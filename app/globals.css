@@ -15,6 +15,18 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #04152d;
+    }
+
+    .hero-bg {
+      background-size: cover;
+      background-position: center;
+    }
     --foreground: #ededed;
   }
 }
@@ -23,4 +35,48 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* for sliders */
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.partner-slider {
+  animation: marquee 25s linear infinite;
+}
+
+.partner-slider:hover {
+  animation-play-state: paused;
+}
+
+
+
+/* for dot animated */
+
+@keyframes floatDot {
+  0% {
+    transform: translateY(0px);
+    opacity: 0.3;
+  }
+
+  50% {
+    transform: translateY(-20px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 0.3;
+  }
+}
+
+.animate-float-dot {
+  animation: floatDot 4s ease-in-out infinite;
 }
