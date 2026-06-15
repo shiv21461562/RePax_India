@@ -107,7 +107,7 @@ export default function Hero() {
               {/* LEFT SIDE */}
               <div>
                 <div className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 backdrop-blur-md px-6 py-3 text-white">
-                  <span>🌿</span>
+                  <span></span>
                   <span className="font-semibold">REPAX INDIA 2026</span>
                 </div>
 

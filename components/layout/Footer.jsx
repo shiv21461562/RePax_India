@@ -3,127 +3,141 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden border-t border-slate-200 bg-white text-slate-900">
+    <footer className="relative overflow-hidden bg-[#174d6d] text-white">
 
-      {/* Top Accent Line */}
-      <div className="absolute left-0 top-0 h-[2px] w-full bg-gradient-to-r from-transparent via-orange-400 to-transparent" />
+      {/* Glow */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(249,115,22,0.10),transparent_40%)]" />
 
-      <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20">
+      <div className="relative mx-auto max-w-7xl px-6 py-20">
 
-        {/* Main Grid */}
-        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-12 lg:grid-cols-4">
 
-          {/* Logo */}
-          <div className="sm:col-span-2 lg:col-span-1">
-
+          {/* Logo + About */}
+          <div>
             <Image
               src="/images/logo.png"
-              alt="REPAX India"
+              alt="RE PAX India"
               width={220}
               height={80}
-              className="h-auto w-[180px]"
+              className="w-[190px]"
             />
 
-            <p className="mt-6 leading-7 text-slate-600 sm:leading-8">
+            <p className="mt-6 leading-8 text-slate-300">
               RE PAX India Summit brings together policymakers,
-              investors, innovators and industry leaders to
-              accelerate the renewable energy transition and
-              sustainable infrastructure growth.
+              investors, innovators and renewable energy leaders
+              driving the future of sustainable energy and clean
+              infrastructure development.
             </p>
+
+            <div className="mt-8 space-y-4 text-slate-300">
+
+              <div className="flex items-start gap-3">
+                <span>📍</span>
+                <span>New Delhi, India</span>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <span>📞</span>
+                <span>+91 98765 43210</span>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <span>✉️</span>
+                <span>info@repaxindia.com</span>
+              </div>
+
+            </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Navigation */}
           <div>
-            <h3 className="mb-6 text-lg font-bold text-slate-900">
-              Quick Links
+            <h3 className="mb-6 text-xl font-semibold">
+              Navigation
             </h3>
 
-            <ul className="space-y-4">
+            <ul className="space-y-4 text-slate-300">
+
               <li>
-                <Link
-                  href="/"
-                  className="text-slate-600 transition hover:text-orange-500"
-                >
+                <Link href="/" className="hover:text-orange-400">
                   Home
                 </Link>
               </li>
 
               <li>
-                <Link
-                  href="/about"
-                  className="text-slate-600 transition hover:text-orange-500"
-                >
-                  About Summit
+                <Link href="/about" className="hover:text-orange-400">
+                  About
                 </Link>
               </li>
 
               <li>
-                <Link
-                  href="/agenda"
-                  className="text-slate-600 transition hover:text-orange-500"
-                >
+                <Link href="/agenda" className="hover:text-orange-400">
                   Agenda
                 </Link>
               </li>
 
               <li>
-                <Link
-                  href="/speakers"
-                  className="text-slate-600 transition hover:text-orange-500"
-                >
+                <Link href="/speakers" className="hover:text-orange-400">
                   Speakers
                 </Link>
               </li>
 
               <li>
-                <Link
-                  href="/sponsors"
-                  className="text-slate-600 transition hover:text-orange-500"
-                >
+                <Link href="/sponsors" className="hover:text-orange-400">
                   Sponsors
                 </Link>
               </li>
+
+              <li>
+                <Link href="/contact" className="hover:text-orange-400">
+                  Contact
+                </Link>
+              </li>
+
             </ul>
           </div>
 
-          {/* Event Info */}
+          {/* Event Details */}
           <div>
-            <h3 className="mb-6 text-lg font-bold text-slate-900">
-              Event Info
+            <h3 className="mb-6 text-xl font-semibold">
+              Event Details
             </h3>
 
-            <ul className="space-y-4 text-slate-600">
-              <li>📅 24–25 Oct 2026</li>
-              <li>📍 New Delhi, India</li>
-              <li>🎤 15+ Speakers</li>
-              <li>🌍 150+ Delegates</li>
+            <ul className="space-y-4 text-slate-300">
+              <li>📅 October 2026</li>
+              <li>🎤 50+ Industry Speakers</li>
+              <li>🤝 5000+ Delegates</li>
+              <li>🌍 20+ Countries</li>
+              <li>⚡ Renewable Energy Summit</li>
+              <li>🏢 Industry Leaders & Investors</li>
             </ul>
           </div>
 
-          {/* Contact */}
+          {/* Connect */}
           <div>
-            <h3 className="mb-6 text-lg font-bold text-slate-900">
-              Contact
+            <h3 className="mb-6 text-xl font-semibold">
+              Connect
             </h3>
 
-            <ul className="space-y-4 text-slate-600">
-              <li>📧 info@repaxindia.com</li>
-              <li>📞 +91 98765 43210</li>
-              <li>📍 New Delhi, India</li>
+            <ul className="space-y-4 text-slate-300">
+              <li>Sponsorship Opportunities</li>
+              <li>Partnership Enquiries</li>
+              <li>Delegate Registration</li>
+              <li>Speaker Applications</li>
+              <li>Media Collaborations</li>
             </ul>
 
             {/* Social Icons */}
-            <div className="mt-8 flex gap-4">
+            <div className="mt-8 flex gap-3">
 
-              <div className="flex h-11 w-11 cursor-pointer items-center justify-center rounded-full border border-slate-200 bg-slate-50 text-slate-700 transition hover:border-orange-500 hover:bg-orange-500 hover:text-white">
+              <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5 transition hover:bg-orange-500">
                 in
               </div>
 
-              <div className="flex h-11 w-11 cursor-pointer items-center justify-center rounded-full border border-slate-200 bg-slate-50 text-slate-700 transition hover:border-orange-500 hover:bg-orange-500 hover:text-white">
+              <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5 transition hover:bg-orange-500">
                 X
               </div>
 
-              <div className="flex h-11 w-11 cursor-pointer items-center justify-center rounded-full border border-slate-200 bg-slate-50 text-slate-700 transition hover:border-orange-500 hover:bg-orange-500 hover:text-white">
+              <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5 transition hover:bg-orange-500">
                 ▶
               </div>
 
@@ -132,65 +146,48 @@ export default function Footer() {
 
         </div>
 
-        {/* Newsletter */}
-        <div className="mt-16 rounded-[32px] border border-slate-200 bg-slate-50 p-6 sm:p-8">
+        {/* Bottom Bar */}
+        <div className="mt-16 border-t border-white/10 pt-8">
 
-          <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+          <div className="flex flex-col gap-4 text-center md:flex-row md:items-center md:justify-between md:text-left">
 
-            <div>
-              <h3 className="text-2xl font-bold text-slate-900 sm:text-3xl">
-                Stay Updated
-              </h3>
+            <p className="text-slate-300">
+              © 2026 RE PAX India Summit. All Rights Reserved.
+            </p>
 
-              <p className="mt-2 text-slate-600">
-                Subscribe to receive summit updates and announcements.
-              </p>
-            </div>
-
-            <div className="flex w-full max-w-xl flex-col gap-3 sm:flex-row">
-
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="w-full flex-1 rounded-full border border-slate-300 bg-white px-6 py-4 outline-none placeholder:text-slate-400"
-              />
-
-              <button className="rounded-full bg-orange-500 px-8 py-4 font-semibold text-white transition hover:bg-orange-600">
-                Subscribe
-              </button>
-
-            </div>
+            <p className="text-slate-300">
+              Driving the Future of Renewable Energy
+            </p>
 
           </div>
 
         </div>
 
+
+  {/* BIG WATERMARK */}
+  <div className="pointer-events-none absolute bottom-[-20px] left-0 w-full">
+
+    <h1
+      className="
+        text-[300px]
+        font-black
+        leading-none
+        tracking-[15px]
+        text-center
+        text-transparent
+        whitespace-nowrap
+      "
+      style={{
+        WebkitTextStroke: "1px rgba(255,255,255,0.07)",
+      }}
+    >
+      RE PAX INDIA
+    </h1>
+
+  </div>
       </div>
 
-      {/* Bottom */}
-      <div className="border-t border-slate-200">
-
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 py-6 text-center text-sm text-slate-600 sm:px-6 lg:flex-row lg:text-left">
-
-          <p>
-            © 2026 RE PAX India Summit. All Rights Reserved.
-          </p>
-
-          <div className="flex gap-6">
-
-            <span className="cursor-pointer transition hover:text-orange-500">
-              Privacy Policy
-            </span>
-
-            <span className="cursor-pointer transition hover:text-orange-500">
-              Terms & Conditions
-            </span>
-
-          </div>
-
-        </div>
-
-      </div>
+   
 
     </footer>
   );
