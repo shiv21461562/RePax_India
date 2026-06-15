@@ -1,16 +1,21 @@
+import type { ReactNode } from "react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import WhatsappButton from "@/components/layout/WhatsappButton";
 import "./globals.css";
 
-export default function RootLayout({ children }) {
+export default function RootLayout({
+  children,
+}: {
+  children: ReactNode;
+}) {
   return (
     <html lang="en">
       <body>
         <Navbar />
         {children}
-           <Footer />
-              <WhatsappButton />
+        <Footer />
+        <WhatsappButton />
       </body>
     </html>
   );
