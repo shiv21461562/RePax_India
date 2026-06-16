@@ -84,12 +84,11 @@ export default function WhatsappButton() {
 
       {/* Floating Button */}
       <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-      <Image
+<img
   src="/images/Whatsapp.png"
   alt="WhatsApp"
-  width={70}
-  height={70}
-  unoptimized
+  width="70"
+  height="70"
 />
       </a>
     </div>
