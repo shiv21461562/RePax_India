@@ -28,7 +28,9 @@ export default function Footer() {
             <div className="mt-8 space-y-4 text-slate-300">
               <div className="flex items-start gap-3">
                 <span>📍</span>
-                <span>Gaur City mall space building 14th floor office 140130</span>
+                <span>
+                  Gaur City mall space building 14th floor office 140130
+                </span>
               </div>
 
               <div className="flex items-start gap-3">

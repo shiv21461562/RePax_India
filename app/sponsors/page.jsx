@@ -139,49 +139,36 @@ export default function SponsorsPage() {
             </div>
           </motion.div>
 
-
           {/* Sponsor Stats */}
 
-<motion.div
-  initial={{ opacity: 0, y: 30 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.8, delay: 0.4 }}
-  className="mt-28 grid gap-5 md:grid-cols-4"
->
-  <div className="rounded-[24px] border border-white/10 bg-[#0d203b]/60 p-6 backdrop-blur-xl">
-    <h3 className="text-4xl font-bold text-orange-400">80+</h3>
-    <p className="mt-2 text-sm text-slate-300">
-      Sponsors
-    </p>
-  </div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="mt-28 grid gap-5 md:grid-cols-4"
+          >
+            <div className="rounded-[24px] border border-white/10 bg-[#0d203b]/60 p-6 backdrop-blur-xl">
+              <h3 className="text-4xl font-bold text-orange-400">80+</h3>
+              <p className="mt-2 text-sm text-slate-300">Sponsors</p>
+            </div>
 
-  <div className="rounded-[24px] border border-white/10 bg-[#0d203b]/60 p-6 backdrop-blur-xl">
-    <h3 className="text-4xl font-bold text-cyan-400">5000+</h3>
-    <p className="mt-2 text-sm text-slate-300">
-      Delegates
-    </p>
-  </div>
+            <div className="rounded-[24px] border border-white/10 bg-[#0d203b]/60 p-6 backdrop-blur-xl">
+              <h3 className="text-4xl font-bold text-cyan-400">200+</h3>
+              <p className="mt-2 text-sm text-slate-300">Delegates</p>
+            </div>
 
-  <div className="rounded-[24px] border border-white/10 bg-[#0d203b]/60 p-6 backdrop-blur-xl">
-    <h3 className="text-4xl font-bold text-green-400">20+</h3>
-    <p className="mt-2 text-sm text-slate-300">
-      Countries
-    </p>
-  </div>
+            <div className="rounded-[24px] border border-white/10 bg-[#0d203b]/60 p-6 backdrop-blur-xl">
+              <h3 className="text-4xl font-bold text-green-400">20+</h3>
+              <p className="mt-2 text-sm text-slate-300">Countries</p>
+            </div>
 
-  <div className="rounded-[24px] border border-white/10 bg-[#0d203b]/60 p-6 backdrop-blur-xl">
-    <h3 className="text-4xl font-bold text-orange-400">150+</h3>
-    <p className="mt-2 text-sm text-slate-300">
-      Partner Brands
-    </p>
-  </div>
-</motion.div>
+            <div className="rounded-[24px] border border-white/10 bg-[#0d203b]/60 p-6 backdrop-blur-xl">
+              <h3 className="text-4xl font-bold text-orange-400">150+</h3>
+              <p className="mt-2 text-sm text-slate-300">Partner Brands</p>
+            </div>
+          </motion.div>
         </div>
       </section>
-
-
-
-
 
       {/* LOGO WALL */}
       {/* Sponsors Section */}

@@ -57,9 +57,26 @@ export default function Hero() {
     <>
       {/* hero section */}
       <section className="relative min-h-screen overflow-hidden bg-[#1f5678]">
-        {/* Background Image with Overlay */}
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: "url('/images/Hero5.png')",
+          }}
+        />
 
-        <div className="absolute inset-0 bg-gradient-to-br from-[#1f5678] via-[#245d82] to-[#2b6b92]" />
+
+
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black/20" 
+/>
+        {/* Blur Effect */}
+        <div className="absolute inset-0 backdrop-blur-[1px]" />
+
+
+        
+
+        {/* Background Image with Overlay */}
 
         {/* Big Glow */}
         <div className="absolute -top-32 -right-32 h-[500px] w-[500px] rounded-full bg-cyan-300/10 blur-[120px]" />
@@ -111,20 +128,32 @@ export default function Hero() {
                   <span className="font-semibold">REPAX INDIA 2026</span>
                 </div>
 
-                <h1 className="mt-8 text-5xl md:text-6xl lg:text-7xl font-black leading-[1.05] text-white">
-                  Accelerating India's
-                  <span className="block bg-gradient-to-r from-orange-400 to-yellow-300 bg-clip-text text-transparent">
-                    Clean Energy
+                <h1 className="mt-8 text-5xl md:text-6xl lg:text-6xl font-black leading-[1.05] text-white">
+                  Powering the
+                  <span
+                    className="
+      block
+      bg-gradient-to-r
+      from-orange-400
+      to-yellow-300
+      bg-clip-text
+      text-transparent
+      leading-[1.2]
+      pb-2
+    "
+                  >
+                    Conversations
                   </span>
-                  Future
+                  Shaping Tomorrow's Energy
                 </h1>
 
                 <div className="mt-8 h-1 w-24 rounded-full bg-gradient-to-r from-orange-400 to-yellow-300" />
 
                 <p className="mt-8 max-w-xl text-lg leading-8 text-gray-200">
-                  India's premier platform bringing together policymakers,
-                  investors, industry leaders and innovators to shape the future
-                  of renewable energy and sustainable infrastructure.
+                  Uniting the Voices of Policymakers, Solar Manufacturers, EPCs,
+                  Developers, Investors & Technology Leaders to Drive
+                  Collaboration, Innovation, and Growth Across India's Renewable
+                  Energy Ecosystem
                 </p>
               </div>
 
@@ -137,22 +166,18 @@ export default function Hero() {
 
                   <div className="mt-6 grid grid-cols-3 gap-3">
                     <div className="rounded-2xl bg-white/5 p-3">
-                      <h3 className="text-2xl font-bold text-cyan-400">
-                        5000+
-                      </h3>
+                      <h3 className="text-2xl font-bold text-cyan-400">200+</h3>
                       <p className="text-xs text-slate-400">Delegates</p>
                     </div>
 
                     <div className="rounded-2xl bg-white/5 p-4">
-                      <h3 className="text-2xl font-bold text-green-400">
-                        150+
-                      </h3>
+                      <h3 className="text-2xl font-bold text-green-400">20+</h3>
                       <p className="text-xs text-slate-400">Speakers</p>
                     </div>
 
                     <div className="rounded-2xl bg-white/5 p-4">
                       <h3 className="text-2xl font-bold text-orange-400">
-                        80+
+                        10+
                       </h3>
                       <p className="text-xs text-slate-400">Sponsors</p>
                     </div>
@@ -160,24 +185,17 @@ export default function Hero() {
                 </div>
 
                 {/* Middle Card */}
-                <div className="absolute left-0 top-52 w-[320px] rounded-3xl border border-white/10 bg-slate-900/80 backdrop-blur-xl p-6 shadow-2xl">
+
+                <div className="absolute left-0 top-36 w-[320px] rounded-3xl border border-white/10 bg-slate-900/80 backdrop-blur-xl p-6 shadow-2xl">
                   <h4 className="font-semibold text-white">Event Highlights</h4>
 
-                  <div className="mt-5 space-y-4">
-                    <div className="flex justify-between text-white">
-                      <span>Solar Energy</span>
-                      <span className="text-green-400">95%</span>
-                    </div>
-
-                    <div className="flex justify-between text-white">
-                      <span>Green Hydrogen</span>
-                      <span className="text-cyan-400">88%</span>
-                    </div>
-
-                    <div className="flex justify-between text-white">
-                      <span>Wind Energy</span>
-                      <span className="text-orange-400">91%</span>
-                    </div>
+                  <div className="mt-5 space-y-3 text-white text-sm">
+                    <div>• Solar Energy & Manufacturing</div>
+                    <div>• Energy Storage & Battery Technologies</div>
+                    <div>• EPC & Project Development</div>
+                    <div>• Government Policies & Regulatory Frameworks</div>
+                    <div>• Electric Mobility & Sustainable Transport</div>
+                    <div>• Investment, Finance & Business Growth</div>
                   </div>
                 </div>
 
@@ -185,6 +203,12 @@ export default function Hero() {
 
                 <div className="absolute right-0 top-[470px] flex gap-3">
                   {[
+                    {
+                      icon: "☀️",
+                      title: "renewablemirror",
+                      desc: "Asia's Clean Energy Expo",
+                      link: "https://www.renewablemirror.com/",
+                    },
                     {
                       icon: "⚡",
                       title: "PowerPax India",
@@ -197,17 +221,12 @@ export default function Hero() {
                       desc: "Industry News & Insights",
                       link: "https://electricalmirror.net/",
                     },
+
                     {
-                      icon: "☀️",
-                      title: "REI Expo",
-                      desc: "Asia's Clean Energy Expo",
-                      link: "https://www.renewableenergyindiaexpo.com/",
-                    },
-                    {
-                      icon: "🤝",
-                      title: "Community",
-                      desc: "Connect & Network",
-                      link: "#",
+                      icon: "📰",
+                      title: "Constr. Mirror",
+                      desc: "India's Leading Construction & Infrastructure Magazine",
+                      link: "https://constructionmirror.com/",
                     },
                   ].map((item, index) => (
                     <a
@@ -216,24 +235,25 @@ export default function Hero() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="
-        group
-        relative
-        w-[135px]
-        overflow-visible
-        rounded-2xl
-        border
-        border-white/10
-        bg-white/10
-        backdrop-blur-xl
-        p-4
-        text-white
-        transition-all
-        duration-300
-        hover:-translate-y-2
-        hover:border-cyan-400
-        hover:bg-white/15
-        hover:shadow-[0_15px_40px_rgba(34,211,238,0.25)]
-      "
+group
+relative
+w-[135px]
+h-[100px]
+overflow-visible
+rounded-2xl
+border
+border-slate-700/50
+bg-slate-800/40
+backdrop-blur-xl
+p-4
+text-white
+transition-all
+duration-300
+hover:-translate-y-2
+hover:border-cyan-400
+hover:bg-white/15
+hover:shadow-[0_15px_40px_rgba(34,211,238,0.25)]
+"
                     >
                       {/* Popup */}
 
@@ -260,9 +280,9 @@ export default function Hero() {
     group-hover:-translate-y-2
   "
                       >
-                        <h5 className="text-sm font-semibold text-cyan-400">
+                        <h4 className="text-xs font-medium leading-4 whitespace-nowrap overflow-hidden text-ellipsis w-full">
                           {item.title}
-                        </h5>
+                        </h4>
 
                         <p className="mt-2 text-xs leading-5 text-slate-300">
                           {item.desc}
@@ -302,56 +322,41 @@ export default function Hero() {
         </div>
       </section>
 
-    
+      {/* Numbers card */}
 
-{/* Numbers card */}
+      <section className="bg-white py-20">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="grid grid-cols-2 gap-8 lg:grid-cols-4">
+            <div className="text-center">
+              <h3 className="text-5xl font-bold text-orange-500">
+                <CountUp end={200} duration={3} />+
+              </h3>
+              <p className="mt-3 text-gray-600">Delegates</p>
+            </div>
 
-<section className="bg-white py-20">
-  <div className="mx-auto max-w-7xl px-6">
+            <div className="text-center">
+              <h3 className="text-5xl font-bold text-orange-500">
+                <CountUp end={20} duration={3} />+
+              </h3>
+              <p className="mt-3 text-gray-600">Speakers</p>
+            </div>
 
-    <div className="grid grid-cols-2 gap-8 lg:grid-cols-4">
+            <div className="text-center">
+              <h3 className="text-5xl font-bold text-orange-500">
+                <CountUp end={10} duration={3} />+
+              </h3>
+              <p className="mt-3 text-gray-600">Sponsors</p>
+            </div>
 
-      <div className="text-center">
-        <h3 className="text-5xl font-bold text-orange-500">
-          <CountUp end={5000} duration={3} />+
-        </h3>
-        <p className="mt-3 text-gray-600">
-          Delegates
-        </p>
-      </div>
-
-      <div className="text-center">
-        <h3 className="text-5xl font-bold text-orange-500">
-          <CountUp end={150} duration={3} />+
-        </h3>
-        <p className="mt-3 text-gray-600">
-          Speakers
-        </p>
-      </div>
-
-      <div className="text-center">
-        <h3 className="text-5xl font-bold text-orange-500">
-          <CountUp end={50} duration={3} />+
-        </h3>
-        <p className="mt-3 text-gray-600">
-          Sponsors
-        </p>
-      </div>
-
-      <div className="text-center">
-        <h3 className="text-5xl font-bold text-orange-500">
-          <CountUp end={30} duration={3} />+
-        </h3>
-        <p className="mt-3 text-gray-600">
-          Countries
-        </p>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-    
+            <div className="text-center">
+              <h3 className="text-5xl font-bold text-orange-500">
+                <CountUp end={30} duration={3} />+
+              </h3>
+              <p className="mt-3 text-gray-600">Countries</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* why  */}
 
@@ -438,8 +443,9 @@ export default function Hero() {
             transition-all
             duration-500
             hover:-translate-y-4
-            hover:border-orange-400
-            hover:shadow-[0_25px_60px_rgba(249,115,22,0.25)]
+          hover:border-orange-400/80
+
+
           "
               >
                 {/* Hover Overlay */}
@@ -531,7 +537,6 @@ export default function Hero() {
 
       {/* Sponsors & Partners */}
 
-    
       <section className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-[#102a43] py-24">
         {/* Background Glow */}
         <div className="absolute top-0 left-0 h-[500px] w-[500px] rounded-full bg-orange-500/10 blur-[150px]" />
@@ -559,12 +564,9 @@ export default function Hero() {
           </div>
 
           {/* Partner Slider */}
-          <div className="relative mt-16 overflow-hidden">
-            <div className="absolute left-0 top-0 z-10 h-full w-24 bg-gradient-to-r from-slate-950 to-transparent" />
 
-            <div className="absolute right-0 top-0 z-10 h-full w-24 bg-gradient-to-l from-slate-950 to-transparent" />
-
-            <div className="partner-slider flex w-max gap-6 py-4">
+          <div className="relative mt-16 overflow-hidden py-4">
+            <div className="partner-slider flex gap-6">
               {[
                 "Tata Power",
                 "Adani Green",
@@ -587,70 +589,69 @@ export default function Hero() {
                 <div
                   key={index}
                   className="
-              group
-              relative
-              flex
-              h-[90px]
-              w-[220px]
-              items-center
-              justify-center
-              overflow-hidden
-              rounded-3xl
-              border
-              border-white/10
-              bg-white/5
-              backdrop-blur-xl
-              transition-all
-              duration-500
-              hover:-translate-y-2
-              hover:border-orange-400
-              hover:shadow-[0_20px_60px_rgba(249,115,22,0.25)]
-            "
+        group
+        relative
+        flex
+        h-[90px]
+        w-[220px]
+        shrink-0
+        items-center
+        justify-center
+        overflow-hidden
+        rounded-3xl
+        border
+        border-white/10
+        bg-white/[0.04]
+        backdrop-blur-md
+        transition-all
+        duration-300
+        hover:-translate-y-1
+        hover:border-orange-400
+        hover:bg-white/[0.08]
+        hover:shadow-[0_0_30px_rgba(249,115,22,0.15)]
+      "
                 >
-                  {/* Hover Fill */}
+                  {/* Hover Gradient */}
                   <div
                     className="
-                absolute
-                inset-0
-                opacity-0
-                bg-gradient-to-r
-                from-orange-500/20
-                via-amber-500/20
-                to-cyan-500/20
-                transition-all
-                duration-500
-                group-hover:opacity-100
-              "
+          absolute
+          inset-0
+          opacity-0
+          bg-gradient-to-r
+          from-orange-500/10
+          via-orange-400/10
+          to-cyan-400/10
+          transition-opacity
+          duration-300
+          group-hover:opacity-100
+        "
                   />
 
-                  {/* Shine */}
+                  {/* Shine Effect */}
                   <div
                     className="
-                absolute
-                -left-40
-                top-0
-                h-full
-                w-20
-                rotate-12
-                bg-white/20
-                blur-xl
-                transition-all
-                duration-700
-                group-hover:left-[120%]
-              "
+          absolute
+          -left-32
+          top-0
+          h-full
+          w-16
+          rotate-12
+          bg-white/10
+          blur-lg
+          transition-all
+          duration-700
+          group-hover:left-[120%]
+        "
                   />
 
                   <span
                     className="
-                relative
-                z-20
-                text-lg
-                font-bold
-                text-white
-                transition-all
-                duration-500
-                group-hover:scale-105
-              "
+          relative
+          z-10
+          text-lg
+          font-semibold
+          text-white
+        "
                   >
                     {item}
                   </span>

@@ -40,22 +40,23 @@ body {
 /* for sliders */
 
 @keyframes marquee {
-  from {
+  0% {
     transform: translateX(0);
   }
-  to {
+
+  100% {
     transform: translateX(-50%);
   }
 }
 
 .partner-slider {
-  animation: marquee 25s linear infinite;
+  width: max-content;
+  animation: marquee 30s linear infinite;
 }
 
 .partner-slider:hover {
   animation-play-state: paused;
 }
-
 
 
 /* for dot animated */
@@ -80,3 +81,7 @@ body {
 .animate-float-dot {
   animation: floatDot 4s ease-in-out infinite;
 }
+
+
+
+

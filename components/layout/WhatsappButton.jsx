@@ -5,10 +5,13 @@ import Image from "next/image";
 
 export default function WhatsappButton() {
   const [open, setOpen] = useState(false);
-  const [visibleCount, setVisibleCount] = useState(0);
+  const [currentMessageIndex, setCurrentMessageIndex] = useState(0);
+  const [charIndex, setCharIndex] = useState(0);
+  const [isTyping, setIsTyping] = useState(false);
 
   const messages = [
     "👋 Hi there!",
+    "How can I help you? 😊",
     "Welcome to RE PAX India Summit.",
     "Looking for event details?",
     "Registration is open now.",
@@ -17,23 +20,52 @@ export default function WhatsappButton() {
 
   useEffect(() => {
     if (!open) {
-      setVisibleCount(0);
+      setCurrentMessageIndex(0);
+      setCharIndex(0);
+      setIsTyping(false);
       return;
     }
 
-    let count = 0;
+    // Start typing first message
+    setCurrentMessageIndex(0);
+    setCharIndex(0);
+    setIsTyping(true);
 
-    const interval = setInterval(() => {
-      count++;
-      setVisibleCount(count);
-
-      if (count >= messages.length) {
-        clearInterval(interval);
-      }
-    }, 700);
-
-    return () => clearInterval(interval);
+    return () => {
+      setIsTyping(false);
+    };
   }, [open]);
+
+  // Typing effect for all messages
+  useEffect(() => {
+    if (!isTyping || !open) return;
+
+    const currentMessage = messages[currentMessageIndex];
+    if (!currentMessage) return;
+
+    // If current message is complete, move to next message
+    if (charIndex >= currentMessage.length) {
+      // Wait 0.5 second before starting next message
+      const timeout = setTimeout(() => {
+        if (currentMessageIndex < messages.length - 1) {
+          setCurrentMessageIndex((prev) => prev + 1);
+          setCharIndex(0);
+        } else {
+          // All messages complete
+          setIsTyping(false);
+        }
+      }, 500);
+
+      return () => clearTimeout(timeout);
+    }
+
+    // Type next character - FASTER TYPING SPEED
+    const typingInterval = setInterval(() => {
+      setCharIndex((prev) => prev + 1);
+    }, 50); // Changed from 150ms to 50ms (3x faster!)
+
+    return () => clearInterval(typingInterval);
+  }, [isTyping, currentMessageIndex, charIndex, open]);
 
   const whatsappLink =
     "https://wa.me/919873168426?text=Hi%20RE%20PAX%20Team,%20I%20want%20more%20information%20about%20the%20summit.";
@@ -61,14 +93,29 @@ export default function WhatsappButton() {
         </div>
 
         {/* Chat */}
-        <div className="space-y-3 bg-[#ECE5DD] p-4 min-h-[260px]">
-          {messages.slice(0, visibleCount).map((msg, index) => (
-            <div key={index} className="animate-[fadeIn_0.4s_ease]">
-              <div className="inline-block rounded-2xl rounded-tl-md bg-white px-4 py-2 text-sm text-gray-800 shadow">
+        <div className="space-y-3 bg-[#ECE5DD] p-4 min-h-[280px]">
+          {/* Show all completed messages */}
+          {messages.slice(0, currentMessageIndex).map((msg, index) => (
+            <div key={index} className="flex justify-start">
+              <div className="inline-block rounded-2xl rounded-tl-md bg-white px-4 py-2 text-sm text-gray-800 shadow max-w-[80%]">
                 {msg}
               </div>
             </div>
           ))}
+
+          {/* Show currently typing message with cursor */}
+          {isTyping && currentMessageIndex < messages.length && (
+            <div className="flex justify-start">
+              <div className="inline-block rounded-2xl rounded-tl-md bg-white px-4 py-2 text-sm text-gray-800 shadow max-w-[80%]">
+                {messages[currentMessageIndex].slice(0, charIndex)}
+                {charIndex < messages[currentMessageIndex].length && (
+                  <span className="inline-block w-[2px] h-4 bg-gray-600 ml-0.5 animate-pulse">
+                    &nbsp;
+                  </span>
+                )}
+              </div>
+            </div>
+          )}
         </div>
 
         {/* CTA */}
@@ -83,14 +130,19 @@ export default function WhatsappButton() {
       </div>
 
       {/* Floating Button */}
-      <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-<img
-  src="/images/Whatsapp.png"
-  alt="WhatsApp"
-  width="70"
-  height="70"
-/>
-      </a>
+<a
+  href={whatsappLink}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="whatsapp-btn"
+>
+  <img
+    src="/images/Whatsapp.png"
+    alt="WhatsApp"
+    width="70"
+    height="70"
+  />
+</a>
     </div>
   );
 }

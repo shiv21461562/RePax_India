@@ -6,90 +6,332 @@ import FadeUp from "@/components/FadeUp";
 export default function About() {
   return (
     <main className="bg-gradient-to-br from-white via-slate-50 to-orange-50 text-slate-900">
-      {/* Hero Section */}
+      {/* About Section  */}
       <motion.section
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
-        className="relative overflow-hidden bg-[#1f5678] pt-36 pb-24"
+        className="relative overflow-hidden bg-[#1f5678] pt-30 pb-24"
       >
-        {/* Grid Background */}
+        {/* Animated Grid Background */}
         <div
           className="absolute inset-0 opacity-10"
           style={{
             backgroundImage: `
-      linear-gradient(rgba(255,255,255,.15) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,255,255,.15) 1px, transparent 1px)
-    `,
+        linear-gradient(rgba(255,255,255,.15) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.15) 1px, transparent 1px)
+      `,
             backgroundSize: "70px 70px",
           }}
         />
 
+        {/* Floating Gradient Orbs */}
+        <div className="absolute -top-40 -right-40 h-[500px] w-[500px] rounded-full bg-orange-400/5 blur-3xl" />
+        <div className="absolute -bottom-40 -left-40 h-[500px] w-[500px] rounded-full bg-blue-400/5 blur-3xl" />
+
         <div className="relative mx-auto max-w-7xl px-6">
-          <div className="grid items-center gap-16 lg:grid-cols-2">
-            {/* Left */}
-            <motion.div
-              initial={{ opacity: 0, x: -80 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <span className="rounded-full border border-orange-400/30 bg-orange-400/10 px-5 py-2 text-sm font-semibold text-orange-300">
+          {/* Section Header - Enhanced */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="mb-20 text-center"
+          >
+            <div className="inline-block">
+              <span className="inline-block rounded-full border border-orange-400/30 bg-orange-400/10 px-6 py-2 text-sm font-semibold text-orange-300 backdrop-blur-sm">
                 ABOUT RE PAX INDIA
               </span>
+            </div>
+            <h2 className="mt-6 text-4xl font-bold text-white md:text-5xl lg:text-6xl">
+              Connecting India's
+              <span className="bg-gradient-to-r from-orange-400 to-orange-300 bg-clip-text text-transparent">
+                Energy Ecosystem
+              </span>
+            </h2>
+            <p className="mx-auto mt-6 max-w-3xl text-lg text-slate-300/80">
+              RE PAX India Summit collaborates with leading media platforms,
+              industry publications, and energy communities to drive innovation,
+              knowledge sharing, and business growth across the renewable
+              sector.
+            </p>
+          </motion.div>
 
-              <h1 className="mt-8 text-5xl font-black leading-tight text-white lg:text-6xl">
-                Accelerating
-                <span className="block text-orange-400">Renewable Energy</span>
-                Innovation
-              </h1>
-
-              <p className="mt-8 max-w-2xl text-lg leading-8 text-slate-300">
-                RE PAX India Summit is India's premier renewable energy platform
-                bringing together policymakers, investors, industry leaders and
-                innovators to shape the future of clean energy.
-              </p>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.6, duration: 0.6 }}
-                className="mt-10 flex flex-wrap gap-4"
-              >
-                <div className="rounded-full border border-white/10 bg-white/10 px-5 py-3 text-white backdrop-blur-xl transition-all duration-300 hover:bg-white/20 hover:scale-105">
-                  ⚡ Clean Energy
-                </div>
-
-                <div className="rounded-full border border-white/10 bg-white/10 px-5 py-3 text-white backdrop-blur-xl transition-all duration-300 hover:bg-white/20 hover:scale-105">
-                  🌍 Global Leaders
-                </div>
-
-                <div className="rounded-full border border-white/10 bg-white/10 px-5 py-3 text-white backdrop-blur-xl transition-all duration-300 hover:bg-white/20 hover:scale-105">
-                  🤝 Partnerships
-                </div>
-              </motion.div>
-            </motion.div>
-
-            {/* Right */}
-            <motion.div
-              initial={{ opacity: 0, x: 80, scale: 0.9 }}
-              animate={{ opacity: 1, x: 0, scale: 1 }}
-              transition={{ duration: 1 }}
+          {/* Cards Grid - Enhanced with better visuals */}
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+            {/* Card 1 - Solar */}
+            <motion.a
+              href="https://www.renewablemirror.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              initial={{ opacity: 0, y: 60 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              whileHover={{
+                y: -10,
+                scale: 1.02,
+              }}
+              className="group relative block overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl transition-all duration-500 hover:border-orange-400 hover:bg-white/10 hover:shadow-2xl hover:shadow-orange-500/20"
             >
-              <motion.div
-                whileHover={{
-                  scale: 1.03,
-                  rotate: 1,
-                }}
-                transition={{ duration: 0.3 }}
-                className="overflow-hidden rounded-[30px] border border-white/10 bg-white/5 p-3 backdrop-blur-xl shadow-2xl"
-              >
+              {/* Image */}
+              <div className="relative h-52 overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1558449028-b53a39d100fc?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0"
-                  alt="Renewable Energy"
-                  className="h-[450px] w-full rounded-3xl object-cover"
+                  src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1200"
+                  alt="Renewable Mirror"
+                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-              </motion.div>
-            </motion.div>
+
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1f5678]/55 via-[#1f5678]/10 to-transparent" />
+
+                {/* Badge */}
+                <div className="absolute bottom-4 left-4">
+                  <span className="rounded-full bg-orange-400 px-4 py-2 text-xs font-bold text-white shadow-lg shadow-orange-500/30">
+                    🌿 Renewable Mirror
+                  </span>
+                </div>
+              </div>
+
+              {/* Content */}
+              <div className="p-6 text-center">
+                <h3 className="text-xl font-bold text-white transition-colors duration-300 group-hover:text-orange-300">
+                  Renewable Mirror
+                </h3>
+
+                <p className="mt-1 text-sm text-slate-400">
+                  Renewable Energy Media Platform
+                </p>
+
+                <div className="mt-5">
+                  <h4 className="text-4xl font-extrabold text-white">100K+</h4>
+
+                  <p className="mt-2 text-sm font-medium text-slate-300">
+                    Industry Readers
+                  </p>
+                </div>
+
+                <div className="mt-5 h-1.5 w-full overflow-hidden rounded-full bg-white/10">
+                  <motion.div
+                    className="h-full bg-gradient-to-r from-orange-400 to-orange-500"
+                    initial={{ width: 0 }}
+                    animate={{ width: "85%" }}
+                    transition={{ duration: 1.5, delay: 0.8 }}
+                  />
+                </div>
+
+                {/* Visit Website */}
+                <div className="mt-5 text-xs font-semibold uppercase tracking-wider text-orange-300 opacity-0 transition-all duration-300 group-hover:opacity-100">
+                  Visit Website →
+                </div>
+              </div>
+            </motion.a>
+
+            {/* Card 2 - Wind */}
+            <motion.a
+              href="https://electricalmirror.net/"
+              target="_blank"
+              rel="noopener noreferrer"
+              initial={{ opacity: 0, y: 60 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              whileHover={{
+                y: -10,
+                scale: 1.02,
+              }}
+              className="group relative block overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl transition-all duration-500 hover:border-orange-400 hover:bg-white/10 hover:shadow-2xl hover:shadow-orange-500/20"
+            >
+              {/* Image */}
+              <div className="relative h-52 overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200"
+                  alt="Electrical Mirror"
+                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1f5678]/55 via-[#1f5678]/10 to-transparent" />
+
+                {/* Badge */}
+                <div className="absolute bottom-4 left-4">
+                  <span className="rounded-full bg-orange-400 px-4 py-2 text-xs font-bold text-white shadow-lg shadow-orange-500/30">
+                    📰 Electrical Mirror
+                  </span>
+                </div>
+              </div>
+
+              {/* Content */}
+              <div className="p-6 text-center">
+                <h3 className="text-xl font-bold text-white transition-colors duration-300 group-hover:text-orange-300">
+                  Electrical Mirror
+                </h3>
+
+                <p className="mt-1 text-sm text-slate-400">
+                  Electrical Industry Publication
+                </p>
+
+                <div className="mt-5">
+                  <h4 className="text-4xl font-extrabold text-white">25+</h4>
+
+                  <p className="mt-2 text-sm font-medium text-slate-300">
+                    Years Presence
+                  </p>
+                </div>
+
+                <div className="mt-5 h-1.5 w-full overflow-hidden rounded-full bg-white/10">
+                  <motion.div
+                    className="h-full bg-gradient-to-r from-orange-400 to-orange-500"
+                    initial={{ width: 0 }}
+                    animate={{ width: "75%" }}
+                    transition={{ duration: 1.5, delay: 1 }}
+                  />
+                </div>
+
+                {/* Visit Website */}
+                <div className="mt-5 text-xs font-semibold uppercase tracking-wider text-orange-300 opacity-0 transition-all duration-300 group-hover:opacity-100">
+                  Visit Website →
+                </div>
+              </div>
+            </motion.a>
+
+            {/* Card 3 - Hydro (Center - Premium) */}
+            <motion.a
+              href="https://www.powerpaxindia.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              initial={{ opacity: 0, y: 60 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              whileHover={{
+                y: -15,
+                scale: 1.03,
+                boxShadow: "0 30px 60px -15px rgba(251,146,60,0.4)",
+              }}
+              className="group relative block overflow-hidden rounded-3xl border-2 border-orange-400/40 bg-gradient-to-br from-orange-400/15 to-white/5 backdrop-blur-xl transition-all duration-500 hover:border-orange-400 hover:shadow-2xl hover:shadow-orange-500/30"
+            >
+              {/* Featured Badge */}
+              <div className="absolute -top-1 right-4 z-10">
+                <div className="relative">
+                  <span className="relative rounded-full bg-gradient-to-r from-orange-400 to-orange-500 px-4 py-1 text-xs font-bold text-white shadow-lg shadow-orange-500/40">
+                    ⭐ FEATURED
+                  </span>
+
+                  <div className="absolute -inset-1 animate-pulse rounded-full bg-orange-400/20 blur-sm"></div>
+                </div>
+              </div>
+
+              {/* Image */}
+              <div className="relative h-52 overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1200"
+                  alt="PowerPax India"
+                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1f5678]/55 via-[#1f5678]/10 to-transparent" />
+
+                <div className="absolute bottom-4 left-4">
+                  <span className="rounded-full bg-orange-400 px-4 py-2 text-xs font-bold text-white ">
+                    ⚡ PowerPax India
+                  </span>
+                </div>
+              </div>
+
+              {/* Content */}
+              <div className="p-6 text-center">
+                <h3 className="text-xl font-bold text-white transition-colors duration-300 group-hover:text-orange-300">
+                  PowerPax India
+                </h3>
+
+                <p className="mt-1 text-sm text-slate-400">
+                  Official Event Platform
+                </p>
+
+                <div className="mt-5">
+                  <h4 className="text-4xl font-extrabold text-white">500+</h4>
+
+                  <p className="mt-2 text-sm font-medium text-slate-300">
+                    Industry Leaders
+                  </p>
+                </div>
+
+                <div className="mt-5 h-1.5 w-full overflow-hidden rounded-full bg-white/10">
+                  <motion.div
+                    className="h-full bg-gradient-to-r from-orange-400 to-orange-500"
+                    initial={{ width: 0 }}
+                    animate={{ width: "95%" }}
+                    transition={{ duration: 1.5, delay: 1.2 }}
+                  />
+                </div>
+
+                {/* Visit Website */}
+                <div className="mt-5 text-xs font-semibold uppercase tracking-wider text-orange-300 opacity-0 transition-all duration-300 group-hover:opacity-100">
+                  Visit Website →
+                </div>
+              </div>
+            </motion.a>
+
+            {/* Card 4 - Bio */}
+            <motion.a
+              href="https://constructionmirror.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              initial={{ opacity: 0, y: 60 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              whileHover={{
+                y: -10,
+                scale: 1.02,
+              }}
+              className="group relative block overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl transition-all duration-500 hover:border-orange-400 hover:bg-white/10 hover:shadow-2xl hover:shadow-orange-500/20"
+            >
+              {/* Image */}
+              <div className="relative h-52 overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1200"
+                  alt="Construction Mirror"
+                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1f5678]/55 via-[#1f5678]/10 to-transparent" />
+
+                {/* Badge */}
+                <div className="absolute bottom-4 left-4">
+                  <span className="rounded-full bg-orange-400 px-4 py-2 text-xs font-bold text-white shadow-lg shadow-orange-500/30">
+                    🏗 Construction Mirror
+                  </span>
+                </div>
+              </div>
+
+              {/* Content */}
+              <div className="p-6 text-center">
+                <h3 className="text-xl font-bold text-white transition-colors duration-300 group-hover:text-orange-300">
+                  Construction Mirror
+                </h3>
+
+                <p className="mt-1 text-sm text-slate-400">
+                  Infrastructure & Construction Media
+                </p>
+
+                <div className="mt-5">
+                  <h4 className="text-4xl font-extrabold text-white">50K+</h4>
+
+                  <p className="mt-2 text-sm font-medium text-slate-300">
+                    Professionals Reached
+                  </p>
+                </div>
+
+                <div className="mt-5 h-1.5 w-full overflow-hidden rounded-full bg-white/10">
+                  <motion.div
+                    className="h-full bg-gradient-to-r from-orange-400 to-orange-500"
+                    initial={{ width: 0 }}
+                    animate={{ width: "80%" }}
+                    transition={{ duration: 1.5, delay: 1.4 }}
+                  />
+                </div>
+
+                {/* Visit Website */}
+                <div className="mt-5 text-xs font-semibold uppercase tracking-wider text-orange-300 opacity-0 transition-all duration-300 group-hover:opacity-100">
+                  Visit Website →
+                </div>
+              </div>
+            </motion.a>
           </div>
         </div>
       </motion.section>
@@ -109,57 +351,74 @@ export default function About() {
         </div>
       </section>
 
-      {/* About Content */}
-      <section className="pb-24">
-        <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2">
-          {/* Image */}
-          <FadeUp>
-            <motion.div
-              whileHover={{ scale: 1.03 }}
-              transition={{ duration: 0.4 }}
-            >
-              <div
-                className="h-[500px] rounded-3xl bg-cover bg-center shadow-2xl"
-                style={{
-                  backgroundImage:
-                    "url('https://studio1hub.com/wp-content/uploads/2021/12/floating-devices-mockup-with-responsive-website-design-3d-rendering-1024x576.jpg')",
-                }}
+      {/* WHY RE PAX INDIA Content */}
+      <section className="relative py-24 bg-white">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="grid items-center gap-16 lg:grid-cols-2">
+            {/* Left Image */}
+            <div className="relative">
+              <img
+                src="https://as1.ftcdn.net/v2/jpg/08/90/38/42/1000_F_890384266_GcuyaHhW69QoFdWEIUlZ5XlOKpxwgD1d.jpg"
+                alt="RE PAX Summit"
+                className="h-[500px] w-full rounded-[32px] object-cover shadow-2xl"
               />
-            </motion.div>
-          </FadeUp>
 
-          {/* Content */}
-          <FadeUp delay={0.2}>
-            <div>
-              <h2 className="text-4xl font-bold text-slate-900">Why RE PAX?</h2>
-
-              <p className="mt-6 text-lg leading-8 text-slate-600">
-                RE PAX India Summit serves as a platform where renewable energy
-                experts, technology innovators, investors and government leaders
-                collaborate to drive meaningful change in the energy ecosystem.
-              </p>
-
-              <div className="mt-10 grid gap-5">
-                {[
-                  "⚡ Clean Energy Innovation",
-                  "🌍 Global Industry Leaders",
-                  "🤝 Networking Opportunities",
-                  "💰 Investment & Partnerships",
-                ].map((item, index) => (
-                  <motion.div
-                    key={index}
-                    whileHover={{
-                      y: -5,
-                      scale: 1.02,
-                    }}
-                    className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"
-                  >
-                    {item}
-                  </motion.div>
-                ))}
+              <div className="absolute bottom-6 left-6 rounded-2xl bg-white/95 p-5 shadow-xl">
+                <h3 className="text-3xl font-bold text-orange-500">500+</h3>
+                <p className="text-slate-600">Industry Leaders</p>
               </div>
             </div>
-          </FadeUp>
+
+            {/* Right Content */}
+            <div>
+              <span className="rounded-full bg-orange-50 px-5 py-2 text-sm font-semibold text-orange-500">
+                WHY RE PAX INDIA
+              </span>
+
+              <h2 className="mt-6 text-3xl font-bold text-slate-900 leading-tight">
+                India's Premier
+                <span className="block text-orange-500">
+                  Renewable Energy Platform
+                </span>
+              </h2>
+
+              <p className="mt-6 text-lg leading-8 text-slate-600">
+                Bringing together renewable energy leaders, investors,
+                innovators and policymakers to accelerate India's clean energy
+                future.
+              </p>
+
+              <div className="mt-10 space-y-4">
+                <div className="flex items-center gap-4">
+                  <div className="h-10 w-10 rounded-full bg-orange-100 flex items-center justify-center">
+                    ⚡
+                  </div>
+                  <span>Clean Energy Innovation</span>
+                </div>
+
+                <div className="flex items-center gap-4">
+                  <div className="h-10 w-10 rounded-full bg-orange-100 flex items-center justify-center">
+                    🌍
+                  </div>
+                  <span>Global Industry Leaders</span>
+                </div>
+
+                <div className="flex items-center gap-4">
+                  <div className="h-10 w-10 rounded-full bg-orange-100 flex items-center justify-center">
+                    🤝
+                  </div>
+                  <span>Strategic Networking</span>
+                </div>
+
+                <div className="flex items-center gap-4">
+                  <div className="h-10 w-10 rounded-full bg-orange-100 flex items-center justify-center">
+                    📈
+                  </div>
+                  <span>Investment Opportunities</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -168,9 +427,9 @@ export default function About() {
         <div className="mx-auto max-w-7xl px-6">
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {[
-              ["5000+", "Delegates"],
-              ["150+", "Speakers"],
-              ["80+", "Sponsors"],
+              ["200+", "Delegates"],
+              ["20+", "Speakers"],
+              ["10+", "Sponsors"],
               ["50+", "Partners"],
             ].map((item, i) => (
               <div

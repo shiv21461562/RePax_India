@@ -236,15 +236,15 @@ export default function ContactPage() {
                 </h3>
 
                 <p className="mt-2 text-slate-500 transition duration-500 group-hover:text-slate-300">
-                  India International Centre
+                  Gaur City Mall
                 </p>
 
                 <p className="mt-5 text-lg font-semibold text-slate-800 transition duration-500 group-hover:text-white">
-                  40, Max Mueller Marg
+                  Office 14130, 14th Floor
                 </p>
 
                 <p className="text-slate-600 transition duration-500 group-hover:text-slate-300">
-                  New Delhi - 110003
+                  Gaur City Mall, Greater Noida West - 201318
                 </p>
               </div>
             </div>
@@ -438,7 +438,7 @@ export default function ContactPage() {
                     Venue Location
                   </h3>
                   <p className="text-sm text-slate-500">
-                    India International Centre, New Delhi
+                    Gaur City Mall, Greater Noida West
                   </p>
                 </div>
               </div>
