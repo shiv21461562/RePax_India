@@ -64,7 +64,7 @@ export default function Hero() {
 
   const websites = [
     {
-      logo: "/logo/RM logo golden.png",
+   logo: "/logo/RM Logo golden.png",
       title: "Renewable Mirror",
       desc: "India's leading renewable energy news & insights platform",
       link: "https://www.renewablemirror.com/",
@@ -76,19 +76,19 @@ export default function Hero() {
       link: "https://www.powerpaxindia.com/",
     },
     {
-      logo: "/logo/EM logo Golden.png",
+     logo: "/logo/EM Logo Golden.png",
       title: "Electrical Mirror",
       desc: "Electrical industry magazine and market intelligence",
       link: "https://electricalmirror.net/",
     },
     {
-      logo: "/logo/CM-LOGO FINAL golden new.png",
+     logo: "/logo/CM-LOGO FINAL golden new.png",
       title: "Construction Mirror",
       desc: "Construction, infrastructure and EPC industry insights",
       link: "https://constructionmirror.com/",
     },
     {
-      logo: "/logo/ETES 2026 logo.png",
+      logo: "/logo/ETES 2026 Logo.png",
       title: "ETES Event",
       desc: "Events, exhibitions and industry networking platform",
       link: "https://etesevent.com/",
