@@ -14,7 +14,7 @@ import CTA from "@/components/home/CTA";
 import Testimonials from "@/components/home/Testimonials";
 import Venue from "@/components/home/Venue";
 
-// import EventVideo from "@/components/home/EventVideo";
+import EventVideo from "@/components/home/EventVideo";
 
 export default function HomePage() {
   return (
@@ -24,7 +24,7 @@ export default function HomePage() {
     
 
       <EventStats />
-        {/* <EventVideo /> */}
+        <EventVideo />
 
       <About />
 

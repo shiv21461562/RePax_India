@@ -344,7 +344,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center flex-shrink-0">
             <Image
-              src="/images/logo.png"
+              src="/images/logo2.png"
               alt="REPAX Logo"
               width={220}
               height={70}

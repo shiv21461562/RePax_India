@@ -34,7 +34,7 @@ export default function Page() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/images/con.avif')",
+            backgroundImage: "url('/images/conf3.png')",
           }}
         />
 
@@ -435,7 +435,7 @@ Agenda Timeline */}
 
       <section className="bg-white py-28 overflow-hidden">
         <div className="mx-auto max-w-6xl px-6">
-          ```
+        
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -550,7 +550,7 @@ Agenda Timeline */}
               </motion.div>
             ))}
           </div>
-          ```
+          
         </div>
       </section>
 
@@ -562,7 +562,7 @@ Agenda Timeline */}
         <div className="absolute right-0 bottom-0 h-96 w-96 rounded-full bg-blue-400/10 blur-[140px]" />
 
         <div className="relative mx-auto max-w-7xl px-6">
-          ```
+          
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -657,7 +657,7 @@ Agenda Timeline */}
               </motion.div>
             ))}
           </div>
-          ```
+          
         </div>
       </section>
 

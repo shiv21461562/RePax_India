@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 import { Download } from "lucide-react";
 import { useState } from "react";
 import Swal from "sweetalert2";
@@ -41,7 +41,7 @@ export default function Hero() {
           },
         });
 
-        window.open("/brochure/ETES 2026 Broucher @.pdf", "_blank");
+        window.open("/brochure/RE-PAX @.pdf", "_blank");
         setBrochureData({
           full_name: "",
           email: "",
@@ -64,31 +64,31 @@ export default function Hero() {
 
   const websites = [
     {
-      icon: "☀️",
+      logo: "/logo/RM logo golden.png",
       title: "Renewable Mirror",
       desc: "India's leading renewable energy news & insights platform",
       link: "https://www.renewablemirror.com/",
     },
     {
-      icon: "⚡",
+      logo: "/logo/pw.png",
       title: "PowerPax India",
       desc: "Power sector innovations, technology & business updates",
       link: "https://www.powerpaxindia.com/",
     },
     {
-      icon: "📰",
+      logo: "/logo/EM logo Golden.png",
       title: "Electrical Mirror",
       desc: "Electrical industry magazine and market intelligence",
       link: "https://electricalmirror.net/",
     },
     {
-      icon: "🏗️",
+      logo: "/logo/CM-LOGO FINAL golden new.png",
       title: "Construction Mirror",
       desc: "Construction, infrastructure and EPC industry insights",
       link: "https://constructionmirror.com/",
     },
     {
-      icon: "🎪",
+      logo: "/logo/ETES 2026 logo.png",
       title: "ETES Event",
       desc: "Events, exhibitions and industry networking platform",
       link: "https://etesevent.com/",
@@ -97,6 +97,7 @@ export default function Hero() {
 
   return (
     <>
+      {/* hero */}
       <section className="relative min-h-screen overflow-hidden bg-[#1f5678]">
         {/* Background */}
         <div
@@ -107,20 +108,6 @@ export default function Hero() {
         />
 
         <div className="absolute inset-0 bg-black/25" />
-
-        {/* Grid Pattern */}
-        <div
-          className="absolute inset-0 opacity-[0.08]"
-          style={{
-            backgroundImage: `
-              linear-gradient(to right, white 1px, transparent 1px),
-              linear-gradient(to bottom, white 1px, transparent 1px)
-            `,
-            backgroundSize: "120px 120px",
-          }}
-        />
-
-       
 
         <div className="relative z-10 min-h-screen">
           <div className="mx-auto flex min-h-screen max-w-7xl items-center px-4 sm:px-6 lg:px-8">
@@ -152,8 +139,8 @@ export default function Hero() {
               </div>
 
               {/* RIGHT CONTENT */}
-           
-<div className="relative flex flex-col gap-4 pt-8 lg:pt-12 lg:h-[600px] lg:justify-between">
+
+              <div className="relative flex flex-col gap-4 pt-8 lg:pt-12 lg:h-[600px] lg:justify-between">
                 {/* Top Row - Overview + Highlights */}
                 <div className="flex w-full flex-col gap-4 sm:flex-row">
                   {/* Overview Card */}
@@ -210,7 +197,7 @@ export default function Hero() {
                 </div>
 
                 {/* Bottom Row */}
-                <div className="flex flex-col gap-4 lg:absolute lg:-bottom-4 lg:w-full">
+                <div className="flex flex-col gap-3 lg:absolute lg:-bottom-6 lg:w-full">
                   {/* Download Button */}
                   <div className="flex justify-center">
                     <button
@@ -231,26 +218,27 @@ export default function Hero() {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="
-                          group relative flex flex-col items-center justify-center
-                          rounded-xl
-                          border border-slate-700/50
-                          bg-slate-800/50
-                          p-2 sm:p-3
-                          text-white
-                          backdrop-blur-xl
-                          overflow-visible
-                          transition-all duration-300
-                          hover:-translate-y-1
-                          hover:bg-slate-700/60
-                          hover:border-yellow-400
-                          hover:shadow-[0_0_20px_rgba(250,204,21,0.30)]
-                        "
+group relative flex flex-col items-center justify-center
+h-[95px]
+rounded-2xl
+border border-[#D8CCA3]/60
+bg-[#0f172a]/75
+backdrop-blur-xl
+p-2
+shadow-[0_0_12px_rgba(216,204,163,0.15)]
+overflow-hidden
+transition-all duration-300
+hover:-translate-y-1
+hover:border-[#D8CCA3]
+hover:bg-[#162338]/90
+hover:shadow-[0_0_25px_rgba(216,204,163,0.35)]
+"
                       >
                         {/* Tooltip - Hidden on mobile */}
                         <div
                           className="
                             pointer-events-none
-                            absolute -top-14 left-1/2
+                            absolute bottom-full mb-3 left-1/2
                             hidden w-48 -translate-x-1/2
                             rounded-lg
                             border border-yellow-400/30
@@ -270,18 +258,23 @@ export default function Hero() {
                           {item.desc}
                         </div>
 
-                        {/* Icon */}
-                        <div className="mb-1 text-xl transition-transform duration-300 group-hover:scale-110 sm:mb-2 sm:text-2xl">
-                          {item.icon}
+                        {/* Logo */}
+                        <div className="relative mb-2 h-7 w-12 sm:h-8 sm:w-14">
+                          <Image
+                            src={item.logo}
+                            alt={item.title}
+                            fill
+                            className="object-contain transition-transform duration-300 group-hover:scale-105"
+                          />
                         </div>
 
                         {/* Title */}
-                        <span className="text-center text-[8px] font-medium leading-tight sm:text-[10px]">
+                        <span className="text-center text-[8px] font-normal text-white leading-tight sm:text-[10px]">
                           {item.title}
                         </span>
 
                         {/* Bottom Glow Line */}
-                        <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-gradient-to-r from-yellow-400 to-orange-400 transition-all duration-300 group-hover:w-full" />
+                        <div className="absolute bottom-0 left-0 h-[2px] w-full bg-gradient-to-r from-[#D8CCA3] to-yellow-400" />
                       </a>
                     ))}
                   </div>
@@ -313,7 +306,10 @@ export default function Hero() {
               Fill the details below to download brochure.
             </p>
 
-            <form onSubmit={handleBrochureSubmit} className="space-y-3 sm:space-y-4">
+            <form
+              onSubmit={handleBrochureSubmit}
+              className="space-y-3 sm:space-y-4"
+            >
               <input
                 type="text"
                 placeholder="Full Name"
