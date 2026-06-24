@@ -1,6 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
 
+import {
+  FaLinkedinIn,
+  FaFacebookF,
+  FaInstagram,
+  FaYoutube,
+} from "react-icons/fa";
+
 export default function Footer() {
   return (
     <footer className="relative overflow-hidden bg-[#174d6d] text-white">
@@ -89,18 +96,36 @@ export default function Footer() {
           </div>
 
           {/* Event Details */}
-          <div>
-            <h3 className="mb-6 text-xl font-semibold">Event Details</h3>
+  {/* Legal */}
+<div>
+  <h3 className="mb-6 text-xl font-semibold">Legal</h3>
 
-            <ul className="space-y-4 text-slate-300">
-              <li>📅 October 2026</li>
-              <li>🎤 50+ Industry Speakers</li>
-              <li>🤝 5000+ Delegates</li>
-              <li>🌍 20+ Countries</li>
-              <li>⚡ Renewable Energy Summit</li>
-              <li>🏢 Industry Leaders & Investors</li>
-            </ul>
-          </div>
+  <ul className="space-y-4 text-slate-300">
+    <li>
+      <Link href="/privacy-policy" className="hover:text-orange-400">
+        Privacy Policy
+      </Link>
+    </li>
+
+    <li>
+      <Link href="/terms-and-conditions" className="hover:text-orange-400">
+        Terms & Conditions
+      </Link>
+    </li>
+
+    <li>
+      <Link href="/refund-policy" className="hover:text-orange-400">
+        Refund Policy
+      </Link>
+    </li>
+
+    <li>
+      <Link href="/faq" className="hover:text-orange-400">
+        FAQ
+      </Link>
+    </li>
+  </ul>
+</div>
 
           {/* Connect */}
           <div>

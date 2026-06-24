@@ -3,47 +3,72 @@
 import { motion } from "framer-motion";
 import FadeUp from "@/components/FadeUp";
 
+
 import CountUp from "react-countup";
 export default function AgendaPage() {
   const agenda = [
     {
       time: "09:00 AM",
+      type: "Networking",
+      speaker: "Event Team",
+      location: "Main Lobby",
       title: "Registration & Welcome Coffee",
       description:
         "Delegate registration, networking and welcome refreshments.",
     },
     {
       time: "10:00 AM",
+      type: "Keynote",
+      speaker: "Rajesh Sharma",
+      location: "Main Hall",
       title: "Opening Keynote",
       description:
         "Future of Renewable Energy and India's Clean Energy Vision.",
     },
     {
-      time: "11:30 AM",
-      title: "Green Hydrogen Session",
+      time: "10:00 AM",
+      type: "Keynote",
+      speaker: "Rajesh Sharma",
+      location: "Main Hall",
+      title: "Opening Keynote",
       description:
-        "Exploring hydrogen infrastructure and future opportunities.",
+        "Future of Renewable Energy and India's Clean Energy Vision.",
     },
     {
-      time: "01:00 PM",
-      title: "Networking Lunch",
-      description: "Connect with industry leaders, investors and policymakers.",
-    },
-    {
-      time: "02:30 PM",
-      title: "Panel Discussion",
+      time: "10:00 AM",
+      type: "Keynote",
+      speaker: "Rajesh Sharma",
+      location: "Main Hall",
+      title: "Opening Keynote",
       description:
-        "Investment opportunities in solar, wind and storage sectors.",
+        "Future of Renewable Energy and India's Clean Energy Vision.",
     },
     {
-      time: "04:00 PM",
-      title: "Innovation Showcase",
-      description: "Latest technologies and breakthrough renewable solutions.",
+      time: "10:00 AM",
+      type: "Keynote",
+      speaker: "Rajesh Sharma",
+      location: "Main Hall",
+      title: "Opening Keynote",
+      description:
+        "Future of Renewable Energy and India's Clean Energy Vision.",
     },
     {
-      time: "05:30 PM",
-      title: "Closing Remarks",
-      description: "Key takeaways and future roadmap discussion.",
+      time: "10:00 AM",
+      type: "Keynote",
+      speaker: "Rajesh Sharma",
+      location: "Main Hall",
+      title: "Opening Keynote",
+      description:
+        "Future of Renewable Energy and India's Clean Energy Vision.",
+    },
+    {
+      time: "10:00 AM",
+      type: "Keynote",
+      speaker: "Rajesh Sharma",
+      location: "Main Hall",
+      title: "Opening Keynote",
+      description:
+        "Future of Renewable Energy and India's Clean Energy Vision.",
     },
   ];
 
@@ -113,105 +138,225 @@ export default function AgendaPage() {
       </section>
 
       {/* Timeline */}
-      {/* Timeline */}
 
-<section className="relative -mt-16 pb-24 z-20">
-  <div className="mx-auto max-w-6xl px-6">
+      <section className="relative -mt-16 pb-24 z-20">
+        <div className="mx-auto max-w-6xl px-6">
+          {/* Timeline Container */}
 
-    {/* Timeline Container */}
+          <div className="rounded-[40px] bg-white p-10 shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
+            <FadeUp>
+              <div className="mb-16 text-center">
+                <span className="inline-flex rounded-full bg-orange-100 px-5 py-2 text-sm font-semibold text-orange-600">
+                  EVENT FLOW
+                </span>
 
-    <div className="rounded-[40px] bg-white p-10 shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
+                <h2 className="mt-5 text-4xl font-bold text-slate-900">
+                  Event Timeline
+                </h2>
 
-      <FadeUp>
-        <div className="mb-16 text-center">
+                <p className="mt-4 text-slate-600">
+                  A full day packed with insights, networking and innovation.
+                </p>
+              </div>
+            </FadeUp>
 
-          <span className="inline-flex rounded-full bg-orange-100 px-5 py-2 text-sm font-semibold text-orange-600">
-            EVENT FLOW
-          </span>
+            <div className="relative">
+              {/* Timeline Line */}
 
-          <h2 className="mt-5 text-4xl font-bold text-slate-900">
-            Event Timeline
-          </h2>
+              <div className="absolute left-6 top-0 h-full w-[3px] bg-gradient-to-b from-orange-500 via-orange-300 to-orange-100" />
 
-          <p className="mt-4 text-slate-600">
-            A full day packed with insights, networking and innovation.
-          </p>
+              {agenda.map((item, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 60 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{
+                    duration: 0.6,
+                    delay: index * 0.1,
+                  }}
+                  className="relative mb-8 pl-24"
+                >
+                  {/* Dot */}
 
-        </div>
-      </FadeUp>
+                  <div className="absolute left-0 top-6 flex h-12 w-12 items-center justify-center rounded-full border-4 border-orange-500 bg-white shadow-lg">
+                    <div className="h-3 w-3 rounded-full bg-orange-500" />
+                  </div>
 
-      <div className="relative">
+                  {/* Card */}
 
-        {/* Timeline Line */}
+ <motion.div
+  initial={{ opacity: 0, y: 80 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true, amount: 0.2 }}
+  transition={{
+    duration: 0.7,
+    delay: index * 0.1,
+  }}
+  whileHover={{
+    y: -10,
+  }}
+  className="
+    group
+    relative
+    overflow-hidden
+    rounded-[32px]
+    bg-gradient-to-br
+    from-[#174d6d]
+    via-[#1c5a7d]
+    to-[#246b94]
+    p-8
+    text-white
+    shadow-[0_20px_50px_rgba(15,23,42,0.15)]
+    transition-all
+    duration-500
+    hover:shadow-[0_25px_80px_rgba(249,115,22,0.25)]
+  "
+>
+  {/* Shine Effect */}
+  <div
+    className="
+      absolute
+      inset-0
+      bg-gradient-to-r
+      from-transparent
+      via-white/10
+      to-transparent
+      -translate-x-full
+      group-hover:translate-x-full
+      transition-all
+      duration-1000
+    "
+  />
 
-        <div className="absolute left-6 top-0 h-full w-[3px] bg-gradient-to-b from-orange-500 via-orange-300 to-orange-100" />
+  {/* Top Border */}
+  <div className="absolute left-0 top-0 h-1 w-full bg-gradient-to-r from-orange-500 via-orange-400 to-orange-300" />
 
-        {agenda.map((item, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 60 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{
-              duration: 0.6,
-              delay: index * 0.1,
-            }}
-            className="relative mb-8 pl-24"
-          >
+  {/* Content */}
+  <div className="relative z-10">
 
-            {/* Dot */}
+    {/* Time + Type */}
+    <div className="flex items-center justify-between flex-wrap gap-3">
 
-            <div className="absolute left-0 top-6 flex h-12 w-12 items-center justify-center rounded-full border-4 border-orange-500 bg-white shadow-lg">
+      <span
+        className="
+          rounded-full
+          bg-orange-500
+          px-4
+          py-2
+          text-sm
+          font-bold
+          text-white
+          shadow-lg
+        "
+      >
+        ⏰ {item.time}
+      </span>
 
-              <div className="h-3 w-3 rounded-full bg-orange-500" />
+      <span
+        className="
+          rounded-full
+          bg-white/10
+          backdrop-blur-xl
+          px-4
+          py-2
+          text-xs
+          font-semibold
+          uppercase
+          tracking-wider
+          text-white
+        "
+      >
+        {item.type}
+      </span>
 
-            </div>
+    </div>
 
-            {/* Card */}
+    {/* Title */}
+    <h3 className="mt-6 text-3xl font-bold leading-tight text-white">
+      {item.title}
+    </h3>
 
-            <motion.div
-              whileHover={{
-                y: -8,
-                scale: 1.02,
-              }}
-              className="
-                group
-                rounded-[28px]
-                border
-                border-slate-200
-                bg-white
-                p-8
-                shadow-sm
-                transition-all
-                duration-300
-                hover:border-orange-300
-                hover:shadow-[0_20px_50px_rgba(249,115,22,0.15)]
-              "
-            >
+    {/* Speaker */}
+    <div className="mt-6 flex items-center gap-4">
 
-              <span className="inline-flex rounded-full bg-orange-50 px-4 py-2 text-sm font-semibold text-orange-600">
-                {item.time}
-              </span>
+      <div
+        className="
+          flex
+          h-12
+          w-12
+          items-center
+          justify-center
+          rounded-full
+          bg-orange-500
+          text-lg
+          shadow-lg
+        "
+      >
+        🎤
+      </div>
 
-              <h3 className="mt-5 text-2xl font-bold text-slate-900">
-                {item.title}
-              </h3>
+      <div>
+        <p className="font-semibold text-white">
+          {item.speaker}
+        </p>
 
-              <p className="mt-3 leading-8 text-slate-600">
-                {item.description}
-              </p>
-
-            </motion.div>
-
-          </motion.div>
-        ))}
-
+        <p className="text-sm text-white/70">
+          Session Speaker
+        </p>
       </div>
 
     </div>
 
+    {/* Location */}
+    <div className="mt-4 flex items-center gap-2 text-white/80">
+      <span>📍</span>
+      <span>{item.location}</span>
+    </div>
+
+    {/* Description */}
+    <p className="mt-6 leading-8 text-white/75">
+      {item.description}
+    </p>
+
+    {/* Footer */}
+    <div className="mt-8 flex items-center justify-between border-t border-white/10 pt-5">
+
+      <span className="text-xs font-semibold tracking-[3px] text-white/50">
+        RE PAX INDIA 2026
+      </span>
+
+      <button
+        className="
+          rounded-full
+          bg-orange-500
+          px-4
+          py-2
+          text-sm
+          font-semibold
+          text-white
+          transition-all
+          duration-300
+          hover:bg-orange-400
+        "
+      >
+        View Session →
+      </button>
+
+    </div>
+
   </div>
-</section>
+</motion.div>
+
+
+
+
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Stats */}
 
@@ -277,7 +422,6 @@ export default function AgendaPage() {
       </section>
 
       {/* CTA */}
-    
 
       <section className="py-24 bg-slate-50">
         <div className="mx-auto max-w-6xl px-6">
@@ -347,7 +491,6 @@ export default function AgendaPage() {
           </div>
         </div>
       </section>
-      
     </main>
   );
 }

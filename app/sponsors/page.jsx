@@ -170,8 +170,7 @@ export default function SponsorsPage() {
         </div>
       </section>
 
-      {/* LOGO WALL */}
-      {/* Sponsors Section */}
+      {/* Sponsors Card Section */}
 
       <section className="py-24 bg-slate-50">
         <div className="mx-auto max-w-7xl px-6">

@@ -58,7 +58,6 @@ body {
   animation-play-state: paused;
 }
 
-
 /* for dot animated */
 
 @keyframes floatDot {
@@ -82,6 +81,67 @@ body {
   animation: floatDot 4s ease-in-out infinite;
 }
 
+/* for Swal */
+
+.swal2-timer-progress-bar {
+  background: linear-gradient(90deg, #22c55e, #84cc16, #22c55e) !important;
+  height: 4px !important;
+}
 
 
+.brochure-popup {
+  border-radius: 30px !important;
+  padding: 30px !important;
+}
+
+.brochure-title{
+  font-size: 72px !important;
+  font-weight: 700 !important;
+  line-height: 1.1 !important;
+  white-space: nowrap !important;
+  color: #174d6d !important;
+}
+
+.brochure-btn {
+  background: #0b1f3a !important;
+  color: #fff !important;
+  border: 1px solid rgba(255,255,255,0.1) !important;
+
+  border-radius: 14px !important;
+  padding: 14px 40px !important;
+  font-size: 20px !important;
+  font-weight: 600 !important;
+
+  box-shadow: 0 8px 25px rgba(11, 31, 58, 0.35) !important;
+  transition: all .3s ease !important;
+}
+
+.brochure-btn:hover {
+  background: #174d6d !important;
+  transform: translateY(-2px);
+}
+
+.swal2-close {
+  color: #94a3b8 !important;
+}
+
+
+
+.sponsor-slider {
+  animation: sponsorScroll 25s linear infinite;
+}
+
+.sponsor-slider:hover {
+  animation-play-state: paused;
+}
+
+@keyframes sponsorScroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+} 
 

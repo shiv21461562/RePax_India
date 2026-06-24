@@ -10,10 +10,68 @@ import {
   Globe,
 } from "lucide-react";
 import { motion } from "framer-motion";
+import Swal from "sweetalert2";
+
+import { useState } from "react";
+import { createContact } from "../services/EnquiriesApi";
 
 import { FaLinkedinIn, FaFacebookF, FaTwitter } from "react-icons/fa";
 
 export default function ContactPage() {
+  const [formData, setFormData] = useState({
+    full_name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
+  });
+
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await createContact(formData);
+
+      // console.log("API RESPONSE =>", response);
+
+      if (response.success) {
+        Swal.fire({
+          toast: true,
+          position: "top-end",
+          icon: "success",
+          title: "😊 Thanks! We'll get back to you soon",
+          showConfirmButton: false,
+          timer: 1500,
+          timerProgressBar: true,
+          background: "#ffffff",
+          color: "#0f172a",
+          iconColor: "#22c55e",
+          customClass: {
+            popup: "rounded-2xl shadow-xl",
+          },
+        });
+
+        setFormData({
+          full_name: "",
+          email: "",
+          phone: "",
+          subject: "",
+          message: "",
+        });
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <main className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-50 via-white to-orange-50">
       {/* Animated Background Elements */}
@@ -276,16 +334,22 @@ export default function ContactPage() {
                 Fill out the form and our team will get back to you shortly.
               </p>
 
-              <form className="mt-6 space-y-4">
+              <form onSubmit={handleSubmit} className="mt-6 space-y-4">
                 <div className="grid gap-4 md:grid-cols-2">
                   <input
                     type="text"
+                    name="full_name"
+                    value={formData.full_name}
+                    onChange={handleChange}
                     placeholder="Full Name"
                     className="w-full rounded-xl border border-slate-200 px-5 py-3 text-slate-700 outline-none transition-all focus:border-[#174d6d] focus:ring-4 focus:ring-[#174d6d]/10"
                   />
 
                   <input
                     type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
                     placeholder="Email Address"
                     className="w-full rounded-xl border border-slate-200 px-5 py-3 text-slate-700 outline-none transition-all focus:border-[#174d6d] focus:ring-4 focus:ring-[#174d6d]/10"
                   />
@@ -293,18 +357,27 @@ export default function ContactPage() {
 
                 <input
                   type="text"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
                   placeholder="Phone Number"
                   className="w-full rounded-xl border border-slate-200 px-5 py-3 text-slate-700 outline-none transition-all focus:border-[#174d6d] focus:ring-4 focus:ring-[#174d6d]/10"
                 />
 
                 <input
                   type="text"
+                  name="subject"
+                  value={formData.subject}
+                  onChange={handleChange}
                   placeholder="Subject"
                   className="w-full rounded-xl border border-slate-200 px-5 py-3 text-slate-700 outline-none transition-all focus:border-[#174d6d] focus:ring-4 focus:ring-[#174d6d]/10"
                 />
 
                 <textarea
                   rows={4}
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
                   placeholder="Tell us more about your inquiry..."
                   className="w-full rounded-xl border border-slate-200 px-5 py-3 text-slate-700 outline-none transition-all focus:border-[#174d6d] focus:ring-4 focus:ring-[#174d6d]/10"
                 />
@@ -450,10 +523,7 @@ export default function ContactPage() {
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.7914311117165!2d77.42705757550215!3d28.60603318528361!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cef6165728471%3A0xf027989e066991a4!2sGaur%20City%20Mall!5e0!3m2!1sen!2sin!4v1781527043962!5m2!1sen!2sin"
                 width="600"
                 height="450"
-                style="border:0;"
-                allowFullScreen=""
                 loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
