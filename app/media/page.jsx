@@ -186,39 +186,83 @@ export default function Page() {
       </button>
     </motion.div>
 
-    {/* Stats */}
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ delay: 1.2 }}
-      className="mt-20 grid grid-cols-2 gap-6 md:grid-cols-4"
+    {/*  Website Stats */}
+
+<motion.div
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 1.2 }}
+  className="mt-10 flex flex-wrap justify-center gap-4"
+>
+  {[
+    {
+      logo: "/logo/RM Logo golden.png",
+      title: "Renewable Mirror",
+      link: "https://www.renewablemirror.com/",
+    },
+    
+  
+    {
+      logo: "/logo/EM Logo Golden.png",
+      title: "Electrical Mirror",
+      link: "https://electricalmirror.net/",
+    },
+    {
+      logo: "/logo/CM-LOGO FINAL golden new.png",
+      title: "Construction Mirror",
+      link: "https://constructionmirror.com/",
+    },
+
+  ].map((item, i) => (
+    <a
+      key={i}
+      href={item.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="
+        group
+        w-[160px]
+        h-[140px]
+        rounded-[24px]
+        border border-white/10
+        bg-slate-900/90
+        backdrop-blur-xl
+        flex flex-col
+        items-center
+        justify-center
+        px-4
+        transition-all
+        duration-300
+        hover:-translate-y-1
+        hover:border-yellow-400/40
+        hover:shadow-[0_8px_30px_rgba(255,193,7,0.15)]
+        relative
+        overflow-hidden
+      "
     >
-      {[
-        { number: "150+", label: "Media Houses" },
-        { number: "50+", label: "Press Releases" },
-        { number: "100K+", label: "Global Reach" },
-        { number: "25+", label: "Partners" },
-      ].map((item, i) => (
-        <div
-          key={i}
-          className="
-          rounded-2xl
-          border
-          border-white/10
-          bg-white/5
-          p-6
-          backdrop-blur-xl
-        "
-        >
-          <h3 className="text-3xl font-bold text-orange-400">
-            {item.number}
-          </h3>
-          <p className="mt-2 text-sm text-slate-300">
-            {item.label}
-          </p>
-        </div>
-      ))}
-    </motion.div>
+      {/* Bottom Gold Line */}
+      <div className="absolute bottom-0 left-0 h-[3px] w-full bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-500 opacity-80" />
+
+      <img
+        src={item.logo}
+        alt={item.title}
+        className="h-12 w-auto object-contain"
+      />
+
+      <h3 className="mt-4 text-sm font-medium text-center text-white leading-tight">
+        {item.title}
+      </h3>
+    </a>
+  ))}
+</motion.div>
+
+
+
+
+
+
+
+
   </div>
 </motion.section>
 
@@ -811,24 +855,7 @@ export default function Page() {
       ))}
     </div>
 
-    <div className="mt-16 text-center">
-      <button
-        className="
-          rounded-full
-          bg-orange-500
-          px-10
-          py-4
-          text-lg
-          font-semibold
-          text-white
-          transition-all
-          duration-300
-          hover:bg-orange-600
-        "
-      >
-        Register As Media →
-      </button>
-    </div>
+ 
 
   </div>
 </section>

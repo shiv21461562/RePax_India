@@ -28,12 +28,6 @@ export default function EventVideo() {
     };
   }, []);
 
-  const stats = [
-    { number: "5000+", label: "Attendees" },
-    { number: "100+", label: "Industry Speakers" },
-    { number: "50+", label: "Exhibitors" },
-    { number: "3", label: "Event Days" },
-  ];
 
   return (
     <section className="relative py-28 overflow-hidden bg-gradient-to-b from-slate-950 via-slate-900 to-black">
@@ -88,7 +82,7 @@ export default function EventVideo() {
             {/* Bottom Badge */}
             <div className="absolute bottom-6 left-6 bg-black/50 backdrop-blur-xl border border-white/10 rounded-2xl px-5 py-3">
               <p className="text-white font-semibold">
-                RE-PAX India Summit 2026
+                RE-PAX India  Solar Summit & Awards 2026
               </p>
               <p className="text-sm text-slate-300">
                 Renewable Energy • Sustainability • Innovation
@@ -97,21 +91,6 @@ export default function EventVideo() {
           </div>
         </div>
 
-        {/* Stats */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
-          {stats.map((item, index) => (
-            <div
-              key={index}
-              className="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 text-center hover:border-green-500/40 hover:-translate-y-2 transition-all duration-300"
-            >
-              <h3 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
-                {item.number}
-              </h3>
-
-              <p className="mt-3 text-slate-300 font-medium">{item.label}</p>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );

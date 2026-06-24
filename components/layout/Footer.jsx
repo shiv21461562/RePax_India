@@ -6,7 +6,8 @@ import {
   FaFacebookF,
   FaInstagram,
   FaYoutube,
-} from "react-icons/fa";
+  FaXTwitter,
+} from "react-icons/fa6";
 
 export default function Footer() {
   return (
@@ -19,7 +20,7 @@ export default function Footer() {
           {/* Logo + About */}
           <div>
             <Image
-              src="/images/logo.png"
+              src="/logo/footerlogo.png"
               alt="RE PAX India"
               width={220}
               height={80}
@@ -36,13 +37,13 @@ export default function Footer() {
               <div className="flex items-start gap-3">
                 <span>📍</span>
                 <span>
-                  Gaur City mall space building 14th floor office 140130
+                  Gaur City mall space building 14th floor office 14130,14130A
                 </span>
               </div>
 
               <div className="flex items-start gap-3">
                 <span>📞</span>
-                <span>+91 9899072636</span>
+                <span>+91 9899072636,9818575520</span>
               </div>
 
               <div className="flex items-start gap-3">
@@ -139,20 +140,56 @@ export default function Footer() {
               <li>Media Collaborations</li>
             </ul>
 
+           
             {/* Social Icons */}
-            <div className="mt-8 flex gap-3">
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5 transition hover:bg-orange-500">
-                in
-              </div>
+<div className="mt-8 flex gap-3">
+  <a
+    href="https://www.linkedin.com/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5 transition hover:bg-orange-500"
+  >
+    <FaLinkedinIn size={18} />
+  </a>
 
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5 transition hover:bg-orange-500">
-                X
-              </div>
+  <a
+    href="https://www.facebook.com/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5 transition hover:bg-orange-500"
+  >
+    <FaFacebookF size={18} />
+  </a>
 
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5 transition hover:bg-orange-500">
-                ▶
-              </div>
-            </div>
+  <a
+    href="https://www.instagram.com/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5 transition hover:bg-orange-500"
+  >
+    <FaInstagram size={18} />
+  </a>
+
+  <a
+    href="https://www.youtube.com/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5 transition hover:bg-orange-500"
+  >
+    <FaYoutube size={18} />
+  </a>
+
+  <a
+  href="https://x.com/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5 transition hover:bg-orange-500"
+>
+  <FaXTwitter size={18} />
+</a>
+
+  
+</div>
           </div>
         </div>
 

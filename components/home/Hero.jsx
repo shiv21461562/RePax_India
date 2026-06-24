@@ -64,7 +64,7 @@ export default function Hero() {
 
   const websites = [
     {
-   logo: "/logo/RM Logo golden.png",
+      logo: "/logo/RM Logo golden.png",
       title: "Renewable Mirror",
       desc: "India's leading renewable energy news & insights platform",
       link: "https://www.renewablemirror.com/",
@@ -76,13 +76,13 @@ export default function Hero() {
       link: "https://www.powerpaxindia.com/",
     },
     {
-     logo: "/logo/EM Logo Golden.png",
+      logo: "/logo/EM Logo Golden.png",
       title: "Electrical Mirror",
       desc: "Electrical industry magazine and market intelligence",
       link: "https://electricalmirror.net/",
     },
     {
-     logo: "/logo/CM-LOGO FINAL golden new.png",
+      logo: "/logo/CM-LOGO FINAL golden new.png",
       title: "Construction Mirror",
       desc: "Construction, infrastructure and EPC industry insights",
       link: "https://constructionmirror.com/",
@@ -143,41 +143,46 @@ export default function Hero() {
               <div className="relative flex flex-col gap-4 pt-8 lg:pt-12 lg:h-[600px] lg:justify-between">
                 {/* Top Row - Overview + Highlights */}
                 <div className="flex w-full flex-col gap-4 sm:flex-row">
-                  {/* Overview Card */}
-                  <div className="w-full rounded-3xl border border-white/10 bg-slate-900/80 p-4 backdrop-blur-xl sm:w-[45%] sm:p-5 lg:p-6">
-                    <h4 className="text-xs text-slate-400 sm:text-sm">
-                      REPAX OVERVIEW
-                    </h4>
+                  {/* REPAX OVERVIEW */}
 
-                    <div className="mt-3 grid grid-cols-3 gap-2 sm:gap-3">
-                      <div className="rounded-2xl bg-white/5 p-2 text-center sm:p-3">
-                        <h3 className="text-lg font-bold text-cyan-400 sm:text-xl lg:text-2xl">
-                          200+
-                        </h3>
-                        <p className="text-[10px] text-slate-400 sm:text-xs">
-                          Delegates
-                        </p>
-                      </div>
 
-                      <div className="rounded-2xl bg-white/5 p-2 text-center sm:p-3">
-                        <h3 className="text-lg font-bold text-green-400 sm:text-xl lg:text-2xl">
-                          20+
-                        </h3>
-                        <p className="text-[10px] text-slate-400 sm:text-xs">
-                          Speakers
-                        </p>
-                      </div>
+                <div className="w-full rounded-3xl border border-white/10 bg-slate-900/80 p-4 backdrop-blur-xl sm:w-[45%] sm:p-5 lg:p-6">
+  <h4 className="text-xs text-slate-400 sm:text-sm">
+    REPAX OVERVIEW
+  </h4>
 
-                      <div className="rounded-2xl bg-white/5 p-2 text-center sm:p-3">
-                        <h3 className="text-lg font-bold text-orange-400 sm:text-xl lg:text-2xl">
-                          10+
-                        </h3>
-                        <p className="text-[10px] text-slate-400 sm:text-xs">
-                          Sponsors
-                        </p>
-                      </div>
-                    </div>
-                  </div>
+  <div className="mt-3 grid grid-cols-2 gap-2 sm:gap-3">
+    <div className="rounded-2xl bg-white/5 p-2 text-center sm:p-3">
+      <h3 className="text-lg font-bold text-cyan-400 sm:text-xl lg:text-2xl">
+        200+
+      </h3>
+      <p className="text-[10px] text-slate-400 sm:text-xs">
+        Delegates
+      </p>
+    </div>
+
+    <div className="rounded-2xl bg-white/5 p-2 text-center sm:p-3">
+      <h3 className="text-lg font-bold text-green-400 sm:text-xl lg:text-2xl">
+        20+
+      </h3>
+      <p className="text-[10px] text-slate-400 sm:text-xs">
+        Speakers
+      </p>
+    </div>
+
+    <div className="rounded-2xl bg-white/5 p-2 text-center sm:p-3">
+      <h3 className="text-lg font-bold text-orange-400 sm:text-xl lg:text-2xl">
+        10+
+      </h3>
+      <p className="text-[10px] text-slate-400 sm:text-xs">
+        Sponsors
+      </p>
+    </div>
+  </div>
+</div>
+
+
+
 
                   {/* Event Highlights */}
                   <div className="w-full rounded-3xl border border-white/10 bg-slate-900/80 p-4 backdrop-blur-xl sm:w-[55%] sm:p-5 lg:p-6">
@@ -194,6 +199,9 @@ export default function Hero() {
                       <div>• Investment, Finance & Growth</div>
                     </div>
                   </div>
+
+
+                  
                 </div>
 
                 {/* Bottom Row */}
@@ -280,6 +288,11 @@ hover:shadow-[0_0_25px_rgba(216,204,163,0.35)]
                   </div>
                 </div>
               </div>
+
+
+
+
+
             </div>
           </div>
         </div>

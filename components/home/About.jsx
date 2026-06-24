@@ -51,7 +51,7 @@ export default function About() {
             <div className="grid grid-cols-2 gap-5">
               {/* Card 1 */}
               <div className="group bg-white rounded-3xl p-7 border border-transparent hover:border-orange-400 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(255,138,0,0.20)] transition-all duration-300">
-                <h3 className="text-4xl font-bold text-[#0B3A63]">10+</h3>
+                <h3 className="text-4xl font-bold text-[#0B3A63]">7+</h3>
                 <p className="mt-2 text-slate-600">
                   Years of Conference Excellence
                 </p>
@@ -59,7 +59,7 @@ export default function About() {
 
               {/* Card 2 */}
               <div className="group bg-orange-50 rounded-3xl p-7 border border-transparent hover:border-orange-400 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(255,138,0,0.20)] transition-all duration-300">
-                <h3 className="text-4xl font-bold text-orange-500">120+</h3>
+                <h3 className="text-4xl font-bold text-orange-500">?</h3>
                 <p className="mt-2 text-slate-600">
                   International Speakers
                 </p>
@@ -67,7 +67,7 @@ export default function About() {
 
               {/* Card 3 */}
               <div className="group bg-[#FFF7ED] rounded-3xl p-7 border border-transparent hover:border-orange-400 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(255,138,0,0.20)] transition-all duration-300">
-                <h3 className="text-4xl font-bold text-orange-500">50+</h3>
+                <h3 className="text-4xl font-bold text-orange-500">?</h3>
                 <p className="mt-2 text-slate-600">
                   Participating Countries
                 </p>
@@ -75,7 +75,7 @@ export default function About() {
 
               {/* Card 4 */}
               <div className="group bg-white rounded-3xl p-7 border border-transparent hover:border-orange-400 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(255,138,0,0.20)] transition-all duration-300">
-                <h3 className="text-4xl font-bold text-[#0B3A63]">5000+</h3>
+                <h3 className="text-4xl font-bold text-[#0B3A63]">?</h3>
                 <p className="mt-2 text-slate-600">
                   Global Attendees
                 </p>

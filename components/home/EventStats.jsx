@@ -5,11 +5,11 @@ import CountUp from "react-countup";
 
 const stats = [
   {
-    number: 5000,
+    number: 200,
     label: "Attendees",
   },
   {
-    number: 120,
+    number: 20,
     label: "Expert Speakers",
   },
   {
