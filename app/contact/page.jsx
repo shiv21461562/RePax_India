@@ -180,19 +180,19 @@ export default function ContactPage() {
             className="mt-16 grid gap-5 md:grid-cols-3"
           >
             <div className="rounded-[28px] border border-white/10 bg-[#0d203b]/70 p-8 backdrop-blur-xl">
-              <h3 className="text-5xl font-bold text-orange-400">24h</h3>
+              <h3 className="text-5xl font-bold text-orange-400">24/7</h3>
 
               <p className="mt-2 text-slate-300">Response Time</p>
             </div>
 
             <div className="rounded-[28px] border border-white/10 bg-[#0d203b]/70 p-8 backdrop-blur-xl">
-              <h3 className="text-5xl font-bold text-cyan-400">5000+</h3>
+              <h3 className="text-5xl font-bold text-cyan-400">500+</h3>
 
               <p className="mt-2 text-slate-300">Event Attendees</p>
             </div>
 
             <div className="rounded-[28px] border border-white/10 bg-[#0d203b]/70 p-8 backdrop-blur-xl">
-              <h3 className="text-5xl font-bold text-green-400">100+</h3>
+              <h3 className="text-5xl font-bold text-green-400">50+</h3>
 
               <p className="mt-2 text-slate-300">Industry Partners</p>
             </div>

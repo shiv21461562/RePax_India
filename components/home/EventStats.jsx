@@ -12,13 +12,10 @@ const stats = [
     number: 20,
     label: "Expert Speakers",
   },
+
   {
-    number: 50,
-    label: "Countries",
-  },
-  {
-    number: 30,
-    label: "Sessions",
+    number: 2,
+    label: "Sessions+Awards",
   },
 ];
 
@@ -49,68 +46,58 @@ export default function EventStats() {
         </motion.div>
 
         {/* Stats */}
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-          {stats.map((item, index) => (
-            <motion.div
-              key={index}
-              initial={{
-                opacity: 0,
-                y: 80,
-                scale: 0.9,
-              }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-                scale: 1,
-              }}
-              viewport={{
-                once: true,
-                amount: 0.3,
-              }}
-              transition={{
-                duration: 0.8,
-                delay: index * 0.15,
-              }}
-              className="
-                group
-                relative
-                overflow-hidden
-                rounded-3xl
-                bg-gradient-to-br
-                from-[#0B3A63]
-                to-[#114D7E]
-                p-8
-                text-center
-                hover:-translate-y-3
-                hover:shadow-[0_25px_60px_rgba(11,58,99,0.25)]
-                transition-all
-                duration-500
-              "
-            >
-              {/* Shine Effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+       {/* Stats */}
+<div className="mx-auto grid max-w-5xl gap-8 md:grid-cols-2 lg:grid-cols-3">
+  {stats.map((item, index) => (
+    <motion.div
+      key={index}
+      initial={{ opacity: 0, y: 80, scale: 0.9 }}
+      whileInView={{ opacity: 1, y: 0, scale: 1 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{
+        duration: 0.8,
+        delay: index * 0.15,
+      }}
+      className="
+        group
+        relative
+        overflow-hidden
+        rounded-3xl
+        bg-gradient-to-br
+        from-[#0B3A63]
+        to-[#114D7E]
+        p-10
+        text-center
+        hover:-translate-y-3
+        hover:shadow-[0_25px_60px_rgba(11,58,99,0.25)]
+        transition-all
+        duration-500
+      "
+    >
+      {/* Shine Effect */}
+      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
 
-              <div className="relative z-10">
-                <h3 className="text-5xl md:text-6xl font-extrabold text-white">
-                  <CountUp
-                    end={item.number}
-                    duration={3}
-                    separator=","
-                    enableScrollSpy
-                    scrollSpyOnce
-                  />
-                  +
-                </h3>
+      <div className="relative z-10">
+        <h3 className="text-5xl lg:text-6xl font-extrabold text-white">
+          <CountUp
+            end={item.number}
+            duration={3}
+            separator=","
+            enableScrollSpy
+            scrollSpyOnce
+          />
+          +
+        </h3>
 
-                <div className="mx-auto mt-5 mb-4 h-1 w-12 rounded-full bg-orange-400 group-hover:w-20 transition-all duration-500" />
+        <div className="mx-auto mt-5 mb-4 h-1 w-14 rounded-full bg-orange-400 group-hover:w-24 transition-all duration-500" />
 
-                <p className="text-slate-200 font-medium text-lg">
-                  {item.label}
-                </p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+        <p className="text-lg font-medium text-slate-200">
+          {item.label}
+        </p>
+      </div>
+    </motion.div>
+  ))}
+</div>
 
         {/* Bottom Text */}
         <motion.div

@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { getSponsors } from "../services/SponsorApi";
+import Link from "next/link";
 
 export default function SponsorsPage() {
   const [sponsors, setSponsors] = useState([]);
@@ -628,24 +629,27 @@ export default function SponsorsPage() {
                 policymakers, innovators and renewable energy leaders.
               </p>
 
-              <button
-                className="
-            mt-10
-            rounded-xl
-            bg-orange-500
-            px-8
-            py-4
-            font-semibold
-            text-white
-            shadow-[0_10px_30px_rgba(249,115,22,0.35)]
-            transition-all
-            duration-300
-            hover:-translate-y-1
-            hover:scale-105
-          "
-              >
-                Partner With Us →
-              </button>
+         <Link href="/contact">
+  <button
+    className="
+      mt-10
+      rounded-xl
+      bg-orange-500
+      px-8
+      py-4
+      font-semibold
+      text-white
+      shadow-[0_10px_30px_rgba(249,115,22,0.35)]
+      transition-all
+      duration-300
+      hover:-translate-y-1
+      hover:scale-105
+      cursor-pointer
+    "
+  >
+    Partner With Us 
+  </button>
+</Link>
             </div>
           </div>
         </div>

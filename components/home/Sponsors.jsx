@@ -1,14 +1,40 @@
 "use client";
 
+import Image from "next/image";
+
 const sponsors = [
-  { name: "Microsoft" },
-  { name: "Google" },
-  { name: "Amazon" },
-  { name: "Tesla" },
-  { name: "Siemens" },
-  { name: "IBM" },
-  { name: "Adobe" },
-  { name: "Oracle" },
+  {
+    name: "Microsoft",
+    logo: "/images/sponsors/microshoft.png",
+  },
+  {
+    name: "Google",
+    logo: "/images/sponsors/google.png",
+  },
+  {
+    name: "Amazon",
+    logo: "/images/sponsors/amazon.png",
+  },
+  {
+    name: "Tesla",
+    logo: "/images/sponsors/tesla.png",
+  },
+  {
+    name: "Siemens",
+    logo: "/images/sponsors/siemens.png",
+  },
+  {
+    name: "IBM",
+    logo: "/images/sponsors/ibm.png",
+  },
+  {
+    name: "Adobe",
+    logo: "/images/sponsors/Adobe.png",
+  },
+  {
+    name: "Oracle",
+    logo: "/images/sponsors/oracle.png",
+  },
 ];
 
 export default function Sponsors() {
@@ -34,7 +60,7 @@ export default function Sponsors() {
         </div>
       </div>
 
-      {/* Slider */}
+      {/* Sponsors Slider */}
       <div className="relative">
         <div className="sponsor-slider flex gap-6 w-max">
           {items.map((sponsor, index) => (
@@ -42,14 +68,20 @@ export default function Sponsors() {
               key={index}
               className="group flex items-center justify-center min-w-[220px] h-[120px] rounded-3xl border border-slate-200 bg-white hover:border-orange-400 hover:shadow-xl transition-all duration-300"
             >
-              <div className="text-center">
-                <div className="w-14 h-14 mx-auto mb-3 rounded-full bg-[#0B3A63] text-white flex items-center justify-center font-bold text-lg group-hover:bg-orange-500 transition-all">
-                  {sponsor.name.charAt(0)}
+              <div className="text-center px-4">
+                {/* Logo */}
+                <div className="flex items-center justify-center h-16 mb-3">
+                  <Image
+                    src={sponsor.logo}
+                    alt={sponsor.name}
+                    width={120}
+                    height={60}
+                    className="object-contain max-h-12 w-auto transition-transform duration-300 group-hover:scale-110"
+                  />
                 </div>
 
-                <h3 className="font-semibold text-slate-900">
-                  {sponsor.name}
-                </h3>
+                {/* Company Name */}
+                <h3 className="font-semibold text-slate-900">{sponsor.name}</h3>
               </div>
             </div>
           ))}

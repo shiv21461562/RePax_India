@@ -3,74 +3,31 @@
 import { motion } from "framer-motion";
 import FadeUp from "@/components/FadeUp";
 
+import { useEffect, useState } from "react";
+import { getAgendas } from "../services/AgendaApi";
+
+import Link from "next/link";
 
 import CountUp from "react-countup";
 export default function AgendaPage() {
-  const agenda = [
-    {
-      time: "09:00 AM",
-      type: "Networking",
-      speaker: "Event Team",
-      location: "Main Lobby",
-      title: "Registration & Welcome Coffee",
-      description:
-        "Delegate registration, networking and welcome refreshments.",
-    },
-    {
-      time: "10:00 AM",
-      type: "Keynote",
-      speaker: "Rajesh Sharma",
-      location: "Main Hall",
-      title: "Opening Keynote",
-      description:
-        "Future of Renewable Energy and India's Clean Energy Vision.",
-    },
-    {
-      time: "10:00 AM",
-      type: "Keynote",
-      speaker: "Rajesh Sharma",
-      location: "Main Hall",
-      title: "Opening Keynote",
-      description:
-        "Future of Renewable Energy and India's Clean Energy Vision.",
-    },
-    {
-      time: "10:00 AM",
-      type: "Keynote",
-      speaker: "Rajesh Sharma",
-      location: "Main Hall",
-      title: "Opening Keynote",
-      description:
-        "Future of Renewable Energy and India's Clean Energy Vision.",
-    },
-    {
-      time: "10:00 AM",
-      type: "Keynote",
-      speaker: "Rajesh Sharma",
-      location: "Main Hall",
-      title: "Opening Keynote",
-      description:
-        "Future of Renewable Energy and India's Clean Energy Vision.",
-    },
-    {
-      time: "10:00 AM",
-      type: "Keynote",
-      speaker: "Rajesh Sharma",
-      location: "Main Hall",
-      title: "Opening Keynote",
-      description:
-        "Future of Renewable Energy and India's Clean Energy Vision.",
-    },
-    {
-      time: "10:00 AM",
-      type: "Keynote",
-      speaker: "Rajesh Sharma",
-      location: "Main Hall",
-      title: "Opening Keynote",
-      description:
-        "Future of Renewable Energy and India's Clean Energy Vision.",
-    },
-  ];
+  const [agenda, setAgenda] = useState([]);
+
+  const fetchAgenda = async () => {
+    try {
+      const response = await getAgendas();
+
+      if (response.success) {
+        setAgenda(response.data);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  // call
+  useEffect(() => {
+    fetchAgenda();
+  }, []);
 
   return (
     <main className="bg-gradient-to-br from-white via-slate-50 to-orange-50 text-slate-900 overflow-hidden">
@@ -185,18 +142,18 @@ export default function AgendaPage() {
 
                   {/* Card */}
 
- <motion.div
-  initial={{ opacity: 0, y: 80 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: true, amount: 0.2 }}
-  transition={{
-    duration: 0.7,
-    delay: index * 0.1,
-  }}
-  whileHover={{
-    y: -10,
-  }}
-  className="
+                  <motion.div
+                    initial={{ opacity: 0, y: 80 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.2 }}
+                    transition={{
+                      duration: 0.7,
+                      delay: index * 0.1,
+                    }}
+                    whileHover={{
+                      y: -10,
+                    }}
+                    className="
     group
     relative
     overflow-hidden
@@ -212,10 +169,10 @@ export default function AgendaPage() {
     duration-500
     hover:shadow-[0_25px_80px_rgba(249,115,22,0.25)]
   "
->
-  {/* Shine Effect */}
-  <div
-    className="
+                  >
+                    {/* Shine Effect */}
+                    <div
+                      className="
       absolute
       inset-0
       bg-gradient-to-r
@@ -227,19 +184,17 @@ export default function AgendaPage() {
       transition-all
       duration-1000
     "
-  />
+                    />
 
-  {/* Top Border */}
-  <div className="absolute left-0 top-0 h-1 w-full bg-gradient-to-r from-orange-500 via-orange-400 to-orange-300" />
+                    {/* Top Border */}
+                    <div className="absolute left-0 top-0 h-1 w-full bg-gradient-to-r from-orange-500 via-orange-400 to-orange-300" />
 
-  {/* Content */}
-  <div className="relative z-10">
-
-    {/* Time + Type */}
-    <div className="flex items-center justify-between flex-wrap gap-3">
-
-      <span
-        className="
+                    {/* Content */}
+                    <div className="relative z-10">
+                      {/* Time + Type */}
+                      <div className="flex items-center justify-between flex-wrap gap-3">
+                        <span
+                          className="
           rounded-full
           bg-orange-500
           px-4
@@ -249,12 +204,12 @@ export default function AgendaPage() {
           text-white
           shadow-lg
         "
-      >
-        ⏰ {item.time}
-      </span>
+                        >
+                          ⏰ {item.time}
+                        </span>
 
-      <span
-        className="
+                        <span
+                          className="
           rounded-full
           bg-white/10
           backdrop-blur-xl
@@ -266,22 +221,20 @@ export default function AgendaPage() {
           tracking-wider
           text-white
         "
-      >
-        {item.type}
-      </span>
+                        >
+                          {item.type}
+                        </span>
+                      </div>
 
-    </div>
+                      {/* Title */}
+                      <h3 className="mt-6 text-3xl font-bold leading-tight text-white">
+                        {item.title}
+                      </h3>
 
-    {/* Title */}
-    <h3 className="mt-6 text-3xl font-bold leading-tight text-white">
-      {item.title}
-    </h3>
-
-    {/* Speaker */}
-    <div className="mt-6 flex items-center gap-4">
-
-      <div
-        className="
+                      {/* Speaker */}
+                      <div className="mt-6 flex items-center gap-4">
+                        <div
+                          className="
           flex
           h-12
           w-12
@@ -292,42 +245,40 @@ export default function AgendaPage() {
           text-lg
           shadow-lg
         "
-      >
-        🎤
-      </div>
+                        >
+                          🎤
+                        </div>  
 
-      <div>
-        <p className="font-semibold text-white">
-          {item.speaker}
-        </p>
+                        <div>
+                          <p className="font-semibold text-white">
+                            {item.speaker_name}
+                          </p>
 
-        <p className="text-sm text-white/70">
-          Session Speaker
-        </p>
-      </div>
+                          <p className="text-sm text-white/70">
+                            Session Speaker
+                          </p>
+                        </div>
+                      </div>
 
-    </div>
+                      {/* Location */}
+                      <div className="mt-4 flex items-center gap-2 text-white/80">
+                        <span>📍</span>
+                        <span>{item.location}</span>
+                      </div>
 
-    {/* Location */}
-    <div className="mt-4 flex items-center gap-2 text-white/80">
-      <span>📍</span>
-      <span>{item.location}</span>
-    </div>
+                      {/* Description */}
+                      <p className="mt-6 leading-8 text-white/75">
+                        {item.description}
+                      </p>
 
-    {/* Description */}
-    <p className="mt-6 leading-8 text-white/75">
-      {item.description}
-    </p>
+                      {/* Footer */}
+                      <div className="mt-8 flex items-center justify-between border-t border-white/10 pt-5">
+                        <span className="text-xs font-semibold tracking-[3px] text-white/50">
+                          RE PAX INDIA 2026
+                        </span>
 
-    {/* Footer */}
-    <div className="mt-8 flex items-center justify-between border-t border-white/10 pt-5">
-
-      <span className="text-xs font-semibold tracking-[3px] text-white/50">
-        RE PAX INDIA 2026
-      </span>
-
-      <button
-        className="
+                        <button
+                          className="
           rounded-full
           bg-orange-500
           px-4
@@ -339,18 +290,12 @@ export default function AgendaPage() {
           duration-300
           hover:bg-orange-400
         "
-      >
-        View Session →
-      </button>
-
-    </div>
-
-  </div>
-</motion.div>
-
-
-
-
+                        >
+                          View Session →
+                        </button>
+                      </div>
+                    </div>
+                  </motion.div>
                 </motion.div>
               ))}
             </div>
@@ -438,9 +383,9 @@ export default function AgendaPage() {
               className="absolute inset-0 opacity-[0.05]"
               style={{
                 backgroundImage: `
-            linear-gradient(rgba(255,255,255,.15) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(255,255,255,.15) 1px, transparent 1px)
-          `,
+              linear-gradient(rgba(255,255,255,.15) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(255,255,255,.15) 1px, transparent 1px)
+            `,
                 backgroundSize: "60px 60px",
               }}
             />
@@ -461,18 +406,20 @@ export default function AgendaPage() {
               </p>
 
               <div className="mt-10 flex flex-wrap justify-center gap-4">
-                <motion.button
-                  whileHover={{
-                    scale: 1.05,
-                    y: -2,
-                  }}
-                  whileTap={{
-                    scale: 0.95,
-                  }}
-                  className="rounded-xl bg-orange-500 px-8 py-4 font-semibold text-white shadow-lg transition-all"
-                >
-                  Contact →
-                </motion.button>
+                <Link href="/contact">
+                  <motion.button
+                    whileHover={{
+                      scale: 1.05,
+                      y: -2,
+                    }}
+                    whileTap={{
+                      scale: 0.95,
+                    }}
+                    className="rounded-xl bg-orange-500 px-8 py-4 font-semibold text-white shadow-lg transition-all hover:bg-orange-600"
+                  >
+                    Contact
+                  </motion.button>
+                </Link>
 
                 <motion.button
                   whileHover={{

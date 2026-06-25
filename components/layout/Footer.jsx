@@ -52,6 +52,7 @@ export default function Footer() {
               </div>
             </div>
           </div>
+          
 
           {/* Navigation */}
           <div>
@@ -96,37 +97,42 @@ export default function Footer() {
             </ul>
           </div>
 
+
           {/* Event Details */}
-  {/* Legal */}
-<div>
-  <h3 className="mb-6 text-xl font-semibold">Legal</h3>
+          {/* Legal */}
+          <div>
+            <h3 className="mb-6 text-xl font-semibold">Legal</h3>
 
-  <ul className="space-y-4 text-slate-300">
-    <li>
-      <Link href="/privacy-policy" className="hover:text-orange-400">
-        Privacy Policy
-      </Link>
-    </li>
+            <ul className="space-y-4 text-slate-300">
+              <li>
+                <Link href="/privacy-policy" className="hover:text-orange-400">
+                  Privacy Policy
+                </Link>
+              </li>
 
-    <li>
-      <Link href="/terms-and-conditions" className="hover:text-orange-400">
-        Terms & Conditions
-      </Link>
-    </li>
+              <li>
+                <Link
+                  href="/terms-and-conditions"
+                  className="hover:text-orange-400"
+                >
+                  Terms & Conditions
+                </Link>
+              </li>
 
-    <li>
-      <Link href="/refund-policy" className="hover:text-orange-400">
-        Refund Policy
-      </Link>
-    </li>
+              <li>
+                <Link href="/refund-policy" className="hover:text-orange-400">
+                  Refund Policy
+                </Link>
+              </li>
 
-    <li>
-      <Link href="/faq" className="hover:text-orange-400">
-        FAQ
-      </Link>
-    </li>
-  </ul>
-</div>
+              <li>
+                <Link href="/faq" className="hover:text-orange-400">
+                  FAQ
+                </Link>
+              </li>
+            </ul>
+          </div>
+
 
           {/* Connect */}
           <div>
@@ -140,57 +146,57 @@ export default function Footer() {
               <li>Media Collaborations</li>
             </ul>
 
-           
             {/* Social Icons */}
-<div className="mt-8 flex gap-3">
-  <a
-    href="https://www.linkedin.com/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5 transition hover:bg-orange-500"
-  >
-    <FaLinkedinIn size={18} />
-  </a>
+            <div className="mt-8 flex gap-3">
+              <a
+                href="https://www.linkedin.com/company/renewablemirror/posts/?feedView=all"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5 transition hover:bg-orange-500"
+              >
+                <FaLinkedinIn size={18} />
+              </a>
 
-  <a
-    href="https://www.facebook.com/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5 transition hover:bg-orange-500"
-  >
-    <FaFacebookF size={18} />
-  </a>
+              <a
+                href="https://www.facebook.com/RenewableMirrorMagazine/posts/pfbid0V9ptaRoU1o9aBHz3rJn2Cex36yecEV1wToJgLtK8TQH7sqPGpXLJT3xVMbp8NEJcl"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5 transition hover:bg-orange-500"
+              >
+                <FaFacebookF size={18} />
+              </a>
 
-  <a
-    href="https://www.instagram.com/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5 transition hover:bg-orange-500"
-  >
-    <FaInstagram size={18} />
-  </a>
+              <a
+                href="https://www.instagram.com/p/DZ9wGrun8lY/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ=="
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5 transition hover:bg-orange-500"
+              >
+                <FaInstagram size={18} />
+              </a>
 
-  <a
-    href="https://www.youtube.com/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5 transition hover:bg-orange-500"
-  >
-    <FaYoutube size={18} />
-  </a>
+              <a
+                href="https://www.youtube.com/results?search_query=renewablemirror.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5 transition hover:bg-orange-500"
+              >
+                <FaYoutube size={18} />
+              </a>
 
-  <a
-  href="https://x.com/"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5 transition hover:bg-orange-500"
->
-  <FaXTwitter size={18} />
-</a>
+              <a
+                href="https://x.com/renewablemirror/status/2069725495361691844?s=20"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5 transition hover:bg-orange-500"
+              >
+                <FaXTwitter size={18} />
+              </a>
+            </div>
 
-  
-</div>
           </div>
+
+
         </div>
 
         {/* Bottom Bar */}

@@ -27,25 +27,7 @@ const themes = [
     icon: Globe2,
     description:
       "Global initiatives and policies driving climate resilience and net-zero goals.",
-  },
-  {
-    title: "Green Technology",
-    icon: Cpu,
-    description:
-      "Innovative technologies transforming sustainability and environmental impact.",
-  },
-  {
-    title: "ESG & Sustainability",
-    icon: LineChart,
-    description:
-      "Best practices for integrating ESG principles into business operations.",
-  },
-  {
-    title: "Smart Infrastructure",
-    icon: Building2,
-    description:
-      "Building sustainable cities through intelligent infrastructure solutions.",
-  },
+  }
 ];
 
 export default function ConferenceThemes() {

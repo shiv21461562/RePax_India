@@ -854,10 +854,7 @@ export default function Page() {
               industry leaders and innovators.
             </p>
 
-            <button className="mt-10 inline-flex items-center gap-2 rounded-full bg-orange-500 px-8 py-4 font-semibold text-white hover:bg-orange-600">
-              Submit Nomination
-              <ArrowRight size={18} />
-            </button>
+          
           </div>
         </div>
       </section>

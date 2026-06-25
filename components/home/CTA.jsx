@@ -4,6 +4,7 @@ import { FiArrowRight, FiCalendar, FiUsers } from "react-icons/fi";
 import { motion } from "framer-motion";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
+import Link from "next/link";
 
 export default function CTA() {
   const { ref, inView } = useInView({
@@ -47,7 +48,6 @@ export default function CTA() {
             className="text-4xl md:text-6xl font-bold leading-tight text-slate-900"
           >
             Ready to Join
-
             <span className="block mt-3 text-[#0B3A63]">
               The Future of Sustainability?
             </span>
@@ -60,18 +60,17 @@ export default function CTA() {
             transition={{ delay: 0.4 }}
             className="mt-6 max-w-3xl mx-auto text-lg md:text-xl text-slate-600 leading-relaxed"
           >
-            Connect with global leaders, investors, innovators,
-            startups, policymakers and sustainability experts
-            at India's premier conference and expo.
+            Connect with global leaders, investors, innovators, startups,
+            policymakers and sustainability experts at India's premier
+            conference and expo.
           </motion.p>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mt-14">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-14 max-w-5xl mx-auto">
             {[
-              { end: 5000, label: "Attendees", suffix: "+" },
-              { end: 150, label: "Speakers", suffix: "+" },
-              { end: 80, label: "Sponsors", suffix: "+" },
-              { end: 40, label: "Countries", suffix: "+" },
+              { end: 200, label: "Attendees", suffix: "+" },
+              { end: 20, label: "Speakers", suffix: "+" },
+              { end: 10, label: "Sponsors", suffix: "+" },
             ].map((item, index) => (
               <motion.div
                 key={index}
@@ -123,41 +122,7 @@ export default function CTA() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8 }}
             className="flex flex-col sm:flex-row justify-center gap-4 mt-14"
-          >
-            <button
-              className="
-                inline-flex items-center justify-center gap-2
-                px-8 py-4 rounded-full
-                bg-orange-500
-                text-white
-                font-semibold
-                hover:bg-orange-600
-                hover:scale-105
-                shadow-lg
-                transition-all duration-300
-              "
-            >
-              Register Now
-              <FiArrowRight />
-            </button>
-
-            <button
-              className="
-                inline-flex items-center justify-center gap-2
-                px-8 py-4 rounded-full
-                border border-slate-300
-                bg-white
-                text-slate-800
-                font-semibold
-                hover:border-[#0B3A63]
-                hover:text-[#0B3A63]
-                transition-all duration-300
-              "
-            >
-              <FiUsers />
-              Become a Sponsor
-            </button>
-          </motion.div>
+          ></motion.div>
         </div>
 
         {/* Divider */}

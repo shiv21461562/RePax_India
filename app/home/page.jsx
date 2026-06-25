@@ -3,12 +3,12 @@ import EventStats from "@/components/home/EventStats";
 import About from "@/components/home/About";
 import ConferenceThemes from "@/components/home/ConferenceThemes";
 import Speakers from "@/components/home/Speakers";
-import Agenda from "@/components/home/Agenda";
-import Industries from "@/components/home/Industries";
+// import Agenda from "@/components/home/Agenda";
+// import Industries from "@/components/home/Industries";
 import Sponsors from "@/components/home/Sponsors";
 import Gallery from "@/components/home/Gallery";
 import News from "@/components/home/News";
-import FAQ from "@/components/home/FAQ";
+// import FAQ from "@/components/home/FAQ";
 import CTA from "@/components/home/CTA";
 
 import Testimonials from "@/components/home/Testimonials";
@@ -32,9 +32,9 @@ export default function HomePage() {
 
       <Speakers />
 
-      <Agenda />
+      {/* <Agenda /> */}
 
-      <Industries />
+      {/* <Industries /> */}
 
       <Sponsors />
 
@@ -46,7 +46,7 @@ export default function HomePage() {
 
       <News />
 
-      <FAQ />
+      {/* <FAQ /> */}
 
       <CTA />
     </>

@@ -70,7 +70,7 @@ export default function Hero() {
       link: "https://www.renewablemirror.com/",
     },
     {
-      logo: "/logo/pw.png",
+      logo: "/logo/ppx.png",
       title: "PowerPax India",
       desc: "Power sector innovations, technology & business updates",
       link: "https://www.powerpaxindia.com/",
@@ -145,44 +145,40 @@ export default function Hero() {
                 <div className="flex w-full flex-col gap-4 sm:flex-row">
                   {/* REPAX OVERVIEW */}
 
+                  <div className="w-full rounded-3xl border border-white/10 bg-slate-900/80 p-4 backdrop-blur-xl sm:w-[45%] sm:p-5 lg:p-6">
+                    <h4 className="text-xs text-slate-400 sm:text-sm">
+                      REPAX OVERVIEW
+                    </h4>
 
-                <div className="w-full rounded-3xl border border-white/10 bg-slate-900/80 p-4 backdrop-blur-xl sm:w-[45%] sm:p-5 lg:p-6">
-  <h4 className="text-xs text-slate-400 sm:text-sm">
-    REPAX OVERVIEW
-  </h4>
+                    <div className="mt-3 grid grid-cols-2 gap-2 sm:gap-3">
+                      <div className="rounded-2xl bg-white/5 p-2 text-center sm:p-3">
+                        <h3 className="text-lg font-bold text-cyan-400 sm:text-xl lg:text-2xl">
+                          200+
+                        </h3>
+                        <p className="text-[10px] text-slate-400 sm:text-xs">
+                          Delegates
+                        </p>
+                      </div>
 
-  <div className="mt-3 grid grid-cols-2 gap-2 sm:gap-3">
-    <div className="rounded-2xl bg-white/5 p-2 text-center sm:p-3">
-      <h3 className="text-lg font-bold text-cyan-400 sm:text-xl lg:text-2xl">
-        200+
-      </h3>
-      <p className="text-[10px] text-slate-400 sm:text-xs">
-        Delegates
-      </p>
-    </div>
+                      <div className="rounded-2xl bg-white/5 p-2 text-center sm:p-3">
+                        <h3 className="text-lg font-bold text-green-400 sm:text-xl lg:text-2xl">
+                          20+
+                        </h3>
+                        <p className="text-[10px] text-slate-400 sm:text-xs">
+                          Speakers
+                        </p>
+                      </div>
 
-    <div className="rounded-2xl bg-white/5 p-2 text-center sm:p-3">
-      <h3 className="text-lg font-bold text-green-400 sm:text-xl lg:text-2xl">
-        20+
-      </h3>
-      <p className="text-[10px] text-slate-400 sm:text-xs">
-        Speakers
-      </p>
-    </div>
-
-    <div className="rounded-2xl bg-white/5 p-2 text-center sm:p-3">
-      <h3 className="text-lg font-bold text-orange-400 sm:text-xl lg:text-2xl">
-        10+
-      </h3>
-      <p className="text-[10px] text-slate-400 sm:text-xs">
-        Sponsors
-      </p>
-    </div>
-  </div>
-</div>
-
-
-
+                      <div className="rounded-2xl bg-white/5 p-2 text-center sm:p-3">
+                        <h3 className="text-lg font-bold text-orange-400 sm:text-xl lg:text-2xl">
+                          10+
+                        </h3>
+                        <p className="text-[10px] text-slate-400 sm:text-xs">
+                          Sponsors
+                        </p>
+                      </div>
+                    </div>
+                  </div>
 
                   {/* Event Highlights */}
                   <div className="w-full rounded-3xl border border-white/10 bg-slate-900/80 p-4 backdrop-blur-xl sm:w-[55%] sm:p-5 lg:p-6">
@@ -199,9 +195,6 @@ export default function Hero() {
                       <div>• Investment, Finance & Growth</div>
                     </div>
                   </div>
-
-
-                  
                 </div>
 
                 {/* Bottom Row */}
@@ -267,7 +260,13 @@ hover:shadow-[0_0_25px_rgba(216,204,163,0.35)]
                         </div>
 
                         {/* Logo */}
-                        <div className="relative mb-2 h-7 w-12 sm:h-8 sm:w-14">
+                        <div
+                          className={`relative mb-2 ${
+                            item.title === "PowerPax India"
+                              ? "h-12 w-20 sm:h-14 sm:w-24"
+                              : "h-7 w-12 sm:h-8 sm:w-14"
+                          }`}
+                        >
                           <Image
                             src={item.logo}
                             alt={item.title}
@@ -275,6 +274,10 @@ hover:shadow-[0_0_25px_rgba(216,204,163,0.35)]
                             className="object-contain transition-transform duration-300 group-hover:scale-105"
                           />
                         </div>
+
+
+
+                        
 
                         {/* Title */}
                         <span className="text-center text-[8px] font-normal text-white leading-tight sm:text-[10px]">
@@ -288,11 +291,6 @@ hover:shadow-[0_0_25px_rgba(216,204,163,0.35)]
                   </div>
                 </div>
               </div>
-
-
-
-
-
             </div>
           </div>
         </div>

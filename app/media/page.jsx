@@ -159,10 +159,8 @@ export default function Page() {
       "
       >
         Download Media Kit
-        <ArrowRight
-          size={20}
-          className="transition-transform group-hover:translate-x-1"
-        />
+       
+      
       </button>
 
       <button
@@ -972,9 +970,6 @@ export default function Page() {
               leaders, innovators and decision makers.
             </p>
 
-            <button className="mt-10 rounded-full bg-orange-500 px-8 py-4 font-semibold text-white hover:bg-orange-600">
-              Partner With Us
-            </button>
 
           </div>
 

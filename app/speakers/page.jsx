@@ -154,19 +154,17 @@ export default function SpeakersPage() {
 
                 <div className="grid grid-cols-3 gap-4">
                   <div className="rounded-2xl bg-white/5 p-5 text-center">
-                    <h4 className="text-3xl font-bold text-cyan-400">50+</h4>
+                    <h4 className="text-3xl font-bold text-cyan-400">20+</h4>
                     <p className="mt-2 text-xs text-slate-400">Speakers</p>
                   </div>
 
                   <div className="rounded-2xl bg-white/5 p-5 text-center">
-                    <h4 className="text-3xl font-bold text-green-400">20+</h4>
+                    <h4 className="text-3xl font-bold text-green-400">2+</h4>
                     <p className="mt-2 text-xs text-slate-400">Countries</p>
                   </div>
 
                   <div className="rounded-2xl bg-white/5 p-5 text-center">
-                    <h4 className="text-3xl font-bold text-orange-400">
-                      5000+
-                    </h4>
+                    <h4 className="text-3xl font-bold text-orange-400">500+</h4>
                     <p className="mt-2 text-xs text-slate-400">Attendees</p>
                   </div>
                 </div>
@@ -625,7 +623,6 @@ export default function SpeakersPage() {
           </div>
         </div>
       </section>
-      
 
       {/* CTA SECTION */}
 
@@ -652,16 +649,6 @@ export default function SpeakersPage() {
                 Be part of India's leading renewable energy summit and connect
                 with global industry leaders, innovators and decision makers.
               </p>
-
-              <div className="mt-8 flex flex-wrap justify-center gap-4">
-                <button className="rounded-xl bg-orange-500 px-8 py-4 text-base font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(249,115,22,0.4)]">
-                  Contact Now →
-                </button>
-
-                <button className="rounded-xl border border-white/30 bg-white/10 px-8 py-4 text-base font-semibold backdrop-blur-xl transition-all duration-300 hover:bg-white/20">
-                  View Agenda →
-                </button>
-              </div>
             </div>
           </div>
         </div>
