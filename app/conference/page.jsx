@@ -16,7 +16,7 @@ const topics = [
 const stats = [
   { number: "20+", title: "Industry Speakers" },
   { number: "5000+", title: "Delegates" },
-  { number: "30+", title: "Countries" },
+  { number: "2+",  title: "Sessions + Awards" },
   { number: "50+", title: "Partners" },
 ];
 
@@ -211,6 +211,9 @@ export default function Page() {
           </div>
         </div>
       </section>
+
+
+
 
       {/* Conference Themes */}
 

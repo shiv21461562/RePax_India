@@ -1,9 +1,14 @@
 "use client";
 
+import { useState } from "react";
+import BoothBookingModal from "@/components/BoothBookingModal";
+
 import { motion } from "framer-motion";
 import { Building2, Users, Globe, Handshake, ArrowRight } from "lucide-react";
 
 export default function Page() {
+  const [openBoothModal, setOpenBoothModal] = useState(false);
+
   const benefits = [
     "Connect with Industry Leaders",
     "Showcase Innovative Solutions",
@@ -66,15 +71,7 @@ export default function Page() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8 }}
             className="mt-10 flex flex-wrap justify-center gap-4"
-          >
-            <button className="rounded-full bg-orange-500 px-8 py-4 font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-orange-600 hover:shadow-xl">
-              Become an Exhibitor
-            </button>
-
-            <button className="rounded-full border border-white/30 px-8 py-4 font-semibold text-white transition-all duration-300 hover:bg-white hover:text-[#255B7D]">
-              Download Brochure
-            </button>
-          </motion.div>
+          ></motion.div>
         </div>
       </motion.section>
 
@@ -85,7 +82,8 @@ export default function Page() {
             {[
               ["5000+", "Visitors"],
               ["100+", "Exhibitors"],
-              ["30+", "Countries"],
+              ["2+", "Sessions + Awards"],
+
               ["50+", "Partners"],
             ].map(([number, title], index) => (
               <div
@@ -285,6 +283,145 @@ export default function Page() {
         </div>
       </motion.section>
 
+      {/* Booth Packages */}
+      <section className="bg-slate-50 py-28">
+        <div className="mx-auto max-w-7xl px-6">
+          {/* Heading */}
+          <div className="mb-16 text-center">
+            <h2 className="text-5xl font-bold text-[#001B4D]">
+              Booth
+              <span className="text-orange-500"> Packages</span>
+            </h2>
+
+            <div className="mx-auto mt-4 h-1 w-24 rounded-full bg-orange-500" />
+
+            <p className="mx-auto mt-6 max-w-3xl text-lg text-slate-600">
+              Choose the exhibition package that best fits your business goals
+              and maximize your brand exposure during REPAY Summit 2026.
+            </p>
+          </div>
+
+          <div className="grid gap-8 lg:grid-cols-3">
+            {[
+              {
+                title: "Standard",
+                size: "6 sqm",
+                price: "₹80,000",
+                color: "bg-white",
+                features: [
+                  "Company Branding",
+                  "Power Supply",
+                  "Basic Furniture",
+                  "2 Delegate Passes",
+                  "Listing on Website",
+                ],
+              },
+              {
+                title: "Premium",
+                size: "9 sqm",
+                price: "₹1,00,000",
+                popular: true,
+                color: "bg-[#255B7D]",
+                features: [
+                  "Prime Location",
+                  "Premium Branding",
+                  "LED Display",
+                  "4 Delegate Passes",
+                  "Networking Access",
+                  "Social Media Promotion",
+                ],
+              },
+              {
+                title: "Platinum",
+                size: "12 sqm",
+                price: "₹1,50,000",
+                color: "bg-white",
+                features: [
+                  "Largest Booth",
+                  "VIP Branding",
+                  "Meeting Lounge",
+                  "8 Delegate Passes",
+                  "Speaking Opportunity",
+                  "Media Coverage",
+                ],
+              },
+            ].map((item, index) => (
+              <div
+                key={index}
+                className={`relative overflow-hidden rounded-[32px] ${
+                  item.color
+                } p-10 shadow-xl transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl`}
+              >
+                {item.popular && (
+                  <span className="absolute right-0 top-0 rounded-bl-2xl bg-orange-500 px-6 py-2 text-sm font-semibold text-white">
+                    MOST POPULAR
+                  </span>
+                )}
+
+                <h3
+                  className={`text-3xl font-bold ${
+                    item.popular ? "text-white" : "text-[#001B4D]"
+                  }`}
+                >
+                  {item.title}
+                </h3>
+
+                <p
+                  className={`mt-2 ${
+                    item.popular ? "text-slate-200" : "text-slate-500"
+                  }`}
+                >
+                  Booth Size • {item.size}
+                </p>
+
+                <div
+                  className={`mt-8 text-5xl font-bold ${
+                    item.popular ? "text-orange-400" : "text-orange-500"
+                  }`}
+                >
+                  {item.price}
+                </div>
+
+                <ul className="mt-10 space-y-4">
+                  {item.features.map((feature) => (
+                    <li
+                      key={feature}
+                      className={`flex items-center gap-3 ${
+                        item.popular ? "text-white" : "text-slate-700"
+                      }`}
+                    >
+                      <div className="h-2 w-2 rounded-full bg-orange-500" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+
+                <button
+                  type="button"
+                  onClick={() => setOpenBoothModal(true)}
+                  className={`mt-10 w-full rounded-full py-4 font-semibold transition ${
+                    item.popular
+                      ? "bg-orange-500 text-white hover:bg-orange-600"
+                      : "bg-[#255B7D] text-white hover:bg-[#1B4966]"
+                  }`}
+                >
+                  Book Booth
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <BoothBookingModal
+        open={openBoothModal}
+        onClose={() => setOpenBoothModal(false)}
+      />
+
+
+
+      
+
       {/* Floor Plan */}
 
       {/* Featured Areas */}
@@ -404,134 +541,6 @@ export default function Page() {
               "
                   />
                 </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Booth Packages */}
-      <section className="bg-slate-50 py-28">
-        <div className="mx-auto max-w-7xl px-6">
-          {/* Heading */}
-          <div className="mb-16 text-center">
-            <h2 className="text-5xl font-bold text-[#001B4D]">
-              Booth
-              <span className="text-orange-500"> Packages</span>
-            </h2>
-
-            <div className="mx-auto mt-4 h-1 w-24 rounded-full bg-orange-500" />
-
-            <p className="mx-auto mt-6 max-w-3xl text-lg text-slate-600">
-              Choose the exhibition package that best fits your business goals
-              and maximize your brand exposure during REPAY Summit 2026.
-            </p>
-          </div>
-
-          <div className="grid gap-8 lg:grid-cols-3">
-            {[
-              {
-                title: "Standard",
-                size: "9 sqm",
-                price: "₹1,50,000",
-                color: "bg-white",
-                features: [
-                  "Company Branding",
-                  "Power Supply",
-                  "Basic Furniture",
-                  "2 Delegate Passes",
-                  "Listing on Website",
-                ],
-              },
-              {
-                title: "Premium",
-                size: "18 sqm",
-                price: "₹3,00,000",
-                popular: true,
-                color: "bg-[#255B7D]",
-                features: [
-                  "Prime Location",
-                  "Premium Branding",
-                  "LED Display",
-                  "4 Delegate Passes",
-                  "Networking Access",
-                  "Social Media Promotion",
-                ],
-              },
-              {
-                title: "Platinum",
-                size: "36 sqm",
-                price: "₹5,50,000",
-                color: "bg-white",
-                features: [
-                  "Largest Booth",
-                  "VIP Branding",
-                  "Meeting Lounge",
-                  "8 Delegate Passes",
-                  "Speaking Opportunity",
-                  "Media Coverage",
-                ],
-              },
-            ].map((item, index) => (
-              <div
-                key={index}
-                className={`relative overflow-hidden rounded-[32px] ${
-                  item.color
-                } p-10 shadow-xl transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl`}
-              >
-                {item.popular && (
-                  <span className="absolute right-0 top-0 rounded-bl-2xl bg-orange-500 px-6 py-2 text-sm font-semibold text-white">
-                    MOST POPULAR
-                  </span>
-                )}
-
-                <h3
-                  className={`text-3xl font-bold ${
-                    item.popular ? "text-white" : "text-[#001B4D]"
-                  }`}
-                >
-                  {item.title}
-                </h3>
-
-                <p
-                  className={`mt-2 ${
-                    item.popular ? "text-slate-200" : "text-slate-500"
-                  }`}
-                >
-                  Booth Size • {item.size}
-                </p>
-
-                <div
-                  className={`mt-8 text-5xl font-bold ${
-                    item.popular ? "text-orange-400" : "text-orange-500"
-                  }`}
-                >
-                  {item.price}
-                </div>
-
-                <ul className="mt-10 space-y-4">
-                  {item.features.map((feature) => (
-                    <li
-                      key={feature}
-                      className={`flex items-center gap-3 ${
-                        item.popular ? "text-white" : "text-slate-700"
-                      }`}
-                    >
-                      <div className="h-2 w-2 rounded-full bg-orange-500" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-
-                <button
-                  className={`mt-10 w-full rounded-full py-4 font-semibold transition ${
-                    item.popular
-                      ? "bg-orange-500 text-white hover:bg-orange-600"
-                      : "bg-[#255B7D] text-white hover:bg-[#1B4966]"
-                  }`}
-                >
-                  Book Booth
-                </button>
               </div>
             ))}
           </div>
