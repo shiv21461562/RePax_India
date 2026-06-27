@@ -12,8 +12,7 @@ import {
 export default function Footer() {
   return (
     <footer className="relative overflow-hidden bg-[#174d6d] text-white">
-      {/* Glow */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(249,115,22,0.10),transparent_40%)]" />
+
 
       <div className="relative mx-auto max-w-7xl px-6 py-20">
         <div className="grid gap-12 lg:grid-cols-4">
@@ -98,53 +97,102 @@ export default function Footer() {
           </div>
 
 
-          {/* Event Details */}
-          {/* Legal */}
-          <div>
-            <h3 className="mb-6 text-xl font-semibold">Legal</h3>
+         
+        
+         {/* Legal */}
+<div>
+  <h3 className="mb-6 text-xl font-semibold">Legal</h3>
 
-            <ul className="space-y-4 text-slate-300">
-              <li>
-                <Link href="/privacy-policy" className="hover:text-orange-400">
-                  Privacy Policy
-                </Link>
-              </li>
+  <ul className="space-y-4 text-slate-300">
+    <li>
+      <Link
+        href="/footerlegal/privacy-policy"
+        className="hover:text-orange-400"
+      >
+        Privacy Policy
+      </Link>
+    </li>
 
-              <li>
-                <Link
-                  href="/terms-and-conditions"
-                  className="hover:text-orange-400"
-                >
-                  Terms & Conditions
-                </Link>
-              </li>
+    <li>
+      <Link
+        href="/footerlegal/terms-and-conditions"
+        className="hover:text-orange-400"
+      >
+        Terms & Conditions
+      </Link>
+    </li>
 
-              <li>
-                <Link href="/refund-policy" className="hover:text-orange-400">
-                  Refund Policy
-                </Link>
-              </li>
+    <li>
+      <Link
+        href="/footerlegal/refund-policy"
+        className="hover:text-orange-400"
+      >
+        Refund Policy
+      </Link>
+    </li>
 
-              <li>
-                <Link href="/faq" className="hover:text-orange-400">
-                  FAQ
-                </Link>
-              </li>
-            </ul>
-          </div>
+    <li>
+      <Link
+        href="/footerlegal/faq"
+        className="hover:text-orange-400"
+      >
+        FAQ
+      </Link>
+    </li>
+  </ul>
+</div>
 
 
           {/* Connect */}
           <div>
             <h3 className="mb-6 text-xl font-semibold">Connect</h3>
 
-            <ul className="space-y-4 text-slate-300">
-              <li>Sponsorship Opportunities</li>
-              <li>Partnership Enquiries</li>
-              <li>Delegate Registration</li>
-              <li>Speaker Applications</li>
-              <li>Media Collaborations</li>
-            </ul>
+         <ul className="space-y-4">
+  <li>
+    <Link
+      href="/footercontent/sponsorship"
+      className="text-slate-300 transition-colors duration-300 hover:text-[#F97316]"
+    >
+      Sponsorship Opportunities
+    </Link>
+  </li>
+
+  <li>
+    <Link
+      href="/footercontent/partnership"
+      className="text-slate-300 transition-colors duration-300 hover:text-[#F97316]"
+    >
+      Partnership Enquiries
+    </Link>
+  </li>
+
+  <li>
+    <Link
+      href="/footercontent/delegate-registration"
+      className="text-slate-300 transition-colors duration-300 hover:text-[#F97316]"
+    >
+      Delegate Registration
+    </Link>
+  </li>
+
+  <li>
+    <Link
+      href="/footercontent/speaker-application"
+      className="text-slate-300 transition-colors duration-300 hover:text-[#F97316]"
+    >
+      Speaker Applications
+    </Link>
+  </li>
+
+  <li>
+    <Link
+      href="/footercontent/media-collaboration"
+      className="text-slate-300 transition-colors duration-300 hover:text-[#F97316]"
+    >
+      Media Collaborations
+    </Link>
+  </li>
+</ul>
 
             {/* Social Icons */}
             <div className="mt-8 flex gap-3">

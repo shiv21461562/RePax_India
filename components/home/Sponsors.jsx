@@ -54,8 +54,10 @@ export default function Sponsors() {
           </h2>
 
           <p className="mt-5 max-w-3xl mx-auto text-slate-600">
-            Proudly supported by leading organizations driving innovation,
-            sustainability and global collaboration.
+            Join leading organizations shaping the future of renewable energy.
+            Explore sponsorship, exhibition, media partnership, and strategic
+            collaboration opportunities to expand your reach and connect with
+            industry leaders.
           </p>
         </div>
       </div>

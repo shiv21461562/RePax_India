@@ -12,10 +12,13 @@ const stats = [
     number: 20,
     label: "Expert Speakers",
   },
-
+  {
+    number: 10,
+    label: "Sponsors",
+  },
   {
     number: 2,
-    label: "Sessions+Awards",
+    label: "Sessions + Awards",
   },
 ];
 
@@ -46,8 +49,8 @@ export default function EventStats() {
         </motion.div>
 
         {/* Stats */}
-       {/* Stats */}
-<div className="mx-auto grid max-w-5xl gap-8 md:grid-cols-2 lg:grid-cols-3">
+     
+<div className="mx-auto grid max-w-6xl gap-8 sm:grid-cols-2 lg:grid-cols-4">
   {stats.map((item, index) => (
     <motion.div
       key={index}

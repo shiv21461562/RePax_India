@@ -39,26 +39,18 @@ export default function Page() {
               </span>
 
               <h1 className="mt-8 text-5xl font-bold leading-tight text-[#001B4D] md:text-5xl">
-                Where Startups Meet
+                {" "}
+                Where Startups Meet{" "}
                 <span className="block text-orange-500">
-                  The Future Of Finance
-                </span>
+                  {" "}
+                  The Future Of Finance{" "}
+                </span>{" "}
               </h1>
 
               <p className="mt-8 max-w-xl text-lg leading-8 text-slate-600">
                 Showcase your innovation, connect with investors, banks, fintech
                 leaders and industry experts at REPAY Startup Pavilion 2026.
               </p>
-
-              <div className="mt-10 flex flex-wrap gap-4">
-                <button className="rounded-full bg-orange-500 px-8 py-4 font-semibold text-white transition hover:bg-orange-600">
-                  Apply As Startup
-                </button>
-
-                <button className="rounded-full border border-slate-300 px-8 py-4 font-semibold text-[#001B4D] transition hover:border-orange-500 hover:text-orange-500">
-                  Download Startup Kit
-                </button>
-              </div>
             </motion.div>
 
             {/* Right */}
@@ -194,9 +186,6 @@ export default function Page() {
         </div>
       </section>
 
-
-
-     
       {/* Why Join */}
       <section className="bg-white py-28">
         <div className="mx-auto max-w-7xl px-6">
@@ -355,67 +344,63 @@ export default function Page() {
         </div>
       </section>
 
+      {/* Startup Opportunities */}
 
+      <section className="bg-[#255B7D] py-28">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-20">
+            <span className="inline-block rounded-full bg-orange-100 px-5 py-2 text-sm font-semibold text-orange-600">
+              STARTUP PROGRAM
+            </span>
 
-      {/* Startup Opportunities */}  
+            <h2 className="mt-6 text-5xl font-bold text-white">
+              Startup Opportunities
+            </h2>
 
+            <div className="mx-auto mt-4 h-1 w-24 rounded-full bg-orange-500" />
 
-<section className="bg-[#255B7D] py-28">
-  <div className="max-w-7xl mx-auto px-6">
+            <p className="mx-auto mt-6 max-w-3xl text-lg text-slate-300">
+              Connect with investors, mentors and industry leaders while
+              showcasing your startup to the right audience.
+            </p>
+          </div>
 
-    <div className="text-center mb-20">
-      <span className="inline-block rounded-full bg-orange-100 px-5 py-2 text-sm font-semibold text-orange-600">
-        STARTUP PROGRAM
-      </span>
-
-      <h2 className="mt-6 text-5xl font-bold text-white">
-        Startup Opportunities
-      </h2>
-
-      <div className="mx-auto mt-4 h-1 w-24 rounded-full bg-orange-500" />
-
-      <p className="mx-auto mt-6 max-w-3xl text-lg text-slate-300">
-        Connect with investors, mentors and industry leaders while
-        showcasing your startup to the right audience.
-      </p>
-    </div>
-
-    <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-      {[
-        {
-          title: "Pitch Competition",
-          icon: "🚀",
-          desc: "Present your startup idea before investors, experts and industry leaders.",
-        },
-        {
-          title: "Investor Connect",
-          icon: "💰",
-          desc: "Schedule meetings with VCs, angel investors and funding partners.",
-        },
-        {
-          title: "Mentors",
-          icon: "🎯",
-          desc: "Learn directly from successful founders, advisors and startup mentors.",
-        },
-        {
-          title: "Startup Registration",
-          icon: "📝",
-          desc: "Secure your participation and showcase your innovation at REPAY.",
-        },
-      ].map((item, index) => (
-        <motion.div
-          key={item.title}
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{
-            duration: 0.5,
-            delay: index * 0.1,
-          }}
-          whileHover={{
-            y: -12,
-          }}
-          className="
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+            {[
+              {
+                title: "Pitch Competition",
+                icon: "🚀",
+                desc: "Present your startup idea before investors, experts and industry leaders.",
+              },
+              {
+                title: "Investor Connect",
+                icon: "💰",
+                desc: "Schedule meetings with VCs, angel investors and funding partners.",
+              },
+              {
+                title: "Mentors",
+                icon: "🎯",
+                desc: "Learn directly from successful founders, advisors and startup mentors.",
+              },
+              {
+                title: "Startup Registration",
+                icon: "📝",
+                desc: "Secure your participation and showcase your innovation at REPAY.",
+              },
+            ].map((item, index) => (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.5,
+                  delay: index * 0.1,
+                }}
+                whileHover={{
+                  y: -12,
+                }}
+                className="
             group
             relative
             overflow-hidden
@@ -431,66 +416,49 @@ export default function Page() {
             hover:bg-white/15
             hover:shadow-[0_20px_50px_rgba(0,0,0,0.25)]
           "
-        >
-          <div className="absolute top-0 left-0 h-1 w-full bg-orange-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
+              >
+                <div className="absolute top-0 left-0 h-1 w-full bg-orange-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
 
-          <div className="flex h-20 w-20 items-center justify-center rounded-3xl bg-orange-500/20 text-4xl">
-            {item.icon}
+                <div className="flex h-20 w-20 items-center justify-center rounded-3xl bg-orange-500/20 text-4xl">
+                  {item.icon}
+                </div>
+
+                <h3 className="mt-8 text-2xl font-bold text-white">
+                  {item.title}
+                </h3>
+
+                <p className="mt-4 leading-7 text-slate-300">{item.desc}</p>
+
+                <div className="mt-8 flex items-center gap-2 text-orange-400 font-semibold">
+                  Learn More →
+                </div>
+              </motion.div>
+            ))}
           </div>
+        </div>
+      </section>
 
-          <h3 className="mt-8 text-2xl font-bold text-white">
-            {item.title}
-          </h3>
+      {/* Startup CTA */}
 
-          <p className="mt-4 leading-7 text-slate-300">
-            {item.desc}
-          </p>
+      <section className="bg-white py-28">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="rounded-[40px] bg-gradient-to-r from-[#1F5678] to-[#2E6C93] p-16 text-center shadow-2xl">
+            <span className="inline-block rounded-full bg-orange-100 px-5 py-2 text-sm font-semibold text-orange-600">
+              JOIN THE STARTUP PAVILION
+            </span>
 
-          <div className="mt-8 flex items-center gap-2 text-orange-400 font-semibold">
-            Learn More →
+            <h2 className="mt-6 text-5xl font-bold text-white">
+              Ready To Scale Your Startup?
+            </h2>
+
+            <p className="mx-auto mt-6 max-w-3xl text-lg text-slate-300">
+              Connect with investors, mentors, strategic partners and industry
+              leaders while showcasing your innovation at REPAY Startup
+              Pavilion.
+            </p>
           </div>
-        </motion.div>
-      ))}
-    </div>
-  </div>
-</section>
-
-{/* Startup CTA */}
-
-<section className="bg-white py-28">
-  <div className="max-w-6xl mx-auto px-6">
-
-    <div className="rounded-[40px] bg-gradient-to-r from-[#1F5678] to-[#2E6C93] p-16 text-center shadow-2xl">
-
-      <span className="inline-block rounded-full bg-orange-100 px-5 py-2 text-sm font-semibold text-orange-600">
-        JOIN THE STARTUP PAVILION
-      </span>
-
-      <h2 className="mt-6 text-5xl font-bold text-white">
-        Ready To Scale Your Startup?
-      </h2>
-
-      <p className="mx-auto mt-6 max-w-3xl text-lg text-slate-300">
-        Connect with investors, mentors, strategic partners and industry
-        leaders while showcasing your innovation at REPAY Startup Pavilion.
-      </p>
-
-      <div className="mt-10 flex flex-wrap justify-center gap-4">
-        <button className="rounded-full bg-orange-500 px-8 py-4 font-semibold text-white hover:bg-orange-600 transition">
-          Register Startup
-        </button>
-
-        <button className="rounded-full border border-white/20 px-8 py-4 font-semibold text-white hover:bg-white/10 transition">
-          Download Startup Kit
-        </button>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-
+        </div>
+      </section>
     </div>
   );
 }

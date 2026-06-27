@@ -94,9 +94,7 @@ export default function ContactPage() {
           }}
         />
 
-        {/* Glow Effects */}
-        <div className="absolute -top-20 left-0 h-80 w-80 rounded-full bg-orange-500/10 blur-3xl" />
-        <div className="absolute -bottom-20 right-0 h-80 w-80 rounded-full bg-cyan-400/10 blur-3xl" />
+
 
         <div className="relative mx-auto max-w-6xl px-6 text-center">
           <motion.span

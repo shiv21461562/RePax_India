@@ -43,10 +43,10 @@ export default function About() {
                 ABOUT RE PAX INDIA
               </span>
             </div>
-            <h2 className="mt-6 text-4xl font-bold text-white md:text-5xl lg:text-6xl">
-              Connecting India's
+            <h2 className="mt-6 text-4xl font-bold text-white md:text-5xl lg:text-5xl">
+             Empowering India's Renewable Energy
               <span className="bg-gradient-to-r from-orange-400 to-orange-300 bg-clip-text text-transparent">
-                Energy Ecosystem
+                Ecosystem Through Collaboration, Innovation & Leadership
               </span>
             </h2>
             <p className="mx-auto mt-6 max-w-3xl text-lg text-slate-300/80">

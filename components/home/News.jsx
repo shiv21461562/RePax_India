@@ -44,8 +44,9 @@ export default function News() {
           </h2>
 
           <p className="mt-5 max-w-3xl mx-auto text-slate-600">
-            Stay updated with the latest announcements, partnerships,
-            speaker reveals and event developments.
+            Stay informed with the latest announcements about RE-PAX India,
+            speaker updates, agenda releases, award nominations, sponsorship
+            opportunities, and renewable energy industry news.
           </p>
         </motion.div>
 

@@ -8,8 +8,9 @@ import Speakers from "@/components/home/Speakers";
 import Sponsors from "@/components/home/Sponsors";
 import Gallery from "@/components/home/Gallery";
 import News from "@/components/home/News";
-// import FAQ from "@/components/home/FAQ";
+import FAQ from "@/components/home/FAQ";
 import CTA from "@/components/home/CTA";
+import EventHighlights from "@/components/home/EventHighlights";
 
 import Testimonials from "@/components/home/Testimonials";
 import Venue from "@/components/home/Venue";
@@ -22,6 +23,7 @@ export default function HomePage() {
       <Hero />
 
     
+ <EventHighlights />
 
       <EventStats />
         <EventVideo />
@@ -46,7 +48,7 @@ export default function HomePage() {
 
       <News />
 
-      {/* <FAQ /> */}
+      <FAQ />
 
       <CTA />
     </>

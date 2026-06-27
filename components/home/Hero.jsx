@@ -103,23 +103,17 @@ export default function Hero() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/images/Hero5.png')",
+            backgroundImage: "url('/images/finalHero1.png')",
           }}
         />
 
-        <div className="absolute inset-0 bg-black/25" />
+        <div className="absolute inset-0 bg-black/20" />
 
         <div className="relative z-10 min-h-screen">
           <div className="mx-auto flex min-h-screen max-w-7xl items-center px-4 sm:px-6 lg:px-8">
             <div className="grid w-full gap-8 py-8 lg:grid-cols-2 lg:gap-16 lg:py-12">
               {/* LEFT CONTENT */}
               <div className="pt-4 sm:pt-6 lg:pt-8">
-                <div className="inline-flex items-center rounded-full border border-white/30 bg-white/10 px-4 py-2 text-white backdrop-blur-md sm:px-6 sm:py-3 lg:px-8 lg:py-4">
-                  <span className="text-xs font-semibold sm:text-sm lg:text-base">
-                    REPAX INDIA 2026
-                  </span>
-                </div>
-
                 <h1 className="mt-6 text-3xl font-black leading-[1.05] text-white sm:mt-8 sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl">
                   Powering the
                   <span className="block bg-gradient-to-r from-orange-400 to-yellow-300 bg-clip-text text-transparent">
@@ -142,60 +136,7 @@ export default function Hero() {
 
               <div className="relative flex flex-col gap-4 pt-8 lg:pt-12 lg:h-[600px] lg:justify-between">
                 {/* Top Row - Overview + Highlights */}
-                <div className="flex w-full flex-col gap-4 sm:flex-row">
-                  {/* REPAX OVERVIEW */}
-
-                  <div className="w-full rounded-3xl border border-white/10 bg-slate-900/80 p-4 backdrop-blur-xl sm:w-[45%] sm:p-5 lg:p-6">
-                    <h4 className="text-xs text-slate-400 sm:text-sm">
-                      REPAX OVERVIEW
-                    </h4>
-
-                    <div className="mt-3 grid grid-cols-2 gap-2 sm:gap-3">
-                      <div className="rounded-2xl bg-white/5 p-2 text-center sm:p-3">
-                        <h3 className="text-lg font-bold text-cyan-400 sm:text-xl lg:text-2xl">
-                          200+
-                        </h3>
-                        <p className="text-[10px] text-slate-400 sm:text-xs">
-                          Delegates
-                        </p>
-                      </div>
-
-                      <div className="rounded-2xl bg-white/5 p-2 text-center sm:p-3">
-                        <h3 className="text-lg font-bold text-green-400 sm:text-xl lg:text-2xl">
-                          20+
-                        </h3>
-                        <p className="text-[10px] text-slate-400 sm:text-xs">
-                          Speakers
-                        </p>
-                      </div>
-
-                      <div className="rounded-2xl bg-white/5 p-2 text-center sm:p-3">
-                        <h3 className="text-lg font-bold text-orange-400 sm:text-xl lg:text-2xl">
-                          10+
-                        </h3>
-                        <p className="text-[10px] text-slate-400 sm:text-xs">
-                          Sponsors
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Event Highlights */}
-                  <div className="w-full rounded-3xl border border-white/10 bg-slate-900/80 p-4 backdrop-blur-xl sm:w-[55%] sm:p-5 lg:p-6">
-                    <h4 className="text-base font-semibold text-white sm:text-lg">
-                      Event Highlights
-                    </h4>
-
-                    <div className="mt-2 space-y-1 text-xs text-white sm:mt-3 sm:text-sm">
-                      <div>• Solar Energy & Manufacturing</div>
-                      <div>• Energy Storage & Battery Technologies</div>
-                      <div>• EPC & Project Development</div>
-                      <div>• Government Policies & Frameworks</div>
-                      <div>• Electric Mobility & Transport</div>
-                      <div>• Investment, Finance & Growth</div>
-                    </div>
-                  </div>
-                </div>
+                <div className="flex w-full flex-col gap-4 sm:flex-row"></div>
 
                 {/* Bottom Row */}
                 <div className="flex flex-col gap-3 lg:absolute lg:-bottom-6 lg:w-full">
@@ -218,21 +159,24 @@ export default function Hero() {
                         href={item.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="
+className="
 group relative flex flex-col items-center justify-center
 h-[95px]
 rounded-2xl
-border border-[#D8CCA3]/60
+border border-[#037AA6]/60
 bg-[#0f172a]/75
 backdrop-blur-xl
 p-2
-shadow-[0_0_12px_rgba(216,204,163,0.15)]
 overflow-hidden
+
+shadow-[0_0_18px_rgba(3,122,166,0.20)]
+
 transition-all duration-300
+
 hover:-translate-y-1
-hover:border-[#D8CCA3]
+hover:border-[#037AA6]
 hover:bg-[#162338]/90
-hover:shadow-[0_0_25px_rgba(216,204,163,0.35)]
+hover:shadow-[0_0_35px_rgba(3,122,166,0.45)]
 "
                       >
                         {/* Tooltip - Hidden on mobile */}
@@ -275,10 +219,6 @@ hover:shadow-[0_0_25px_rgba(216,204,163,0.35)]
                           />
                         </div>
 
-
-
-                        
-
                         {/* Title */}
                         <span className="text-center text-[8px] font-normal text-white leading-tight sm:text-[10px]">
                           {item.title}
@@ -289,6 +229,9 @@ hover:shadow-[0_0_25px_rgba(216,204,163,0.35)]
                       </a>
                     ))}
                   </div>
+
+
+                  
                 </div>
               </div>
             </div>
