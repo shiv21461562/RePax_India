@@ -115,20 +115,29 @@ export default function Hero() {
               {/* LEFT CONTENT */}
               <div className="pt-4 sm:pt-6 lg:pt-8">
                 <h1 className="mt-6 text-3xl font-black leading-[1.05] text-white sm:mt-8 sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl">
-                  Powering the
+                  RE-PAX India
                   <span className="block bg-gradient-to-r from-orange-400 to-yellow-300 bg-clip-text text-transparent">
-                    Conversations
+                    2026
                   </span>
-                  Shaping Tomorrow's Energy
                 </h1>
 
                 <div className="mt-6 h-1 w-16 rounded-full bg-gradient-to-r from-orange-400 to-yellow-300 sm:mt-8 sm:w-20 lg:w-24" />
 
                 <p className="mt-6 text-sm leading-7 text-gray-200 sm:mt-8 sm:text-base sm:leading-8 lg:text-lg lg:leading-8">
-                  Uniting the Voices of Policymakers, Solar Manufacturers, EPCs,
-                  Developers, Investors & Technology Leaders to Drive
-                  Collaboration, Innovation and Growth Across India's Renewable
-                  Energy Ecosystem.
+                  <span className="block text-xl font-semibold text-white mb-3">
+                    India's Premier Renewable Energy Conference, Expo &
+                    Leadership Awards
+                  </span>
+                  <span className="block mb-4 text-orange-300 font-medium">
+                    Empowering Innovation • Driving Collaboration • Accelerating
+                    India's Clean Energy Future
+                  </span>
+                  Join India's most influential gathering of renewable energy
+                  leaders, solar manufacturers, battery storage innovators, EPC
+                  contractors, policymakers, investors, utilities and technology
+                  providers. RE-PAX India is where industry leaders meet to
+                  exchange ideas, build partnerships, showcase innovations and
+                  shape the future of clean energy.
                 </p>
               </div>
 
@@ -159,7 +168,7 @@ export default function Hero() {
                         href={item.link}
                         target="_blank"
                         rel="noopener noreferrer"
-className="
+                        className="
 group relative flex flex-col items-center justify-center
 h-[95px]
 rounded-2xl
@@ -229,9 +238,6 @@ hover:shadow-[0_0_35px_rgba(3,122,166,0.45)]
                       </a>
                     ))}
                   </div>
-
-
-                  
                 </div>
               </div>
             </div>

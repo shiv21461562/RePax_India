@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import FadeUp from "@/components/FadeUp";
 import RegisterModal from "@/components/RegisterModal";
@@ -22,8 +23,6 @@ export default function About() {
     });
   };
 
-
-
   return (
     <>
       <FadeUp>
@@ -33,25 +32,31 @@ export default function About() {
               {/* LEFT */}
               <div>
                 <span className="inline-flex px-4 py-2 rounded-full bg-white/10 border border-white/20 text-orange-300 text-xs font-bold tracking-widest uppercase">
-                  About The Conference
+                  ABOUT RE-PAX INDIA
                 </span>
 
-                <h2 className="mt-6 text-4xl md:text-5xl font-bold text-white leading-tight">
-                  Shaping a Sustainable
-                  <span className="text-orange-400"> Future Together</span>
+                <h2 className="mt-6 text-4xl md:text-4xl font-bold text-white leading-tight">
+                  Empowering India's Renewable Energy Ecosystem Through
+                  Collaboration,
+                  <span className="text-orange-400">
+                    {" "}
+                    Innovation & Leadership
+                  </span>
                 </h2>
 
                 <p className="mt-6 text-slate-300 text-lg leading-relaxed">
-                  Join global leaders, sustainability experts, innovators and
-                  policymakers for an inspiring conference focused on solving
-                  tomorrow's environmental and energy challenges.
+                  India's renewable energy sector is undergoing a remarkable
+                  transformation. As the nation accelerates toward its ambitious
+                  clean energy targets, the demand for innovation,
+                  collaboration, and strategic partnerships continues to grow.
                 </p>
 
                 <p className="mt-5 text-slate-400 leading-relaxed">
-                  Through keynote sessions, networking opportunities, workshops
-                  and industry collaborations, participants gain actionable
-                  insights, discover emerging technologies and build meaningful
-                  connections.
+                  RE-PAX India is a premier business networking and
+                  knowledge-sharing platform that brings together manufacturers,
+                  EPC contractors, developers, investors, policymakers,
+                  technology providers, and sustainability leaders to drive
+                  collaboration and accelerate India's clean energy future.
                 </p>
 
                 <div className="flex flex-wrap gap-4 mt-8">
@@ -62,9 +67,12 @@ export default function About() {
                     Register Now
                   </button>
 
-                  <button className="px-6 py-3 border border-white/20 text-white rounded-xl hover:bg-white/10 transition-all duration-300">
+                  <Link
+                    href="/about"
+                    className="px-6 py-3 border border-white/20 text-white rounded-xl hover:bg-white/10 transition-all duration-300"
+                  >
                     Learn More
-                  </button>
+                  </Link>
                 </div>
               </div>
 
@@ -86,14 +94,14 @@ export default function About() {
 
                 <div className="col-span-2 group bg-gradient-to-r from-[#FF8A00] to-[#FFB347] rounded-3xl p-8 text-white border border-transparent hover:border-white/40 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(255,138,0,0.30)] transition-all duration-300">
                   <h3 className="text-2xl font-bold">
-                    Building Connections That Matter
+                    Driving India's Renewable Energy Ecosystem
                   </h3>
 
                   <p className="mt-3 text-white/90 leading-relaxed">
-                    Connect with decision-makers, innovators and sustainability
-                    professionals from around the globe through meaningful
-                    discussions, networking opportunities and collaborative
-                    initiatives.
+                    Connect with manufacturers, EPC companies, developers,
+                    investors, policymakers and technology providers while
+                    discovering new business opportunities and strategic
+                    partnerships.
                   </p>
                 </div>
               </div>
@@ -101,13 +109,13 @@ export default function About() {
           </div>
         </section>
       </FadeUp>
-<RegisterModal
-  open={openModal}
-  onClose={() => setOpenModal(false)}
-  formData={formData}
-  handleChange={handleChange}
-  setFormData={setFormData}
-/>
+      <RegisterModal
+        open={openModal}
+        onClose={() => setOpenModal(false)}
+        formData={formData}
+        handleChange={handleChange}
+        setFormData={setFormData}
+      />
     </>
   );
 }

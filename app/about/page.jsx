@@ -7,355 +7,142 @@ import CountUp from "react-countup";
 export default function About() {
   return (
     <main className="bg-gradient-to-br from-white via-slate-50 to-orange-50 text-slate-900">
-      {/* About Section  */}
+      {/* ================= ABOUT HERO ================= */}
+
       <motion.section
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
-        className="relative overflow-hidden bg-[#1f5678] pt-30 pb-24"
+      className="relative overflow-hidden bg-[#1f5678] pt-40 pb-20 lg:pt-30"
       >
-        {/* Animated Grid Background */}
-        <div
-          className="absolute inset-0 opacity-10"
-          style={{
-            backgroundImage: `
-        linear-gradient(rgba(255,255,255,.15) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,.15) 1px, transparent 1px)
-      `,
-            backgroundSize: "70px 70px",
-          }}
-        />
+   
 
-        {/* Floating Gradient Orbs */}
-        <div className="absolute -top-40 -right-40 h-[500px] w-[500px] rounded-full bg-orange-400/5 blur-3xl" />
-        <div className="absolute -bottom-40 -left-40 h-[500px] w-[500px] rounded-full bg-blue-400/5 blur-3xl" />
+ 
 
         <div className="relative mx-auto max-w-7xl px-6">
-          {/* Section Header - Enhanced */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="mb-20 text-center"
-          >
-            <div className="inline-block">
-              <span className="inline-block rounded-full border border-orange-400/30 bg-orange-400/10 px-6 py-2 text-sm font-semibold text-orange-300 backdrop-blur-sm">
-                ABOUT RE PAX INDIA
+          {/* Badge */}
+
+          <div className="text-center">
+            <span className="inline-flex items-center rounded-full border border-orange-400/30 bg-orange-500/10 px-6 py-2 text-sm font-semibold tracking-widest text-orange-300 uppercase">
+              About RE-PAX India
+            </span>
+
+            {/* Heading */}
+
+            <h1 className="mx-auto mt-8 max-w-6xl text-4xl font-black leading-tight text-white md:text-6xl lg:text-6xl">
+              Empowering India's
+              <span className="block">
+                Renewable Energy
+                <span className="text-orange-400"> Ecosystem</span>
               </span>
-            </div>
-            <h2 className="mt-6 text-4xl font-bold text-white md:text-5xl lg:text-5xl">
-             Empowering India's Renewable Energy
-              <span className="bg-gradient-to-r from-orange-400 to-orange-300 bg-clip-text text-transparent">
-                Ecosystem Through Collaboration, Innovation & Leadership
+              <span className="mt-3 block text-3xl font-bold text-orange-300 md:text-4xl">
+                Through Collaboration, Innovation & Leadership
               </span>
-            </h2>
-            <p className="mx-auto mt-6 max-w-3xl text-lg text-slate-300/80">
-              RE PAX India Summit collaborates with leading media platforms,
-              industry publications, and energy communities to drive innovation,
-              knowledge sharing, and business growth across the renewable
-              sector.
+            </h1>
+
+            {/* Description */}
+
+            <p className="mx-auto mt-8 max-w-4xl text-lg leading-9 text-slate-300">
+              India's renewable energy sector is undergoing a remarkable
+              transformation. As the nation accelerates toward ambitious clean
+              energy targets, RE-PAX India brings together manufacturers, EPC
+              companies, policymakers, investors, technology providers,
+              developers and sustainability leaders to drive innovation,
+              collaboration and business growth.
             </p>
-          </motion.div>
+          </div>
 
-          {/* Cards Grid - Enhanced with better visuals */}
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-            {/* Card 1 - Solar */}
-            <motion.a
-              href="https://www.renewablemirror.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              initial={{ opacity: 0, y: 60 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              whileHover={{
-                y: -10,
-                scale: 1.02,
-              }}
-              className="group relative block overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl transition-all duration-500 hover:border-orange-400 hover:bg-white/10 hover:shadow-2xl hover:shadow-orange-500/20"
-            >
-              {/* Image */}
-              <div className="relative h-52 overflow-hidden">
-                <img
-                  src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1200"
-                  alt="Renewable Mirror"
-                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
+          {/* Stats */}
 
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1f5678]/55 via-[#1f5678]/10 to-transparent" />
-
-                {/* Badge */}
-                <div className="absolute bottom-4 left-4">
-                  <span className="rounded-full bg-orange-400 px-4 py-2 text-xs font-bold text-white shadow-lg shadow-orange-500/30">
-                    🌿 Renewable Mirror
-                  </span>
-                </div>
-              </div>
-
-              {/* Content */}
-              <div className="p-6 text-center">
-                <h3 className="text-xl font-bold text-white transition-colors duration-300 group-hover:text-orange-300">
-                  Renewable Mirror
+          <div className="mt-16 grid grid-cols-2 gap-6 md:grid-cols-4">
+            {[
+              {
+                number: "200+",
+                label: "Delegates",
+              },
+              {
+                number: "20+",
+                label: "Speakers",
+              },
+              {
+                number: "50+",
+                label: "Companies",
+              },
+              {
+                number: "15+",
+                label: "Award Categories",
+              },
+            ].map((item, index) => (
+              <motion.div
+                key={index}
+                whileHover={{
+                  scale: 1.05,
+                }}
+                transition={{
+                  duration: 0.25,
+                }}
+                className="
+            rounded-2xl
+            border
+            border-white/10
+            bg-white/5
+            p-6
+            text-center
+            backdrop-blur-sm
+            transition-all
+            duration-300
+            hover:border-orange-400
+            hover:bg-white/10
+          "
+              >
+                <h3 className="text-4xl font-black text-orange-400">
+                  {item.number}
                 </h3>
 
-                <p className="mt-1 text-sm text-slate-400">
-                  Renewable Energy Media Platform
+                <p className="mt-2 text-sm uppercase tracking-wider text-slate-300">
+                  {item.label}
                 </p>
-
-                <div className="mt-5">
-                  <h4 className="text-4xl font-extrabold text-white">100K+</h4>
-
-                  <p className="mt-2 text-sm font-medium text-slate-300">
-                    Industry Readers
-                  </p>
-                </div>
-
-                <div className="mt-5 h-1.5 w-full overflow-hidden rounded-full bg-white/10">
-                  <motion.div
-                    className="h-full bg-gradient-to-r from-orange-400 to-orange-500"
-                    initial={{ width: 0 }}
-                    animate={{ width: "85%" }}
-                    transition={{ duration: 1.5, delay: 0.8 }}
-                  />
-                </div>
-
-                {/* Visit Website */}
-                <div className="mt-5 text-xs font-semibold uppercase tracking-wider text-orange-300 opacity-0 transition-all duration-300 group-hover:opacity-100">
-                  Visit Website →
-                </div>
-              </div>
-            </motion.a>
-
-            {/* Card 2 - Wind */}
-            <motion.a
-              href="https://electricalmirror.net/"
-              target="_blank"
-              rel="noopener noreferrer"
-              initial={{ opacity: 0, y: 60 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              whileHover={{
-                y: -10,
-                scale: 1.02,
-              }}
-              className="group relative block overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl transition-all duration-500 hover:border-orange-400 hover:bg-white/10 hover:shadow-2xl hover:shadow-orange-500/20"
-            >
-              {/* Image */}
-              <div className="relative h-52 overflow-hidden">
-                <img
-                  src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200"
-                  alt="Electrical Mirror"
-                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1f5678]/55 via-[#1f5678]/10 to-transparent" />
-
-                {/* Badge */}
-                <div className="absolute bottom-4 left-4">
-                  <span className="rounded-full bg-orange-400 px-4 py-2 text-xs font-bold text-white shadow-lg shadow-orange-500/30">
-                    📰 Electrical Mirror
-                  </span>
-                </div>
-              </div>
-
-              {/* Content */}
-              <div className="p-6 text-center">
-                <h3 className="text-xl font-bold text-white transition-colors duration-300 group-hover:text-orange-300">
-                  Electrical Mirror
-                </h3>
-
-                <p className="mt-1 text-sm text-slate-400">
-                  Electrical Industry Publication
-                </p>
-
-                <div className="mt-5">
-                  <h4 className="text-4xl font-extrabold text-white">25+</h4>
-
-                  <p className="mt-2 text-sm font-medium text-slate-300">
-                    Years Presence
-                  </p>
-                </div>
-
-                <div className="mt-5 h-1.5 w-full overflow-hidden rounded-full bg-white/10">
-                  <motion.div
-                    className="h-full bg-gradient-to-r from-orange-400 to-orange-500"
-                    initial={{ width: 0 }}
-                    animate={{ width: "75%" }}
-                    transition={{ duration: 1.5, delay: 1 }}
-                  />
-                </div>
-
-                {/* Visit Website */}
-                <div className="mt-5 text-xs font-semibold uppercase tracking-wider text-orange-300 opacity-0 transition-all duration-300 group-hover:opacity-100">
-                  Visit Website →
-                </div>
-              </div>
-            </motion.a>
-
-            {/* Card 3 - Hydro (Center - Premium) */}
-            <motion.a
-              href="https://www.powerpaxindia.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              initial={{ opacity: 0, y: 60 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              whileHover={{
-                y: -15,
-                scale: 1.03,
-                boxShadow: "0 30px 60px -15px rgba(251,146,60,0.4)",
-              }}
-              className="group relative block overflow-hidden rounded-3xl border-2 border-orange-400/40 bg-gradient-to-br from-orange-400/15 to-white/5 backdrop-blur-xl transition-all duration-500 hover:border-orange-400 hover:shadow-2xl hover:shadow-orange-500/30"
-            >
-              {/* Featured Badge */}
-              <div className="absolute -top-1 right-4 z-10">
-                <div className="relative">
-                  <span className="relative rounded-full bg-gradient-to-r from-orange-400 to-orange-500 px-4 py-1 text-xs font-bold text-white shadow-lg shadow-orange-500/40">
-                    ⭐ FEATURED
-                  </span>
-
-                  <div className="absolute -inset-1 animate-pulse rounded-full bg-orange-400/20 blur-sm"></div>
-                </div>
-              </div>
-
-              {/* Image */}
-              <div className="relative h-52 overflow-hidden">
-                <img
-                  src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1200"
-                  alt="PowerPax India"
-                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1f5678]/55 via-[#1f5678]/10 to-transparent" />
-
-                <div className="absolute bottom-4 left-4">
-                  <span className="rounded-full bg-orange-400 px-4 py-2 text-xs font-bold text-white ">
-                    ⚡ PowerPax India
-                  </span>
-                </div>
-              </div>
-
-              {/* Content */}
-              <div className="p-6 text-center">
-                <h3 className="text-xl font-bold text-white transition-colors duration-300 group-hover:text-orange-300">
-                  PowerPax India
-                </h3>
-
-                <p className="mt-1 text-sm text-slate-400">
-                  Official Event Platform
-                </p>
-
-                <div className="mt-5">
-                  <h4 className="text-4xl font-extrabold text-white">500+</h4>
-
-                  <p className="mt-2 text-sm font-medium text-slate-300">
-                    Industry Leaders
-                  </p>
-                </div>
-
-                <div className="mt-5 h-1.5 w-full overflow-hidden rounded-full bg-white/10">
-                  <motion.div
-                    className="h-full bg-gradient-to-r from-orange-400 to-orange-500"
-                    initial={{ width: 0 }}
-                    animate={{ width: "95%" }}
-                    transition={{ duration: 1.5, delay: 1.2 }}
-                  />
-                </div>
-
-                {/* Visit Website */}
-                <div className="mt-5 text-xs font-semibold uppercase tracking-wider text-orange-300 opacity-0 transition-all duration-300 group-hover:opacity-100">
-                  Visit Website →
-                </div>
-              </div>
-            </motion.a>
-
-            {/* Card 4 - Bio */}
-            <motion.a
-              href="https://constructionmirror.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              initial={{ opacity: 0, y: 60 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              whileHover={{
-                y: -10,
-                scale: 1.02,
-              }}
-              className="group relative block overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl transition-all duration-500 hover:border-orange-400 hover:bg-white/10 hover:shadow-2xl hover:shadow-orange-500/20"
-            >
-              {/* Image */}
-              <div className="relative h-52 overflow-hidden">
-                <img
-                  src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1200"
-                  alt="Construction Mirror"
-                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1f5678]/55 via-[#1f5678]/10 to-transparent" />
-
-                {/* Badge */}
-                <div className="absolute bottom-4 left-4">
-                  <span className="rounded-full bg-orange-400 px-4 py-2 text-xs font-bold text-white shadow-lg shadow-orange-500/30">
-                    🏗 Construction Mirror
-                  </span>
-                </div>
-              </div>
-
-              {/* Content */}
-              <div className="p-6 text-center">
-                <h3 className="text-xl font-bold text-white transition-colors duration-300 group-hover:text-orange-300">
-                  Construction Mirror
-                </h3>
-
-                <p className="mt-1 text-sm text-slate-400">
-                  Infrastructure & Construction Media
-                </p>
-
-                <div className="mt-5">
-                  <h4 className="text-4xl font-extrabold text-white">50K+</h4>
-
-                  <p className="mt-2 text-sm font-medium text-slate-300">
-                    Professionals Reached
-                  </p>
-                </div>
-
-                <div className="mt-5 h-1.5 w-full overflow-hidden rounded-full bg-white/10">
-                  <motion.div
-                    className="h-full bg-gradient-to-r from-orange-400 to-orange-500"
-                    initial={{ width: 0 }}
-                    animate={{ width: "80%" }}
-                    transition={{ duration: 1.5, delay: 1.4 }}
-                  />
-                </div>
-
-                {/* Visit Website */}
-                <div className="mt-5 text-xs font-semibold uppercase tracking-wider text-orange-300 opacity-0 transition-all duration-300 group-hover:opacity-100">
-                  Visit Website →
-                </div>
-              </div>
-            </motion.a>
+              </motion.div>
+            ))}
           </div>
         </div>
       </motion.section>
 
-
-
-      {/* Purpose */}
+      {/* About */}
       <section className="py-24 bg-white">
         <div className="mx-auto max-w-7xl px-6">
           <div className="text-center">
-            <h2 className="text-5xl font-bold text-slate-900">Our Purpose</h2>
+            <h2 className="text-5xl font-bold text-slate-900">
+              About RE-PAX India
+            </h2>
 
             <p className="mx-auto mt-6 max-w-3xl text-lg text-slate-600">
-              RE PAX India creates a collaborative ecosystem where renewable
-              energy leaders, innovators, policymakers, and investors work
-              together to accelerate India's clean energy transition.
+              RE-PAX India was established to support this transformation by
+              creating a dedicated platform where the entire renewable energy
+              ecosystem can come together under one roof. More than just a
+              conference, RE-PAX India is a business networking and
+              knowledge-sharing platform that enables meaningful conversations,
+              encourages innovation, and fosters partnerships that contribute to
+              India's sustainable future.
+            </p>
+
+            <p className="mx-auto mt-6 max-w-3xl text-lg text-slate-600">
+              Organized by Renewable Mirror, RE-PAX India has become one of the
+              country's fastest-growing renewable energy conference series,
+              bringing together industry leaders, government representatives,
+              manufacturers, EPC contractors, project developers, utilities,
+              financial institutions, investors, researchers, and technology
+              innovators.
+            </p>
+
+            <p className="mx-auto mt-6 max-w-3xl text-lg text-slate-600">
+              Our goal is simple: to provide a world-class platform where
+              businesses connect, ideas flourish, and the renewable energy
+              industry moves forward together.
             </p>
           </div>
         </div>
       </section>
-
-
-
 
       {/* WHY RE PAX INDIA Content */}
       <section className="relative py-24 bg-white">
@@ -392,10 +179,7 @@ export default function About() {
               </span>
 
               <h2 className="mt-6 text-3xl font-bold text-slate-900 leading-tight">
-                India's Premier
-                <span className="block text-orange-500">
-                  Renewable Energy Platform
-                </span>
+                Why RE-PAX India?
               </h2>
 
               <p className="mt-6 text-lg leading-8 text-slate-600">
@@ -403,43 +187,74 @@ export default function About() {
                 innovators and policymakers to accelerate India's clean energy
                 future.
               </p>
-
               <div className="mt-10 space-y-4">
                 <div className="flex items-center gap-4">
                   <div className="h-10 w-10 rounded-full bg-orange-100 flex items-center justify-center">
                     ⚡
                   </div>
-                  <span>Clean Energy Innovation</span>
+                  <span>Learn from industry experts and policymakers.</span>
                 </div>
 
                 <div className="flex items-center gap-4">
                   <div className="h-10 w-10 rounded-full bg-orange-100 flex items-center justify-center">
                     🌍
                   </div>
-                  <span>Global Industry Leaders</span>
+                  <span>Discover innovative technologies and solutions.</span>
                 </div>
 
                 <div className="flex items-center gap-4">
                   <div className="h-10 w-10 rounded-full bg-orange-100 flex items-center justify-center">
                     🤝
                   </div>
-                  <span>Strategic Networking</span>
+                  <span>Explore investment and funding opportunities.</span>
                 </div>
 
                 <div className="flex items-center gap-4">
                   <div className="h-10 w-10 rounded-full bg-orange-100 flex items-center justify-center">
                     📈
                   </div>
-                  <span>Investment Opportunities</span>
+                  <span>Build relationships with key decision-makers.</span>
+                </div>
+
+                <div className="flex items-center gap-4">
+                  <div className="h-10 w-10 rounded-full bg-orange-100 flex items-center justify-center">
+                    🚀
+                  </div>
+                  <span>Showcase products and services.</span>
+                </div>
+
+                <div className="flex items-center gap-4">
+                  <div className="h-10 w-10 rounded-full bg-orange-100 flex items-center justify-center">
+                    💼
+                  </div>
+                  <span>Generate high-quality business leads.</span>
+                </div>
+
+                <div className="flex items-center gap-4">
+                  <div className="h-10 w-10 rounded-full bg-orange-100 flex items-center justify-center">
+                    🏛️
+                  </div>
+                  <span>
+                    Understand government initiatives and policy developments.
+                  </span>
+                </div>
+
+                <div className="flex items-center gap-4">
+                  <div className="h-10 w-10 rounded-full bg-orange-100 flex items-center justify-center">
+                    📊
+                  </div>
+                  <span>Stay informed about emerging market trends.</span>
                 </div>
               </div>
+              <p className="mt-8 text-lg leading-8 text-slate-600">
+                Unlike traditional exhibitions or conferences, RE-PAX India
+                combines thought leadership, networking, business matchmaking,
+                exhibitions, and recognition into one integrated experience.
+              </p>
             </div>
           </div>
         </div>
       </section>
-
-
-
 
       {/* Stats */}
       <section className="bg-[#1f5678] py-24">
@@ -471,14 +286,7 @@ export default function About() {
           "
               >
                 <h3 className="text-5xl font-bold text-orange-400 transition-all duration-300 group-hover:scale-110">
-                  <CountUp
-                    start={0}
-                    end={item[0]}
-                    duration={2.5}
-                    enableScrollSpy
-                    scrollSpyOnce
-                  />
-                  +
+                  <CountUp start={0} end={item[0]} duration={2.5} />+
                 </h3>
 
                 <p className="mt-3 text-slate-300 text-lg">{item[1]}</p>
@@ -537,7 +345,7 @@ export default function About() {
             }}
             className="mt-6 text-4xl font-bold text-slate-900 md:text-5xl"
           >
-            Shaping The Future Of
+            Building a Sustainable Future Through
             <span className="block text-orange-500">Renewable Energy</span>
           </motion.h2>
 
@@ -569,175 +377,528 @@ export default function About() {
             }}
             className="mx-auto mt-8 max-w-4xl text-lg leading-9 text-slate-600"
           >
-            Our vision is to create a collaborative platform that accelerates
-            renewable energy adoption, drives innovation, and connects
-            policymakers, investors, technology providers, and industry leaders
-            to build a cleaner, greener, and more sustainable future for India.
+            Our vision is to become India's most trusted renewable energy
+            conference and business networking platform by connecting industry
+            leaders, policymakers, investors, innovators, and businesses to
+            accelerate the adoption of clean energy technologies.
+            <br />
+            We believe that collaboration is the foundation of sustainable
+            growth. By bringing together diverse stakeholders from across the
+            renewable energy value chain, RE-PAX India aims to inspire
+            innovation, strengthen partnerships, and contribute to India's
+            journey toward energy independence and environmental sustainability.
           </motion.p>
         </div>
       </motion.section>
 
-
-
       {/* Mission */}
 
-<motion.section
-  initial={{ opacity: 0, y: 80 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: true }}
-  transition={{ duration: 0.8 }}
-  className="relative overflow-hidden py-28 bg-gradient-to-br from-[#1f5678] via-[#245f85] to-[#1f5678]"
->
+      <motion.section
+        initial={{ opacity: 0, y: 80 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className="relative overflow-hidden py-28 bg-gradient-to-br from-[#1f5678] via-[#245f85] to-[#1f5678]"
+      >
+        <div className="relative max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <span className="inline-block px-5 py-2 rounded-full bg-orange-500/15 border border-orange-400/30 text-orange-300 font-semibold">
+              OUR MISSION
+            </span>
 
+            <h2 className="mt-6 text-5xl md:text-6xl font-bold text-white">
+              Creating Opportunities That Empower the
+              <span className="block text-orange-400">
+                Renewable Energy Community
+              </span>
+            </h2>
 
-  <div className="relative max-w-7xl mx-auto px-6">
-    <div className="text-center mb-16">
-      <span className="inline-block px-5 py-2 rounded-full bg-orange-500/15 border border-orange-400/30 text-orange-300 font-semibold">
-        OUR MISSION
-      </span>
-
-      <h2 className="mt-6 text-5xl md:text-6xl font-bold text-white">
-        Driving Renewable
-        <span className="block text-orange-400">
-          Energy Growth
-        </span>
-      </h2>
-
-      <p className="mt-6 max-w-3xl mx-auto text-lg text-slate-300">
-        To foster collaboration, innovation, investment and sustainable
-        development across India's renewable energy ecosystem while
-        accelerating the nation's clean energy transition.
-      </p>
-    </div>
-
-    <div className="grid md:grid-cols-3 gap-8">
-      {[
-        {
-          icon: "🤝",
-          title: "Industry Collaboration",
-          desc: "Connecting stakeholders, policymakers and industry leaders."
-        },
-        {
-          icon: "⚡",
-          title: "Technology Innovation",
-          desc: "Promoting breakthrough renewable energy solutions."
-        },
-        {
-          icon: "🌱",
-          title: "Sustainable Development",
-          desc: "Building a cleaner and greener future for India."
-        },
-      ].map((item, i) => (
-        <motion.div
-          key={i}
-          whileHover={{
-            y: -10,
-            scale: 1.03,
-          }}
-          className="
-            group
-            rounded-3xl
-            border
-            border-white/10
-            bg-white/5
-            backdrop-blur-xl
-            p-8
-            text-center
-            transition-all
-            duration-500
-            hover:border-orange-400
-            hover:bg-white/10
-            hover:shadow-[0_20px_50px_rgba(249,115,22,0.25)]
-          "
-        >
-          <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-2xl bg-orange-500 text-4xl shadow-lg shadow-orange-500/30">
-            {item.icon}
+            <p className="mt-6 max-w-3xl mx-auto text-lg text-slate-300">
+              At RE-PAX India, our mission is to create opportunities that
+              empower the renewable energy community through:
+            </p>
           </div>
 
-          <h3 className="mt-6 text-2xl font-bold text-white">
-            {item.title}
-          </h3>
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              {
+                icon: "🤝",
+                title: "Industry Collaboration",
+                desc: "Encouraging collaboration across the renewable energy ecosystem.",
+              },
+              {
+                icon: "📚",
+                title: "Knowledge Sharing",
+                desc: "Sharing industry insights, trends and best practices.",
+              },
+              {
+                icon: "⚡",
+                title: "Technology Innovation",
+                desc: "Promoting innovative clean energy technologies and solutions.",
+              },
+              {
+                icon: "🌐",
+                title: "Business Networking",
+                desc: "Creating valuable networking opportunities for businesses.",
+              },
+              {
+                icon: "💰",
+                title: "Investment Facilitation",
+                desc: "Connecting investors with promising renewable energy opportunities.",
+              },
+              {
+                icon: "🏛️",
+                title: "Policy Discussions",
+                desc: "Supporting dialogue on renewable energy policies and regulations.",
+              },
+              {
+                icon: "🏆",
+                title: "Leadership Recognition",
+                desc: "Recognizing excellence through the RE-PAX Leadership Awards.",
+              },
+              {
+                icon: "🌱",
+                title: "Sustainable Development",
+                desc: "Driving long-term environmental and sustainable growth.",
+              },
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                whileHover={{
+                  y: -10,
+                  scale: 1.03,
+                }}
+                className="
+        group
+        rounded-3xl
+        border
+        border-white/10
+        bg-white/5
+        backdrop-blur-xl
+        p-8
+        text-center
+        transition-all
+        duration-500
+        hover:border-orange-400
+        hover:bg-white/10
+        hover:shadow-[0_20px_50px_rgba(249,115,22,0.25)]
+      "
+              >
+                <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-2xl bg-orange-500 text-4xl shadow-lg shadow-orange-500/30">
+                  {item.icon}
+                </div>
 
-          <p className="mt-3 text-slate-300 leading-7">
-            {item.desc}
-          </p>
-        </motion.div>
-      ))}
-    </div>
-  </div>
-</motion.section>
+                <h3 className="mt-6 text-xl font-bold text-white">
+                  {item.title}
+                </h3>
 
+                <p className="mt-3 text-slate-300 leading-7 text-sm">
+                  {item.desc}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </motion.section>
 
+      {/* WHAT MAKES RE-PAX DIFFERENT */}
+      <section className="bg-white py-24">
+        <div className="mx-auto max-w-7xl px-6">
+          {/* Heading */}
+          <div className="mx-auto mb-16 max-w-4xl text-center">
+            <span className="rounded-full bg-orange-50 px-5 py-2 text-sm font-semibold text-orange-500">
+              WHAT MAKES RE-PAX DIFFERENT?
+            </span>
 
+            <h2 className="mt-6 text-4xl font-bold text-slate-900 md:text-5xl">
+              What Makes
+              <span className="block text-orange-500">RE-PAX Different?</span>
+            </h2>
 
-      {/* Objectives */}
+            <p className="mt-6 text-lg leading-8 text-slate-600">
+              Unlike traditional exhibitions or conferences, RE-PAX India
+              combines thought leadership, networking, business matchmaking,
+              exhibitions, and recognition into one integrated experience.
+            </p>
+          </div>
 
-<motion.section
-  initial={{ opacity: 0, y: 80 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: true }}
-  transition={{ duration: 0.8 }}
-  className="relative overflow-hidden py-28 bg-white"
->
-  {/* Background Glow */}
-  <div className="absolute top-0 right-0 h-96 w-96 rounded-full bg-orange-100 blur-3xl opacity-50" />
-  <div className="absolute bottom-0 left-0 h-96 w-96 rounded-full bg-blue-100 blur-3xl opacity-50" />
+          {/* Cards */}
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {[
+              {
+                title: "Business-Focused Networking",
+                desc: "RE-PAX India is designed to facilitate meaningful business interactions rather than casual networking. Our carefully curated attendee base includes senior executives, business owners, project developers, procurement heads, investors, consultants and government officials actively seeking partnerships and opportunities.",
+              },
+              {
+                title: "Expert-Led Knowledge Sharing",
+                desc: "Gain valuable insights from industry leaders through keynote presentations, panel discussions, fireside chats and technical sessions covering the latest trends, challenges and innovations in renewable energy.",
+              },
+              {
+                title: "Industry Recognition",
+                desc: "The RE-PAX Leadership Awards celebrate organizations and professionals who have demonstrated excellence in renewable energy, innovation, sustainability and business leadership.",
+              },
+              {
+                title: "Technology Showcase",
+                desc: "Discover cutting-edge products, services and technologies from leading companies shaping the future of solar energy, battery storage, electric mobility, smart grids and clean technology.",
+              },
+              {
+                title: "Strategic Partnerships",
+                desc: "RE-PAX creates an environment where businesses can identify potential partners, customers, suppliers, investors and collaborators, helping participants achieve long-term growth.",
+              },
+            ].map((item, index) => (
+              <motion.div
+                key={index}
+                whileHover={{
+                  scale: 1.03,
+                }}
+                transition={{ duration: 0.25 }}
+                className="
+            rounded-3xl
+            border
+            border-[#2D6A8C]
+            bg-[#1f5678]
+            p-8
+            shadow-lg
+            transition-all
+            duration-300
+            hover:border-[#F4B400]
+            hover:shadow-[0_20px_40px_rgba(31,86,120,0.35)]
+          "
+              >
+                <h3 className="text-2xl font-bold text-white">{item.title}</h3>
 
-  <div className="relative max-w-7xl mx-auto px-6">
-    {/* Heading */}
-    <div className="text-center mb-20">
-      <span className="inline-flex rounded-full border border-orange-200 bg-orange-50 px-5 py-2 text-sm font-semibold text-orange-600">
-        OBJECTIVES
-      </span>
+                <p className="mt-5 leading-8 text-slate-200">{item.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-      <h2 className="mt-6 text-4xl md:text-5xl font-bold text-slate-900">
-        What We Aim To
-        <span className="block text-orange-500">
-          Achieve
-        </span>
-      </h2>
+      {/* OUR CORE FOCUS AREAS */}
 
-      <p className="mt-6 max-w-3xl mx-auto text-lg text-slate-600">
-        Creating opportunities for collaboration, innovation,
-        networking and sustainable growth across India's renewable
-        energy ecosystem.
-      </p>
-    </div>
+      <section className="bg-[#1f5678] py-24">
+        <div className="mx-auto max-w-7xl px-6">
+          {/* Heading */}
 
-    {/* Cards */}
-    <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-      {[
-        {
-          icon: "📚",
-          title: "Knowledge Sharing",
-          desc: "Exchange insights, trends and best practices."
-        },
-        {
-          icon: "🤝",
-          title: "Business Networking",
-          desc: "Connect industry leaders and decision makers."
-        },
-        {
-          icon: "💰",
-          title: "Investment Promotion",
-          desc: "Unlock funding and growth opportunities."
-        },
-        {
-          icon: "🏛️",
-          title: "Policy Discussion",
-          desc: "Support industry dialogue and policy development."
-        },
-      ].map((item, i) => (
-        <motion.div
-          key={i}
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: i * 0.1 }}
-          whileHover={{
-            y: -12,
-            scale: 1.03,
-          }}
-          className="
+          <div className="mx-auto mb-16 max-w-4xl text-center">
+            <span className="rounded-full border border-orange-400/30 bg-orange-500/10 px-5 py-2 text-sm font-semibold text-orange-300">
+              OUR CORE FOCUS AREAS
+            </span>
+
+            <h2 className="mt-6 text-4xl font-bold text-white md:text-5xl">
+              Driving India's
+              <span className="block text-orange-400">
+                Renewable Energy Transition
+              </span>
+            </h2>
+
+            <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-300">
+              RE-PAX India addresses the most significant sectors driving
+              India's renewable energy transition.
+            </p>
+          </div>
+
+          {/* Cards */}
+
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {[
+              {
+                title: "Solar Manufacturing",
+                desc: "Explore advancements in solar cells, modules, wafers, inverters, domestic manufacturing, ALMM, DCR policies and next-generation technologies.",
+              },
+              {
+                title: "Energy Storage Systems (BESS)",
+                desc: "Understand the growing role of battery energy storage in grid stability, renewable integration, commercial applications and utility-scale projects.",
+              },
+              {
+                title: "Electric Mobility",
+                desc: "Learn about EV charging infrastructure, battery technologies, fleet electrification and sustainable transportation solutions.",
+              },
+              {
+                title: "Green Hydrogen",
+                desc: "Discover opportunities in hydrogen production, storage, infrastructure, industrial applications and India's Hydrogen Mission.",
+              },
+              {
+                title: "Smart Energy Solutions",
+                desc: "Explore AI, IoT, digital energy management, automation, smart grids and intelligent renewable energy technologies.",
+              },
+              {
+                title: "Sustainability & ESG",
+                desc: "Understand sustainability strategies, carbon reduction, ESG best practices and long-term environmental responsibility.",
+              },
+            ].map((item, index) => (
+              <motion.div
+                key={index}
+                whileHover={{
+                  scale: 1.03,
+                }}
+                transition={{
+                  duration: 0.25,
+                }}
+                className="
+            rounded-3xl
+            border
+            border-[#2b6b8f]
+            bg-[#245f85]
+            p-8
+            transition-all
+            duration-300
+            hover:border-[#F4B400]
+            hover:shadow-[0_20px_45px_rgba(0,0,0,0.30)]
+          "
+              >
+                <h3 className="text-2xl font-bold text-white">{item.title}</h3>
+
+                <div className="mt-4 h-1 w-16 rounded-full bg-orange-400" />
+
+                <p className="mt-5 leading-8 text-slate-200">{item.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* WHO WE BRING TOGETHER */}
+
+      <section className="bg-white py-24">
+        <div className="mx-auto max-w-7xl px-6">
+          {/* Heading */}
+
+          <div className="mx-auto mb-16 max-w-4xl text-center">
+            <span className="rounded-full bg-orange-50 px-5 py-2 text-sm font-semibold text-orange-500">
+              WHO WE BRING TOGETHER
+            </span>
+
+            <h2 className="mt-6 text-4xl font-bold text-slate-900 md:text-5xl">
+              Connecting Every Stakeholder in
+              <span className="block text-[#1f5678]">
+                India's Renewable Energy Ecosystem
+              </span>
+            </h2>
+
+            <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-600">
+              RE-PAX India connects professionals from across the renewable
+              energy value chain, creating an ideal environment for
+              collaboration, innovation and business development.
+            </p>
+          </div>
+
+          {/* Cards */}
+
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              "Solar Manufacturers",
+              "Battery Manufacturers",
+              "Energy Storage Companies",
+              "EPC Contractors",
+              "Renewable Energy Developers",
+              "Independent Power Producers (IPPs)",
+              "Government Departments",
+              "Public Sector Undertakings (PSUs)",
+              "Policymakers & Regulators",
+              "Utilities & DISCOMs",
+              "Technology Providers",
+              "OEMs",
+              "Investors & Venture Capital Firms",
+              "Banks & Financial Institutions",
+              "Consultants",
+              "Dealers & Distributors",
+              "Installers",
+              "Industrial & Commercial Energy Consumers",
+              "Startups",
+              "Research Institutions",
+              "Industry Associations",
+            ].map((item, index) => (
+              <motion.div
+                key={index}
+                whileHover={{
+                  scale: 1.04,
+                }}
+                transition={{
+                  duration: 0.25,
+                }}
+                className="
+            rounded-2xl
+            border
+            border-slate-200
+            bg-white
+            px-6
+            py-5
+            text-center
+            shadow-sm
+            transition-all
+            duration-300
+            hover:border-[#F4B400]
+            hover:shadow-xl
+          "
+              >
+                <h3 className="font-semibold text-[#1f5678] text-lg">{item}</h3>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Bottom Text */}
+
+          <div className="mx-auto mt-16 max-w-5xl rounded-3xl border border-slate-200 bg-slate-50 p-8 text-center">
+            <p className="text-lg leading-8 text-slate-600">
+              This diverse participation creates an ideal environment for
+              collaboration, innovation, strategic partnerships and business
+              development across India's renewable energy ecosystem.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ORGANIZED BY RENEWABLE MIRROR */}
+
+      <section className="bg-[#1f5678] py-24">
+        <div className="mx-auto max-w-7xl px-6">
+          {/* Heading */}
+
+          <div className="mx-auto mb-16 max-w-4xl text-center">
+            <span className="rounded-full border border-orange-400/30 bg-orange-500/10 px-5 py-2 text-sm font-semibold text-orange-300">
+              ORGANIZED BY
+            </span>
+
+            <h2 className="mt-6 text-4xl font-bold text-white md:text-5xl">
+              Renewable
+              <span className="block text-orange-400">Mirror</span>
+            </h2>
+
+            <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-300">
+              RE-PAX India is proudly organized by Renewable Mirror, a leading
+              media and networking platform dedicated to the renewable energy
+              industry. Through industry publications, conferences, awards,
+              digital media and knowledge initiatives, Renewable Mirror
+              continues to support the growth of India's clean energy ecosystem.
+            </p>
+          </div>
+
+          {/* Cards */}
+
+          <div className="grid gap-8 lg:grid-cols-2">
+            {/* Card 1 */}
+
+            <motion.div
+              whileHover={{ scale: 1.03 }}
+              transition={{ duration: 0.25 }}
+              className="
+          rounded-3xl
+          border
+          border-[#2c6b8d]
+          bg-[#245f85]
+          p-10
+          transition-all
+          duration-300
+          hover:border-[#F4B400]
+        "
+            >
+              <h3 className="text-2xl font-bold text-white">
+                Industry Leadership
+              </h3>
+
+              <div className="mt-4 h-1 w-16 rounded-full bg-orange-400"></div>
+
+              <p className="mt-6 leading-8 text-slate-200">
+                Renewable Mirror has earned the trust of professionals,
+                manufacturers, developers, EPC companies, investors and
+                policymakers by delivering high-quality industry insights,
+                business networking opportunities and knowledge-driven events.
+              </p>
+            </motion.div>
+
+            {/* Card 2 */}
+
+            <motion.div
+              whileHover={{ scale: 1.03 }}
+              transition={{ duration: 0.25 }}
+              className="
+          rounded-3xl
+          border
+          border-[#2c6b8d]
+          bg-[#245f85]
+          p-10
+          transition-all
+          duration-300
+          hover:border-[#F4B400]
+        "
+            >
+              <h3 className="text-2xl font-bold text-white">Our Commitment</h3>
+
+              <div className="mt-4 h-1 w-16 rounded-full bg-orange-400"></div>
+
+              <p className="mt-6 leading-8 text-slate-200">
+                With a strong focus on quality content, meaningful engagement
+                and industry collaboration, Renewable Mirror continues to
+                accelerate India's renewable energy transition while connecting
+                businesses, promoting innovation and creating lasting
+                partnerships.
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* JOIN THE MOVEMENT */}
+
+      <section className="bg-white py-24">
+        <div className="mx-auto max-w-7xl px-6">
+          {/* Heading */}
+
+          <div className="mx-auto mb-16 max-w-4xl text-center">
+            <span className="rounded-full bg-orange-50 px-5 py-2 text-sm font-semibold text-orange-500">
+              JOIN THE MOVEMENT
+            </span>
+
+            <h2 className="mt-6 text-4xl font-bold text-slate-900 md:text-5xl">
+              The Future of Energy
+              <span className="block text-[#1f5678]">Is Renewable</span>
+            </h2>
+
+            <p className="mx-auto mt-8 max-w-4xl text-lg leading-8 text-slate-600">
+              Whether you are a manufacturer, investor, policymaker, EPC
+              contractor, developer, technology provider, startup or
+              sustainability professional, RE-PAX India offers the perfect
+              platform to connect, collaborate and grow.
+            </p>
+
+            <p className="mx-auto mt-5 max-w-4xl text-lg leading-8 text-slate-600">
+              Join us in driving innovation, building partnerships and
+              accelerating India's transition to a cleaner, greener and more
+              sustainable future.
+            </p>
+          </div>
+
+          {/* Cards */}
+
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+            {[
+              {
+                title: "Register Now",
+                desc: "Secure your delegate pass and become part of India's renewable energy community.",
+              },
+              {
+                title: "Become a Sponsor",
+                desc: "Showcase your brand before senior decision-makers and industry leaders.",
+              },
+              {
+                title: "Nominate for Awards",
+                desc: "Celebrate excellence by submitting your organization for the RE-PAX Leadership Awards.",
+              },
+              {
+                title: "Contact Us",
+                desc: "Get in touch with our team for sponsorship, partnership or event enquiries.",
+              },
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                whileHover={{
+                  scale: 1.04,
+                }}
+                transition={{
+                  duration: 0.25,
+                }}
+                className="
             group
             relative
             overflow-hidden
@@ -746,280 +907,80 @@ export default function About() {
             border-slate-200
             bg-white
             p-8
-            shadow-lg
+            shadow-sm
             transition-all
-            duration-500
-            hover:border-orange-400
-            hover:shadow-[0_20px_50px_rgba(249,115,22,0.20)]
+            duration-300
+            hover:border-[#F4B400]
+            hover:shadow-[0_20px_40px_rgba(31,86,120,0.25)]
           "
-        >
-          {/* Top Line */}
-          <div className="absolute top-0 left-0 h-1 w-full bg-gradient-to-r from-orange-400 to-orange-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
-
-          {/* Icon */}
-          <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-orange-100 text-3xl">
-            {item.icon}
-          </div>
-
-          {/* Title */}
-          <h3 className="mt-6 text-xl font-bold text-slate-900">
-            {item.title}
-          </h3>
-
-          {/* Description */}
-          <p className="mt-3 text-slate-600 leading-7">
-            {item.desc}
-          </p>
-        </motion.div>
-      ))}
-    </div>
-  </div>
-</motion.section>
-
-
-      {/* Organizers */}
-
-<motion.section
-  initial={{ opacity: 0, y: 80 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: true }}
-  className="py-24 bg-[#1f5678]"
->
-  <div className="max-w-7xl mx-auto px-6">
-    <div className="text-center mb-16">
-      <motion.h2 
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.2 }}
-        className="text-5xl font-bold text-white"
-      >
-        Organizers
-      </motion.h2>
-      <motion.p
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ delay: 0.4 }}
-        className="text-slate-300 mt-4 text-lg"
-      >
-        Meet our esteemed event organizers
-      </motion.p>
-    </div>
-
-    <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
-      {[
-        "Renewable Mirror",
-        "Electrical Mirror",
-        "PowerPax India",
-        "Construction Mirror",
-        "ETES Event",
-      ].map((item, i) => (
-        <motion.div
-          key={i}
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: i * 0.1 }}
-          whileHover={{ 
-            y: -15,
-            scale: 1.02,
-            boxShadow: "0 20px 40px rgba(0,0,0,0.3)"
-          }}
-          className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 text-center border border-white/10 hover:border-white/30 transition-all duration-300 cursor-pointer"
-        >
-          <motion.div 
-            className="h-24 w-24 mx-auto rounded-full bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center"
-            whileHover={{ rotate: 360 }}
-            transition={{ duration: 0.8 }}
-          >
-            <span className="text-3xl font-bold text-white">
-              {item.charAt(0)}
-            </span>
-          </motion.div>
-
-          <h3 className="mt-6 text-xl font-bold text-white">
-            {item}
-          </h3>
-
-          <p className="text-slate-300 mt-2 text-sm">
-            Event Organizer
-          </p>
-        </motion.div>
-      ))}
-    </div>
-  </div>
-</motion.section>
-
-
-
-      {/* Past Events */}
-
-<motion.section
-  initial={{ opacity: 0, y: 80 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: true }}
-  className="py-24 bg-white"
->
-  <div className="max-w-7xl mx-auto px-6">
-    <div className="text-center mb-16">
-      <motion.h2
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.2 }}
-        className="text-5xl font-bold text-[#1f5678]"
-      >
-        Past Events
-      </motion.h2>
-
-      <motion.p
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ delay: 0.4 }}
-        className="mt-4 text-slate-500 text-lg"
-      >
-        A journey of successful renewable energy conferences and summits.
-      </motion.p>
-    </div>
-
-    <div className="grid md:grid-cols-3 gap-8">
-      {[
-        {
-          year: "2022",
-          title: "RE PAX 2022",
-          subtitle: "Renewable Energy Leadership Summit",
-          location: "Mumbai, India",
-          attendees: "500+",
-        },
-        {
-          year: "2023",
-          title: "RE PAX 2023",
-          subtitle: "Global Renewable Energy Conference",
-          location: "Delhi, India",
-          attendees: "750+",
-        },
-        {
-          year: "2024",
-          title: "RE PAX 2024",
-          subtitle: "Future of Sustainable Energy",
-          location: "Bangalore, India",
-          attendees: "1000+",
-        },
-      ].map((item, i) => (
-        <motion.div
-          key={i}
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: i * 0.15 }}
-          whileHover={{
-            y: -12,
-            scale: 1.02,
-          }}
-          className="group overflow-hidden rounded-3xl bg-white border border-slate-200 shadow-md hover:shadow-2xl transition-all duration-500 cursor-pointer"
-        >
-          {/* Top Section */}
-          <div className="h-60 relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-br from-[#1f5678] via-[#2b6b8f] to-[#1f5678]" />
-
-            {/* Decorative Circles */}
-            <div className="absolute -top-10 -left-10 w-40 h-40 bg-white/5 rounded-full" />
-            <div className="absolute -bottom-12 -right-12 w-48 h-48 bg-white/5 rounded-full" />
-
-            {/* Year Badge */}
-            <div className="absolute top-5 right-5 bg-white px-4 py-2 rounded-full shadow-lg">
-              <span className="text-[#1f5678] font-bold text-sm">
-                {item.year}
-              </span>
-            </div>
-
-            {/* Center Branding */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-center">
-                <div className="text-8xl font-extrabold text-white/10">
-                  RE
-                </div>
-                <div className="text-3xl font-bold text-white/25 -mt-4">
-                  {item.year}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Content */}
-          <div className="p-6">
-            <h3 className="text-2xl font-bold text-gray-800">
-              {item.title}
-            </h3>
-
-            <p className="mt-2 text-slate-600">
-              {item.subtitle}
-            </p>
-
-            <div className="mt-5 pt-4 border-t border-slate-200">
-              <div className="flex items-center justify-between text-sm text-slate-500">
-                <span className="flex items-center gap-2">
-                  <svg
-                    className="w-4 h-4 text-[#1f5678]"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                    />
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                    />
-                  </svg>
-                  {item.location}
-                </span>
-
-                <span className="flex items-center gap-2">
-                  <svg
-                    className="w-4 h-4 text-[#1f5678]"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-                    />
-                  </svg>
-                  {item.attendees}
-                </span>
-              </div>
-            </div>
-
-            <div className="mt-6 inline-flex items-center text-[#1f5678] font-semibold text-sm group-hover:translate-x-2 transition-transform duration-300">
-              View Event
-              <svg
-                className="w-4 h-4 ml-1"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-            </div>
-          </div>
-        </motion.div>
-      ))}
-    </div>
-  </div>
-</motion.section>
+                {/* Hover Background */}
 
-      
+                <div
+                  className="
+              absolute
+              inset-0
+              bg-[#1f5678]
+              opacity-0
+              transition-all
+              duration-300
+              group-hover:opacity-100
+            "
+                />
+
+                {/* Content */}
+
+                <div className="relative z-10">
+                  <h3
+                    className="
+                text-2xl
+                font-bold
+                text-[#1f5678]
+                transition-all
+                duration-300
+                group-hover:text-white
+              "
+                  >
+                    {item.title}
+                  </h3>
+
+                  <p
+                    className="
+                mt-5
+                leading-7
+                text-slate-600
+                transition-all
+                duration-300
+                group-hover:text-slate-200
+              "
+                  >
+                    {item.desc}
+                  </p>
+
+                  <button
+                    className="
+                mt-8
+                rounded-xl
+                border
+                border-orange-400
+                px-6
+                py-3
+                font-semibold
+                text-orange-500
+                transition-all
+                duration-300
+                group-hover:border-white
+                group-hover:text-white
+              "
+                  >
+                    Explore
+                  </button>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
     </main>
   );
 }

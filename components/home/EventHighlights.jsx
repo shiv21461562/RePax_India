@@ -45,17 +45,27 @@ export default function EventHighlights() {
             }}
           >
             {[...highlights, ...highlights].map((item, index) => (
-              <div
-                key={index}
-                onMouseEnter={() => setPaused(true)}
-                onMouseLeave={() => setPaused(false)}
-                onClick={() => setPaused(!paused)}
-                className="group flex cursor-pointer items-center gap-3 rounded-full border border-white/10 bg-white/5 px-8 py-4 backdrop-blur-xl transition-all duration-300 hover:border-emerald-400 hover:bg-white/10 hover:shadow-[0_0_30px_rgba(16,185,129,.25)]"
-              >
-                <div className="h-2.5 w-2.5 rounded-full bg-gradient-to-r from-orange-400 to-emerald-400 transition group-hover:scale-125" />
+<div
+  key={index}
+  onMouseEnter={() => setPaused(true)}
+  onMouseLeave={() => setPaused(false)}
+  onClick={() => setPaused(!paused)}
+  className="group relative flex cursor-pointer items-center gap-3 overflow-hidden rounded-full border border-white/10 bg-[#182332] px-8 py-4 backdrop-blur-xl transition-all duration-500 hover:border-[#F59E0B] hover:shadow-[0_0_25px_rgba(16,185,129,.20)]"
+>
+  {/* Left → Right Background */}
+  <span className="absolute inset-0 origin-left scale-x-0 rounded-full bg-gradient-to-r from-[#0D3B52] via-[#156C63] to-[#0F8F6D] transition-transform duration-500 ease-out group-hover:scale-x-100"></span>
 
-                <span className="font-medium text-gray-200">{item}</span>
-              </div>
+  {/* Shine Effect */}
+  <span className="absolute -left-full top-0 h-full w-1/2 skew-x-[-25deg] bg-gradient-to-r from-transparent via-white/20 to-transparent transition-all duration-700 group-hover:left-[140%]"></span>
+
+  {/* Dot */}
+  <div className="relative z-10 h-2.5 w-2.5 rounded-full bg-gradient-to-r from-[#F59E0B] to-[#FFD6A0] transition-all duration-300 group-hover:scale-125"></div>
+
+  {/* Text */}
+  <span className="relative z-10 font-medium text-gray-300 transition-colors duration-300 group-hover:text-white">
+    {item}
+  </span>
+</div>
             ))}
           </motion.div>
         </div>
