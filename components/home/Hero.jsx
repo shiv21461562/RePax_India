@@ -1,9 +1,12 @@
+
+
 "use client";
 import Image from "next/image";
 import { Download } from "lucide-react";
 import { useState } from "react";
 import Swal from "sweetalert2";
 import { createContact } from "@/app/services/EnquiriesApi";
+import Link from "next/link";
 
 export default function Hero() {
   const [showBrochureForm, setShowBrochureForm] = useState(false);
@@ -98,37 +101,69 @@ export default function Hero() {
   return (
     <>
       {/* hero */}
-      <section className="relative min-h-screen overflow-hidden bg-[#1f5678]">
+      <section className="relative min-h-[100dvh] lg:h-screen overflow-hidden bg-[#020817]">
         {/* Background */}
         <div
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-cover"
           style={{
-            backgroundImage: "url('/images/finalHero1.png')",
+            backgroundImage: "url('/images/finalHero.png')",
+            backgroundPosition: "72% center",
+            backgroundSize: "cover",
           }}
         />
 
-        <div className="absolute inset-0 bg-black/20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#020817]/50 via-[#020817]/50 to-transparent" />
 
-        <div className="relative z-10 min-h-screen">
-          <div className="mx-auto flex min-h-screen max-w-7xl items-center px-4 sm:px-6 lg:px-8">
-            <div className="grid w-full gap-8 py-8 lg:grid-cols-2 lg:gap-16 lg:py-12">
+      
+
+        <div className="relative z-10 min-h-[100dvh] lg:min-h-screen">
+          <div className="mx-auto flex min-h-[100dvh] max-w-7xl flex-col justify-center px-4 sm:px-6 lg:min-h-screen lg:items-center lg:px-8">
+            <div className="grid w-full gap-8 py-24 sm:py-28 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16 lg:py-12">
               {/* LEFT CONTENT */}
-              <div className="pt-4 sm:pt-6 lg:pt-8">
-                <h1 className="mt-6 text-3xl font-black leading-[1.05] text-white sm:mt-8 sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl">
-                  RE-PAX India
-                  <span className="block bg-gradient-to-r from-orange-400 to-yellow-300 bg-clip-text text-transparent">
-                    2026
-                  </span>
-                </h1>
+              <div className="max-w-[620px] lg:pt-16">
+                <div
+                  className="
+                    inline-flex items-center
+                    rounded-full
+                    border border-orange-400/40
+                    bg-orange-500/10
+                    px-3 py-1.5
+                    text-[10px]
+                    sm:px-4 sm:py-2
+                    sm:text-xs
+                    font-semibold
+                    uppercase
+                    tracking-widest
+                    text-orange-300
+                    backdrop-blur-md
+                  "
+                >
+                  India's Premier Renewable Energy Event
+                </div>
 
-                <div className="mt-6 h-1 w-16 rounded-full bg-gradient-to-r from-orange-400 to-yellow-300 sm:mt-8 sm:w-20 lg:w-24" />
+             <h1
+  className="
+    mt-5 sm:mt-6
+    text-[44px]
+    sm:text-[55px]
+    lg:text-[60px]
+    leading-[1.05]
+    font-black
+    tracking-tight
+    text-white
+  "
+>
+  RE-PAX India
+  <span className="text-orange-400"> 2026</span>
+</h1>
 
-                <p className="mt-6 text-sm leading-7 text-gray-200 sm:mt-8 sm:text-base sm:leading-8 lg:text-lg lg:leading-8">
-                  <span className="block text-xl font-semibold text-white mb-3">
-                    India's Premier Renewable Energy Conference, Expo &
-                    Leadership Awards
-                  </span>
-                  <span className="block mb-4 text-orange-300 font-medium">
+                <h2 className="mt-4 max-w-[560px] text-lg sm:text-xl lg:text-xl font-bold leading-snug text-white">
+                  India's Premier Renewable Energy Conference, Expo &
+                  <span className="text-orange-400"> Leadership Awards</span>
+                </h2>
+
+                <p className="mt-4 text-sm leading-6 text-gray-200 sm:mt-8 sm:text-base sm:leading-8 lg:text-lg lg:leading-8">
+                  <span className="block mb-3 sm:mb-4 text-orange-300 font-medium">
                     Empowering Innovation • Driving Collaboration • Accelerating
                     India's Clean Energy Future
                   </span>
@@ -139,105 +174,146 @@ export default function Hero() {
                   exchange ideas, build partnerships, showcase innovations and
                   shape the future of clean energy.
                 </p>
+
+                {/* CTA Buttons */}
+                <div className="mt-6 sm:mt-8 flex flex-row gap-3 sm:gap-4 w-full">
+                  <Link
+                    href="/register"
+                    className="group flex-1 inline-flex items-center justify-center overflow-hidden rounded-full border border-orange-400/40 bg-gradient-to-r from-orange-600 to-amber-500 px-4 py-3 sm:px-8 sm:py-4 text-sm sm:text-base font-semibold text-white shadow-[0_12px_35px_rgba(249,115,22,0.35)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_45px_rgba(249,115,22,0.55)]"
+                  >
+                    Register Now
+                  </Link>
+
+                  <Link
+                    href="/sponsors"
+                    className="flex-1 inline-flex items-center justify-center rounded-full border border-white/30 bg-white/10 px-4 py-3 sm:px-7 sm:py-4 text-sm sm:text-base font-semibold text-white backdrop-blur-md transition-all duration-300 hover:bg-white hover:text-[#0f172a]"
+                  >
+                    Become a Sponsor
+                  </Link>
+                </div>
               </div>
 
               {/* RIGHT CONTENT */}
+              <div className="relative flex h-full flex-col justify-end">
+                {/* Download Button */}
+                <div className="flex justify-center">
+                  <button
+                    onClick={() => setShowBrochureForm(true)}
+                    className="
+                      group
+                      flex
+                      h-12
+                      sm:h-16
+                      w-full
+                      max-w-[360px]
+                      items-center
+                      justify-center
+                      gap-2
+                      sm:gap-3
+                      rounded-full
+                      border
+                      border-cyan-400/30
+                      bg-[#0B1220]/55
+                      backdrop-blur-2xl
+                      px-6
+                      sm:px-8
+                      text-sm
+                      sm:text-base
+                      font-semibold
+                      text-white
+                      shadow-[0_10px_30px_rgba(0,0,0,0.35)]
+                      transition-all
+                      duration-300
+                      hover:-translate-y-1
+                      hover:border-cyan-400/60
+                      hover:bg-[#11233A]/75
+                      hover:shadow-[0_15px_40px_rgba(0,170,255,0.25)]
+                    "
+                  >
+                    <Download
+                      size={18}
+                      className="sm:w-5 sm:h-5 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:text-cyan-300"
+                    />
+                    <span>Download Brochure</span>
+                  </button>
+                </div>
 
-              <div className="relative flex flex-col gap-4 pt-8 lg:pt-12 lg:h-[600px] lg:justify-between">
-                {/* Top Row - Overview + Highlights */}
-                <div className="flex w-full flex-col gap-4 sm:flex-row"></div>
-
-                {/* Bottom Row */}
-                <div className="flex flex-col gap-3 lg:absolute lg:-bottom-6 lg:w-full">
-                  {/* Download Button */}
-                  <div className="flex justify-center">
-                    <button
-                      onClick={() => setShowBrochureForm(true)}
-                      className="flex w-full max-w-[280px] items-center justify-center gap-3 rounded-2xl border border-[#D8CCA3] bg-[#A89A6A]/90 px-4 py-3 text-sm font-semibold text-white transition-all hover:bg-[#A89A6A] sm:px-6 sm:py-4 sm:text-base lg:w-[260px]"
+                {/* Website Cards */}
+<div className="mt-8 sm:mt-10 lg:mt-4 grid w-full grid-cols-3 gap-2 sm:grid-cols-5 sm:gap-3">
+                  {websites.map((item, index) => (
+                    <a
+                      key={index}
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="
+                        group relative flex flex-col items-center justify-center
+                        h-[80px]
+                        sm:h-[95px]
+                        rounded-xl
+                        sm:rounded-2xl
+                        border border-[#037AA6]/60
+                        bg-[#0f172a]/75
+                        backdrop-blur-xl
+                        p-2
+                        overflow-hidden
+                        shadow-[0_0_18px_rgba(3,122,166,0.20)]
+                        transition-all duration-300
+                        hover:-translate-y-1
+                        hover:border-[#037AA6]
+                        hover:bg-[#162338]/90
+                        hover:shadow-[0_0_35px_rgba(3,122,166,0.45)]
+                      "
                     >
-                      <Download size={18} />
-                      Download Brochure
-                    </button>
-                  </div>
-
-                  {/* Website Cards */}
-                  <div className="grid w-full grid-cols-3 gap-2 sm:grid-cols-5 sm:gap-3">
-                    {websites.map((item, index) => (
-                      <a
-                        key={index}
-                        href={item.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                      {/* Tooltip - Hidden on mobile */}
+                      <div
                         className="
-group relative flex flex-col items-center justify-center
-h-[95px]
-rounded-2xl
-border border-[#037AA6]/60
-bg-[#0f172a]/75
-backdrop-blur-xl
-p-2
-overflow-hidden
-
-shadow-[0_0_18px_rgba(3,122,166,0.20)]
-
-transition-all duration-300
-
-hover:-translate-y-1
-hover:border-[#037AA6]
-hover:bg-[#162338]/90
-hover:shadow-[0_0_35px_rgba(3,122,166,0.45)]
-"
+                          pointer-events-none
+                          absolute bottom-full mb-3 left-1/2
+                          hidden w-48 -translate-x-1/2
+                          rounded-lg
+                          border border-yellow-400/30
+                          bg-slate-900/95
+                          px-3 py-2
+                          text-center text-[10px]
+                          text-white
+                          opacity-0
+                          shadow-xl
+                          transition-all duration-300
+                          group-hover:-top-16
+                          group-hover:opacity-100
+                          z-50
+                          lg:block
+                        "
                       >
-                        {/* Tooltip - Hidden on mobile */}
-                        <div
-                          className="
-                            pointer-events-none
-                            absolute bottom-full mb-3 left-1/2
-                            hidden w-48 -translate-x-1/2
-                            rounded-lg
-                            border border-yellow-400/30
-                            bg-slate-900/95
-                            px-3 py-2
-                            text-center text-[10px]
-                            text-white
-                            opacity-0
-                            shadow-xl
-                            transition-all duration-300
-                            group-hover:-top-16
-                            group-hover:opacity-100
-                            z-50
-                            sm:block
-                          "
-                        >
-                          {item.desc}
-                        </div>
+                        {item.desc}
+                      </div>
 
-                        {/* Logo */}
-                        <div
-                          className={`relative mb-2 ${
-                            item.title === "PowerPax India"
-                              ? "h-12 w-20 sm:h-14 sm:w-24"
-                              : "h-7 w-12 sm:h-8 sm:w-14"
-                          }`}
-                        >
-                          <Image
-                            src={item.logo}
-                            alt={item.title}
-                            fill
-                            className="object-contain transition-transform duration-300 group-hover:scale-105"
-                          />
-                        </div>
+                      {/* Logo */}
+                      <div
+                        className={`relative mb-1.5 sm:mb-2 ${
+                          item.title === "PowerPax India"
+                            ? "h-10 w-16 sm:h-14 sm:w-24"
+                            : "h-6 w-10 sm:h-8 sm:w-14"
+                        }`}
+                      >
+                        <Image
+                          src={item.logo}
+                          alt={item.title}
+                          fill
+                          className="object-contain transition-transform duration-300 group-hover:scale-105"
+                        />
+                      </div>
 
-                        {/* Title */}
-                        <span className="text-center text-[8px] font-normal text-white leading-tight sm:text-[10px]">
-                          {item.title}
-                        </span>
+                      {/* Title */}
+                      <span className="text-center text-[7px] sm:text-[10px] font-normal text-white leading-tight px-0.5">
+                        {item.title}
+                      </span>
 
-                        {/* Bottom Glow Line */}
-                        <div className="absolute bottom-0 left-0 h-[2px] w-full bg-gradient-to-r from-[#D8CCA3] to-yellow-400" />
-                      </a>
-                    ))}
-                  </div>
+                      {/* Bottom Glow Line */}
+                      <div className="absolute bottom-0 left-0 h-[2px] w-full bg-gradient-to-r from-[#D8CCA3] to-yellow-400" />
+                    </a>
+                  ))}
                 </div>
               </div>
             </div>

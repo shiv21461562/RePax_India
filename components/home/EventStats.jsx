@@ -6,19 +6,38 @@ import CountUp from "react-countup";
 const stats = [
   {
     number: 200,
-    label: "Attendees",
+    label: "Delegates",
   },
   {
     number: 20,
-    label: "Expert Speakers",
+    label: "Industry Speakers",
+  },
+  {
+    number: 50,
+    label: "Renewable Energy Companies",
   },
   {
     number: 10,
-    label: "Sponsors",
+    label: "Conference Sessions",
   },
   {
-    number: 2,
-    label: "Sessions + Awards",
+    number: 15,
+    label: "Award Categories",
+  },
+  {
+    number: null,
+    icon: "🤝",
+    label: "High-Impact Networking",
+  },
+  {
+    number: null,
+    icon: "⚡",
+    label: "Technology Showcase",
+  },
+  {
+    number: null,
+    icon: "💼",
+    label: "Business Matchmaking",
   },
 ];
 
@@ -35,7 +54,7 @@ export default function EventStats() {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <span className="inline-flex items-center px-4 py-2 rounded-full bg-green-50 text-green-700 text-xs font-bold tracking-widest uppercase">
-            Event Statistics
+          EVENT AT A GLANCE
           </span>
 
           <h2 className="mt-5 text-4xl md:text-5xl font-bold text-slate-900">
@@ -43,8 +62,7 @@ export default function EventStats() {
           </h2>
 
           <p className="mt-5 text-lg text-slate-600">
-            Bringing together global experts, innovators and decision makers
-            to accelerate sustainable development worldwide.
+           Experience one of India's leading renewable energy conferences bringing together delegates, industry leaders, innovators and decision-makers to accelerate India's clean energy transition.
           </p>
         </motion.div>
 
@@ -81,16 +99,22 @@ export default function EventStats() {
       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
 
       <div className="relative z-10">
-        <h3 className="text-5xl lg:text-6xl font-extrabold text-white">
-          <CountUp
-            end={item.number}
-            duration={3}
-            separator=","
-            enableScrollSpy
-            scrollSpyOnce
-          />
-          +
-        </h3>
+  {item.number !== null ? (
+  <h3 className="text-5xl lg:text-6xl font-extrabold text-white">
+    <CountUp
+      end={item.number}
+      duration={3}
+      separator=","
+      enableScrollSpy
+      scrollSpyOnce
+    />
+    +
+  </h3>
+) : (
+  <h3 className="text-5xl lg:text-6xl">
+    {item.icon}
+  </h3>
+)}
 
         <div className="mx-auto mt-5 mb-4 h-1 w-14 rounded-full bg-orange-400 group-hover:w-24 transition-all duration-500" />
 
@@ -113,11 +137,13 @@ export default function EventStats() {
           }}
           className="mt-16 text-center"
         >
-          <p className="text-slate-500 max-w-3xl mx-auto">
-            Join a diverse community of sustainability leaders, researchers,
-            policymakers and industry pioneers dedicated to creating a more
-            resilient and sustainable future.
-          </p>
+         <p className="text-slate-500 max-w-4xl mx-auto leading-8">
+  RE-PAX India brings together manufacturers, EPC companies,
+  developers, investors, policymakers, utilities and technology
+  providers to create meaningful business opportunities through
+  networking, innovation showcases, knowledge sharing and
+  strategic collaborations.
+</p>
         </motion.div>
       </div>
     </section>

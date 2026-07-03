@@ -7,6 +7,8 @@ import {
   Cpu,
   LineChart,
   Building2,
+  Bot,
+  Leaf,
 } from "lucide-react";
 
 const themes = [
@@ -27,8 +29,28 @@ const themes = [
     icon: Globe2,
     description:
       "Global initiatives and policies driving climate resilience and net-zero goals.",
-  }
+  },
+  {
+  title: "Energy Storage Systems (BESS)",
+  icon: Cpu,
+  description:
+    "Understand the growing role of battery energy storage in grid stability, renewable integration, commercial & industrial applications and utility-scale projects.",
+},
+{
+  title: "Green Hydrogen",
+  icon: Building2,
+  description:
+    "Discover opportunities in hydrogen production, storage, infrastructure, industrial applications and India's Green Hydrogen Mission.",
+},
+{
+  title: "Electric Mobility",
+  icon: LineChart,
+  description:
+    "Learn about EV charging infrastructure, battery technologies, fleet electrification and sustainable transportation solutions.",
+},
 ];
+
+
 
 export default function ConferenceThemes() {
   return (
@@ -37,7 +59,7 @@ export default function ConferenceThemes() {
         {/* Heading */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-flex items-center px-4 py-2 rounded-full bg-green-50 text-green-700 text-xs font-bold tracking-widest uppercase">
-            Conference Themes
+          Shaping the Future of Renewable Energy
           </span>
 
           <h2 className="mt-5 text-4xl md:text-5xl font-bold text-slate-900">
@@ -45,8 +67,7 @@ export default function ConferenceThemes() {
           </h2>
 
           <p className="mt-5 text-lg text-slate-600">
-            Discover the most important topics shaping sustainability,
-            innovation, climate action, and future-ready development.
+           The conference will focus on the most important topics driving India's clean energy transformation.
           </p>
         </div>
 

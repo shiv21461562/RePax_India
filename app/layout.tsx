@@ -2,6 +2,9 @@ import type { ReactNode } from "react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import WhatsappButton from "@/components/layout/WhatsappButton";
+import BackToTop from "@/components/layout/BackToTop";
+
+
 import "./globals.css";
 
 export default function RootLayout({
@@ -16,6 +19,7 @@ export default function RootLayout({
         {children}
         <Footer />
         <WhatsappButton />
+         <BackToTop />
       </body>
     </html>
   );

@@ -29,188 +29,227 @@ const videos = [
     <div className="bg-white pt-24">
       {/* Hero Section */}
 
-      <motion.section
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
-        className="relative flex min-h-screen items-center justify-center overflow-hidden"
+     <motion.section
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ duration: 0.8 }}
+  className="relative flex min-h-screen items-center overflow-hidden"
+>
+  {/* Background Image */}
+  <div
+    className="absolute inset-0 bg-cover bg-center"
+    style={{
+      backgroundImage: "url('/images/media4.png')",
+    }}
+  />
+
+  {/* Dark Overlay */}
+  <div className="absolute inset-0 bg-[#0B1F2E]/55" />
+
+  {/* Content */}
+  <div className="relative z-20 mx-auto w-full max-w-7xl px-6 pt-32 pb-16">
+    <div className="max-w-2xl">
+      {/* Badge */}
+      <motion.div
+        initial={{ opacity: 0, y: -30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.2 }}
       >
-        {/* Background Image */}
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: "url('/images/media3.avif')",
-          }}
-        />
+        <span
+          className="
+            inline-flex
+            items-center
+            gap-2
+            rounded-full
+            border
+            border-orange-400/40
+            px-5
+            py-2
+            text-sm
+            font-medium
+            tracking-widest
+            text-orange-400
+          "
+        >
+           PRESS & MEDIA
+        </span>
+      </motion.div>
 
-        {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-[#0B1F2E]/45" />
+      {/* Heading */}
+      <motion.h1
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.4, duration: 0.8 }}
+        className="
+          mt-6
+          text-5xl
+          font-extrabold
+          leading-tight
+          text-white
+          md:text-6xl
+          lg:text-7xl
+        "
+      >
+        Media{" "}
+        <br />
+        <span
+          className="
+            bg-gradient-to-r
+            from-orange-500
+            to-orange-400
+            bg-clip-text
+            text-transparent
+          "
+        >
+          Centre
+        </span>
+      </motion.h1>
 
-        {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-[#255B7D]/20 to-black/30" />
+      {/* Description */}
+      <motion.p
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.7, duration: 0.8 }}
+        className="
+          mt-6
+          max-w-xl
+          text-base
+          leading-7
+          text-slate-200
+          md:text-lg
+        "
+      >
+        RE-PAX India welcomes journalists, media organizations,
+        digital publishers, bloggers, and content creators to
+        cover India's premier renewable energy conference,
+        featuring industry leaders, policymakers, innovators,
+        and clean energy pioneers.
+      </motion.p>
 
-        {/* Blur Circles */}
-        <div className="absolute left-20 top-20 h-72 w-72 rounded-full bg-orange-500/20 blur-[120px]" />
-        <div className="absolute bottom-10 right-20 h-72 w-72 rounded-full bg-cyan-500/20 blur-[120px]" />
+      {/* CTA Buttons */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.9 }}
+        className="mt-8 flex flex-wrap gap-4"
+      >
+        <a
+          href="/media-pass"
+          className="
+            inline-flex
+            items-center
+            gap-2
+            rounded-full
+            bg-orange-500
+            px-6
+            py-3
+            text-sm
+            font-semibold
+            text-white
+            transition-all
+            hover:bg-orange-600
+          "
+        >
+          Apply for Media Pass <span></span>
+        </a>
 
-        {/* Grid Pattern */}
-        <div className="absolute inset-0 opacity-[0.04]">
-          <div className="h-full w-full bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:35px_35px]" />
-        </div>
+        <a
+          href="/media-kit.pdf"
+          download
+          className="
+            inline-flex
+            items-center
+            gap-2
+            rounded-full
+            border
+            border-white/30
+            bg-white/5
+            px-6
+            py-3
+            text-sm
+            font-semibold
+            text-white
+            backdrop-blur-md
+            transition-all
+            hover:bg-white/10
+          "
+        >
+          Download Media Kit
+        </a>
+      </motion.div>
 
-        {/* Content */}
-        <div className="relative z-20 mx-auto max-w-7xl px-6 text-center">
-          {/* Badge */}
-          <motion.div
-            initial={{ opacity: 0, y: -30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-          >
-            <span
-              className="
-        inline-flex
-        items-center
-        gap-2
-        rounded-full
-        border
-        border-white/20
-        bg-white/10
-        px-6
-        py-3
-        text-sm
-        font-medium
-        tracking-widest
-        text-orange-400
-        backdrop-blur-xl
-        shadow-lg
-      "
-            >
-              ✦ REPAY MEDIA CENTER
-            </span>
-          </motion.div>
+   
+    </div>
 
-          {/* Heading */}
-          <motion.h1
-            initial={{ opacity: 0, y: -50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
-            className="
-      mt-8
-      text-5xl
-      font-extrabold
-      leading-tight
-      text-white
-      md:text-7xl
-      lg:text-6xl
-    "
-          >
-            Media &
-            <span
-              className="
-        block
-        bg-gradient-to-r
-        from-orange-400
-        via-orange-300
-        to-yellow-300
-        bg-clip-text
-        text-transparent
-      "
-            >
-              Press Center
-            </span>
-          </motion.h1>
+    {/* Website / Partner Logos */}
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 1.3 }}
+      className="mt-12 flex flex-wrap gap-4"
+    >
+      {[
+        {
+          logo: "/logo/RM Logo golden.png",
+          title: "Renewable Mirror",
+          link: "https://www.renewablemirror.com/",
+        },
+        {
+          logo: "/logo/EM Logo Golden.png",
+          title: "Electrical Mirror",
+          link: "https://electricalmirror.net/",
+        },
+        {
+          logo: "/logo/CM-LOGO FINAL golden new.png",
+          title: "Construction Mirror",
+          link: "https://constructionmirror.com/",
+        },
+      ].map((item, i) => (
+        <a
+          key={i}
+          href={item.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="
+            group
+            w-[150px]
+            h-[120px]
+            rounded-2xl
+            border border-white/10
+            bg-slate-900/80
+            backdrop-blur-xl
+            flex flex-col
+            items-center
+            justify-center
+            px-4
+            transition-all
+            duration-300
+            hover:-translate-y-1
+            hover:border-yellow-400/40
+            relative
+            overflow-hidden
+          "
+        >
+          <div className="absolute bottom-0 left-0 h-[3px] w-full bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-500 opacity-80" />
+          <img
+            src={item.logo}
+            alt={item.title}
+            className="h-10 w-auto object-contain"
+          />
+          <h3 className="mt-3 text-xs font-medium text-center text-white leading-tight">
+            {item.title}
+          </h3>
+        </a>
+      ))}
+    </motion.div>
 
-          {/* Description */}
-          <motion.p
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.7, duration: 0.8 }}
-            className="
-      mx-auto
-      mt-8
-      max-w-4xl
-      text-lg
-      leading-8
-      text-slate-200
-      md:text-xl
-    "
-          >
-            Stay updated with the latest announcements, press releases, media
-            coverage, and event highlights from REPAY Summit 2026. Connect with
-            journalists, industry publications, and media partners shaping the
-            future of payments and fintech.
-          </motion.p>
+  
+  </div>
+</motion.section>
 
 
-          {/*  Website Stats */}
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.2 }}
-            className="mt-10 flex flex-wrap justify-center gap-4"
-          >
-            {[
-              {
-                logo: "/logo/RM Logo golden.png",
-                title: "Renewable Mirror",
-                link: "https://www.renewablemirror.com/",
-              },
 
-              {
-                logo: "/logo/EM Logo Golden.png",
-                title: "Electrical Mirror",
-                link: "https://electricalmirror.net/",
-              },
-              {
-                logo: "/logo/CM-LOGO FINAL golden new.png",
-                title: "Construction Mirror",
-                link: "https://constructionmirror.com/",
-              },
-            ].map((item, i) => (
-              <a
-                key={i}
-                href={item.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="
-        group
-        w-[160px]
-        h-[140px]
-        rounded-[24px]
-        border border-white/10
-        bg-slate-900/90
-        backdrop-blur-xl
-        flex flex-col
-        items-center
-        justify-center
-        px-4
-        transition-all
-        duration-300
-        hover:-translate-y-1
-        hover:border-yellow-400/40
-        hover:shadow-[0_8px_30px_rgba(255,193,7,0.15)]
-        relative
-        overflow-hidden
-      "
-              >
-                {/* Bottom Gold Line */}
-                <div className="absolute bottom-0 left-0 h-[3px] w-full bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-500 opacity-80" />
-
-                <img
-                  src={item.logo}
-                  alt={item.title}
-                  className="h-12 w-auto object-contain"
-                />
-
-                <h3 className="mt-4 text-sm font-medium text-center text-white leading-tight">
-                  {item.title}
-                </h3>
-              </a>
-            ))}
-          </motion.div>
-        </div>
-      </motion.section>
 
       {/* Media Coverage */}
       <section className="bg-white py-28">

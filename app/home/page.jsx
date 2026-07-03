@@ -17,20 +17,24 @@ import Venue from "@/components/home/Venue";
 
 import EventVideo from "@/components/home/EventVideo";
 
+import WhyAttend from "@/components/home/WhyAttend"
+
+import FeaturedConferenceSessions from "@/components/home/FeaturedConferenceSessions"
 export default function HomePage() {
   return (
     <>
       <Hero />
 
-    
- <EventHighlights />
+      <EventHighlights />
 
       <EventStats />
-        <EventVideo />
+      <EventVideo />
 
       <About />
 
       <ConferenceThemes />
+      <FeaturedConferenceSessions/>
+      <WhyAttend/>
 
       <Speakers />
 
