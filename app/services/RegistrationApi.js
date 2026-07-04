@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:5000/api";
+const BASE_URL = "http://electrocurrent.com/api";
 
 export const createRegistration = async (data) => {
   const response = await fetch(`${BASE_URL}/registrations`, {

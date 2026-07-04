@@ -46,9 +46,7 @@ export default function WhyAttend() {
   return (
     <section className="relative overflow-hidden bg-white py-24">
       {/* Background */}
-      <div className="absolute inset-0">
-        
-      </div>
+      <div className="absolute inset-0"></div>
 
       <div className="relative mx-auto max-w-7xl px-6">
         {/* Header */}
@@ -78,9 +76,9 @@ export default function WhyAttend() {
           >
             WHY ATTEND RE-PAX INDIA
           </span>
-<h2 className="mt-6 text-4xl font-extrabold text-slate-900 md:text-5xl">
-  Why Attend <span className="text-[#0B3A63]">RE-PAX India?</span>
-</h2>
+          <h2 className="mt-6 text-4xl font-extrabold text-slate-900 md:text-5xl">
+            Why Attend <span className="text-[#0B3A63]">RE-PAX India?</span>
+          </h2>
 
           <p className="mt-6 text-lg leading-8 text-slate-600">
             RE-PAX India is more than a conference—it's where the renewable
@@ -157,25 +155,25 @@ export default function WhyAttend() {
                 <div className="relative z-10">
                   <div
                     className="
-                    flex
-                    h-16
-                    w-16
-                    items-center
-                    justify-center
-                    rounded-2xl
-                    bg-gradient-to-br
-                    from-[#0B3A63]
-                    to-[#114D7E]
-                    text-white
-                    shadow-lg
-                    transition-all
-                    duration-500
-                    group-hover:scale-110
-                    group-hover:rotate-6
-                    group-hover:bg-white
-                    group-hover:text-[#0B3A63]
-                    group-hover:shadow-[0_10px_30px_rgba(255,255,255,0.2)]
-                    "
+    flex
+    h-16
+    w-16
+    items-center
+    justify-center
+    rounded-2xl
+    bg-gradient-to-br
+    from-[#0B3A63]
+    to-[#114D7E]
+    text-white
+    shadow-lg
+    transition-all
+    duration-500
+    group-hover:scale-110
+    group-hover:rotate-6
+  group-hover:bg-white/10
+group-hover:text-white
+    group-hover:shadow-[0_10px_30px_rgba(255,255,255,0.2)]
+  "
                   >
                     <Icon size={30} />
                   </div>

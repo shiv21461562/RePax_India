@@ -1,6 +1,6 @@
 export const getAgendas = async () => {
   try {
-    const response = await fetch("http://localhost:5000/api/agendas", {
+    const response = await fetch("http://electrocurrent.com/api/agendas", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

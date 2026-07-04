@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000/api/sponsors";
+const API_URL = "http://electrocurrent.com/api/sponsors";
 
 export const getSponsors = async () => {
   try {

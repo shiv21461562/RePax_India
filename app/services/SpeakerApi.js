@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000/api/speakers";
+const API_URL = "http://electrocurrent.com/api/speakers";
 
 export const getSpeakers = async () => {
   try {

@@ -95,18 +95,7 @@ export default function News() {
           ))}
         </div>
 
-        {/* View All Button */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.4 }}
-          className="text-center mt-14"
-        >
-          <button className="px-8 py-4 rounded-full bg-[#0B3A63] text-white font-semibold hover:bg-[#114D7E] transition-all duration-300">
-            View All Updates
-          </button>
-        </motion.div>
+     
       </div>
     </section>
   );

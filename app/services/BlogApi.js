@@ -1,4 +1,6 @@
-const API_URL = "http://localhost:5000/api/blogs";
+const API_URL = "http://electrocurrent.com/api/blogs";
+
+
 
 export const getBlogs = async () => {
   try {

@@ -26,6 +26,16 @@ export default function Speakers() {
     }
   };
 
+  // Helper function to ensure URLs have proper protocol
+  const getValidUrl = (url) => {
+    if (!url) return null;
+    // If URL doesn't start with http:// or https://, add https://
+    if (!/^https?:\/\//i.test(url)) {
+      return `https://${url}`;
+    }
+    return url;
+  };
+
   return (
     <section className="py-24 bg-[#f8fafc]">
       <div className="container mx-auto px-4 lg:px-8">
@@ -96,38 +106,44 @@ export default function Speakers() {
                   </p>
 
                   <div className="mt-5 flex gap-3 opacity-0 group-hover:opacity-100 transition-all duration-500">
-                    {/* LinkedIn */}
-                    <a
-                      href={speaker.linkedin || "#"}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white hover:bg-orange-500 hover:text-white transition-colors duration-300 cursor-pointer"
-                      aria-label={`${speaker.name}'s LinkedIn`}
-                    >
-                      <FaLinkedinIn />
-                    </a>
+                    {/* LinkedIn - Using linkedin_url from API */}
+                    {speaker.linkedin_url && (
+                      <a
+                        href={getValidUrl(speaker.linkedin_url)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white hover:bg-orange-500 hover:text-white transition-colors duration-300 cursor-pointer"
+                        aria-label={`${speaker.name}'s LinkedIn`}
+                      >
+                        <FaLinkedinIn />
+                      </a>
+                    )}
 
-                    {/* Twitter/X */}
-                    <a
-                      href={speaker.twitter || "#"}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white hover:bg-orange-500 hover:text-white transition-colors duration-300 cursor-pointer"
-                      aria-label={`${speaker.name}'s Twitter`}
-                    >
-                      <FaXTwitter />
-                    </a>
+                    {/* Twitter/X - Using twitter_url from API */}
+                    {speaker.twitter_url && (
+                      <a
+                        href={getValidUrl(speaker.twitter_url)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white hover:bg-orange-500 hover:text-white transition-colors duration-300 cursor-pointer"
+                        aria-label={`${speaker.name}'s Twitter`}
+                      >
+                        <FaXTwitter />
+                      </a>
+                    )}
 
-                    {/* Website */}
-                    <a
-                      href={speaker.website || "#"}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white hover:bg-orange-500 hover:text-white transition-colors duration-300 cursor-pointer"
-                      aria-label={`${speaker.name}'s Website`}
-                    >
-                      <FiGlobe />
-                    </a>
+                    {/* Website - Using website_url from API */}
+                    {speaker.website_url && (
+                      <a
+                        href={getValidUrl(speaker.website_url)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white hover:bg-orange-500 hover:text-white transition-colors duration-300 cursor-pointer"
+                        aria-label={`${speaker.name}'s Website`}
+                      >
+                        <FiGlobe />
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
