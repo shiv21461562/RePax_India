@@ -482,77 +482,7 @@ export default function SponsorsPage() {
         </div>
       </section>
 
-      {/* SPONSORSHIP OPPORTUNITIES */}
-      <section className="py-24 bg-slate-50">
-        <div className="mx-auto max-w-7xl px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-            className="mb-16 text-center"
-          >
-            <span className="inline-flex rounded-full border border-[#174d6d]/20 bg-[#174d6d]/10 px-5 py-2 text-sm font-semibold text-[#174d6d]">
-              SPONSORSHIP OPPORTUNITIES
-            </span>
-            <h2 className="mt-5 text-4xl font-bold text-slate-900 md:text-5xl">
-              Sponsorship Packages
-            </h2>
-            <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-slate-600">
-              We offer a range of sponsorship packages tailored to maximize your
-              brand's visibility and business objectives.
-            </p>
-            <div className="mx-auto mt-6 h-1 w-24 rounded-full bg-[#174d6d]" />
-          </motion.div>
-
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {sponsorshipPackages.map((pkg, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className={`rounded-2xl border p-6 transition-all hover:-translate-y-2 hover:shadow-xl ${
-                  index === 0
-                    ? "border-orange-300 bg-gradient-to-b from-orange-50 to-white shadow-lg"
-                    : "border-slate-200 bg-white"
-                }`}
-              >
-                <div
-                  className={`mb-4 inline-block rounded-full px-4 py-1 text-sm font-bold ${
-                    index === 0
-                      ? "bg-orange-500 text-white"
-                      : "bg-[#174d6d] text-white"
-                  }`}
-                >
-                  {pkg.tier}
-                </div>
-                <p className="mb-4 text-sm text-slate-600">{pkg.description}</p>
-                <h4 className="mb-3 text-sm font-semibold text-slate-900">
-                  Benefits Include:
-                </h4>
-                <ul className="space-y-2">
-                  {pkg.benefits.slice(0, 6).map((benefit, idx) => (
-                    <li
-                      key={idx}
-                      className="flex items-start gap-2 text-sm text-slate-600"
-                    >
-                      <span className="mt-0.5 text-[#174d6d]">•</span>
-                      {benefit}
-                    </li>
-                  ))}
-                  {pkg.benefits.length > 6 && (
-                    <li className="text-sm text-[#174d6d] font-medium">
-                      +{pkg.benefits.length - 6} more benefits
-                    </li>
-                  )}
-                </ul>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+  
 
       {/* EXHIBITION & BRANDING */}
       <section className="py-24 bg-white">
