@@ -21,7 +21,7 @@ import Swal from "sweetalert2";
 import { useState } from "react";
 import { createContact } from "../services/EnquiriesApi";
 import { FaLinkedinIn, FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
-
+import Link from "next/link";
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     full_name: "",
@@ -718,29 +718,44 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* CTA Section - Ready to Join */}
-      <section className="bg-[#255B7D] py-20">
-        <div className="mx-auto max-w-4xl px-6 text-center">
-          <h2 className="text-4xl font-bold text-white md:text-5xl">
-            Ready to Join <span className="text-orange-400">RE-PAX India?</span>
-          </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-200">
-            Register today and become part of India's leading renewable energy conference 
-            and networking platform.
-          </p>
-          <div className="mt-10 flex flex-wrap justify-center gap-4">
-            <button className="rounded-full bg-orange-500 px-8 py-4 font-semibold text-white transition hover:bg-orange-600 hover:shadow-lg">
-              Register Now
-            </button>
-            <button className="rounded-full border-2 border-white/30 px-8 py-4 font-semibold text-white transition hover:bg-white/10">
-              Become a Sponsor
-            </button>
-            <button className="rounded-full border-2 border-white/30 px-8 py-4 font-semibold text-white transition hover:bg-white/10">
-              Contact Our Team
-            </button>
-          </div>
-        </div>
-      </section>
+   {/* CTA Section - Ready to Join */}
+<section className="bg-[#255B7D] py-20">
+  <div className="mx-auto max-w-4xl px-6 text-center">
+    <h2 className="text-4xl font-bold text-white md:text-5xl">
+      Ready to Join <span className="text-orange-400">RE-PAX India?</span>
+    </h2>
+
+    <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-200">
+      Register today and become part of India's leading renewable energy
+      conference and networking platform.
+    </p>
+
+    <div className="mt-10 flex flex-wrap justify-center gap-4">
+
+      <Link
+        href="/register"
+        className="rounded-full bg-orange-500 px-8 py-4 font-semibold text-white transition hover:bg-orange-600 hover:shadow-lg"
+      >
+        Register Now
+      </Link>
+
+      <Link
+        href="/sponsors"
+        className="rounded-full border-2 border-white/30 px-8 py-4 font-semibold text-white transition hover:bg-white/10"
+      >
+        Become a Sponsor
+      </Link>
+
+      <Link
+        href="/contact"
+        className="rounded-full border-2 border-white/30 px-8 py-4 font-semibold text-white transition hover:bg-white/10"
+      >
+        Contact Our Team
+      </Link>
+
+    </div>
+  </div>
+</section>
     </main>
   );
 }
