@@ -35,9 +35,7 @@ export default function Navbar() {
     { name: "Exhibition", href: "/exhibition" },
     { name: "Awards", href: "/awards" },
     { name: "Startup Pavilion", href: "/startup-pavilion" },
-    { name: "Media", href: "/media" },
-    { name: "News", href: "/news" },
-    { name: "Partner With Us", href: "/partner-with-us" },
+  
   ];
 
   // Close mobile menu automatically when route changes
@@ -112,10 +110,7 @@ export default function Navbar() {
                       { name: "Conference", href: "/conference" },
                       { name: "Exhibition", href: "/exhibition" },
                       { name: "Awards", href: "/awards" },
-                      { name: "Startup Pavilion", href: "/startup-pavilion" },
-                      { name: "Media", href: "/media" },
-                      { name: "News", href: "/news" },
-                        { name: "Partner With Us", href: "/partner-with-us" }
+                 
                     ].map((item) => (
                       <Link
                         key={item.href}

@@ -15,7 +15,7 @@ import EventHighlights from "@/components/home/EventHighlights";
 import Testimonials from "@/components/home/Testimonials";
 import Venue from "@/components/home/Venue";
 
-import EventVideo from "@/components/home/EventVideo";
+// import EventVideo from "@/components/home/EventVideo";
 
 import WhyAttend from "@/components/home/WhyAttend"
 
@@ -28,7 +28,7 @@ export default function HomePage() {
       <EventHighlights />
 
       <EventStats />
-      <EventVideo />
+      {/* <EventVideo /> */}
 
       <About />
 

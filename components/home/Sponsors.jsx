@@ -9,7 +9,7 @@ const sponsors = [
   },
   {
     name: "Google",
-    logo: "/images/sponsors/google.png",
+    logo: "/images/sponsors/google2.png",
   },
   {
     name: "Amazon",
@@ -25,7 +25,7 @@ const sponsors = [
   },
   {
     name: "IBM",
-    logo: "/images/sponsors/ibm.png",
+    logo: "/images/sponsors/IBM2.png",
   },
   {
     name: "Adobe",

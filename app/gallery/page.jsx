@@ -14,18 +14,6 @@ import {
   Image as ImageIcon,
 } from "lucide-react";
 
-const categories = [
-  { name: "All", icon: Grid3x3 },
-  { name: "Conference Sessions", icon: Users },
-  { name: "Keynote Speakers", icon: Mic },
-  { name: "Exhibition", icon: Building2 },
-  { name: "Networking", icon: Handshake },
-  { name: "Awards Ceremony", icon: Trophy },
-  { name: "Sponsors", icon: Handshake },
-  { name: "Product Launches", icon: Rocket },
-  { name: "Media Coverage", icon: Camera },
-];
-
 const galleryImages = [
   {
     id: 1,
@@ -93,60 +81,37 @@ const galleryImages = [
 ];
 
 export default function GalleryPage() {
-  const [active, setActive] = useState("All");
   const [selectedImage, setSelectedImage] = useState(null);
 
-  const filtered =
-    active === "All"
-      ? galleryImages
-      : galleryImages.filter((item) => item.category === active);
-
   return (
-    <section className="relative overflow-hidden py-20 bg-white">
+    <section className="relative overflow-hidden pt-32 pb-20 bg-white">
       <div className="relative mx-auto max-w-7xl px-6">
-     
-    
-        
-      {/* Filter */}
-<div className="mt-16 mb-10 flex flex-wrap justify-center gap-3 rounded-3xl bg-white/60 p-4">
-          {categories.map(({ name, icon: Icon }) => (
-<button
-  key={name}
-  onClick={() => setActive(name)}
-  className={`group relative overflow-hidden rounded-full border px-6 py-3 text-sm font-semibold transition-all duration-300 ${
-    active === name
-      ? "border-[#1E5575] text-white shadow-lg"
-      : "border-slate-200 bg-white text-slate-700 hover:border-[#1E5575]"
-  }`}
->
-  {/* Background */}
-  <span
-    className={`absolute inset-0 rounded-full transition-all duration-500 ${
-      active === name
-        ? "bg-gradient-to-r from-[#163C59] via-[#1E5575] to-[#2A6C93]"
-        : "origin-left scale-x-0 bg-gradient-to-r from-[#163C59] via-[#1E5575] to-[#2A6C93] group-hover:scale-x-100"
-    }`}
-  />
+        {/* Header Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center max-w-3xl mx-auto mb-16"
+        >
+          <span className="inline-flex items-center px-4 py-2 rounded-full bg-orange-50 text-orange-600 text-xs font-bold tracking-widest uppercase">
+            GALLERY
+          </span>
 
-  {/* Content */}
-  <span
-    className={`relative z-10 flex items-center gap-2 transition-colors duration-300 ${
-      active === name
-        ? "text-white"
-        : "group-hover:text-white"
-    }`}
-  >
-    <Icon size={16} />
-    {name}
-  </span>
-</button>
-          ))}
-        </div>
+          <h2 className="mt-4 text-4xl md:text-5xl font-bold text-slate-900">
+            Conference Moments
+          </h2>
+
+          <p className="mt-4 text-lg text-slate-600">
+            Explore the highlights from RE-PAX India - from insightful sessions
+            and networking to exhibitions and award ceremonies.
+          </p>
+        </motion.div>
 
         {/* Gallery Grid */}
         <motion.div layout className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           <AnimatePresence mode="wait">
-            {filtered.map((item, index) => (
+            {galleryImages.map((item, index) => (
               <motion.div
                 key={item.id}
                 layout

@@ -36,7 +36,7 @@ export default function CTA() {
             <FiCalendar size={16} className="text-orange-500" />
 
             <span className="text-sm font-medium text-slate-700">
-              RePax India 2026 • Limited Seats Available
+              RePax India 2026 • 
             </span>
           </motion.div>
 
