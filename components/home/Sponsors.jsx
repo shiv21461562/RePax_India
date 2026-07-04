@@ -19,10 +19,7 @@ const sponsors = [
     name: "Tesla",
     logo: "/images/sponsors/tesla.png",
   },
-  {
-    name: "Siemens",
-    logo: "/images/sponsors/siemens.png",
-  },
+
   {
     name: "IBM",
     logo: "/images/sponsors/IBM2.png",
