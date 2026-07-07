@@ -1,4 +1,4 @@
-const API_URL = "http://electrocurrent.com/api/newsletter";
+const API_URL = "https://electrocurrent.com/api/newsletter";
 
 export const subscribeNewsletter = async (email) => {
   try {

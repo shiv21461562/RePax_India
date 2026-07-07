@@ -1,4 +1,4 @@
-const API_URL = "http://electrocurrent.com/api/blogs";
+const API_URL = "https://electrocurrent.com/api/blogs";
 
 
 
@@ -24,7 +24,7 @@ export const getBlogs = async () => {
 export const getBlogById = async (id) => {
   try {
     const response = await fetch(
-      `http://localhost:5000/api/blogs/${id}`,
+      `https://electrocurrent.com/api/blogs/${id}`,
       {
         cache: "no-store",
       }

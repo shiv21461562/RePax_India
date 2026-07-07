@@ -1,4 +1,4 @@
-const API_URL = "http://electrocurrent.com/api";
+const API_URL = "https://electrocurrent.com/api";
 
 export const createContact = async (data) => {
   const response = await fetch(`${API_URL}/contacts`, {
