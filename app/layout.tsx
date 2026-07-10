@@ -37,7 +37,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "PowerPax India",
+    default: "RePax India",
     template: "%s | PowerPax India",
   },
   description:
