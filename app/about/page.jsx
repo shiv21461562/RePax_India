@@ -65,41 +65,7 @@ export default function About() {
   </div>
 </motion.section>
 
-      {/* About */}
-      <section className="py-24 bg-white">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="text-center">
-            <h2 className="text-5xl font-bold text-slate-900">
-              About RE-PAX India
-            </h2>
-
-            <p className="mx-auto mt-6 max-w-3xl text-lg text-slate-600">
-              RE-PAX India was established to support this transformation by
-              creating a dedicated platform where the entire renewable energy
-              ecosystem can come together under one roof. More than just a
-              conference, RE-PAX India is a business networking and
-              knowledge-sharing platform that enables meaningful conversations,
-              encourages innovation, and fosters partnerships that contribute to
-              India's sustainable future.
-            </p>
-
-            <p className="mx-auto mt-6 max-w-3xl text-lg text-slate-600">
-              Organized by Renewable Mirror, RE-PAX India has become one of the
-              country's fastest-growing renewable energy conference series,
-              bringing together industry leaders, government representatives,
-              manufacturers, EPC contractors, project developers, utilities,
-              financial institutions, investors, researchers, and technology
-              innovators.
-            </p>
-
-            <p className="mx-auto mt-6 max-w-3xl text-lg text-slate-600">
-              Our goal is simple: to provide a world-class platform where
-              businesses connect, ideas flourish, and the renewable energy
-              industry moves forward together.
-            </p>
-          </div>
-        </div>
-      </section>
+   
 
       {/* WHY RE PAX INDIA Content */}
       <section className="relative py-24 bg-white">

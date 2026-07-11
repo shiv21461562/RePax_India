@@ -37,7 +37,7 @@ export default function About() {
                   ABOUT RE-PAX INDIA
                 </span>
 
-                <h2 className="mt-6 text-4xl md:text-5xl font-bold text-white leading-tight">
+                <h2 className="mt-6 text-4xl md:text-4xl font-bold text-white leading-tight">
                   India's Most Influential
                   <span className="block text-orange-400">
                     Renewable Energy
@@ -109,25 +109,9 @@ export default function About() {
 
               {/* RIGHT - Stats Cards */}
               <div className="grid grid-cols-2 gap-5">
-                <div className="group bg-white rounded-3xl p-7 border border-transparent hover:border-orange-400 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(255,138,0,0.20)] transition-all duration-300">
-                  <h3 className="text-4xl font-bold text-[#0B3A63]">200+</h3>
-                  <p className="mt-2 text-slate-600">Industry Delegates</p>
-                </div>
+               
 
-                <div className="group bg-orange-50 rounded-3xl p-7 border border-transparent hover:border-orange-400 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(255,138,0,0.20)] transition-all duration-300">
-                  <h3 className="text-4xl font-bold text-orange-500">20+</h3>
-                  <p className="mt-2 text-slate-600">Industry Speakers</p>
-                </div>
-
-                <div className="group bg-white rounded-3xl p-7 border border-transparent hover:border-orange-400 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(255,138,0,0.20)] transition-all duration-300">
-                  <h3 className="text-4xl font-bold text-[#0B3A63]">50+</h3>
-                  <p className="mt-2 text-slate-600">Leading Companies</p>
-                </div>
-
-                <div className="group bg-orange-50 rounded-3xl p-7 border border-transparent hover:border-orange-400 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(255,138,0,0.20)] transition-all duration-300">
-                  <h3 className="text-4xl font-bold text-orange-500">15+</h3>
-                  <p className="mt-2 text-slate-600">Award Categories</p>
-                </div>
+              
 
                 <div className="col-span-2 group bg-gradient-to-r from-[#FF8A00] to-[#FFB347] rounded-3xl p-8 text-white border border-transparent hover:border-white/40 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(255,138,0,0.30)] transition-all duration-300">
                   <h3 className="text-2xl font-bold">Why RE-PAX India?</h3>

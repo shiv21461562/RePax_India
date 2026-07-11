@@ -769,19 +769,21 @@ export default function SponsorsPage() {
                 goals and delivers maximum value.
               </p>
 
-              <div className="mt-10 flex flex-wrap justify-center gap-4">
-                <Link href="/contact">
-                  <button className="rounded-xl bg-orange-500 px-8 py-4 font-semibold text-white shadow-[0_10px_30px_rgba(249,115,22,0.35)] transition-all duration-300 hover:-translate-y-1 hover:scale-105 cursor-pointer">
-                    Become a Sponsor
-                  </button>
-                </Link>
-                <Link href="/brochure">
-                  <button className="rounded-xl border border-white/30 bg-white/10 px-8 py-4 font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:bg-white/20 cursor-pointer">
-                    Download Sponsorship Brochure
-                  </button>
-                </Link>
-            
-              </div>
+           <div className="mt-10 flex flex-wrap justify-center gap-4">
+  <Link href="/contact">
+    <button className="rounded-xl bg-orange-500 px-8 py-4 font-semibold text-white shadow-[0_10px_30px_rgba(249,115,22,0.35)] transition-all duration-300 hover:-translate-y-1 hover:scale-105 cursor-pointer">
+      Become a Sponsor
+    </button>
+  </Link>
+
+  <a
+    href="/brochure/RE-PAX%20%40.pdf"
+    download
+    className="rounded-xl border border-white/30 bg-white/10 px-8 py-4 font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:bg-white/20 cursor-pointer inline-flex items-center justify-center"
+  >
+    Download Sponsorship Brochure
+  </a>
+</div>
             </div>
           </div>
         </div>

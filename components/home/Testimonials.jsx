@@ -98,11 +98,7 @@ export default function Testimonials() {
 
               {/* User */}
               <div className="flex items-center gap-4 mt-8 pt-6 border-t border-white/10">
-                <img
-                  src={item.image}
-                  alt={item.name}
-                  className="w-14 h-14 rounded-full object-cover border-2 border-orange-400"
-                />
+              
 
                 <div>
                   <h4 className="font-bold text-white">
