@@ -323,10 +323,6 @@ export default function RepaxRegistration() {
 
             <div className="w-16 h-1 bg-orange-500 mx-auto mt-4 rounded-full"></div>
 
-            <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
-              Choose the registration category that best matches your profile
-              and become part of India's premier renewable energy conference.
-            </p>
           </div>
 
           {/* Cards */}

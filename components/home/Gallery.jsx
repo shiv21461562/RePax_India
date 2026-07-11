@@ -1,43 +1,45 @@
 "use client";
 
 const galleryImages = [
-  "https://images.unsplash.com/photo-1511578314322-379afb476865?w=1200",
-  "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200",
-  "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=1200",
-  "https://images.unsplash.com/photo-1515169067868-5387ec356754?w=1200",
-  "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1200",
-  "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=1200",
+  "/gallary/image1.jpeg",
+  "/gallary/image2.jpeg",
+  "/gallary/image3.jpeg",
+  "/gallary/image4.jpeg",
+  "/gallary/image5.jpeg",
+  "/gallary/image6.jpeg",
 ];
 
 export default function Gallery() {
   return (
-    <section className="py-20 bg-white">
+    <section className="bg-white py-20">
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="text-center mb-14">
-          <span className="inline-block px-4 py-1 rounded-full bg-green-100 text-green-700 text-sm font-semibold">
+        {/* Heading */}
+        <div className="mb-14 text-center">
+          <span className="inline-block rounded-full bg-green-100 px-4 py-1 text-sm font-semibold text-green-700">
             EVENT GALLERY
           </span>
 
-          <h2 className="mt-4 text-4xl md:text-5xl font-bold text-gray-900">
+          <h2 className="mt-4 text-4xl font-bold text-gray-900 md:text-5xl">
             Moments From Previous Editions
           </h2>
 
-          <p className="mt-4 max-w-3xl mx-auto text-gray-600">
+          <p className="mx-auto mt-4 max-w-3xl text-gray-600">
             Explore highlights, networking sessions, keynote speeches,
-            exhibitions, and memorable moments.
+            exhibitions and memorable moments from RE-PAX India.
           </p>
         </div>
 
+        {/* Gallery */}
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {galleryImages.map((image, index) => (
             <div
               key={index}
-              className="overflow-hidden rounded-3xl group"
+              className="group overflow-hidden rounded-3xl shadow-lg"
             >
               <img
                 src={image}
                 alt={`Gallery ${index + 1}`}
-                className="w-full h-80 object-cover transition duration-500 group-hover:scale-110"
+                className="h-80 w-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
             </div>
           ))}

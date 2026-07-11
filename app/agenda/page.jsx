@@ -310,7 +310,7 @@ export default function AgendaPage() {
           <div className="grid gap-6 md:grid-cols-3">
             {[
               {
-                value: 150,
+                value: 200,
                 label: "Delegates",
               },
               {

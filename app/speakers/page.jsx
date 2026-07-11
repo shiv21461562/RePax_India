@@ -549,107 +549,7 @@ export default function SpeakersPage() {
 
 </section>
 
-      {/* KEYNOTE SPEAKER */}
-
-      <section className="py-28 bg-white">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="mb-16 text-center">
-            <span className="rounded-full bg-orange-100 px-5 py-2 text-sm font-semibold text-orange-600">
-              FEATURED KEYNOTE
-            </span>
-
-            <h2 className="mt-5 text-4xl font-bold text-slate-900 md:text-5xl">
-              Meet Our Keynote Speaker
-            </h2>
-          </div>
-
-          <div className="relative overflow-hidden rounded-[40px] border border-slate-200 bg-white shadow-[0_20px_80px_rgba(15,23,42,0.08)]">
-            <div className="absolute right-0 top-0 h-80 w-80 rounded-full bg-orange-100 blur-3xl opacity-60" />
-
-            <div className="grid items-center lg:grid-cols-[420px_1fr]">
-              {/* Image */}
-
-              <div className="relative p-8">
-                <div className="overflow-hidden rounded-[32px]">
-                  <img
-                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=1500&q=80"
-                    alt=""
-                    className="h-[500px] w-full object-cover transition duration-700 hover:scale-105"
-                  />
-                </div>
-              </div>
-
-              {/* Content */}
-
-              <div className="relative p-10 lg:p-14">
-                <span className="rounded-full border border-orange-200 bg-orange-50 px-4 py-2 text-sm font-semibold text-orange-600">
-                  KEYNOTE ADDRESS
-                </span>
-
-                <h3 className="mt-6 text-4xl font-bold text-slate-900">
-                  Dr. Rajesh Sharma
-                </h3>
-
-                <p className="mt-2 text-xl text-orange-500">
-                  CEO, Green Energy India
-                </p>
-
-                <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-600">
-                  A globally recognized renewable energy leader with more than
-                  two decades of experience driving solar, wind and hydrogen
-                  infrastructure projects across Asia. His insights continue to
-                  influence the future of sustainable energy development.
-                </p>
-
-                {/* Stats */}
-
-                <div className="mt-10 grid gap-5 md:grid-cols-3">
-                  <div className="rounded-3xl bg-slate-50 p-6">
-                    <h4 className="text-3xl font-bold text-orange-500">20+</h4>
-                    <p className="mt-2 text-sm text-slate-500">
-                      Years Experience
-                    </p>
-                  </div>
-
-                  <div className="rounded-3xl bg-slate-50 p-6">
-                    <h4 className="text-3xl font-bold text-cyan-500">50+</h4>
-                    <p className="mt-2 text-sm text-slate-500">
-                      Energy Projects
-                    </p>
-                  </div>
-
-                  <div className="rounded-3xl bg-slate-50 p-6">
-                    <h4 className="text-3xl font-bold text-green-500">15+</h4>
-                    <p className="mt-2 text-sm text-slate-500">
-                      Countries Impacted
-                    </p>
-                  </div>
-                </div>
-
-                {/* Expertise */}
-
-                <div className="mt-10 flex flex-wrap gap-3">
-                  <span className="rounded-full bg-slate-100 px-4 py-2 text-sm text-slate-700">
-                    Renewable Energy
-                  </span>
-
-                  <span className="rounded-full bg-slate-100 px-4 py-2 text-sm text-slate-700">
-                    Green Hydrogen
-                  </span>
-
-                  <span className="rounded-full bg-slate-100 px-4 py-2 text-sm text-slate-700">
-                    Sustainability
-                  </span>
-
-                  <span className="rounded-full bg-slate-100 px-4 py-2 text-sm text-slate-700">
-                    Energy Policy
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+   
 
       {/* SPEAKERS */}
 
@@ -1198,22 +1098,7 @@ export default function SpeakersPage() {
           across the industry.
         </p>
 
-        <button
-          className="
-            mt-10
-            rounded-xl
-            bg-[#174d6d]
-            px-8
-            py-4
-            text-white
-            font-semibold
-            transition-all
-            duration-300
-            hover:bg-orange-500
-          "
-        >
-          Apply To Speak
-        </button>
+    
 
       </div>
 
@@ -1339,9 +1224,7 @@ export default function SpeakersPage() {
         Download Speaker Guidelines
       </button>
 
-      <button className="rounded-xl border border-cyan-400 px-8 py-4 font-semibold text-cyan-300 transition-all duration-300 hover:bg-cyan-400 hover:text-[#174d6d]">
-        Contact Conference Team
-      </button>
+     
 
     </div>
 

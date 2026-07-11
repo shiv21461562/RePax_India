@@ -121,25 +121,7 @@ export default function Hero() {
             <div className="grid w-full gap-8 py-24 sm:py-28 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16 lg:py-12">
               {/* LEFT CONTENT */}
               <div className="max-w-[620px] lg:pt-16">
-                <div
-                  className="
-                    inline-flex items-center
-                    rounded-full
-                    border border-orange-400/40
-                    bg-orange-500/10
-                    px-3 py-1.5
-                    text-[10px]
-                    sm:px-4 sm:py-2
-                    sm:text-xs
-                    font-semibold
-                    uppercase
-                    tracking-widest
-                    text-orange-300
-                    backdrop-blur-md
-                  "
-                >
-                  India's Premier Renewable Energy Event
-                </div>
+              
 
              <h1
   className="

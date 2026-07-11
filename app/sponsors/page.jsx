@@ -273,54 +273,9 @@ export default function SponsorsPage() {
             across the country.
           </motion.p>
 
-          {/* Highlights */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.7,
-              delay: 0.3,
-            }}
-            className="mt-12 flex flex-wrap justify-center gap-4"
-          >
-            <div className="rounded-full border border-white/10 bg-white/10 px-5 py-3 text-sm text-white backdrop-blur-xl">
-              🤝 Senior Decision Makers
-            </div>
-            <div className="rounded-full border border-white/10 bg-white/10 px-5 py-3 text-sm text-white backdrop-blur-xl">
-              🏛 Government Officials
-            </div>
-            <div className="rounded-full border border-white/10 bg-white/10 px-5 py-3 text-sm text-white backdrop-blur-xl">
-              💼 Investors
-            </div>
-            <div className="rounded-full border border-white/10 bg-white/10 px-5 py-3 text-sm text-white backdrop-blur-xl">
-              ⚡ Technology Leaders
-            </div>
-          </motion.div>
+       
 
-          {/* Sponsor Stats */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="mt-28 grid gap-5 md:grid-cols-4"
-          >
-            <div className="rounded-[24px] border border-white/10 bg-[#0d203b]/60 p-6 backdrop-blur-xl">
-              <h3 className="text-4xl font-bold text-orange-400">80+</h3>
-              <p className="mt-2 text-sm text-slate-300">Sponsors</p>
-            </div>
-            <div className="rounded-[24px] border border-white/10 bg-[#0d203b]/60 p-6 backdrop-blur-xl">
-              <h3 className="text-4xl font-bold text-cyan-400">200+</h3>
-              <p className="mt-2 text-sm text-slate-300">Delegates</p>
-            </div>
-            <div className="rounded-[24px] border border-white/10 bg-[#0d203b]/60 p-6 backdrop-blur-xl">
-              <h3 className="text-4xl font-bold text-green-400">20+</h3>
-              <p className="mt-2 text-sm text-slate-300">Countries</p>
-            </div>
-            <div className="rounded-[24px] border border-white/10 bg-[#0d203b]/60 p-6 backdrop-blur-xl">
-              <h3 className="text-4xl font-bold text-orange-400">150+</h3>
-              <p className="mt-2 text-sm text-slate-300">Partner Brands</p>
-            </div>
-          </motion.div>
+      
         </div>
       </section>
 
@@ -825,46 +780,14 @@ export default function SponsorsPage() {
                     Download Sponsorship Brochure
                   </button>
                 </Link>
-                <Link href="/contact">
-                  <button className="rounded-xl border border-white/30 bg-white/10 px-8 py-4 font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:bg-white/20 cursor-pointer">
-                    Contact Sponsorship Team
-                  </button>
-                </Link>
+            
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* FINAL CTA - Let's Build the Future Together */}
-      <section className="py-24 bg-white">
-        <div className="mx-auto max-w-4xl px-6 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-          >
-            <span className="inline-flex rounded-full bg-orange-100 px-5 py-2 text-sm font-semibold text-orange-600">
-              LET'S BUILD THE FUTURE TOGETHER
-            </span>
-            <h2 className="mt-5 text-4xl font-bold text-slate-900 md:text-5xl">
-              Let's Build the Future Together
-            </h2>
-            <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-600">
-              The renewable energy industry thrives on collaboration,
-              innovation, and partnerships. At RE-PAX India, we provide the
-              platform where meaningful connections are made and lasting
-              business relationships begin.
-            </p>
-            <p className="mt-4 text-xl font-semibold text-[#174d6d]">
-              Become a sponsor. Showcase your brand. Inspire innovation. Shape
-              the future.
-            </p>
-            <div className="mx-auto mt-6 h-1 w-24 rounded-full bg-orange-500" />
-          </motion.div>
-        </div>
-      </section>
+   
     </main>
   );
 }

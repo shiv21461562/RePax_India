@@ -18,64 +18,85 @@ const galleryImages = [
   {
     id: 1,
     category: "Conference Sessions",
-    image:
-      "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200",
+    image: "/gallary/image1.jpeg",
     title: "RE-PAX INDIA",
     subtitle: "CONFERENCE SESSION",
   },
   {
     id: 2,
     category: "Keynote Speakers",
-    image:
-      "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=1200",
-    title: "Shaping India's Renewable Energy Future",
+    image: "/gallary/image2.jpeg",
+    title: "Keynote Speakers",
     subtitle: "RE-PAX INDIA",
   },
   {
     id: 3,
     category: "Exhibition",
-    image:
-      "https://images.unsplash.com/photo-1540317580384-e5d43616b9aa?w=1200",
+    image: "/gallary/image3.jpeg",
     title: "Exhibition Hall",
     subtitle: "RE-PAX INDIA",
   },
   {
     id: 4,
     category: "Networking",
-    image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200",
+    image: "/gallary/image4.jpeg",
     title: "Industry Networking",
     subtitle: "RE-PAX INDIA",
   },
   {
     id: 5,
     category: "Awards Ceremony",
-    image:
-      "https://images.unsplash.com/photo-1601933470928-c5b0b0d0a8b9?w=1200",
-    title: "RE-PAX INDIA LEADERSHIP AWARDS",
+    image: "/gallary/image5.jpeg",
+    title: "Leadership Awards",
     subtitle: "RE-PAX INDIA",
   },
   {
     id: 6,
     category: "Product Launches",
-    image:
-      "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1200",
+    image: "/gallary/image6.jpeg",
     title: "Product Launch",
     subtitle: "RE-PAX INDIA",
   },
   {
     id: 7,
     category: "Sponsors",
-    image:
-      "https://images.unsplash.com/photo-1511578314322-379afb476865?w=1200",
-    title: "RE-PAX INDIA Gala",
+    image: "/gallary/image7.jpeg",
+    title: "Sponsors & Partners",
     subtitle: "RE-PAX INDIA",
   },
   {
     id: 8,
     category: "Media Coverage",
-    image:
-      "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=1200",
+    image: "/gallary/image8.jpeg",
     title: "Media Coverage",
+    subtitle: "RE-PAX INDIA",
+  },
+  {
+    id: 9,
+    category: "Solar Exhibition",
+    image: "/gallary/image9.jpeg",
+    title: "Solar Exhibition",
+    subtitle: "RE-PAX INDIA",
+  },
+  {
+    id: 10,
+    category: "Panel Discussion",
+    image: "/gallary/image10.jpeg",
+    title: "Panel Discussion",
+    subtitle: "RE-PAX INDIA",
+  },
+  {
+    id: 11,
+    category: "Business Meetings",
+    image: "/gallary/image11.jpeg",
+    title: "B2B Meetings",
+    subtitle: "RE-PAX INDIA",
+  },
+  {
+    id: 12,
+    category: "Closing Ceremony",
+    image: "/gallary/image12.jpeg",
+    title: "Closing Ceremony",
     subtitle: "RE-PAX INDIA",
   },
 ];
@@ -164,10 +185,7 @@ export default function GalleryPage() {
             </div>
           </div>
 
-          <button className="flex shrink-0 items-center gap-2 rounded-xl bg-orange-500 px-7 py-4 font-semibold text-white shadow-lg shadow-orange-200 transition-all duration-300 hover:-translate-y-0.5 hover:bg-orange-600">
-            <ImageIcon size={18} />
-            View More Photos
-          </button>
+       
         </motion.div>
       </div>
 
