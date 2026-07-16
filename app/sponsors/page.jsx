@@ -272,10 +272,6 @@ export default function SponsorsPage() {
             manufacturers, technology providers, and industry influencers from
             across the country.
           </motion.p>
-
-       
-
-      
         </div>
       </section>
 
@@ -353,7 +349,6 @@ export default function SponsorsPage() {
       {/* ======================= ATTENDEE PROFILE ======================= */}
 
       <section className="relative overflow-hidden bg-[#174d6d] py-28">
-        
         <div className="absolute right-0 bottom-24 opacity-20">
           <div className="grid grid-cols-6 gap-2">
             {[...Array(36)].map((_, i) => (
@@ -436,8 +431,6 @@ export default function SponsorsPage() {
           </div>
         </div>
       </section>
-
-  
 
       {/* EXHIBITION & BRANDING */}
       <section className="py-24 bg-white">
@@ -583,65 +576,65 @@ export default function SponsorsPage() {
       </section>
 
       {/* WHY LEADING BRANDS CHOOSE RE-PAX */}
-    <section className="py-24 bg-slate-50">
-  <div className="mx-auto max-w-7xl px-6">
-    <motion.div
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.7 }}
-      className="mb-16 text-center"
-    >
-      <span className="inline-flex rounded-full border border-[#1F5678]/20 bg-[#1F5678]/10 px-5 py-2 text-sm font-semibold tracking-wider text-[#1F5678]">
-        WHY LEADING BRANDS CHOOSE RE-PAX
-      </span>
+      <section className="py-24 bg-slate-50">
+        <div className="mx-auto max-w-7xl px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="mb-16 text-center"
+          >
+            <span className="inline-flex rounded-full border border-[#1F5678]/20 bg-[#1F5678]/10 px-5 py-2 text-sm font-semibold tracking-wider text-[#1F5678]">
+              WHY LEADING BRANDS CHOOSE RE-PAX
+            </span>
 
-      <h2 className="mt-5 text-4xl font-bold text-slate-900 md:text-5xl">
-        Why Leading Brands Choose RE-PAX
-      </h2>
+            <h2 className="mt-5 text-4xl font-bold text-slate-900 md:text-5xl">
+              Why Leading Brands Choose RE-PAX
+            </h2>
 
-      <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-slate-600">
-        Organizations choose RE-PAX India because it delivers measurable
-        business value, strategic networking opportunities and unmatched
-        industry exposure.
-      </p>
-    </motion.div>
+            <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-slate-600">
+              Organizations choose RE-PAX India because it delivers measurable
+              business value, strategic networking opportunities and unmatched
+              industry exposure.
+            </p>
+          </motion.div>
 
-    <div className="grid gap-7 md:grid-cols-2 lg:grid-cols-3">
-      {[
-        {
-          title: "Direct Access to Decision Makers",
-          desc: "Meet policymakers, CXOs, investors and renewable energy leaders under one roof.",
-        },
-        {
-          title: "Business Networking",
-          desc: "Build valuable partnerships with EPC companies, manufacturers and technology providers.",
-        },
-        {
-          title: "Targeted Industry Audience",
-          desc: "Engage directly with professionals actively seeking renewable energy solutions.",
-        },
-        {
-          title: "Enhanced Brand Visibility",
-          desc: "Increase brand awareness before thousands of qualified industry professionals.",
-        },
-        {
-          title: "Strong Media Presence",
-          desc: "Receive extensive visibility through Renewable Mirror and industry media channels.",
-        },
-        {
-          title: "Excellent ROI",
-          desc: "Generate qualified leads, business opportunities and long-term partnerships.",
-        },
-      ].map((item, index) => (
-        <motion.div
-          key={index}
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.45, delay: index * 0.08 }}
-          whileHover={{ y: -8 }}
-          className="
+          <div className="grid gap-7 md:grid-cols-2 lg:grid-cols-3">
+            {[
+              {
+                title: "Direct Access to Decision Makers",
+                desc: "Meet policymakers, CXOs, investors and renewable energy leaders under one roof.",
+              },
+              {
+                title: "Business Networking",
+                desc: "Build valuable partnerships with EPC companies, manufacturers and technology providers.",
+              },
+              {
+                title: "Targeted Industry Audience",
+                desc: "Engage directly with professionals actively seeking renewable energy solutions.",
+              },
+              {
+                title: "Enhanced Brand Visibility",
+                desc: "Increase brand awareness before thousands of qualified industry professionals.",
+              },
+              {
+                title: "Strong Media Presence",
+                desc: "Receive extensive visibility through Renewable Mirror and industry media channels.",
+              },
+              {
+                title: "Excellent ROI",
+                desc: "Generate qualified leads, business opportunities and long-term partnerships.",
+              },
+            ].map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.45, delay: index * 0.08 }}
+                whileHover={{ y: -8 }}
+                className="
             group
             relative
             overflow-hidden
@@ -654,39 +647,31 @@ export default function SponsorsPage() {
             hover:-translate-y-2
             hover:shadow-[0_20px_45px_rgba(31,86,120,0.35)]
           "
-        >
-      
+              >
+                {/* Orange Line */}
+                <div className="mb-6 h-1 w-14 rounded-full bg-orange-500 transition-all duration-300 group-hover:w-24" />
 
-          {/* Orange Line */}
-          <div className="mb-6 h-1 w-14 rounded-full bg-orange-500 transition-all duration-300 group-hover:w-24" />
+                <h3 className="text-2xl font-bold leading-tight text-white">
+                  {item.title}
+                </h3>
 
-          <h3 className="text-2xl font-bold leading-tight text-white">
-            {item.title}
-          </h3>
+                <p className="mt-5 leading-8 text-slate-300">{item.desc}</p>
 
-          <p className="mt-5 leading-8 text-slate-300">
-            {item.desc}
-          </p>
+                <div className="mt-8 flex items-center gap-2 text-orange-400 font-semibold">
+                  <span>Discover More</span>
 
-          <div className="mt-8 flex items-center gap-2 text-orange-400 font-semibold">
-            <span>Discover More</span>
+                  <span className="transition-transform duration-300 group-hover:translate-x-2">
+                    →
+                  </span>
+                </div>
 
-            <span className="transition-transform duration-300 group-hover:translate-x-2">
-              →
-            </span>
+                {/* Hover Glow */}
+                <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-orange-500/10 blur-3xl opacity-0 transition-all duration-500 group-hover:opacity-100" />
+              </motion.div>
+            ))}
           </div>
-
-          {/* Hover Glow */}
-          <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-orange-500/10 blur-3xl opacity-0 transition-all duration-500 group-hover:opacity-100" />
-        </motion.div>
-      ))}
-    </div>
-  </div>
-</section>
-
-
-
-
+        </div>
+      </section>
 
       {/* PARTNERS CATEGORIES */}
       <section className="py-24 bg-white">
@@ -769,27 +754,25 @@ export default function SponsorsPage() {
                 goals and delivers maximum value.
               </p>
 
-           <div className="mt-10 flex flex-wrap justify-center gap-4">
-  <Link href="/contact">
-    <button className="rounded-xl bg-orange-500 px-8 py-4 font-semibold text-white shadow-[0_10px_30px_rgba(249,115,22,0.35)] transition-all duration-300 hover:-translate-y-1 hover:scale-105 cursor-pointer">
-      Become a Sponsor
-    </button>
-  </Link>
+              <div className="mt-10 flex flex-wrap justify-center gap-4">
+                <Link href="/contact">
+                  <button className="rounded-xl bg-orange-500 px-8 py-4 font-semibold text-white shadow-[0_10px_30px_rgba(249,115,22,0.35)] transition-all duration-300 hover:-translate-y-1 hover:scale-105 cursor-pointer">
+                    Become a Sponsor
+                  </button>
+                </Link>
 
-  <a
-    href="/brochure/RE-PAX%20%40.pdf"
-    download
-    className="rounded-xl border border-white/30 bg-white/10 px-8 py-4 font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:bg-white/20 cursor-pointer inline-flex items-center justify-center"
-  >
-    Download Sponsorship Brochure
-  </a>
-</div>
+                <a
+                  href="/brochure/RE-PAX%20%40.pdf"
+                  download
+                  className="rounded-xl border border-white/30 bg-white/10 px-8 py-4 font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:bg-white/20 cursor-pointer inline-flex items-center justify-center"
+                >
+                  Download Sponsorship Brochure
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </section>
-
-   
     </main>
   );
 }
