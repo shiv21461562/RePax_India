@@ -5,7 +5,7 @@ import CountUp from "react-countup";
 
 const stats = [
   {
-    number: 200,
+    number: 150,
     label: "Delegates",
   },
   {
