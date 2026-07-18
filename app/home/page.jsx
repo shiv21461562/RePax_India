@@ -5,9 +5,9 @@ import ConferenceThemes from "@/components/home/ConferenceThemes";
 import Speakers from "@/components/home/Speakers";
 // import Agenda from "@/components/home/Agenda";
 // import Industries from "@/components/home/Industries";
-import Sponsors from "@/components/home/Sponsors";
+// import Sponsors from "@/components/home/Sponsors";
 import Gallery from "@/components/home/Gallery";
-import News from "@/components/home/News";
+// import News from "@/components/home/News";
 import FAQ from "@/components/home/FAQ";
 import CTA from "@/components/home/CTA";
 import EventHighlights from "@/components/home/EventHighlights";
@@ -42,7 +42,7 @@ export default function HomePage() {
 
       {/* <Industries /> */}
 
-      <Sponsors />
+      {/* <Sponsors /> */}
 
       <Testimonials />
 
@@ -50,7 +50,7 @@ export default function HomePage() {
 
       <Gallery />
 
-      <News />
+      {/* <News /> */}
 
       <FAQ />
 
