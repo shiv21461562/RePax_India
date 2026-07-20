@@ -11,30 +11,26 @@ import Gallery from "@/components/home/Gallery";
 import FAQ from "@/components/home/FAQ";
 import CTA from "@/components/home/CTA";
 import EventHighlights from "@/components/home/EventHighlights";
-
 import Testimonials from "@/components/home/Testimonials";
 import Venue from "@/components/home/Venue";
 
 // import EventVideo from "@/components/home/EventVideo";
 
-import WhyAttend from "@/components/home/WhyAttend"
-
-import FeaturedConferenceSessions from "@/components/home/FeaturedConferenceSessions"
+import WhyAttend from "@/components/home/WhyAttend";
+import FeaturedConferenceSessions from "@/components/home/FeaturedConferenceSessions";
 export default function HomePage() {
   return (
     <>
       <Hero />
-
       <EventHighlights />
-
       <EventStats />
       {/* <EventVideo /> */}
 
       <About />
 
       <ConferenceThemes />
-      <FeaturedConferenceSessions/>
-      <WhyAttend/>
+      <FeaturedConferenceSessions />
+      <WhyAttend />
 
       <Speakers />
 
