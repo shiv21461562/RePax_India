@@ -112,39 +112,37 @@
 //           }}
 //         />
 
-//         <div className="absolute inset-0 bg-gradient-to-r from-[#020817]/50 via-[#020817]/50 to-transparent" />
-
-      
+//         <div className="absolute inset-0 bg-gradient-to-r from-[#020817]/60 via-[#020817]/55 to-[#020817]/20 md:to-transparent" />
 
 //         <div className="relative z-10 min-h-[100dvh] lg:min-h-screen">
-//           <div className="mx-auto flex min-h-[100dvh] max-w-7xl flex-col justify-center px-4 sm:px-6 lg:min-h-screen lg:items-center lg:px-8">
-//             <div className="grid w-full gap-8 py-24 sm:py-28 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16 lg:py-12">
+//           <div className="mx-auto flex min-h-[100dvh] max-w-7xl flex-col justify-center px-4 sm:px-6 md:px-8 lg:min-h-screen lg:items-center lg:px-8">
+//             <div className="grid w-full gap-8 py-20 sm:py-24 md:grid-cols-[0.95fr_1.05fr] md:gap-10 md:py-16 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16 lg:py-12">
 //               {/* LEFT CONTENT */}
-//               <div className="max-w-[620px] lg:pt-16">
-              
+//               <div className="max-w-full md:max-w-[520px] lg:max-w-[620px] md:pt-10 lg:pt-16">
+//                 <h1
+//                   className="
+//                     mt-4 sm:mt-5 md:mt-6
+//                     text-[36px]
+//                     sm:text-[44px]
+//                     md:text-[50px]
+//                     lg:text-[60px]
+//                     leading-[1.1]
+//                     lg:leading-[1.05]
+//                     font-black
+//                     tracking-tight
+//                     text-white
+//                   "
+//                 >
+//                   RE-PAX India
+//                   <span className="text-orange-400"> 2026</span>
+//                 </h1>
 
-//              <h1
-//   className="
-//     mt-5 sm:mt-6
-//     text-[44px]
-//     sm:text-[55px]
-//     lg:text-[60px]
-//     leading-[1.05]
-//     font-black
-//     tracking-tight
-//     text-white
-//   "
-// >
-//   RE-PAX India
-//   <span className="text-orange-400"> 2026</span>
-// </h1>
-
-//                 <h2 className="mt-4 max-w-[560px] text-lg sm:text-xl lg:text-xl font-bold leading-snug text-white">
+//                 <h2 className="mt-3 sm:mt-4 max-w-full md:max-w-[480px] lg:max-w-[560px] text-base sm:text-lg md:text-xl font-bold leading-snug text-white">
 //                   India's Premier Renewable Energy Conference, Expo &
 //                   <span className="text-orange-400"> Leadership Awards</span>
 //                 </h2>
 
-//                 <p className="mt-4 text-sm leading-6 text-gray-200 sm:mt-8 sm:text-base sm:leading-8 lg:text-lg lg:leading-8">
+//                 <p className="mt-4 text-sm leading-6 text-gray-200 sm:mt-6 sm:text-base sm:leading-7 md:mt-8 lg:text-lg lg:leading-8">
 //                   <span className="block mb-3 sm:mb-4 text-orange-300 font-medium">
 //                     Empowering Innovation • Driving Collaboration • Accelerating
 //                     India's Clean Energy Future
@@ -158,17 +156,17 @@
 //                 </p>
 
 //                 {/* CTA Buttons */}
-//                 <div className="mt-6 sm:mt-8 flex flex-row gap-3 sm:gap-4 w-full">
+//                 <div className="mt-6 sm:mt-8 flex flex-row gap-2 sm:gap-4 w-full">
 //                   <Link
 //                     href="/register"
-//                     className="group flex-1 inline-flex items-center justify-center overflow-hidden rounded-full border border-orange-400/40 bg-gradient-to-r from-orange-600 to-amber-500 px-4 py-3 sm:px-8 sm:py-4 text-sm sm:text-base font-semibold text-white shadow-[0_12px_35px_rgba(249,115,22,0.35)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_45px_rgba(249,115,22,0.55)]"
+//                     className="group flex-1 inline-flex items-center justify-center overflow-hidden rounded-full border border-orange-400/40 bg-gradient-to-r from-orange-600 to-amber-500 px-4 py-3 sm:px-8 sm:py-4 text-sm sm:text-base font-semibold text-white shadow-[0_12px_35px_rgba(249,115,22,0.35)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_45px_rgba(249,115,22,0.55)] whitespace-nowrap"
 //                   >
 //                     Register Now
 //                   </Link>
 
 //                   <Link
 //                     href="/sponsors"
-//                     className="flex-1 inline-flex items-center justify-center rounded-full border border-white/30 bg-white/10 px-4 py-3 sm:px-7 sm:py-4 text-sm sm:text-base font-semibold text-white backdrop-blur-md transition-all duration-300 hover:bg-white hover:text-[#0f172a]"
+//                     className="flex-1 inline-flex items-center justify-center rounded-full border border-white/30 bg-white/10 px-4 py-3 sm:px-7 sm:py-4 text-sm sm:text-base font-semibold text-white backdrop-blur-md transition-all duration-300 hover:bg-white hover:text-[#0f172a] whitespace-nowrap"
 //                   >
 //                     Become a Sponsor
 //                   </Link>
@@ -176,7 +174,7 @@
 //               </div>
 
 //               {/* RIGHT CONTENT */}
-//               <div className="relative flex h-full flex-col justify-end">
+//               <div className="relative flex h-full flex-col justify-end gap-2">
 //                 {/* Download Button */}
 //                 <div className="flex justify-center">
 //                   <button
@@ -185,9 +183,11 @@
 //                       group
 //                       flex
 //                       h-12
-//                       sm:h-16
+//                       sm:h-14
+//                       md:h-16
 //                       w-full
-//                       max-w-[360px]
+//                       max-w-[320px]
+//                       sm:max-w-[360px]
 //                       items-center
 //                       justify-center
 //                       gap-2
@@ -197,7 +197,7 @@
 //                       border-cyan-400/30
 //                       bg-[#0B1220]/55
 //                       backdrop-blur-2xl
-//                       px-6
+//                       px-5
 //                       sm:px-8
 //                       text-sm
 //                       sm:text-base
@@ -221,7 +221,7 @@
 //                 </div>
 
 //                 {/* Website Cards */}
-// <div className="mt-8 sm:mt-10 lg:mt-4 grid w-full grid-cols-3 gap-2 sm:grid-cols-5 sm:gap-3">
+//                 <div className="mt-6 sm:mt-8 md:mt-6 lg:mt-4 flex flex-wrap justify-center gap-2 sm:gap-3">
 //                   {websites.map((item, index) => (
 //                     <a
 //                       key={index}
@@ -230,8 +230,13 @@
 //                       rel="noopener noreferrer"
 //                       className="
 //                         group relative flex flex-col items-center justify-center
-//                         h-[80px]
-//                         sm:h-[95px]
+//                         h-[76px]
+//                         sm:h-[90px]
+//                         md:h-[95px]
+//                         w-[30%]
+//                         min-w-[92px]
+//                         sm:w-[18%]
+//                         sm:min-w-[100px]
 //                         rounded-xl
 //                         sm:rounded-2xl
 //                         border border-[#037AA6]/60
@@ -247,7 +252,7 @@
 //                         hover:shadow-[0_0_35px_rgba(3,122,166,0.45)]
 //                       "
 //                     >
-//                       {/* Tooltip - Hidden on mobile */}
+//                       {/* Tooltip - Hidden on mobile/tablet */}
 //                       <div
 //                         className="
 //                           pointer-events-none
@@ -275,20 +280,21 @@
 //                       <div
 //                         className={`relative mb-1.5 sm:mb-2 ${
 //                           item.title === "PowerPax India"
-//                             ? "h-10 w-16 sm:h-14 sm:w-24"
-//                             : "h-6 w-10 sm:h-8 sm:w-14"
+//                             ? "h-9 w-14 sm:h-12 sm:w-20 md:h-14 md:w-24"
+//                             : "h-6 w-9 sm:h-7 sm:w-12 md:h-8 md:w-14"
 //                         }`}
 //                       >
 //                         <Image
 //                           src={item.logo}
 //                           alt={item.title}
 //                           fill
+//                           sizes="(max-width: 640px) 30vw, (max-width: 1024px) 18vw, 120px"
 //                           className="object-contain transition-transform duration-300 group-hover:scale-105"
 //                         />
 //                       </div>
 
 //                       {/* Title */}
-//                       <span className="text-center text-[7px] sm:text-[10px] font-normal text-white leading-tight px-0.5">
+//                       <span className="text-center text-[7px] sm:text-[9px] md:text-[10px] font-normal text-white leading-tight px-0.5">
 //                         {item.title}
 //                       </span>
 
@@ -306,7 +312,7 @@
 //       {/* Brochure Modal */}
 //       {showBrochureForm && (
 //         <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/70 p-4">
-//           <div className="relative w-full max-w-lg rounded-3xl bg-white p-5 shadow-2xl max-h-[90vh] overflow-y-auto sm:p-6">
+//           <div className="relative w-full max-w-[92vw] sm:max-w-lg rounded-3xl bg-white p-5 shadow-2xl max-h-[90vh] overflow-y-auto sm:p-6">
 //             {/* Close Button */}
 //             <button
 //               type="button"
@@ -316,7 +322,7 @@
 //               ×
 //             </button>
 
-//             <h2 className="mb-1 text-xl font-bold text-slate-900 sm:text-2xl">
+//             <h2 className="mb-1 pr-8 text-lg font-bold text-slate-900 sm:text-2xl">
 //               Download Brochure
 //             </h2>
 
@@ -404,7 +410,6 @@
 //     </>
 //   );
 // }
-
 
 
 "use client";
@@ -509,15 +514,18 @@ export default function Hero() {
     <>
       {/* hero */}
       <section className="relative min-h-[100dvh] lg:h-screen overflow-hidden bg-[#020817]">
-        {/* Background */}
-        <div
-          className="absolute inset-0 bg-cover"
-          style={{
-            backgroundImage: "url('/images/finalHero.png')",
-            backgroundPosition: "72% center",
-            backgroundSize: "cover",
-          }}
-        />
+        {/* Background - object-cover so image always fills the screen (no shrinking on mobile),
+            with tuned object-position per breakpoint so key visual content stays in frame */}
+        <div className="absolute inset-0">
+          <Image
+            src="/images/finalHero.png"
+            alt="RE-PAX India 2026 Background"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-[80%_center] sm:object-[75%_center] md:object-[73%_center] lg:object-[72%_center]"
+          />
+        </div>
 
         <div className="absolute inset-0 bg-gradient-to-r from-[#020817]/60 via-[#020817]/55 to-[#020817]/20 md:to-transparent" />
 
@@ -551,15 +559,15 @@ export default function Hero() {
 
                 <p className="mt-4 text-sm leading-6 text-gray-200 sm:mt-6 sm:text-base sm:leading-7 md:mt-8 lg:text-lg lg:leading-8">
                   <span className="block mb-3 sm:mb-4 text-orange-300 font-medium">
-                    Empowering Innovation • Driving Collaboration • Accelerating
-                    India's Clean Energy Future
+                    Empowering Innovation • Driving Collaboration •
+                    Accelerating India's Clean Energy Future
                   </span>
                   Join India's most influential gathering of renewable energy
                   leaders, solar manufacturers, battery storage innovators, EPC
-                  contractors, policymakers, investors, utilities and technology
-                  providers. RE-PAX India is where industry leaders meet to
-                  exchange ideas, build partnerships, showcase innovations and
-                  shape the future of clean energy.
+                  contractors, policymakers, investors, utilities and
+                  technology providers. RE-PAX India is where industry leaders
+                  meet to exchange ideas, build partnerships, showcase
+                  innovations and shape the future of clean energy.
                 </p>
 
                 {/* CTA Buttons */}
@@ -817,3 +825,6 @@ export default function Hero() {
     </>
   );
 }
+
+
+
