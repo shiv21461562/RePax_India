@@ -78,14 +78,14 @@ const galleryImages = [
   {
     id: 11,
     category: "Business Meetings",
-    image: "/gallary/image11.jpg",
+    image: "/gallary/image11.jpeg",
     title: "B2B Meetings",
     subtitle: "RE-PAX INDIA",
   },
   {
     id: 12,
     category: "Closing Ceremony",
-    image: "/gallary/image12.jpg",
+    image: "/gallary/image12.jpeg",
     title: "Closing Ceremony",
     subtitle: "RE-PAX INDIA",
   },
