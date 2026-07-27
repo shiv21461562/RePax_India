@@ -99,7 +99,38 @@ export default function RepaxRegistration() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-  const [formData, setFormData] = useState({
+const [formData, setFormData] = useState({
+  full_name: "",
+  company_name: "",
+  designation: "",
+  email: "",
+  phone: "",
+  city: "",
+  country: "",
+  gst_number: "",
+  registration_type: "Speaker", // default free
+});
+
+ const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  const response = await createRegistration(formData);
+
+  if (!response.success) {
+    alert(response.message);
+    return;
+  }
+
+  // Delegate -> Payment
+if (response.data.paymentRequired) {
+  window.location.href = "https://rzp.io/rzp/BN6quaL";
+  return;
+}
+
+  // Free Registration
+  setSubmitted(true);
+
+  setFormData({
     full_name: "",
     company_name: "",
     designation: "",
@@ -108,30 +139,9 @@ export default function RepaxRegistration() {
     city: "",
     country: "",
     gst_number: "",
+    registration_type: "speaker",
   });
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    const response = await createRegistration(formData);
-
-    if (response.success) {
-      setSubmitted(true);
-
-      setFormData({
-        full_name: "",
-        company_name: "",
-        designation: "",
-        email: "",
-        phone: "",
-        city: "",
-        country: "",
-        gst_number: "",
-      });
-    } else {
-      alert(response.message);
-    }
-  };
+};
 
   const handleChange = (e) => {
     setFormData({
@@ -202,6 +212,8 @@ export default function RepaxRegistration() {
           />
         </svg>
       </section>
+
+
 
       {/* Why Register */}
       <section id="why" className="scroll-mt-28 py-20 px-6 bg-orange-50">
@@ -311,6 +323,9 @@ export default function RepaxRegistration() {
           </div>
         </div>
       </section>
+
+
+
 
       {/* Categories */}
       <section className="py-20 px-6 bg-white">
@@ -430,6 +445,9 @@ export default function RepaxRegistration() {
         </div>
       </section>
 
+
+
+
       {/* Registration form + sidebar */}
       <section id="register" className="scroll-mt-32 py-20 px-6 bg-orange-50">
         <div className="max-w-6xl mx-auto grid md:grid-cols-[1.3fr_0.9fr] gap-7 items-start">
@@ -445,96 +463,140 @@ export default function RepaxRegistration() {
               </div>
             )}
 
-            <form onSubmit={handleSubmit} className="space-y-5">
-              <div className="grid md:grid-cols-2 gap-5">
-                <Field
-                  label="Name"
-                  name="full_name"
-                  value={formData.full_name}
-                  onChange={handleChange}
-                  required
-                  placeholder="Enter your full name"
-                />
-                <Field
-                  label="Company"
-                  name="company_name"
-                  value={formData.company_name}
-                  onChange={handleChange}
-                  required
-                  placeholder="Enter company name"
-                />
-              </div>
-              <div className="grid md:grid-cols-2 gap-5">
-                <Field
-                  label="Designation"
-                  name="designation"
-                  value={formData.designation}
-                  onChange={handleChange}
-                  required
-                  placeholder="Enter your designation"
-                />
-                <Field
-                  label="Email"
-                  name="email"
-                  type="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  placeholder="Enter your email address"
-                />
-              </div>
-              <div className="grid md:grid-cols-2 gap-5">
-                <Field
-                  label="Phone"
-                  name="phone"
-                  type="tel"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  required
-                  placeholder="Enter your phone number"
-                />
-                <Field
-                  label="City"
-                  name="city"
-                  value={formData.city}
-                  onChange={handleChange}
-                  required
-                  placeholder="Enter your city"
-                />
-              </div>
-              <div className="grid md:grid-cols-2 gap-5">
-                <Field
-                  label="Country"
-                  name="country"
-                  value={formData.country}
-                  onChange={handleChange}
-                  required
-                  placeholder="Enter your country"
-                />
-                <Field
-                  label="GST Number (Optional)"
-                  name="gst_number"
-                  value={formData.gst_number}
-                  onChange={handleChange}
-                  placeholder="Enter GST number"
-                />
-              </div>
 
-              <button
-                type="submit"
-                className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-orange-500 to-orange-400 text-white py-4 rounded-xl font-bold text-base shadow-lg shadow-orange-500/40 hover:-translate-y-0.5 transition-transform"
-              >
-                <Send size={16} />
-                Register Now
-              </button>
 
-              <div className="flex items-center justify-center gap-2 text-xs text-slate-500 pt-1">
-                <Lock size={13} />
-                Your information is secure and will not be shared.
-              </div>
-            </form>
+
+<form onSubmit={handleSubmit} className="space-y-5">
+  <div className="grid md:grid-cols-2 gap-5">
+    <Field
+      label="Name"
+      name="full_name"
+      value={formData.full_name}
+      onChange={handleChange}
+      required
+      placeholder="Enter your full name"
+    />
+    <Field
+      label="Company"
+      name="company_name"
+      value={formData.company_name}
+      onChange={handleChange}
+      required
+      placeholder="Enter company name"
+    />
+  </div>
+  <div className="grid md:grid-cols-2 gap-5">
+    <Field
+      label="Designation"
+      name="designation"
+      value={formData.designation}
+      onChange={handleChange}
+      required
+      placeholder="Enter your designation"
+    />
+    <Field
+      label="Email"
+      name="email"
+      type="email"
+      value={formData.email}
+      onChange={handleChange}
+      required
+      placeholder="Enter your email address"
+    />
+  </div>
+  <div className="grid md:grid-cols-2 gap-5">
+    <Field
+      label="Phone"
+      name="phone"
+      type="tel"
+      value={formData.phone}
+      onChange={handleChange}
+      required
+      placeholder="Enter your phone number"
+    />
+    <Field
+      label="City"
+      name="city"
+      value={formData.city}
+      onChange={handleChange}
+      required
+      placeholder="Enter your city"
+    />
+  </div>
+  <div className="grid md:grid-cols-2 gap-5">
+    <Field
+      label="Country"
+      name="country"
+      value={formData.country}
+      onChange={handleChange}
+      required
+      placeholder="Enter your country"
+    />
+    <Field
+      label="GST Number (Optional)"
+      name="gst_number"
+      value={formData.gst_number}
+      onChange={handleChange}
+      placeholder="Enter GST number"
+    />
+  </div>
+
+  {/* - Registration Type */}
+  <div>
+    <label className="block text-sm font-medium text-slate-700 mb-1.5">
+      Registration Type <span className="text-red-500">*</span>
+    </label>
+    <select
+      name="registration_type"
+      value={formData.registration_type}
+      onChange={handleChange}
+      className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-orange-400 focus:ring-2 focus:ring-orange-400/20 outline-none transition-all bg-white"
+      required
+    >
+<option value="Speaker">Speaker </option>
+<option value="Visitor">Visitor</option>
+<option value="Delegate">Delegate - ₹2,999 + GST(18%)</option>
+    </select>
+{formData.registration_type === "Delegate" && (
+  <p className="mt-2 text-orange-600 font-semibold">
+    Registration Fee : ₹2,999 + GST (18%)
+  </p>
+)}
+
+{formData.registration_type !== "Delegate" && (
+  <p className="mt-2 text-green-600 font-semibold">
+    Free Registration
+  </p>
+)}
+  </div>
+
+  <button
+    type="submit"
+    className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-orange-500 to-orange-400 text-white py-4 rounded-xl font-bold text-base shadow-lg shadow-orange-500/40 hover:-translate-y-0.5 transition-transform"
+  >
+    <Send size={16} />
+    Register Now
+  </button>
+
+  <div className="flex items-center justify-center gap-2 text-xs text-slate-500 pt-1">
+    <Lock size={13} />
+    Your information is secure and will not be shared.
+  </div>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
           </div>
-
           {/* Sidebar */}
           <div className="rounded-3xl overflow-hidden shadow-xl sticky top-24">
             <div className="h-56 relative bg-gradient-to-b from-sky-500 via-sky-300 to-slate-200 overflow-hidden">

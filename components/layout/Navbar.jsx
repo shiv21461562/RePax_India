@@ -1,10 +1,3 @@
-
-
-
-
-
-
-
 "use client";
 
 import Image from "next/image";
@@ -55,7 +48,9 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 left-0 z-50 w-full bg-white/95 backdrop-blur-md shadow-sm">
       <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8 xl:px-12">
-        <div className="flex h-16 sm:h-20 lg:h-[88px] items-center justify-between">
+        {/* relative + justify-center so the logo sits centered on mobile/tablet;
+            from xl+ it goes back to the original justify-between layout */}
+        <div className="relative flex h-16 sm:h-20 lg:h-[88px] items-center justify-center xl:justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center flex-shrink-0">
             <Image
@@ -148,11 +143,12 @@ export default function Navbar() {
             </Link>
           </div>
 
-          {/* Mobile / Tablet Toggle — visible on everything below xl */}
+          {/* Mobile / Tablet Toggle — visible on everything below xl.
+              Positioned absolute on the right so the logo can stay centered. */}
           <button
             type="button"
             onClick={() => setIsOpen((prev) => !prev)}
-            className="relative z-[60] flex-shrink-0 rounded-md p-1 text-slate-800 xl:hidden"
+            className="absolute right-0 top-1/2 z-[60] -translate-y-1/2 flex-shrink-0 rounded-md p-1 text-slate-800 xl:hidden"
             aria-label="Toggle menu"
             aria-expanded={isOpen}
           >
@@ -215,11 +211,3 @@ export default function Navbar() {
     </header>
   );
 }
-
-
-
-
-
-
-
-
