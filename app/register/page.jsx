@@ -111,38 +111,30 @@ const [formData, setFormData] = useState({
   registration_type: "Speaker", // default free
 });
 
- const handleSubmit = async (e) => {
+const handleSubmit = async (e) => {
   e.preventDefault();
 
-  const response = await createRegistration(formData);
+  try {
+    const response = await createRegistration(formData);
+    console.log("API response:", response); // debug ke liye
 
-  if (!response.success) {
-    alert(response.message);
-    return;
+    if (!response.success) {
+      alert(response.message || "Registration failed");
+      return;
+    }
+
+    if (response.data?.paymentRequired) {
+      window.location.href = "https://rzp.io/rzp/BN6quaL";
+      return;
+    }
+
+    setSubmitted(true);
+    // form reset...
+  } catch (err) {
+    console.error(err);
+    alert("Something went wrong. Please try again.");
   }
-
-  // Delegate -> Payment
-if (response.data.paymentRequired) {
-  window.location.href = "https://rzp.io/rzp/BN6quaL";
-  return;
-}
-
-  // Free Registration
-  setSubmitted(true);
-
-  setFormData({
-    full_name: "",
-    company_name: "",
-    designation: "",
-    email: "",
-    phone: "",
-    city: "",
-    country: "",
-    gst_number: "",
-    registration_type: "speaker",
-  });
 };
-
   const handleChange = (e) => {
     setFormData({
       ...formData,
