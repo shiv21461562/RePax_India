@@ -1,12 +1,12 @@
 "use client";
 
 const galleryImages = [
-  "/gallary/image1.jpeg",
-  "/gallary/image2.jpeg",
-  "/gallary/image3.jpeg",
-  "/gallary/image4.jpeg",
-  "/gallary/image5.jpeg",
-  "/gallary/image6.jpeg",
+  "/gallary/image20.jpeg",
+  "/gallary/image21.jpeg",
+  "/gallary/image25.jpeg",
+  "/gallary/image29.jpeg",
+  "/gallary/image27.jpeg",
+  "/gallary/award24.jpeg",
 ];
 
 export default function Gallery() {

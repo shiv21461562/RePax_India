@@ -57,7 +57,7 @@ export default function Venue() {
           {/* Image */}
 <div className="relative h-[300px] lg:h-[320px] overflow-hidden">
   <Image
-    src="/venue/nashik.avif"
+    src="/venue/jodhpur.avif"
     alt="Scope Complex"
     fill
     priority
@@ -76,7 +76,7 @@ export default function Venue() {
     </h3>
 
     <p className="text-lg text-white font-medium">
-      Nashik, Maharashtra
+     jodhpur, rajasthan
     </p>
   </div>
 </div>
@@ -84,7 +84,7 @@ export default function Venue() {
             {/* Content */}
             <div className="p-8 lg:p-10 flex flex-col justify-center">
               <h3 className="text-2xl md:text-3xl font-bold text-[#0B3A63]">
-               Radisson Blu,,   Nashik, Maharashtra
+               Radisson Blu, jodhpur, rajasthan
               </h3>
 
               <p className="mt-4 text-slate-600 leading-7">
@@ -100,7 +100,9 @@ export default function Venue() {
                   </div>
 
                   <span className="text-slate-700">
-                     Radisson Blu, CTS No 289, 2, Vikrikar Bhavan Rd, Buddha Vihar, Pathardi Phata, Nashik, Maharashtra 422010
+   Radisson Blu, Jodhpur,
+8, Residency Rd, Gaurav Path,
+Jodhpur, Rajasthan 342001
                   </span>
                 </div>
 
@@ -109,13 +111,13 @@ export default function Venue() {
                     <Calendar size={18} className="text-orange-500" />
                   </div>
 
-                  <span className="text-slate-700">5 August 2026</span>
+                  <span className="text-slate-700">9 September 2026</span>
                 </div>
               </div>
 
            <a
-  href="https://maps.google.com/?q=Radisson+Blu+Hotel+%26+Spa+Nashik"
-  target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=Radisson+Hotel+Jodhpur%2C+8+Residency+Road%2C+Gaurav+Path%2C+Jodhpur%2C+Rajasthan+342001"
+target="_blank"
   rel="noopener noreferrer"
   className="
     mt-8
