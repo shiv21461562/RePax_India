@@ -140,7 +140,7 @@ export default function ContactPage() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-96 w-96 rounded-full bg-emerald-200/20 blur-[140px]" />
 
       {/* Hero Section */}
-     
+
       <section className="relative overflow-hidden bg-[#255B7D] min-h-[100vh] flex items-center pt-32 pb-32">
         {/* Grid Background */}
         <div
@@ -171,7 +171,7 @@ export default function ContactPage() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="mt-10 text-5xl font-extrabold leading-tight md:text-7xl"
+            className="mt-10 font-poppins text-5xl font-extrabold leading-tight md:text-6xl"
           >
             <span className="block text-white">We're Here to Help You</span>
 

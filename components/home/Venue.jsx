@@ -16,9 +16,9 @@ export default function Venue() {
           transition={{ duration: 0.7 }}
           className="text-center mb-12"
         >
-        <div className="inline-flex flex-col items-center">
-  <p
-    className="
+          <div className="inline-flex flex-col items-center">
+            <p
+              className="
       font-sans
       text-[15px]
       md:text-[17px]
@@ -28,15 +28,15 @@ export default function Venue() {
       text-orange-500
       drop-shadow-[0_2px_4px_rgba(249,115,22,0.18)]
     "
-  >
-    Event Venue · 2nd Edition
-  </p>
+            >
+              Event Venue · 2nd Edition
+            </p>
 
-  <div className="relative mt-3 flex items-center justify-center">
-    <span className="h-[1px] w-8 bg-orange-200" />
+            <div className="relative mt-3 flex items-center justify-center">
+              <span className="h-[1px] w-8 bg-orange-200" />
 
-    <span
-      className="
+              <span
+                className="
         mx-2
         h-[3px]
         w-20
@@ -44,11 +44,11 @@ export default function Venue() {
         bg-orange-500
         shadow-[0_2px_8px_rgba(249,115,22,0.35)]
       "
-    />
+              />
 
-    <span className="h-[1px] w-8 bg-orange-200" />
-  </div>
-</div>
+              <span className="h-[1px] w-8 bg-orange-200" />
+            </div>
+          </div>
 
           <h2 className="mt-4 text-3xl md:text-4xl font-bold text-slate-900">
             Join Us At The Venue
@@ -82,7 +82,7 @@ export default function Venue() {
             {/* Image */}
             <div className="relative h-[300px] lg:h-[320px] overflow-hidden">
               <Image
-                src="/venue/jodhpur.avif"
+                src="/venue/indana.jpg"
                 alt="Radisson Blu hotel exterior in Jodhpur"
                 fill
                 priority
@@ -102,8 +102,8 @@ export default function Venue() {
                   </span>
                 </span>
 
-                <h3 className="mt-3 text-4xl font-bold text-[#D4AF37] drop-shadow-lg">
-                  Radisson Blu
+                <h3 className="mt-3 text-4xl font-bold text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
+                  Indana Palace
                 </h3>
 
                 <p className="text-lg text-white font-medium">
@@ -115,7 +115,7 @@ export default function Venue() {
             {/* Content */}
             <div className="p-8 lg:p-10 flex flex-col justify-center">
               <h3 className="text-2xl md:text-3xl font-bold text-[#0B3A63]">
-                Radisson Blu, Jodhpur, Rajasthan
+                Indana Palace, Jodhpur, Rajasthan
               </h3>
 
               <p className="mt-4 text-slate-600 leading-7">
@@ -131,11 +131,13 @@ export default function Venue() {
                   </div>
 
                   <span className="text-slate-700">
-                    Radisson Blu, Jodhpur,
+                    Indana Palace, Jodhpur,
                     <br />
-                    8, Residency Rd, Gaurav Path,
+                    Opp. Military Officer Quarters,
                     <br />
-                    Jodhpur, Rajasthan 342001
+                    Benayakiya Road, Shikargarh,
+                    <br />
+                    Jodhpur, Rajasthan 342015
                   </span>
                 </div>
 
@@ -151,7 +153,7 @@ export default function Venue() {
               </div>
 
               <a
-                href="https://www.google.com/maps/search/?api=1&query=Radisson+Hotel+Jodhpur%2C+8+Residency+Road%2C+Gaurav+Path%2C+Jodhpur%2C+Rajasthan+342001"
+                href="https://www.google.com/maps/dir/?api=1&destination=Indana+Palace+Jodhpur%2C+Benayakiya+Road%2C+Shikargarh%2C+Jodhpur%2C+Rajasthan+342015"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Get directions to Radisson Blu, Jodhpur on Google Maps"
@@ -178,7 +180,10 @@ export default function Venue() {
                 "
               >
                 Get Directions
-                <Navigation size={18} className="transition-transform group-hover:translate-x-1" />
+                <Navigation
+                  size={18}
+                  className="transition-transform group-hover:translate-x-1"
+                />
               </a>
             </div>
           </div>

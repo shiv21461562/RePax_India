@@ -38,19 +38,25 @@ export default function About() {
         About RE-PAX India
       </span>
 
+
+
+
       {/* Heading */}
-      <h1 className="mx-auto mt-8 max-w-6xl text-4xl font-black leading-tight text-white md:text-6xl lg:text-7xl">
-        Empowering India's
+ {/* Heading */}
+<h1 className="mx-auto mt-8 max-w-6xl font-poppins text-4xl font-black leading-tight text-white md:text-6xl lg:text-7xl">
+  Empowering India's
 
-        <span className="mt-2 block">
-          Renewable Energy
-          <span className="text-orange-400"> Ecosystem</span>
-        </span>
+  <span className="mt-2 block">
+    Renewable Energy
+    <span className="text-orange-400"> Ecosystem</span>
+  </span>
 
-        <span className="mt-5 block text-2xl font-bold text-orange-300 md:text-4xl">
-          Through Collaboration, Innovation & Leadership
-        </span>
-      </h1>
+  <span className="mt-5 block text-2xl font-bold text-orange-300 md:text-4xl">
+    Through Collaboration, Innovation & Leadership
+  </span>
+</h1>
+
+
 
       {/* Description */}
       <p className="mx-auto mt-10 max-w-4xl text-lg leading-9 text-slate-300 md:text-xl">
