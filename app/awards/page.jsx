@@ -56,7 +56,7 @@ export default function Page() {
             transition={{ delay: 0.2 }}
             className="rounded-full bg-white/10 px-5 py-2 text-sm font-medium text-orange-400"
           >
-            REPAY AWARDS 2026
+            REPAX AWARDS 2026
           </motion.span>
 
           <motion.h1
@@ -115,14 +115,19 @@ export default function Page() {
         </div>
       </motion.section>
 
+
+
+
+
+
       {/* Stats */}
       <section className="relative -mt-16 pb-24">
         <div className="mx-auto max-w-7xl px-6">
           <div className="grid gap-6 md:grid-cols-4">
             {[
-              ["25+", "Award Categories"],
-              ["500+", "Nominations"],
-              ["100+", "Industry Leaders"],
+              ["20+", "Award Categories"],
+              ["150+", "Nominations"],
+              ["20+", "Industry Leaders"],
               ["1", "Grand Ceremony"],
             ].map(([number, title]) => (
               <div
