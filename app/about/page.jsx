@@ -119,77 +119,86 @@ export default function About() {
               <span className="h-[2px] w-6 sm:w-10 bg-orange-500" />
             </motion.div>
 
-            {/* Heading */}
-            <motion.h1
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3, duration: 0.8 }}
-              className="
-                mt-4
-                sm:mt-5
-                md:mt-6
-                w-full
-                font-serif
-                font-bold
-                leading-[1.08]
-                sm:leading-[1.12]
-                tracking-tight
-                text-white
-              "
-            >
+          {/* Heading */}
+{/* Heading */}
+<motion.h1
+  initial={{ opacity: 0, y: 40 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.3, duration: 0.8 }}
+  className="
+    mt-4
+    sm:mt-5
+    md:mt-6
+    w-full
+    font-serif
+    font-bold
+    leading-[1.08]
+    tracking-tight
+    text-white
+  "
+>
+  {/* Row 1 */}
+  <span
+    className="
+      block
+      text-[24px]
+      xs:text-[26px]
+      sm:text-3xl
+      md:text-4xl
+      lg:text-5xl
+    "
+  >
+    Empowering India's
+  </span>
 
-              {/* Row 1 */}
-              <span
-                className="
-                  block
-                  text-[27px]
-                  xs:text-[29px]
-                  sm:text-4xl
-                  md:text-5xl
-                  lg:text-6xl
-                "
-              >
-                Empowering India's
-              </span>
+  {/* Row 2 */}
+  <span
+    className="
+      block
+      text-[24px]
+      xs:text-[26px]
+      sm:text-3xl
+      md:text-4xl
+      lg:text-5xl
+    "
+  >
+    Renewable Energy
+  </span>
 
-              {/* Row 2 */}
-              <span
-                className="
-                  mt-1
-                  sm:mt-2
-                  block
-                  text-[27px]
-                  xs:text-[29px]
-                  sm:text-4xl
-                  md:text-5xl
-                  lg:text-6xl
-                "
-              >
-                Renewable Energy{" "}
-                <span className="text-orange-500">
-                  Ecosystem
-                </span>
-              </span>
+  {/* Row 3 */}
+  <span
+    className="
+      block
+      text-[24px]
+      xs:text-[26px]
+      sm:text-3xl
+      md:text-4xl
+      lg:text-5xl
+      text-orange-500
+    "
+  >
+    Ecosystem
+  </span>
 
-              {/* Row 3 */}
-              <span
-                className="
-                  mt-3
-                  sm:mt-4
-                  block
-                  text-xs
-                  xs:text-sm
-                  sm:text-lg
-                  md:text-xl
-                  lg:text-2xl
-                  font-semibold
-                  leading-snug
-                  text-orange-400
-                "
-              >
-                Through Collaboration, Innovation & Leadership
-              </span>
-            </motion.h1>
+  {/* Subtitle */}
+  <span
+    className="
+      mt-2
+      sm:mt-3
+      block
+      text-[11px]
+      xs:text-xs
+      sm:text-base
+      md:text-lg
+      lg:text-xl
+      font-semibold
+      leading-snug
+      text-orange-400
+    "
+  >
+    Through Collaboration, Innovation & Leadership
+  </span>
+</motion.h1>
 
             {/* Description */}
             <motion.p
