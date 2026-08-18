@@ -196,10 +196,6 @@ export default function SponsorsPage() {
           }}
         />
 
-        {/* Glow Effects */}
-        <div className="absolute -top-20 left-0 h-80 w-80 rounded-full bg-orange-500/10 blur-3xl" />
-        <div className="absolute -bottom-20 right-0 h-80 w-80 rounded-full bg-cyan-400/10 blur-3xl" />
-
         <div className="relative mx-auto max-w-6xl px-6 text-center">
           <motion.span
             initial={{ opacity: 0, y: 20 }}
@@ -224,18 +220,35 @@ export default function SponsorsPage() {
             SPONSORS & PARTNERS
           </motion.span>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.7,
-              delay: 0.1,
-            }}
-            className="mt-8 text-5xl font-bold tracking-tight md:text-6xl"
-          >
-            <span className="text-white">Partner with India's Premier </span>
-            <span className="text-orange-400">Renewable Energy Conference</span>
-          </motion.h1>
+     <motion.h1
+  initial={{ opacity: 0, y: 40 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{
+    duration: 0.7,
+    delay: 0.1,
+  }}
+  className="
+    mx-auto mt-7
+    max-w-4xl
+    text-center
+    font-serif
+    text-2xl
+    sm:text-3xl
+    md:text-4xl
+    lg:text-5xl
+    font-bold
+    leading-[1.15]
+    tracking-tight
+  "
+>
+  <span className="block text-white">
+    Partner with India's Premier
+  </span>
+
+  <span className="mt-1 block text-orange-400">
+    Renewable Energy Conference
+  </span>
+</motion.h1>
 
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
@@ -290,14 +303,50 @@ export default function SponsorsPage() {
             transition={{ duration: 0.7 }}
             className="mb-20 text-center"
           >
-            <span className="inline-flex items-center rounded-full border border-cyan-200 bg-cyan-50 px-6 py-2 text-sm font-semibold tracking-widest uppercase text-[#174d6d]">
-              WHY SPONSOR
-            </span>
+         <div className="flex items-center justify-center gap-5">
+  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
 
-            <h2 className="mt-6 text-4xl font-bold leading-tight text-slate-900 md:text-5xl lg:text-5xl">
-              Why Sponsor
-              <span className="block text-[#174d6d]">RE-PAX India 2026?</span>
-            </h2>
+  <span
+    className="
+      font-poppins
+      text-xs
+      sm:text-sm
+      md:text-base
+      font-medium
+      uppercase
+      tracking-[0.18em]
+      text-red-500
+      text-center
+      whitespace-nowrap
+    "
+  >
+    WHY SPONSOR
+  </span>
+
+  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
+</div>
+
+        <h2
+  className="
+    mt-5
+    font-serif
+    text-2xl
+    sm:text-3xl
+    md:text-4xl
+    font-bold
+    leading-tight
+    tracking-tight
+    text-slate-900
+  "
+>
+  <span className="block">
+    Why Sponsor
+  </span>
+
+  <span className="mt-2 block text-[#174d6d]">
+    RE-PAX India 2026?
+  </span>
+</h2>
 
             <div className="mx-auto mt-6 h-1.5 w-28 rounded-full bg-gradient-to-r from-cyan-500 via-[#174d6d] to-cyan-500"></div>
 
@@ -366,15 +415,44 @@ export default function SponsorsPage() {
             transition={{ duration: 0.7 }}
             className="mb-16 text-center"
           >
-            <span className="inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-[3px] text-cyan-200">
-              <span className="h-px w-10 bg-cyan-300"></span>
-              Attendee Profile
-              <span className="h-px w-10 bg-cyan-300"></span>
-            </span>
+          <div className="flex items-center justify-center gap-5">
+  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
 
-            <h2 className="mt-6 text-4xl font-bold text-white md:text-5xl lg:text-6xl">
-              Who Will You Meet?
-            </h2>
+  <span
+    className="
+      font-poppins
+      text-xs
+      sm:text-sm
+      md:text-base
+      font-medium
+      uppercase
+      tracking-[0.18em]
+      text-white
+      text-center
+      whitespace-nowrap
+    "
+  >
+    Attendee Profile
+  </span>
+
+  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
+</div>
+
+          <h2
+  className="
+    mt-5
+    font-serif
+    text-2xl
+    sm:text-3xl
+    md:text-4xl
+    font-bold
+    leading-tight
+    tracking-tight
+    text-white
+  "
+>
+  Who Will You Meet?
+</h2>
 
             <p className="mx-auto mt-6 max-w-3xl text-lg leading-9 text-slate-200">
               Your brand will engage with professionals representing every
@@ -432,6 +510,13 @@ export default function SponsorsPage() {
         </div>
       </section>
 
+
+
+
+
+
+
+
       {/* EXHIBITION & BRANDING */}
       <section className="py-24 bg-white">
         <div className="mx-auto max-w-7xl px-6">
@@ -444,12 +529,41 @@ export default function SponsorsPage() {
               transition={{ duration: 0.7 }}
               className="rounded-2xl border border-slate-200 bg-slate-50 p-8"
             >
-              <span className="inline-flex rounded-full bg-[#174d6d]/10 px-4 py-1 text-sm font-semibold text-[#174d6d]">
-                EXHIBITION
-              </span>
-              <h3 className="mt-4 text-2xl font-bold text-slate-900">
-                Exhibition Opportunities
-              </h3>
+<div className="flex items-center justify-start gap-5 max-sm:justify-center">
+  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
+
+  <span
+    className="
+      font-poppins
+      text-xs
+      sm:text-sm
+      md:text-base
+      font-medium
+      uppercase
+      tracking-[0.18em]
+      text-red-500
+      whitespace-nowrap
+    "
+  >
+    EXHIBITION
+  </span>
+
+  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
+</div>
+             <h3
+  className="
+    mt-4
+    font-serif
+    text-xl
+    sm:text-2xl
+    font-bold
+    leading-tight
+    tracking-tight
+    text-slate-900
+  "
+>
+  Exhibition Opportunities
+</h3>
               <p className="mt-3 text-slate-600">
                 Showcase your latest products, technologies, and solutions to a
                 highly engaged audience of renewable energy professionals. The
@@ -490,12 +604,41 @@ export default function SponsorsPage() {
               transition={{ duration: 0.7 }}
               className="rounded-2xl border border-slate-200 bg-slate-50 p-8"
             >
-              <span className="inline-flex rounded-full bg-orange-100 px-4 py-1 text-sm font-semibold text-orange-600">
-                BRANDING
-              </span>
-              <h3 className="mt-4 text-2xl font-bold text-slate-900">
-                Branding Opportunities
-              </h3>
+             <div className="flex items-center justify-start gap-5 max-sm:justify-center">
+  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
+
+  <span
+    className="
+      font-poppins
+      text-xs
+      sm:text-sm
+      md:text-base
+      font-medium
+      uppercase
+      tracking-[0.18em]
+      text-red-500
+      whitespace-nowrap
+    "
+  >
+    BRANDING
+  </span>
+
+  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
+</div>
+            <h3
+  className="
+    mt-4
+    font-serif
+    text-xl
+    sm:text-2xl
+    font-bold
+    leading-tight
+    tracking-tight
+    text-slate-900
+  "
+>
+  Branding Opportunities
+</h3>
               <p className="mt-3 text-slate-600">
                 In addition to sponsorship packages, RE-PAX India offers
                 multiple branding options to maximize your visibility throughout
@@ -524,6 +667,16 @@ export default function SponsorsPage() {
         </div>
       </section>
 
+
+
+
+
+
+
+
+
+
+
       {/* BENEFITS BEYOND EVENT */}
       <section className="py-24 bg-[#174d6d]">
         <div className="mx-auto max-w-7xl px-6 text-center">
@@ -533,12 +686,43 @@ export default function SponsorsPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <span className="inline-flex rounded-full border border-white/20 bg-white/10 px-5 py-2 text-sm font-semibold text-white backdrop-blur-xl">
-              BEYOND THE EVENT
-            </span>
-            <h2 className="mt-5 text-4xl font-bold text-white md:text-5xl">
-              Benefits Beyond the Event
-            </h2>
+            <div className="flex items-center justify-center gap-5">
+  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
+
+  <span
+    className="
+      font-poppins
+      text-xs
+      sm:text-sm
+      md:text-base
+      font-medium
+      uppercase
+      tracking-[0.18em]
+      text-white
+      text-center
+      whitespace-nowrap
+    "
+  >
+    BEYOND THE EVENT
+  </span>
+
+  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
+</div>
+        <h2
+  className="
+    mt-5
+    font-serif
+    text-2xl
+    sm:text-3xl
+    md:text-4xl
+    font-bold
+    leading-tight
+    tracking-tight
+    text-white
+  "
+>
+  Benefits Beyond the Event
+</h2>
             <p className="mx-auto mt-5 max-w-2xl text-lg text-slate-300">
               Your partnership with RE-PAX India extends beyond the conference
               day. Sponsors benefit from:
@@ -575,6 +759,10 @@ export default function SponsorsPage() {
         </div>
       </section>
 
+
+
+      
+
       {/* WHY LEADING BRANDS CHOOSE RE-PAX */}
       <section className="py-24 bg-slate-50">
         <div className="mx-auto max-w-7xl px-6">
@@ -585,13 +773,44 @@ export default function SponsorsPage() {
             transition={{ duration: 0.7 }}
             className="mb-16 text-center"
           >
-            <span className="inline-flex rounded-full border border-[#1F5678]/20 bg-[#1F5678]/10 px-5 py-2 text-sm font-semibold tracking-wider text-[#1F5678]">
-              WHY LEADING BRANDS CHOOSE RE-PAX
-            </span>
+            <div className="flex items-center justify-center gap-5">
+  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
 
-            <h2 className="mt-5 text-4xl font-bold text-slate-900 md:text-5xl">
-              Why Leading Brands Choose RE-PAX
-            </h2>
+  <span
+    className="
+      font-poppins
+      text-xs
+      sm:text-sm
+      md:text-base
+      font-medium
+      uppercase
+      tracking-[0.18em]
+      text-red-500
+      text-center
+      whitespace-nowrap
+    "
+  >
+    WHY LEADING BRANDS CHOOSE RE-PAX
+  </span>
+
+  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
+</div>
+
+          <h2
+  className="
+    mt-5
+    font-serif
+    text-2xl
+    sm:text-3xl
+    md:text-4xl
+    font-bold
+    leading-tight
+    tracking-tight
+    text-slate-900
+  "
+>
+  Why Leading Brands Choose RE-PAX
+</h2>
 
             <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-slate-600">
               Organizations choose RE-PAX India because it delivers measurable
@@ -682,12 +901,43 @@ export default function SponsorsPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <span className="inline-flex rounded-full border border-orange-200 bg-orange-50 px-5 py-2 text-sm font-semibold text-orange-600">
-              OUR PARTNERS
-            </span>
-            <h2 className="mt-5 text-4xl font-bold text-slate-900 md:text-5xl">
-              Partnership Categories
-            </h2>
+        <div className="flex items-center justify-center gap-5">
+  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
+
+  <span
+    className="
+      font-poppins
+      text-xs
+      sm:text-sm
+      md:text-base
+      font-medium
+      uppercase
+      tracking-[0.18em]
+      text-red-500
+      text-center
+      whitespace-nowrap
+    "
+  >
+    OUR PARTNERS
+  </span>
+
+  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
+</div>
+          <h2
+  className="
+    mt-5
+    font-serif
+    text-2xl
+    sm:text-3xl
+    md:text-4xl
+    font-bold
+    leading-tight
+    tracking-tight
+    text-slate-900
+  "
+>
+  Partnership Categories
+</h2>
             <p className="mx-auto mt-5 max-w-2xl text-lg text-slate-600">
               We proudly collaborate with organizations that share our vision of
               advancing India's renewable energy ecosystem.
@@ -713,6 +963,9 @@ export default function SponsorsPage() {
         </div>
       </section>
 
+
+
+
       {/* CTA - Become a Sponsor */}
       <section className="py-24 bg-slate-50">
         <div className="mx-auto max-w-6xl px-6">
@@ -729,18 +982,46 @@ export default function SponsorsPage() {
               }}
             />
 
-            {/* Glow Effects */}
-            <div className="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-orange-500/10 blur-3xl" />
-            <div className="absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-cyan-400/10 blur-3xl" />
+      
 
             <div className="relative">
-              <span className="inline-flex rounded-full border border-white/10 bg-white/10 px-5 py-2 text-sm font-semibold backdrop-blur-xl">
-                RE PAX INDIA 2026
-              </span>
+          <div className="flex items-center justify-center gap-5">
+  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
 
-              <h2 className="mt-6 text-4xl font-bold md:text-5xl">
-                Become a Sponsor
-              </h2>
+  <span
+    className="
+      font-poppins
+      text-xs
+      sm:text-sm
+      md:text-base
+      font-medium
+      uppercase
+      tracking-[0.18em]
+      text-white
+      text-center
+      whitespace-nowrap
+    "
+  >
+    RE PAX INDIA 2026
+  </span>
+
+  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
+</div>
+
+           <h2
+  className="
+    mt-5
+    font-serif
+    text-2xl
+    sm:text-3xl
+    md:text-4xl
+    font-bold
+    leading-tight
+    tracking-tight
+  "
+>
+  Become a Sponsor
+</h2>
 
               <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-300">
                 Ready to elevate your brand and connect with the leaders shaping

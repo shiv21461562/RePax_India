@@ -57,13 +57,31 @@ export default function AgendaPage() {
           </FadeUp>
 
           <FadeUp delay={0.2}>
-            <h1 className="mt-10 text-5xl font-bold leading-none md:text-7xl">
-              <span className="block text-white">Explore The</span>
+       <h1
+  className="
+    mt-8
+    font-serif
+    text-3xl
+    sm:text-4xl
+    md:text-5xl
+    lg:text-6xl
+    font-bold
+    leading-[1.05]
+    tracking-tight
+  "
+>
+  <span className="block text-white">
+    Explore The
+  </span>
 
-              <span className="mt-2 block text-orange-400">Summit</span>
+  <span className="mt-1 block text-orange-400">
+    Summit
+  </span>
 
-              <span className="mt-2 block text-white">Agenda</span>
-            </h1>
+  <span className="mt-1 block text-white">
+    Agenda
+  </span>
+</h1>
           </FadeUp>
 
           <FadeUp delay={0.4}>
@@ -103,13 +121,44 @@ export default function AgendaPage() {
           <div className="rounded-[40px] bg-white p-10 shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
             <FadeUp>
               <div className="mb-16 text-center">
-                <span className="inline-flex rounded-full bg-orange-100 px-5 py-2 text-sm font-semibold text-orange-600">
-                  EVENT FLOW
-                </span>
+             <div className="flex items-center justify-center gap-5">
+  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
 
-                <h2 className="mt-5 text-4xl font-bold text-slate-900">
-                  Event Timeline
-                </h2>
+  <span
+    className="
+      font-poppins
+      text-xs
+      sm:text-sm
+      md:text-base
+      font-medium
+      uppercase
+      tracking-[0.18em]
+      text-red-500
+      text-center
+      whitespace-nowrap
+    "
+  >
+    EVENT FLOW
+  </span>
+
+  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
+</div>
+
+               <h2
+  className="
+    mt-5
+    font-serif
+    text-2xl
+    sm:text-3xl
+    md:text-4xl
+    font-bold
+    leading-tight
+    tracking-tight
+    text-slate-900
+  "
+>
+  Event Timeline
+</h2>
 
                 <p className="mt-4 text-slate-600">
                   A full day packed with insights, networking and innovation.
@@ -395,10 +444,26 @@ export default function AgendaPage() {
                 RE PAX INDIA 2026
               </span>
 
-              <h2 className="mt-6 text-4xl font-bold md:text-5xl">
-                Ready To Experience
-                <span className="mt-2 block text-orange-400">RE PAX 2026?</span>
-              </h2>
+           <h2
+  className="
+    mt-5
+    font-serif
+    text-2xl
+    sm:text-3xl
+    md:text-4xl
+    font-bold
+    leading-tight
+    tracking-tight
+  "
+>
+  <span className="block">
+    Ready To Experience
+  </span>
+
+  <span className="mt-2 block text-orange-400">
+    RE PAX 2026?
+  </span>
+</h2>
 
               <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-300">
                 Join industry leaders, investors, policymakers and innovators

@@ -25,6 +25,7 @@ export default function HomePage() {
       <EventHighlights />
       <EventStats />
       {/* <EventVideo /> */}
+          <Venue />
 
       <About />
 
@@ -42,7 +43,7 @@ export default function HomePage() {
 
       <Testimonials />
 
-      <Venue />
+  
 
       <Gallery />
 

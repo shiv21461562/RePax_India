@@ -59,18 +59,31 @@ export default function Page() {
             REPAX AWARDS 2026
           </motion.span>
 
-          <motion.h1
-            initial={{ opacity: 0, y: -60 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              delay: 0.4,
-              duration: 0.8,
-            }}
-            className="mt-8 text-5xl font-bold text-white md:text-7xl"
-          >
-            Celebrating Excellence In
-            <span className="block text-orange-400">Payments & Fintech</span>
-          </motion.h1>
+    <motion.h1
+  initial={{ opacity: 0, y: -60 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{
+    delay: 0.4,
+    duration: 0.8,
+  }}
+  className="
+    mt-7
+    font-serif
+    text-3xl
+    sm:text-4xl
+    md:text-5xl
+    font-bold
+    leading-[1.08]
+    tracking-tight
+    text-white
+  "
+>
+  Celebrating Excellence In
+
+  <span className="mt-1 block text-orange-400">
+    Payments & Fintech
+  </span>
+</motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 40 }}
@@ -157,10 +170,24 @@ export default function Page() {
         <div className="mx-auto max-w-7xl px-6">
           {/* Heading */}
           <div className="mb-16 text-center">
-            <h2 className="text-5xl font-bold text-white">
-              Award
-              <span className="text-orange-400"> Categories</span>
-            </h2>
+          <h2
+  className="
+    mt-5
+    font-serif
+    text-2xl
+    sm:text-3xl
+    md:text-4xl
+    font-bold
+    leading-tight
+    tracking-tight
+    text-white
+  "
+>
+  Award{" "}
+  <span className="text-orange-400">
+    Categories
+  </span>
+</h2>
 
             <div className="mx-auto mt-4 h-1 w-24 rounded-full bg-orange-500" />
 
@@ -281,7 +308,21 @@ export default function Page() {
         <div className="max-w-7xl mx-auto px-6">
           {/* Heading */}
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold text-[#001B4D]">Eligibility</h2>
+           <h2
+  className="
+    mt-5
+    font-serif
+    text-2xl
+    sm:text-3xl
+    md:text-4xl
+    font-bold
+    leading-tight
+    tracking-tight
+    text-[#001B4D]
+  "
+>
+  Eligibility
+</h2>
 
             <div className="mx-auto mt-4 h-1 w-24 rounded-full bg-orange-500" />
 
@@ -367,10 +408,24 @@ export default function Page() {
         <div className="max-w-7xl mx-auto px-6">
           {/* Heading */}
           <div className="text-center mb-20">
-            <h2 className="text-5xl font-bold text-white">
-              Distinguished
-              <span className="text-orange-400"> Jury Panel</span>
-            </h2>
+        <h2
+  className="
+    mt-5
+    font-serif
+    text-2xl
+    sm:text-3xl
+    md:text-4xl
+    font-bold
+    leading-tight
+    tracking-tight
+    text-white
+  "
+>
+  Distinguished{" "}
+  <span className="text-orange-400">
+    Jury Panel
+  </span>
+</h2>
 
             <div className="mx-auto mt-4 h-1 w-24 rounded-full bg-orange-500" />
 
@@ -494,10 +549,24 @@ export default function Page() {
         <div className="max-w-7xl mx-auto px-6">
           {/* Heading */}
           <div className="text-center mb-20">
-            <h2 className="text-5xl font-bold text-[#001B4D]">
-              Nomination
-              <span className="text-orange-500"> Process</span>
-            </h2>
+           <h2
+  className="
+    mt-5
+    font-serif
+    text-2xl
+    sm:text-3xl
+    md:text-4xl
+    font-bold
+    leading-tight
+    tracking-tight
+    text-[#001B4D]
+  "
+>
+  Nomination{" "}
+  <span className="text-orange-500">
+    Process
+  </span>
+</h2>
 
             <div className="mx-auto mt-4 h-1 w-24 rounded-full bg-orange-500" />
 
@@ -605,10 +674,24 @@ export default function Page() {
         <div className="max-w-7xl mx-auto px-6">
           {/* Heading */}
           <div className="text-center mb-20">
-            <h2 className="text-5xl font-bold text-white">
-              Previous
-              <span className="text-orange-400"> Winners</span>
-            </h2>
+        <h2
+  className="
+    mt-5
+    font-serif
+    text-2xl
+    sm:text-3xl
+    md:text-4xl
+    font-bold
+    leading-tight
+    tracking-tight
+    text-white
+  "
+>
+  Previous{" "}
+  <span className="text-orange-400">
+    Winners
+  </span>
+</h2>
 
             <div className="mx-auto mt-4 h-1 w-24 rounded-full bg-orange-500" />
 
@@ -709,10 +792,24 @@ export default function Page() {
         <div className="mx-auto max-w-7xl px-6">
           {/* Heading */}
           <div className="mb-16 text-center">
-            <h2 className="text-5xl font-bold text-[#001B4D]">
-              Why
-              <span className="text-orange-500"> Participate?</span>
-            </h2>
+         <h2
+  className="
+    mt-5
+    font-serif
+    text-2xl
+    sm:text-3xl
+    md:text-4xl
+    font-bold
+    leading-tight
+    tracking-tight
+    text-[#001B4D]
+  "
+>
+  Why{" "}
+  <span className="text-orange-500">
+    Participate?
+  </span>
+</h2>
 
             <div className="mx-auto mt-4 h-1 w-24 rounded-full bg-orange-500" />
 
@@ -846,13 +943,43 @@ export default function Page() {
       <section className="bg-white py-24">
         <div className="mx-auto max-w-6xl px-6">
           <div className="rounded-[40px] bg-[#255B7D] p-16 text-center text-white">
-            <span className="rounded-full bg-white/10 px-4 py-2 text-sm text-orange-400">
-              REPAY AWARDS 2026
-            </span>
+         <div className="flex items-center justify-center gap-5">
+  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
 
-            <h2 className="mt-8 text-5xl font-bold">
-              Ready To Get Recognized?
-            </h2>
+  <span
+    className="
+      font-poppins
+      text-xs
+      sm:text-sm
+      md:text-base
+      font-medium
+      uppercase
+      tracking-[0.18em]
+      text-white
+      text-center
+      whitespace-nowrap
+    "
+  >
+    REPAX AWARDS 2026
+  </span>
+
+  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
+</div>
+
+    <h2
+  className="
+    mt-6
+    font-serif
+    text-2xl
+    sm:text-3xl
+    md:text-4xl
+    font-bold
+    leading-tight
+    tracking-tight
+  "
+>
+  Ready To Get Recognized?
+</h2>
 
             <p className="mx-auto mt-6 max-w-3xl text-lg text-slate-200">
               Submit your nomination and showcase your achievements before

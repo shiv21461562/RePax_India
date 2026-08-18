@@ -9,69 +9,228 @@ export default function About() {
   return (
     <main className="bg-gradient-to-br from-white via-slate-50 to-orange-50 text-slate-900">
       {/* ================= ABOUT HERO ================= */}
-
-  <motion.section
-  initial={{ opacity: 0 }}
-  animate={{ opacity: 1 }}
-  transition={{ duration: 0.8 }}
-  className="relative overflow-hidden bg-[#1f5678] min-h-[85vh] flex items-center pt-32 pb-32"
->
-  {/* Background Overlay */}
-  <div className="absolute inset-0 bg-gradient-to-b from-[#255B7D] via-[#1f5678] to-[#184760]" />
-
-  {/* Grid Pattern */}
+<section className="relative w-full overflow-hidden bg-[#071827] pt-0 md:pt-[87px]">
   <div
-    className="absolute inset-0 opacity-[0.06]"
-    style={{
-      backgroundImage: `
-        linear-gradient(rgba(255,255,255,.15) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,.15) 1px, transparent 1px)
-      `,
-      backgroundSize: "70px 70px",
-    }}
-  />
+    className="
+      relative w-full
+      min-h-[630px]
+      sm:min-h-[660px]
+      md:min-h-[720px]
+    "
+  >
 
-  <div className="relative mx-auto max-w-7xl px-6">
-    <div className="text-center">
-      {/* Badge */}
-      <span className="inline-flex items-center rounded-full border border-orange-400/30 bg-orange-500/10 px-6 py-2 text-sm font-semibold uppercase tracking-widest text-orange-300">
-        About RE-PAX India
-      </span>
+    {/* Background Image */}
+    <img
+      src="/speaker/aboutBg.png"
+      alt="About RE-PAX India"
+      className="
+        absolute inset-0
+        w-full h-full
+        object-cover
+        object-[72%_center]
+        sm:object-[70%_center]
+        md:object-center
+      "
+    />
 
+    {/* Dark Transparent Overlay */}
+    <div
+      className="
+        absolute inset-0
+        bg-gradient-to-r
+        from-[#061522]/85
+        via-[#071827]/75
+        sm:via-[#071827]/65
+        md:via-[#071827]/55
+        to-[#071827]/20
+      "
+    />
 
+    {/* Mobile Extra Dark Overlay */}
+    <div
+      className="
+        absolute inset-0
+        bg-[#061522]/20
+        sm:bg-transparent
+      "
+    />
 
+    {/* Content */}
+    <div
+      className="
+        relative z-10
+        flex min-h-[620px]
+        sm:min-h-[650px]
+        md:min-h-[700px]
+        items-center
+      "
+    >
+      <div
+        className="
+          mx-auto w-full max-w-7xl
+          px-5
+          sm:px-8
+          md:px-12
+          lg:px-16
+        "
+      >
+        <div
+          className="
+            w-full
+            max-w-[760px]
+            pt-16
+            sm:pt-0
+          "
+        >
 
-      {/* Heading */}
- {/* Heading */}
-<h1 className="mx-auto mt-8 max-w-6xl font-poppins text-4xl font-black leading-tight text-white md:text-6xl lg:text-7xl">
-  Empowering India's
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="flex flex-col items-start text-left"
+          >
 
-  <span className="mt-2 block">
-    Renewable Energy
-    <span className="text-orange-400"> Ecosystem</span>
-  </span>
+            {/* Badge */}
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="flex items-center gap-2 sm:gap-3"
+            >
+              <span className="h-[2px] w-6 sm:w-10 bg-orange-500" />
 
-  <span className="mt-5 block text-2xl font-bold text-orange-300 md:text-4xl">
-    Through Collaboration, Innovation & Leadership
-  </span>
-</h1>
+              <span
+                className="
+                  font-poppins
+                  text-[9px]
+                  xs:text-[10px]
+                  sm:text-xs
+                  md:text-sm
+                  font-medium
+                  uppercase
+                  tracking-[0.12em]
+                  sm:tracking-[0.22em]
+                  text-orange-400
+                  whitespace-nowrap
+                "
+              >
+                About RE-PAX India
+              </span>
 
+              <span className="h-[2px] w-6 sm:w-10 bg-orange-500" />
+            </motion.div>
 
+            {/* Heading */}
+            <motion.h1
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.8 }}
+              className="
+                mt-4
+                sm:mt-5
+                md:mt-6
+                w-full
+                font-serif
+                font-bold
+                leading-[1.08]
+                sm:leading-[1.12]
+                tracking-tight
+                text-white
+              "
+            >
 
-      {/* Description */}
-      <p className="mx-auto mt-10 max-w-4xl text-lg leading-9 text-slate-300 md:text-xl">
-        India's renewable energy sector is undergoing a remarkable
-        transformation. As the nation accelerates toward ambitious clean
-        energy targets, RE-PAX India brings together manufacturers, EPC
-        companies, policymakers, investors, technology providers,
-        developers and sustainability leaders to drive innovation,
-        collaboration and business growth.
-      </p>
+              {/* Row 1 */}
+              <span
+                className="
+                  block
+                  text-[27px]
+                  xs:text-[29px]
+                  sm:text-4xl
+                  md:text-5xl
+                  lg:text-6xl
+                "
+              >
+                Empowering India's
+              </span>
+
+              {/* Row 2 */}
+              <span
+                className="
+                  mt-1
+                  sm:mt-2
+                  block
+                  text-[27px]
+                  xs:text-[29px]
+                  sm:text-4xl
+                  md:text-5xl
+                  lg:text-6xl
+                "
+              >
+                Renewable Energy{" "}
+                <span className="text-orange-500">
+                  Ecosystem
+                </span>
+              </span>
+
+              {/* Row 3 */}
+              <span
+                className="
+                  mt-3
+                  sm:mt-4
+                  block
+                  text-xs
+                  xs:text-sm
+                  sm:text-lg
+                  md:text-xl
+                  lg:text-2xl
+                  font-semibold
+                  leading-snug
+                  text-orange-400
+                "
+              >
+                Through Collaboration, Innovation & Leadership
+              </span>
+            </motion.h1>
+
+            {/* Description */}
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.7 }}
+              className="
+                mt-4
+                sm:mt-5
+                md:mt-6
+                max-w-[650px]
+                text-[10px]
+                xs:text-xs
+                sm:text-sm
+                md:text-base
+                leading-4
+                sm:leading-6
+                md:leading-7
+                text-white/80
+              "
+            >
+              India's renewable energy sector is undergoing a remarkable
+              transformation. As the nation accelerates toward ambitious
+              clean energy targets, RE-PAX India brings together
+              manufacturers, EPC companies, policymakers, investors,
+              technology providers, developers and sustainability leaders
+              to drive innovation, collaboration and business growth.
+            </motion.p>
+
+          </motion.div>
+
+        </div>
+      </div>
     </div>
   </div>
-</motion.section>
+</section>
 
-   
+
+
+      
 
       {/* WHY RE PAX INDIA Content */}
       <section className="relative py-24 bg-white">
@@ -98,10 +257,6 @@ export default function About() {
 
             {/* Right Content */}
             <div>
-              <span className="rounded-full bg-orange-50 px-5 py-2 text-sm font-semibold text-orange-500">
-                WHY RE PAX INDIA
-              </span>
-
               <h2 className="mt-6 text-3xl font-bold text-slate-900 leading-tight">
                 Why RE-PAX India?
               </h2>
@@ -356,13 +511,29 @@ export default function About() {
         <div className="mx-auto max-w-7xl px-6">
           {/* Heading */}
           <div className="mx-auto mb-16 max-w-4xl text-center">
-            <span className="rounded-full bg-orange-50 px-5 py-2 text-sm font-semibold text-orange-500">
-              WHAT MAKES RE-PAX DIFFERENT?
-            </span>
+<div className="flex flex-col items-center justify-center text-center">
+  <span className="font-poppins text-sm font-semibold tracking-wide text-slate-900">
+    WHAT MAKES RE-PAX DIFFERENT?
+  </span>
 
-            <h2 className="mt-6 text-4xl font-bold text-slate-900 md:text-5xl">
-              What Makes
-              <span className="block text-orange-500">RE-PAX Different?</span>
+  <span className="mt-2 h-[2px] w-12 rounded-full bg-red-500" />
+</div>
+
+            <h2
+              className="
+    mt-6
+    font-poppins
+    text-2xl
+    sm:text-3xl
+    md:text-4xl
+    font-bold
+    leading-tight
+    text-slate-900
+    whitespace-nowrap
+  "
+            >
+              What Makes{" "}
+              <span className="text-orange-500">RE-PAX Different?</span>
             </h2>
 
             <p className="mt-6 text-lg leading-8 text-slate-600">
@@ -431,16 +602,31 @@ export default function About() {
           {/* Heading */}
 
           <div className="mx-auto mb-16 max-w-4xl text-center">
-            <span className="rounded-full border border-orange-400/30 bg-orange-500/10 px-5 py-2 text-sm font-semibold text-orange-300">
-              OUR CORE FOCUS AREAS
-            </span>
+        <div className="flex flex-col items-center justify-center text-center">
+  <span className="font-poppins text-sm font-semibold tracking-wide text-white">
+    OUR CORE FOCUS AREAS
+  </span>
 
-            <h2 className="mt-6 text-4xl font-bold text-white md:text-5xl">
-              Driving India's
-              <span className="block text-orange-400">
-                Renewable Energy Transition
-              </span>
-            </h2>
+  <span className="mt-2 h-[2px] w-12 rounded-full bg-red-500" />
+</div>
+
+       <h2
+  className="
+    mt-5
+    font-poppins
+    text-2xl
+    sm:text-3xl
+    md:text-4xl
+    font-bold
+    leading-tight
+    text-white
+  "
+>
+  Driving India's
+  <span className="block mt-1 text-orange-400">
+    Renewable Energy Transition
+  </span>
+</h2>
 
             <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-300">
               RE-PAX India addresses the most significant sectors driving
@@ -515,16 +701,49 @@ export default function About() {
           {/* Heading */}
 
           <div className="mx-auto mb-16 max-w-4xl text-center">
-            <span className="rounded-full bg-orange-50 px-5 py-2 text-sm font-semibold text-orange-500">
-              WHO WE BRING TOGETHER
-            </span>
+        <div className="flex items-center justify-center gap-5">
+  <span className="h-[2px] w-16 sm:w-20 bg-red-500" />
 
-            <h2 className="mt-6 text-4xl font-bold text-slate-900 md:text-5xl">
-              Connecting Every Stakeholder in
-              <span className="block text-[#1f5678]">
-                India's Renewable Energy Ecosystem
-              </span>
-            </h2>
+  <span
+    className="
+      font-poppins
+      text-sm
+      sm:text-base
+      font-medium
+      tracking-[0.35em]
+      text-red-500
+      whitespace-nowrap
+    "
+  >
+    WHO WE BRING TOGETHER
+  </span>
+
+  <span className="h-[2px] w-16 sm:w-20 bg-red-500" />
+</div>
+
+      <h2
+  className="
+    mt-5
+    font-poppins
+    text-2xl
+    sm:text-3xl
+    md:text-4xl
+    font-bold
+    leading-tight
+    tracking-tight
+    text-slate-900
+  "
+>
+  {/* Row 1 */}
+  <span className="block">
+    Connecting Every Stakeholder in
+  </span>
+
+  {/* Row 2 */}
+  <span className="mt-1 block text-[#1f5678]">
+    India's Renewable Energy Ecosystem
+  </span>
+</h2>
 
             <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-600">
               RE-PAX India connects professionals from across the renewable
@@ -606,14 +825,45 @@ export default function About() {
           {/* Heading */}
 
           <div className="mx-auto mb-16 max-w-4xl text-center">
-            <span className="rounded-full border border-orange-400/30 bg-orange-500/10 px-5 py-2 text-sm font-semibold text-orange-300">
-              ORGANIZED BY
-            </span>
+         <div className="flex items-center justify-center gap-5">
+  <span className="h-[2px] w-16 sm:w-20 bg-red-500" />
 
-            <h2 className="mt-6 text-4xl font-bold text-white md:text-5xl">
-              Renewable
-              <span className="block text-orange-400">Mirror</span>
-            </h2>
+  <span
+    className="
+      font-poppins
+      text-sm
+      sm:text-base
+      font-medium
+      tracking-[0.35em]
+      text-white
+      whitespace-nowrap
+    "
+  >
+    ORGANIZED BY
+  </span>
+
+  <span className="h-[2px] w-16 sm:w-20 bg-red-500" />
+</div>
+
+         <h2
+  className="
+    mt-5
+    font-serif
+    text-3xl
+    sm:text-4xl
+    md:text-5xl
+    font-bold
+    leading-tight
+    tracking-tight
+    text-white
+    whitespace-nowrap
+  "
+>
+  Renewable{" "}
+  <span className="text-orange-400">
+    Mirror
+  </span>
+</h2>
 
             <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-300">
               RE-PAX India is proudly organized by Renewable Mirror, a leading
@@ -696,14 +946,46 @@ export default function About() {
         <div className="mx-auto max-w-7xl px-6">
           {/* Heading */}
           <div className="mx-auto mb-16 max-w-4xl text-center">
-            <span className="inline-flex rounded-full bg-orange-50 px-5 py-2 text-sm font-semibold text-orange-500">
-              JOIN THE MOVEMENT
-            </span>
+         <div className="flex items-center justify-center gap-5">
+  <span className="h-[2px] w-16 bg-red-500 sm:w-20" />
 
-            <h2 className="mt-6 text-4xl font-bold text-slate-900 md:text-5xl">
-              The Future of Energy
-              <span className="mt-2 block text-[#1f5678]">Is Renewable</span>
-            </h2>
+  <span
+    className="
+      font-poppins
+      text-sm
+      font-medium
+      tracking-[0.35em]
+      text-red-500
+      whitespace-nowrap
+    "
+  >
+    JOIN THE MOVEMENT
+  </span>
+
+  <span className="h-[2px] w-16 bg-red-500 sm:w-20" />
+</div>
+
+        <h2
+  className="
+    mt-5
+    font-serif
+    text-3xl
+    sm:text-4xl
+    md:text-5xl
+    font-bold
+    leading-tight
+    tracking-tight
+    text-slate-900
+  "
+>
+  <span className="block">
+    The Future of Energy
+  </span>
+
+  <span className="mt-1 block text-[#1f5678]">
+    Is Renewable
+  </span>
+</h2>
 
             <p className="mx-auto mt-8 max-w-4xl text-lg leading-8 text-slate-600">
               Whether you are a manufacturer, investor, policymaker, EPC

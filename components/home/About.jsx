@@ -33,17 +33,54 @@ export default function About() {
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               {/* LEFT */}
               <div>
-                <span className="inline-flex px-4 py-2 rounded-full bg-white/10 border border-white/20 text-orange-300 text-xs font-bold tracking-widest uppercase">
-                  ABOUT RE-PAX INDIA
-                </span>
+            <div className="flex items-center justify-start gap-5 max-sm:justify-center">
+  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
 
-                <h2 className="mt-6 text-4xl md:text-4xl font-bold text-white leading-tight">
-                  India's Most Influential
-                  <span className="block text-orange-400">
-                    Renewable Energy
-                  </span>
-                  Business Networking Platform
-                </h2>
+  <span
+    className="
+      font-poppins
+      text-xs
+      sm:text-sm
+      md:text-base
+      font-medium
+      uppercase
+      tracking-[0.18em]
+      text-white
+      text-center
+      whitespace-nowrap
+    "
+  >
+    ABOUT RE-PAX INDIA
+  </span>
+
+  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
+</div>
+
+           <h2
+  className="
+    mt-5
+    font-serif
+    text-2xl
+    sm:text-3xl
+    md:text-4xl
+    font-bold
+    leading-[1.12]
+    tracking-tight
+    text-white
+  "
+>
+  <span className="block">
+    India's Most Influential
+  </span>
+
+  <span className="mt-1 block text-orange-400">
+    Renewable Energy
+  </span>
+
+  <span className="mt-1 block">
+    Business Networking Platform
+  </span>
+</h2>
 
                 <p className="mt-6 text-slate-300 text-lg leading-relaxed">
                   RE-PAX India is a premier conference and networking platform

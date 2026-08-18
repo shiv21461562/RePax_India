@@ -42,13 +42,44 @@ export default function Testimonials() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <span className="inline-flex px-4 py-2 rounded-full bg-white/10 border border-white/10 text-orange-300 text-xs font-bold uppercase tracking-widest">
-            Testimonials
-          </span>
+         <div className="flex items-center justify-center gap-5">
+  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
 
-          <h2 className="mt-5 text-4xl md:text-5xl font-bold text-white">
-            What Industry Leaders Say
-          </h2>
+  <span
+    className="
+      font-poppins
+      text-xs
+      sm:text-sm
+      md:text-base
+      font-medium
+      uppercase
+      tracking-[0.18em]
+      text-white-500
+      text-center
+      whitespace-nowrap
+    "
+  >
+    Testimonials
+  </span>
+
+  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
+</div>
+
+       <h2
+  className="
+    mt-5
+    font-serif
+    text-2xl
+    sm:text-3xl
+    md:text-4xl
+    font-bold
+    leading-tight
+    tracking-tight
+    text-white
+  "
+>
+  What Industry Leaders Say
+</h2>
 
           <p className="mt-5 text-slate-300 max-w-2xl mx-auto">
             Hear from delegates, sponsors and industry leaders who have

@@ -58,13 +58,44 @@ export default function ConferenceThemes() {
       <div className="container mx-auto px-4 lg:px-8">
         {/* Heading */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-flex items-center px-4 py-2 rounded-full bg-green-50 text-green-700 text-xs font-bold tracking-widest uppercase">
-          Shaping the Future of Renewable Energy
-          </span>
+      <div className="flex items-center justify-start gap-5 max-sm:justify-center">
+  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
 
-          <h2 className="mt-5 text-4xl md:text-5xl font-bold text-slate-900">
-            Explore Key Discussion Areas
-          </h2>
+  <span
+    className="
+      font-poppins
+      text-xs
+      sm:text-sm
+      md:text-base
+      font-medium
+      uppercase
+      tracking-[0.18em]
+      text-red-500
+      text-center
+      whitespace-nowrap
+    "
+  >
+    Shaping the Future of Renewable Energy
+  </span>
+
+  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
+</div>
+
+      <h2
+  className="
+    mt-5
+    font-serif
+    text-2xl
+    sm:text-3xl
+    md:text-4xl
+    font-bold
+    leading-tight
+    tracking-tight
+    text-slate-900
+  "
+>
+  Explore Key Discussion Areas
+</h2>
 
           <p className="mt-5 text-lg text-slate-600">
            The conference will focus on the most important topics driving India's clean energy transformation.

@@ -61,11 +61,7 @@ export default function FAQ() {
 
   return (
     <section className="relative py-24 overflow-hidden bg-[#1F567A]">
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#1F567A] via-[#225F87] to-[#184C6C]" />
-
-      <div className="absolute top-0 right-0 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-white/5 rounded-full blur-3xl" />
+    
 
       <div className="relative container mx-auto px-4 lg:px-8">
         {/* Heading */}
@@ -76,13 +72,44 @@ export default function FAQ() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <span className="inline-flex px-4 py-2 rounded-full bg-white/10 border border-white/10 text-orange-300 text-xs font-bold tracking-widest uppercase">
-            Frequently Asked Questions
-          </span>
+      <div className="flex items-center justify-center gap-5">
+  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
 
-          <h2 className="mt-5 text-4xl md:text-5xl font-bold text-white">
-            Everything You Need to Know About RE-PAX India
-          </h2>
+  <span
+    className="
+      font-poppins
+      text-xs
+      sm:text-sm
+      md:text-base
+      font-medium
+      uppercase
+      tracking-[0.18em]
+      text-white-500
+      text-center
+      whitespace-nowrap
+    "
+  >
+    Frequently Asked Questions
+  </span>
+
+  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
+</div>
+
+        <h2
+  className="
+    mt-5
+    font-serif
+    text-2xl
+    sm:text-3xl
+    md:text-4xl
+    font-bold
+    leading-tight
+    tracking-tight
+    text-white
+  "
+>
+  Everything You Need to Know About RE-PAX India
+</h2>
 
           <p className="mt-5 max-w-3xl mx-auto text-lg leading-8 text-slate-300">
             Find answers to the most common questions about attending,

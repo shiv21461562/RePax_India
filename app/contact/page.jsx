@@ -171,11 +171,20 @@ export default function ContactPage() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="mt-10 font-poppins text-5xl font-extrabold leading-tight md:text-6xl"
+            className="
+    mt-8
+    font-serif
+    text-3xl
+    sm:text-4xl
+    md:text-5xl
+    font-bold
+    leading-[1.08]
+    tracking-tight
+  "
           >
             <span className="block text-white">We're Here to Help You</span>
 
-            <span className="mt-3 block text-orange-400">
+            <span className="mt-2 block text-orange-400">
               Be Part of RE-PAX India
             </span>
           </motion.h1>
@@ -208,10 +217,41 @@ export default function ContactPage() {
 
         <div className="relative mx-auto max-w-7xl px-6">
           <div className="mb-14 text-center">
-            <span className="inline-flex rounded-full bg-[#255B7D]/10 px-5 py-2 text-sm font-semibold text-[#255B7D]">
-              GET IN TOUCH
-            </span>
-            <h2 className="mt-5 text-4xl font-bold text-slate-900 md:text-5xl">
+            <div className="flex items-center justify-center gap-5">
+              <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
+
+              <span
+                className="
+      font-poppins
+      text-xs
+      sm:text-sm
+      md:text-base
+      font-medium
+      uppercase
+      tracking-[0.18em]
+      text-red-500
+      text-center
+      whitespace-nowrap
+    "
+              >
+                GET IN TOUCH
+              </span>
+
+              <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
+            </div>
+            <h2
+              className="
+    mt-5
+    font-serif
+    text-2xl
+    sm:text-3xl
+    md:text-4xl
+    font-bold
+    leading-tight
+    tracking-tight
+    text-slate-900
+  "
+            >
               Have Questions? We're Here to Help
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-slate-600">
@@ -228,7 +268,21 @@ export default function ContactPage() {
                 <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-orange-500 text-white transition-all duration-500 group-hover:bg-white/10">
                   <Phone className="h-7 w-7" />
                 </div>
-                <h3 className="mt-6 text-2xl font-bold text-slate-900 transition duration-500 group-hover:text-white">
+                <h3
+                  className="
+    mt-5
+    font-serif
+    text-xl
+    sm:text-2xl
+    font-bold
+    leading-tight
+    tracking-tight
+    text-slate-900
+    transition
+    duration-500
+    group-hover:text-white
+  "
+                >
                   Call Us
                 </h3>
                 <p className="mt-2 text-slate-500 transition duration-500 group-hover:text-slate-300">
@@ -250,7 +304,21 @@ export default function ContactPage() {
                 <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-cyan-500 text-white transition-all duration-500 group-hover:bg-white/10">
                   <Mail className="h-7 w-7" />
                 </div>
-                <h3 className="mt-6 text-2xl font-bold text-slate-900 transition duration-500 group-hover:text-white">
+                <h3
+                  className="
+    mt-5
+    font-serif
+    text-xl
+    sm:text-2xl
+    font-bold
+    leading-tight
+    tracking-tight
+    text-slate-900
+    transition
+    duration-500
+    group-hover:text-white
+  "
+                >
                   Email Us
                 </h3>
                 <p className="mt-2 text-slate-500 transition duration-500 group-hover:text-slate-300">
@@ -272,7 +340,21 @@ export default function ContactPage() {
                 <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-emerald-500 text-white transition-all duration-500 group-hover:bg-white/10">
                   <Building2 className="h-7 w-7" />
                 </div>
-                <h3 className="mt-6 text-2xl font-bold text-slate-900 transition duration-500 group-hover:text-white">
+                <h3
+                  className="
+    mt-5
+    font-serif
+    text-xl
+    sm:text-2xl
+    font-bold
+    leading-tight
+    tracking-tight
+    text-slate-900
+    transition
+    duration-500
+    group-hover:text-white
+  "
+                >
                   Corporate Office
                 </h3>
                 <p className="mt-2 text-slate-500 transition duration-500 group-hover:text-slate-300">
@@ -302,7 +384,19 @@ export default function ContactPage() {
           <div className="grid items-start gap-8 lg:grid-cols-[1.4fr_1fr]">
             {/* FORM */}
             <div className="rounded-[32px] border border-slate-200 bg-white p-8 shadow-[0_15px_50px_rgba(15,23,42,0.08)]">
-              <h2 className="mt-4 text-3xl font-bold text-slate-900">
+              <h2
+                className="
+    mt-4
+    font-serif
+    text-xl
+    sm:text-2xl
+    md:text-3xl
+    font-bold
+    leading-tight
+    tracking-tight
+    text-slate-900
+  "
+              >
                 Have a Question?
               </h2>
               <p className="mt-2 text-slate-500">
@@ -436,9 +530,21 @@ export default function ContactPage() {
                 <span className="inline-flex rounded-full bg-[#255B7D]/10 px-4 py-2 text-sm font-semibold text-[#255B7D]">
                   FAQ
                 </span>
-                <h2 className="mt-4 text-3xl font-bold text-slate-900">
-                  Frequently Asked Questions
-                </h2>
+             <h2
+  className="
+    mt-4
+    font-serif
+    text-xl
+    sm:text-2xl
+    md:text-3xl
+    font-bold
+    leading-tight
+    tracking-tight
+    text-slate-900
+  "
+>
+  Frequently Asked Questions
+</h2>
                 <p className="mt-2 text-slate-500">
                   Quick answers to common queries.
                 </p>
@@ -475,12 +581,43 @@ export default function ContactPage() {
 
         <div className="relative mx-auto max-w-7xl px-6">
           <div className="mb-16 text-center">
-            <span className="inline-flex rounded-full bg-[#255B7D]/10 px-5 py-2 text-sm font-semibold text-[#255B7D]">
-              EVENT SUPPORT
-            </span>
-            <h2 className="mt-5 text-4xl font-bold text-slate-900 md:text-5xl">
-              Dedicated Support for Every Need
-            </h2>
+         <div className="flex items-center justify-center gap-5">
+  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
+
+  <span
+    className="
+      font-poppins
+      text-xs
+      sm:text-sm
+      md:text-base
+      font-medium
+      uppercase
+      tracking-[0.18em]
+      text-red-500
+      text-center
+      whitespace-nowrap
+    "
+  >
+    EVENT SUPPORT
+  </span>
+
+  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
+</div>
+         <h2
+  className="
+    mt-5
+    font-serif
+    text-2xl
+    sm:text-3xl
+    md:text-4xl
+    font-bold
+    leading-tight
+    tracking-tight
+    text-slate-900
+  "
+>
+  Dedicated Support for Every Need
+</h2>
             <p className="mx-auto mt-4 max-w-2xl text-slate-600">
               Our team is here to assist you with every aspect of your RE-PAX
               journey.
@@ -802,9 +939,23 @@ export default function ContactPage() {
       {/* CTA Section - Ready to Join */}
       <section className="bg-[#255B7D] py-20">
         <div className="mx-auto max-w-4xl px-6 text-center">
-          <h2 className="text-4xl font-bold text-white md:text-5xl">
-            Ready to Join <span className="text-orange-400">RE-PAX India?</span>
-          </h2>
+        <h2
+  className="
+    font-serif
+    text-2xl
+    sm:text-3xl
+    md:text-4xl
+    font-bold
+    leading-tight
+    tracking-tight
+    text-white
+  "
+>
+  Ready to Join{" "}
+  <span className="text-orange-400">
+    RE-PAX India?
+  </span>
+</h2>
 
           <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-200">
             Register today and become part of India's leading renewable energy

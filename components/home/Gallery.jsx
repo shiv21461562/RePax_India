@@ -15,13 +15,44 @@ export default function Gallery() {
       <div className="container mx-auto px-4 lg:px-8">
         {/* Heading */}
         <div className="mb-14 text-center">
-          <span className="inline-block rounded-full bg-green-100 px-4 py-1 text-sm font-semibold text-green-700">
-            EVENT GALLERY
-          </span>
+         <div className="flex items-center justify-center gap-5">
+  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
 
-          <h2 className="mt-4 text-4xl font-bold text-gray-900 md:text-5xl">
-            Moments From Previous Editions
-          </h2>
+  <span
+    className="
+      font-poppins
+      text-xs
+      sm:text-sm
+      md:text-base
+      font-medium
+      uppercase
+      tracking-[0.18em]
+      text-red-500
+      text-center
+      whitespace-nowrap
+    "
+  >
+    EVENT GALLERY
+  </span>
+
+  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
+</div>
+
+        <h2
+  className="
+    mt-4
+    font-serif
+    text-2xl
+    sm:text-3xl
+    md:text-4xl
+    font-bold
+    leading-tight
+    tracking-tight
+    text-gray-900
+  "
+>
+  Moments From Previous Editions
+</h2>
 
           <p className="mx-auto mt-4 max-w-3xl text-gray-600">
             Explore highlights, networking sessions, keynote speeches,

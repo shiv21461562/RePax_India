@@ -152,13 +152,32 @@ const handleSubmit = async (e) => {
               <span className="w-5 h-0.5 bg-orange-400 inline-block" />
               Registration Page
             </div>
-            <h1 className="text-white text-4xl md:text-5xl font-extrabold leading-tight tracking-tight">
-              Register for{" "}
-              <span className="bg-gradient-to-r from-orange-400 to-amber-300 bg-clip-text text-transparent">
-                RE-PAX
-              </span>{" "}
-              India 2026
-            </h1>
+           <h1
+  className="
+    font-serif
+    text-3xl
+    sm:text-4xl
+    md:text-5xl
+    font-bold
+    leading-tight
+    tracking-tight
+    text-white
+  "
+>
+  Register for{" "}
+  <span
+    className="
+      bg-gradient-to-r
+      from-orange-400
+      to-amber-300
+      bg-clip-text
+      text-transparent
+    "
+  >
+    RE-PAX
+  </span>{" "}
+  India 2026
+</h1>
             <p className="text-slate-100 text-lg font-semibold mt-4">
               Join India's Premier Renewable Energy Conference
             </p>
@@ -212,9 +231,20 @@ const handleSubmit = async (e) => {
         <div className="max-w-6xl mx-auto">
           {/* Heading */}
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-gray-900">
-              Why Register?
-            </h2>
+           <h2
+  className="
+    font-serif
+    text-2xl
+    sm:text-3xl
+    md:text-4xl
+    font-bold
+    leading-tight
+    tracking-tight
+    text-gray-900
+  "
+>
+  Why Register?
+</h2>
 
             <div className="w-16 h-1 bg-orange-500 mx-auto mt-4 rounded-full"></div>
 
@@ -324,9 +354,20 @@ const handleSubmit = async (e) => {
         <div className="max-w-6xl mx-auto">
           {/* Heading */}
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-gray-900">
-              Registration Categories
-            </h2>
+         <h2
+  className="
+    font-serif
+    text-2xl
+    sm:text-3xl
+    md:text-4xl
+    font-bold
+    leading-tight
+    tracking-tight
+    text-gray-900
+  "
+>
+  Registration Categories
+</h2>
 
             <div className="w-16 h-1 bg-orange-500 mx-auto mt-4 rounded-full"></div>
 
@@ -445,7 +486,18 @@ const handleSubmit = async (e) => {
         <div className="max-w-6xl mx-auto grid md:grid-cols-[1.3fr_0.9fr] gap-7 items-start">
           {/* Form card */}
           <div className="bg-white border border-orange-100 rounded-3xl p-8 md:p-10 shadow-xl">
-            <h2 className="text-2xl font-extrabold">Registration Form</h2>
+         <h2
+  className="
+    font-serif
+    text-xl
+    sm:text-2xl
+    font-bold
+    leading-tight
+    tracking-tight
+  "
+>
+  Registration Form
+</h2>
             <div className="w-12 h-1 bg-gradient-to-r from-orange-500 to-amber-400 mt-3 mb-7 rounded-full" />
 
             {submitted && (

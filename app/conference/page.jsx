@@ -250,16 +250,55 @@ export default function Page() {
           <div className="grid w-full items-center gap-16 lg:grid-cols-2">
             {/* LEFT */}
             <div>
-              <span className="inline-flex rounded-full border border-green-500/30 bg-green-500/10 px-5 py-2 text-sm font-medium text-green-300 backdrop-blur-md">
-                RE-PAX INDIA 2026
-              </span>
+    <div className="flex items-center justify-start gap-5 max-sm:justify-center">
+  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
 
-              <h1 className="mt-8 text-5xl font-bold leading-tight text-white md:text-6xl lg:text-5xl">
-                India's Premier
-              <span className="block text-[#FF6B00]">Renewable Energy</span>
-                Conference
-              </h1>
+  <span
+    className="
+      font-poppins
+      text-xs
+      sm:text-sm
+      md:text-base
+      font-medium
+      uppercase
+      tracking-[0.18em]
+      text-white
+      text-center
+      whitespace-nowrap
+    "
+  >
+    RE-PAX INDIA 2026
+  </span>
 
+  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
+</div>
+
+          <h1
+  className="
+    mt-7
+    font-serif
+    text-3xl
+    sm:text-4xl
+    md:text-5xl
+    lg:text-5xl
+    font-bold
+    leading-[1.08]
+    tracking-tight
+    text-white
+  "
+>
+  <span className="block">
+    India's Premier
+  </span>
+
+  <span className="mt-1 block text-[#FF6B00]">
+    Renewable Energy
+  </span>
+
+  <span className="mt-1 block">
+    Conference
+  </span>
+</h1>
               <p className="mt-6 max-w-xl text-lg leading-8 text-slate-300">
                 Discover a Day of Learning, Networking & Innovation — A
                 Power-Packed Conference Designed for Renewable Energy
@@ -287,18 +326,52 @@ export default function Page() {
         </div>
       </section>
 
+
+
+
       {/* EVENT OVERVIEW */}
       <section className="bg-white py-24">
         <div className="mx-auto max-w-7xl px-6">
           <div className="grid items-center gap-16 lg:grid-cols-2">
             <div>
-              <span className="rounded-full border border-sky-200 bg-sky-50 px-4 py-2 text-sm font-semibold text-[#0A3F63]">
-                Event Overview
-              </span>
+            <div className="flex items-center justify-start gap-5 max-sm:justify-center">
+  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
 
-              <h2 className="mt-6 text-5xl font-bold text-[#0B4D7A]">
-                Shaping The Future Of Renewable Energy In India
-              </h2>
+  <span
+    className="
+      font-poppins
+      text-xs
+      sm:text-sm
+      md:text-base
+      font-medium
+      uppercase
+      tracking-[0.18em]
+      text-red-500
+      text-center
+      whitespace-nowrap
+    "
+  >
+    Event Overview
+  </span>
+
+  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
+</div>
+
+             <h2
+  className="
+    mt-5
+    font-serif
+    text-2xl
+    sm:text-3xl
+    md:text-4xl
+    font-bold
+    leading-tight
+    tracking-tight
+    text-[#0B4D7A]
+  "
+>
+  Shaping The Future Of Renewable Energy In India
+</h2>
 
               <p className="mt-6 text-lg leading-8 text-slate-600">
                 The RE-PAX India Conference Agenda has been carefully curated to
@@ -324,7 +397,18 @@ export default function Page() {
             </div>
 
             <div className="rounded-3xl bg-gradient-to-br from-[#0B4D7A] to-[#1D5A7A] p-10 text-white shadow-2xl">
-              <h3 className="text-3xl font-bold">Why Attend?</h3>
+             <h3
+  className="
+    font-serif
+    text-2xl
+    sm:text-3xl
+    font-bold
+    leading-tight
+    tracking-tight
+  "
+>
+  Why Attend?
+</h3>
 
               <ul className="mt-8 space-y-4">
                 {whyAttend.map((item) => (
@@ -351,6 +435,9 @@ export default function Page() {
         </div>
       </section>
 
+
+
+
      
  {/* ================= EVENT STATISTICS ================= */}
 
@@ -374,13 +461,43 @@ export default function Page() {
       className="mb-16 text-center"
     >
 
-      <span className="inline-flex rounded-full border border-[#FF8A00]/40 bg-[#FF8A00]/10 px-5 py-2 text-sm font-semibold tracking-wider text-[#FF8A00]">
-        EVENT STATISTICS
-      </span>
+  <div className="flex items-center justify-center gap-5">
+  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
 
-      <h2 className="mt-6 text-4xl font-bold text-white md:text-5xl">
-        Conference By The Numbers
-      </h2>
+  <span
+    className="
+      font-poppins
+      text-xs
+      sm:text-sm
+      md:text-base
+      font-medium
+      uppercase
+      tracking-[0.18em]
+      text-white
+      text-center
+      whitespace-nowrap
+    "
+  >
+    EVENT STATISTICS
+  </span>
+
+  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
+</div>
+<h2
+  className="
+    mt-5
+    font-serif
+    text-2xl
+    sm:text-3xl
+    md:text-4xl
+    font-bold
+    leading-tight
+    tracking-tight
+    text-white
+  "
+>
+  Conference By The Numbers
+</h2>
 
       <div className="mx-auto mt-5 h-1 w-20 rounded-full bg-[#FF8A00]" />
 
@@ -393,64 +510,81 @@ export default function Page() {
 
     {/* Cards */}
 
-    <div className="grid gap-7 md:grid-cols-2 lg:grid-cols-4">
+  <div className="grid gap-7 md:grid-cols-2 lg:grid-cols-4">
 
-      {stats.map((item, index) => (
+  {stats.map((item, index) => (
 
-        <motion.div
-          key={item.title}
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{
-            duration: .6,
-            delay: index * .15,
-          }}
-          whileHover={{
-            y: -10,
-          }}
-          className="group relative overflow-hidden rounded-3xl border border-white/10 bg-[#165A86]/70 p-10 backdrop-blur-sm transition-all duration-500 hover:border-[#FF8A00] hover:bg-[#15628F] hover:shadow-[0_20px_45px_rgba(0,0,0,.35)]"
-        >
+    <motion.div
+      key={item.title}
+      initial={{ opacity: 0, y: 60 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{
+        duration: 0.6,
+        delay: index * 0.15,
+      }}
+      whileHover={{
+        y: -10,
+      }}
+      className="
+        group relative overflow-hidden
+        rounded-3xl
+        border border-white/10
+        bg-[#165A86]/70
+        p-10
+        backdrop-blur-sm
+        transition-all duration-500
+        hover:border-[#FF8A00]
+        hover:bg-[#15628F]
+        hover:shadow-[0_20px_45px_rgba(0,0,0,.35)]
+      "
+    >
 
-          {/* Orange Line */}
+      {/* Orange Line */}
+      <div className="absolute left-0 top-0 h-1 w-0 bg-[#FF8A00] transition-all duration-500 group-hover:w-full" />
 
-          <div className="absolute left-0 top-0 h-1 w-0 bg-[#FF8A00] transition-all duration-500 group-hover:w-full" />
+      {/* Background Glow */}
+      <div className="absolute -right-16 -top-16 h-44 w-44 rounded-full bg-[#FF8A00]/10 opacity-0 blur-3xl transition-all duration-500 group-hover:opacity-100" />
 
-          {/* Background Glow */}
+      {/* Number */}
+      <h3
+        className="
+          relative
+          font-serif
+          text-4xl
+          sm:text-5xl
+          md:text-5xl
+          font-bold
+          leading-none
+          text-[#FF8A00]
+          transition-all duration-500
+          group-hover:scale-105
+        "
+      >
+        {item.number}
+      </h3>
 
-          <div className="absolute -right-16 -top-16 h-44 w-44 rounded-full bg-[#FF8A00]/10 opacity-0 blur-3xl transition-all duration-500 group-hover:opacity-100" />
+      {/* Divider */}
+      <div className="mt-5 h-1 w-14 rounded-full bg-[#FF8A00] transition-all duration-500 group-hover:w-20" />
 
-          {/* Number */}
+      {/* Title */}
+      <h4 className="mt-5 text-lg font-semibold text-white">
+        {item.title}
+      </h4>
 
-          <h3 className="relative text-6xl font-extrabold text-[#FF8A00] transition-all duration-500 group-hover:scale-110">
-            {item.number}
-          </h3>
+      {/* Description */}
+      <p className="mt-3 text-sm leading-7 text-slate-300">
+        {item.description}
+      </p>
 
-          {/* Divider */}
+      {/* Bottom Border */}
+      <div className="absolute bottom-0 left-0 h-1 w-0 bg-[#FF8A00] transition-all duration-500 group-hover:w-full" />
 
-          <div className="mt-5 h-1 w-16 rounded-full bg-[#FF8A00] transition-all duration-500 group-hover:w-24" />
+    </motion.div>
 
-          {/* Title */}
+  ))}
 
-          <h4 className="mt-6 text-xl font-semibold text-white">
-            {item.title}
-          </h4>
-
-          {/* Description */}
-
-          <p className="mt-3 text-sm leading-7 text-slate-300">
-            {item.description}
-          </p>
-
-          {/* Bottom Border */}
-
-          <div className="absolute bottom-0 left-0 h-1 w-0 bg-[#FF8A00] transition-all duration-500 group-hover:w-full" />
-
-        </motion.div>
-
-      ))}
-
-    </div>
+</div>
 
   </div>
 
@@ -469,13 +603,44 @@ export default function Page() {
             transition={{ duration: 0.7 }}
             className="mb-20 text-center"
           >
-          <span className="rounded-full border border-[#FFB27A] bg-[#FFF2E8] px-5 py-2 text-sm font-semibold text-[#FF6B00]">
-              Conference Themes
-            </span>
+          <div className="flex items-center justify-center gap-5">
+  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
 
-            <h2 className="mt-6 text-5xl font-bold text-[#0A3F63] md:text-6xl">
-              Explore The Future Of Renewable Energy
-            </h2>
+  <span
+    className="
+      font-poppins
+      text-xs
+      sm:text-sm
+      md:text-base
+      font-medium
+      uppercase
+      tracking-[0.18em]
+      text-red-500
+      text-center
+      whitespace-nowrap
+    "
+  >
+    Conference Themes
+  </span>
+
+  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
+</div>
+
+        <h2
+  className="
+    mt-5
+    font-serif
+    text-2xl
+    sm:text-3xl
+    md:text-4xl
+    font-bold
+    leading-tight
+    tracking-tight
+    text-[#0A3F63]
+  "
+>
+  Explore The Future Of Renewable Energy
+</h2>
 
             <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-600">
               Discover transformative technologies, innovative business models
@@ -544,13 +709,43 @@ export default function Page() {
       transition={{ duration: 0.7 }}
       className="mb-20 text-center"
     >
-      <span className="inline-flex rounded-full border border-sky-400/20 bg-sky-400/10 px-5 py-2 text-sm font-semibold tracking-wide text-sky-300">
-        Industry Focus Areas
-      </span>
+    <div className="flex items-center justify-center gap-5">
+  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
 
-      <h2 className="mt-6 text-5xl font-bold text-white">
-        Industry-Focused Tracks
-      </h2>
+  <span
+    className="
+      font-poppins
+      text-xs
+      sm:text-sm
+      md:text-base
+      font-medium
+      uppercase
+      tracking-[0.18em]
+      text-white
+      text-center
+      whitespace-nowrap
+    "
+  >
+    Industry Focus Areas
+  </span>
+
+  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
+</div>
+    <h2
+  className="
+    mt-5
+    font-serif
+    text-2xl
+    sm:text-3xl
+    md:text-4xl
+    font-bold
+    leading-tight
+    tracking-tight
+    text-white
+  "
+>
+  Industry-Focused Tracks
+</h2>
 
       <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-300">
         Explore dedicated conference tracks covering renewable energy,
@@ -666,13 +861,44 @@ export default function Page() {
       transition={{ duration: .6 }}
       className="mb-20 text-center"
     >
-      <span className="inline-flex rounded-full border border-sky-200 bg-sky-50 px-5 py-2 text-sm font-semibold text-[#0A3F63]">
-        Conference Agenda
-      </span>
+    <div className="flex items-center justify-center gap-5">
+  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
 
-      <h2 className="mt-6 text-5xl font-bold text-[#0A3F63]">
-        Event Schedule
-      </h2>
+  <span
+    className="
+      font-poppins
+      text-xs
+      sm:text-sm
+      md:text-base
+      font-medium
+      uppercase
+      tracking-[0.18em]
+      text-red-500
+      text-center
+      whitespace-nowrap
+    "
+  >
+    Conference Agenda
+  </span>
+
+  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
+</div>
+
+     <h2
+  className="
+    mt-5
+    font-serif
+    text-2xl
+    sm:text-3xl
+    md:text-4xl
+    font-bold
+    leading-tight
+    tracking-tight
+    text-[#0A3F63]
+  "
+>
+  Event Schedule
+</h2>
 
       <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-600">
         A thoughtfully curated agenda featuring keynote sessions,
@@ -909,9 +1135,21 @@ export default function Page() {
         Interactive Workshops
       </span>
 
-      <h2 className="mt-6 text-5xl font-bold text-white">
-        Hands-On Learning Sessions
-      </h2>
+   <h2
+  className="
+    mt-5
+    font-serif
+    text-2xl
+    sm:text-3xl
+    md:text-4xl
+    font-bold
+    leading-tight
+    tracking-tight
+    text-white
+  "
+>
+  Hands-On Learning Sessions
+</h2>
 
       <div className="mx-auto mt-6 h-1 w-20 rounded-full bg-sky-400" />
 
@@ -1007,13 +1245,44 @@ export default function Page() {
       transition={{ duration: .6 }}
       className="mb-20 text-center"
     >
-      <span className="inline-flex rounded-full border border-sky-200 bg-sky-50 px-5 py-2 text-sm font-semibold text-[#0A3F63]">
-        Networking Opportunities
-      </span>
+  <div className="flex items-center justify-center gap-5">
+  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
 
-      <h2 className="mt-6 text-5xl font-bold text-[#0A3F63]">
-        Networking Beyond The Conference
-      </h2>
+  <span
+    className="
+      font-poppins
+      text-xs
+      sm:text-sm
+      md:text-base
+      font-medium
+      uppercase
+      tracking-[0.18em]
+      text-red-500
+      text-center
+      whitespace-nowrap
+    "
+  >
+    Opportunities
+  </span>
+
+  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
+</div>
+
+   <h2
+  className="
+    mt-5
+    font-serif
+    text-2xl
+    sm:text-3xl
+    md:text-4xl
+    font-bold
+    leading-tight
+    tracking-tight
+    text-[#0A3F63]
+  "
+>
+  Networking Beyond The Conference
+</h2>
 
       <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-600">
         Build meaningful industry relationships through structured networking,
@@ -1113,9 +1382,22 @@ export default function Page() {
 
       <div className="relative z-10 text-center">
 
-        <h3 className="text-3xl font-bold text-[#0A3F63] transition-colors duration-500 group-hover:text-white">
-          Connections That Last Beyond The Event
-        </h3>
+   <h3
+  className="
+    font-serif
+    text-2xl
+    sm:text-3xl
+    font-bold
+    leading-tight
+    tracking-tight
+    text-[#0A3F63]
+    transition-colors
+    duration-500
+    group-hover:text-white
+  "
+>
+  Connections That Last Beyond The Event
+</h3>
 
         <p className="mx-auto mt-6 max-w-4xl leading-8 text-slate-600 transition-colors duration-500 group-hover:text-slate-200">
           Some of the strongest partnerships begin with a simple conversation.
@@ -1134,39 +1416,135 @@ export default function Page() {
 </section>
 
       {/* FINAL CTA */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#0A3F63] to-[#001B4D] py-28">
-        <div className="absolute inset-0 bg-[url('/images/conf3.png')] bg-cover bg-center opacity-10" />
+    <section className="relative overflow-hidden border-y border-white/10 bg-gradient-to-br from-[#0A3F63] to-[#001B4D] py-20 sm:py-24 md:py-28">
 
-        <div className="relative mx-auto max-w-4xl px-6 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-          >
-            <h2 className="text-5xl font-bold text-white">Register Today</h2>
+  {/* Background Image */}
+  <div className="absolute inset-0 bg-[url('/images/conf3.png')] bg-cover bg-center opacity-[0.08]" />
 
-            <p className="mt-6 text-xl text-slate-300">
-              Don't miss the opportunity to be part of India's premier renewable
-              energy conference. Join industry leaders, innovators, investors,
-              policymakers, and technology experts for a day of learning,
-              networking, and collaboration.
-            </p>
+  {/* Soft Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-b from-[#0A3F63]/20 via-transparent to-[#001B4D]/40" />
 
-            <div className="mt-10 flex flex-wrap justify-center gap-4">
-              <button className="rounded-full bg-green-500 px-10 py-4 text-lg font-semibold text-white transition hover:bg-green-600 hover:shadow-[0_10px_40px_rgba(34,197,94,0.3)]">
-                Register as Delegate
-              </button>
-              <button className="rounded-full border border-white/30 px-10 py-4 text-lg font-semibold text-white transition hover:bg-white/10">
-                View Speakers
-              </button>
-              <button className="rounded-full border border-white/30 px-10 py-4 text-lg font-semibold text-white transition hover:bg-white/10">
-                Become a Sponsor
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+  <div className="relative mx-auto max-w-4xl px-4 sm:px-6 text-center">
+
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.7 }}
+    >
+
+      {/* Heading */}
+      <h2
+        className="
+          font-serif
+          text-3xl
+          sm:text-4xl
+          md:text-5xl
+          font-bold
+          leading-tight
+          tracking-tight
+          text-white
+        "
+      >
+        Register Today
+      </h2>
+
+      {/* Small Line */}
+      <div className="mx-auto mt-4 h-[2px] w-14 rounded-full bg-[#FF6B00]" />
+
+      {/* Description */}
+      <p
+        className="
+          mx-auto mt-5
+          max-w-3xl
+          text-sm
+          sm:text-base
+          md:text-lg
+          leading-7
+          sm:leading-8
+          text-slate-300
+        "
+      >
+        Don't miss the opportunity to be part of India's premier renewable
+        energy conference. Join industry leaders, innovators, investors,
+        policymakers, and technology experts for a day of learning,
+        networking, and collaboration.
+      </p>
+
+      {/* Buttons */}
+      <div className="mt-8 sm:mt-10 flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+
+        {/* Register */}
+        <button
+          className="
+            rounded-full
+            border border-white/30
+            bg-white/10
+            px-6 sm:px-8
+            py-3 sm:py-3.5
+            text-sm sm:text-base
+            font-poppins
+            font-semibold
+            text-white
+            backdrop-blur-sm
+            transition-all duration-300
+            hover:border-[#FF6B00]
+            hover:bg-[#FF6B00]
+            hover:shadow-[0_10px_30px_rgba(255,107,0,0.25)]
+          "
+        >
+          Register as Delegate
+        </button>
+
+        {/* Speakers */}
+        <button
+          className="
+            rounded-full
+            border border-white/30
+            bg-white/10
+            px-6 sm:px-8
+            py-3 sm:py-3.5
+            text-sm sm:text-base
+            font-poppins
+            font-semibold
+            text-white
+            backdrop-blur-sm
+            transition-all duration-300
+            hover:border-[#FF6B00]
+            hover:bg-[#FF6B00]
+            hover:shadow-[0_10px_30px_rgba(255,107,0,0.25)]
+          "
+        >
+          View Speakers
+        </button>
+
+        {/* Sponsor */}
+        <button
+          className="
+            rounded-full
+            border border-white/30
+            bg-white/10
+            px-6 sm:px-8
+            py-3 sm:py-3.5
+            text-sm sm:text-base
+            font-poppins
+            font-semibold
+            text-white
+            backdrop-blur-sm
+            transition-all duration-300
+            hover:border-[#FF6B00]
+            hover:bg-[#FF6B00]
+            hover:shadow-[0_10px_30px_rgba(255,107,0,0.25)]
+          "
+        >
+          Become a Sponsor
+        </button>
+
+      </div>
+
+    </motion.div>
+  </div>
+</section>
     </div>
   );
 }

@@ -112,17 +112,30 @@ export default function Page() {
             RE-PAX INDIA 2026
           </motion.span>
 
-          <motion.h1
-            initial={{ opacity: 0, y: -40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.8 }}
-            className="mt-8 text-5xl font-bold leading-tight text-white md:text-7xl"
-          >
-            Exhibit at RE-PAX India
-            <span className="block text-orange-400">
-              Showcase Your Innovations
-            </span>
-          </motion.h1>
+       <motion.h1
+  initial={{ opacity: 0, y: -40 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.3, duration: 0.8 }}
+  className="
+    mt-7
+    font-serif
+    text-3xl
+    sm:text-4xl
+    md:text-6xl
+    font-bold
+    leading-[1.08]
+    tracking-tight
+    text-white
+  "
+>
+  <span className="block">
+    Exhibit at RE-PAX India
+  </span>
+
+  <span className="mt-1 block text-orange-400">
+    Showcase Your Innovations
+  </span>
+</motion.h1>
 
           <motion.p
             initial={{ opacity: 0 }}
@@ -204,10 +217,24 @@ export default function Page() {
             transition={{ duration: 0.7 }}
             className="mb-16 text-center"
           >
-            <h2 className="text-5xl font-bold text-[#001B4D]">
-              Why Exhibit at
-              <span className="text-orange-500"> RE-PAX India?</span>
-            </h2>
+          <h2
+  className="
+    mt-5
+    font-serif
+    text-2xl
+    sm:text-3xl
+    md:text-4xl
+    font-bold
+    leading-tight
+    tracking-tight
+    text-[#001B4D]
+  "
+>
+  Why Exhibit at{" "}
+  <span className="text-orange-500">
+    RE-PAX India?
+  </span>
+</h2>
 
             <div className="mx-auto mt-4 h-1 w-24 rounded-full bg-orange-500" />
 
@@ -539,9 +566,24 @@ export default function Page() {
         <div className="mx-auto max-w-7xl px-6">
           {/* Heading */}
           <div className="mb-16 text-center">
-            <h2 className="text-5xl font-bold text-[#001B4D]">
-              Exhibition <span className="text-orange-500">Features</span>
-            </h2>
+         <h2
+  className="
+    mt-5
+    font-serif
+    text-2xl
+    sm:text-3xl
+    md:text-4xl
+    font-bold
+    leading-tight
+    tracking-tight
+    text-[#001B4D]
+  "
+>
+  Exhibition{" "}
+  <span className="text-orange-500">
+    Features
+  </span>
+</h2>
 
             <div className="mx-auto mt-4 h-1 w-24 rounded-full bg-orange-500" />
 
@@ -728,10 +770,24 @@ export default function Page() {
         <div className="mx-auto max-w-7xl px-6">
           {/* Heading */}
           <div className="mb-16 text-center">
-            <h2 className="text-5xl font-bold text-[#001B4D]">
-              Who Will Visit
-              <span className="text-orange-500"> Your Booth?</span>
-            </h2>
+           <h2
+  className="
+    mt-5
+    font-serif
+    text-2xl
+    sm:text-3xl
+    md:text-4xl
+    font-bold
+    leading-tight
+    tracking-tight
+    text-[#001B4D]
+  "
+>
+  Who Will Visit{" "}
+  <span className="text-orange-500">
+    Your Booth?
+  </span>
+</h2>
 
             <div className="mx-auto mt-4 h-1 w-24 rounded-full bg-orange-500" />
 
@@ -799,12 +855,43 @@ export default function Page() {
           <div className="rounded-[40px] bg-[#255B7D] p-16">
             <div className="grid gap-12 md:grid-cols-2">
               <div>
-                <span className="rounded-full bg-white/10 px-4 py-2 text-sm font-medium text-orange-400">
-                  Why RE-PAX Exhibition?
-                </span>
-                <h2 className="mt-6 text-4xl font-bold text-white">
-                  Beyond Traditional Exhibitions
-                </h2>
+             <div className="flex items-center justify-center gap-5">
+  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
+
+  <span
+    className="
+      font-poppins
+      text-xs
+      sm:text-sm
+      md:text-base
+      font-medium
+      uppercase
+      tracking-[0.18em]
+      text-white
+      text-center
+      whitespace-nowrap
+    "
+  >
+    Why RE-PAX Exhibition?
+  </span>
+
+  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
+</div>
+            <h2
+  className="
+    mt-5
+    font-serif
+    text-2xl
+    sm:text-3xl
+    md:text-4xl
+    font-bold
+    leading-tight
+    tracking-tight
+    text-white
+  "
+>
+  Beyond Traditional Exhibitions
+</h2>
                 <p className="mt-4 text-lg text-slate-200">
                   Unlike traditional trade exhibitions, RE-PAX integrates the
                   exhibition with a conference, networking sessions, leadership
@@ -851,9 +938,24 @@ export default function Page() {
         <div className="mx-auto max-w-7xl px-6">
           {/* Heading */}
           <div className="mb-16 text-center">
-            <h2 className="text-5xl font-bold text-white">
-              Ideal <span className="text-orange-400">Exhibitors</span>
-            </h2>
+          <h2
+  className="
+    mt-5
+    font-serif
+    text-2xl
+    sm:text-3xl
+    md:text-4xl
+    font-bold
+    leading-tight
+    tracking-tight
+    text-white
+  "
+>
+  Ideal{" "}
+  <span className="text-orange-400">
+    Exhibitors
+  </span>
+</h2>
 
             <div className="mx-auto mt-4 h-1 w-24 rounded-full bg-orange-500" />
 
@@ -924,16 +1026,50 @@ export default function Page() {
           >
             {/* Badge */}
             <div className="flex justify-center">
-              <span className="rounded-full bg-white/10 px-5 py-2 text-sm font-semibold uppercase tracking-[2px] text-orange-300 backdrop-blur">
-                Join RE-PAX India 2026
-              </span>
+            <div className="flex items-center justify-center gap-5">
+  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
+
+  <span
+    className="
+      font-poppins
+      text-xs
+      sm:text-sm
+      md:text-base
+      font-medium
+      uppercase
+      tracking-[0.18em]
+      text-white
+      text-center
+      whitespace-nowrap
+    "
+  >
+    Join RE-PAX India 2026
+  </span>
+
+  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
+</div>
             </div>
 
             {/* Heading */}
-            <h2 className="mt-6 text-center text-5xl font-bold leading-tight text-white">
-              Let's Build the
-              <span className="text-orange-400"> Future Together</span>
-            </h2>
+        <h2
+  className="
+    mt-5
+    text-center
+    font-serif
+    text-2xl
+    sm:text-3xl
+    md:text-4xl
+    font-bold
+    leading-tight
+    tracking-tight
+    text-white
+  "
+>
+  Let's Build the{" "}
+  <span className="text-orange-400">
+    Future Together
+  </span>
+</h2>
 
             <div className="mx-auto mt-5 h-1 w-24 rounded-full bg-orange-500" />
 

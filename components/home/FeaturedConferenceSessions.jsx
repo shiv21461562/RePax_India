@@ -58,11 +58,7 @@ const sessions = [
 export default function ConferenceSessions() {
   return (
     <section className="relative overflow-hidden bg-[#0B3A63] py-20">
-      {/* Background Glow */}
-      <div className="absolute inset-0">
-        <div className="absolute -top-40 -left-40 h-96 w-96 rounded-full bg-orange-500/10 blur-3xl" />
-        <div className="absolute -bottom-40 -right-40 h-96 w-96 rounded-full bg-blue-400/10 blur-3xl" />
-      </div>
+   
 
       <div className="relative mx-auto max-w-7xl px-6">
 
@@ -74,16 +70,50 @@ export default function ConferenceSessions() {
           transition={{ duration: 0.7 }}
           className="mx-auto mb-14 max-w-3xl text-center"
         >
-          <span className="inline-flex rounded-full border border-orange-400/30 bg-orange-500/10 px-5 py-2 text-xs font-semibold uppercase tracking-[3px] text-orange-300">
-            Featured Conference Sessions
-          </span>
+        <div className="flex items-center justify-center gap-5">
+  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
 
-          <h2 className="mt-5 text-4xl font-bold text-white md:text-5xl">
-            Featured Conference
-            <span className="mt-2 block text-orange-400">
-              Sessions
-            </span>
-          </h2>
+  <span
+    className="
+      font-poppins
+      text-xs
+      sm:text-sm
+      md:text-base
+      font-medium
+      uppercase
+      tracking-[0.18em]
+      text-white
+      text-center
+      whitespace-nowrap
+    "
+  >
+    Featured Conference Sessions
+  </span>
+
+  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
+</div>
+
+        <h2
+  className="
+    mt-5
+    font-serif
+    text-2xl
+    sm:text-3xl
+    md:text-4xl
+    font-bold
+    leading-tight
+    tracking-tight
+    text-white
+  "
+>
+  <span className="block">
+    Featured Conference
+  </span>
+
+  <span className="mt-2 block text-orange-400">
+    Sessions
+  </span>
+</h2>
 
        
         </motion.div>

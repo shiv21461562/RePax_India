@@ -22,118 +22,194 @@ export default function SpeakersPage() {
     <main className="bg-white text-slate-900">
       {/* HERO */}
 
-      <section className="relative min-h-screen overflow-hidden bg-[#174d6d]">
-        {/* Grid Background */}
-        <div
-          className="absolute inset-0 opacity-[0.06]"
-          style={{
-            backgroundImage: `
-        linear-gradient(rgba(255,255,255,.15) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,.15) 1px, transparent 1px)
-      `,
-            backgroundSize: "70px 70px",
+  <section className="relative min-h-screen overflow-hidden bg-[#0b2033]">
+  {/* Hero Background Image */}
+  <div
+    className="absolute left-0 right-0 top-20 bottom-0 bg-cover bg-center bg-no-repeat"
+    style={{
+      backgroundImage: "url('/speaker/heroBG.png')",
+    }}
+  />
+
+  {/* Soft overlay for text readability */}
+  <div className="absolute inset-0 bg-gradient-to-r from-[#071a2b]/90 via-[#071a2b]/65 to-transparent" />
+
+  {/* Bottom soft darkening */}
+  <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#071a2b]/50 to-transparent" />
+
+  {/* Content */}
+  <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl items-center px-6 py-24 sm:px-8 lg:px-10">
+    <div className="w-full max-w-3xl">
+
+      {/* Main Animation */}
+      <motion.div
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
+
+        {/* Badge */}
+        <motion.span
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.6 }}
+          className="
+            inline-flex
+            items-center
+            rounded-full
+            border border-white/20
+            bg-white/10
+            px-5 py-2.5
+            text-[11px]
+            font-semibold
+            uppercase
+            tracking-[2.5px]
+            text-white
+            backdrop-blur-md
+          "
+        >
+          RE-PAX INDIA CONFERENCE
+        </motion.span>
+
+        {/* Heading */}
+        <motion.h1
+          initial={{ opacity: 0, y: 35 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3, duration: 0.8 }}
+    className="
+  mt-7
+  max-w-3xl
+  font-serif
+  text-3xl
+  font-bold
+  leading-[1.08]
+  tracking-tight
+  text-white
+  sm:text-3xl
+  md:text-4xl
+  lg:text-5xl
+"
+        >
+          Meet the Visionaries
+
+          <span className="block text-orange-400">
+            Shaping the Future
+          </span>
+
+          <span className="block">
+            of Renewable Energy
+          </span>
+        </motion.h1>
+
+        {/* Orange Line */}
+        <motion.div
+          initial={{ width: 0, opacity: 0 }}
+          animate={{ width: 110, opacity: 1 }}
+          transition={{
+            delay: 0.6,
+            duration: 0.7,
+            ease: "easeOut",
           }}
+          className="mt-7 h-1 rounded-full bg-orange-400"
         />
 
-        {/* Gradient Glow */}
-        <div className="absolute -top-40 -left-40 h-[500px] w-[500px] rounded-full bg-orange-500/10 blur-[120px]" />
-        <div className="absolute -bottom-40 -right-40 h-[500px] w-[500px] rounded-full bg-cyan-400/10 blur-[120px]" />
+        {/* Description */}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.7, duration: 0.7 }}
+          className="
+            mt-7
+            max-w-2xl
+            text-[16px]
+            leading-7
+            text-slate-200
+            sm:text-[17px]
+            sm:leading-8
+          "
+        >
+          The RE-PAX India Conference brings together some of the most
+          respected voices in the renewable energy industry. Our speakers
+          include government officials, policy experts, CEOs, founders,
+          technology pioneers, investors, researchers and sustainability
+          leaders driving India's clean energy future.
+        </motion.p>
 
-        <div className="relative mx-auto flex min-h-screen max-w-7xl items-center justify-center px-6 py-24">
-          <div className="w-full max-w-5xl">
+        {/* Tags */}
+        <motion.div
+          initial="hidden"
+          animate="show"
+          variants={{
+            hidden: {},
+            show: {
+              transition: {
+                staggerChildren: 0.12,
+                delayChildren: 0.85,
+              },
+            },
+          }}
+          className="
+            mt-9
+            flex
+            max-w-3xl
+            flex-wrap
+            gap-3
+          "
+        >
+          {[
+            "🏛 Government Leaders",
+            "⚡ Industry Experts",
+            "💼 Investors",
+            "🌱 Sustainability Leaders",
+          ].map((item) => (
             <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="flex flex-col items-center text-center"
+              key={item}
+              variants={{
+                hidden: {
+                  opacity: 0,
+                  y: 20,
+                },
+                show: {
+                  opacity: 1,
+                  y: 0,
+                },
+              }}
+              whileHover={{
+                scale: 1.04,
+                y: -3,
+              }}
+              transition={{
+                duration: 0.2,
+              }}
+              className="
+                rounded-full
+                border border-white/20
+                bg-white/10
+                px-4 py-2.5
+                text-sm
+                font-medium
+                text-white
+                backdrop-blur-md
+                transition-all
+                hover:border-orange-400/60
+                hover:bg-orange-400/10
+              "
             >
-              {/* Badge */}
-              <motion.span
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 }}
-                className="inline-flex items-center rounded-full border border-white/10 bg-white/10 px-5 py-2 text-xs font-medium uppercase tracking-[2px] text-slate-200 backdrop-blur-xl"
-              >
-                RE-PAX INDIA CONFERENCE
-              </motion.span>
-
-              {/* Heading */}
-              <motion.h1
-                initial={{ opacity: 0, y: 40 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3, duration: 0.8 }}
-                className="mt-8 max-w-4xl text-4xl font-extrabold leading-tight tracking-tight text-white lg:text-6xl"
-              >
-                Meet the Visionaries
-                <span className="block text-orange-400">
-                  Shaping the Future
-                </span>
-                of Renewable Energy
-              </motion.h1>
-
-              {/* Line */}
-              <motion.div
-                initial={{ width: 0 }}
-                animate={{ width: 120 }}
-                transition={{ delay: 0.6 }}
-                className="mt-6 h-1 rounded-full bg-orange-500"
-              />
-
-              {/* Description */}
-              <motion.p
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.7 }}
-                className="mt-8 max-w-3xl text-[17px] leading-8 text-slate-300"
-              >
-                The RE-PAX India Conference brings together some of the most
-                respected voices in the renewable energy industry. Our speakers
-                include government officials, policy experts, CEOs, founders,
-                technology pioneers, investors, researchers and sustainability
-                leaders driving India's clean energy future.
-              </motion.p>
-
-              {/* Tags */}
-              <motion.div
-                initial="hidden"
-                animate="show"
-                variants={{
-                  hidden: {},
-                  show: {
-                    transition: {
-                      staggerChildren: 0.15,
-                      delayChildren: 0.8,
-                    },
-                  },
-                }}
-                className="mt-10 flex flex-wrap justify-center gap-4"
-              >
-                {[
-                  "🏛 Government Leaders",
-                  "⚡ Industry Experts",
-                  "💼 Investors",
-                  "🌱 Sustainability Leaders",
-                ].map((item) => (
-                  <motion.div
-                    key={item}
-                    variants={{
-                      hidden: { opacity: 0, y: 20 },
-                      show: { opacity: 1, y: 0 },
-                    }}
-                    whileHover={{
-                      scale: 1.05,
-                      y: -4,
-                    }}
-                    className="rounded-full border border-white/10 bg-white/10 px-5 py-3 text-sm text-white backdrop-blur-xl"
-                  >
-                    {item}
-                  </motion.div>
-                ))}
-              </motion.div>
+              {item}
             </motion.div>
-          </div>
-        </div>
-      </section>
+          ))}
+        </motion.div>
+
+      </motion.div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
 
       {/* WHY ATTEND SPEAKER SESSIONS */}
 
@@ -142,13 +218,41 @@ export default function SpeakersPage() {
 
         <div className="relative mx-auto max-w-7xl px-6">
           <div className="text-center">
-            <span className="rounded-full bg-orange-100 px-5 py-2 text-sm font-semibold text-orange-600">
-              WHY ATTEND
-            </span>
+         <div className="flex items-center justify-center gap-5">
+  <span className="h-[2px] w-16 bg-red-500 sm:w-20" />
 
-            <h2 className="mt-6 text-4xl font-bold text-slate-900 md:text-5xl">
-              Why Attend Speaker Sessions?
-            </h2>
+  <span
+    className="
+      font-poppins
+      text-sm
+      sm:text-base
+      font-medium
+      tracking-[0.25em]
+      text-red-500
+      whitespace-nowrap
+    "
+  >
+    WHY ATTEND
+  </span>
+
+  <span className="h-[2px] w-16 bg-red-500 sm:w-20" />
+</div>
+
+           <h2
+  className="
+    mt-5
+    font-serif
+    text-2xl
+    sm:text-3xl
+    md:text-4xl
+    font-bold
+    leading-tight
+    tracking-tight
+    text-slate-900
+  "
+>
+  Why Attend Speaker Sessions?
+</h2>
 
             <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-600">
               Learn directly from global energy pioneers, investors,
@@ -275,6 +379,9 @@ export default function SpeakersPage() {
         </div>
       </section>
 
+
+
+
       {/* ===================== LEARN FROM INDUSTRY LEADERS ===================== */}
 
       <section className="relative overflow-hidden bg-gradient-to-br from-[#1b4f6d] via-[#225879] to-[#153f59] py-28">
@@ -295,16 +402,56 @@ export default function SpeakersPage() {
           {/* ===================== Heading ===================== */}
 
           <div className="mx-auto max-w-5xl text-center">
-            <span className="inline-flex rounded-full bg-orange-100 px-6 py-2 text-sm font-bold uppercase tracking-[0.18em] text-orange-600 shadow-lg">
-              Learn From Industry Leaders
-            </span>
+         <div className="flex items-center justify-center gap-5">
+  <span className="h-[2px] w-16 bg-red-500 sm:w-20" />
 
-            <h2 className="mt-8 text-4xl font-extrabold leading-tight text-white md:text-6xl">
-              Learn from Industry Leaders,
-              <span className="mt-2 block bg-gradient-to-r from-[#FFD166] via-white to-[#9BE7FF] bg-clip-text text-transparent">
-                Innovators & Policymakers
-              </span>
-            </h2>
+  <span
+    className="
+      font-poppins
+      text-sm
+      sm:text-base
+      font-medium
+      uppercase
+      tracking-[0.18em]
+      text-white
+      whitespace-nowrap
+    "
+  >
+    Learn From Industry Leaders
+  </span>
+
+  <span className="h-[2px] w-16 bg-red-500 sm:w-20" />
+</div>
+
+        <h2
+  className="
+    mt-6
+    font-serif
+    text-3xl
+    sm:text-4xl
+    md:text-5xl
+    font-bold
+    leading-tight
+    tracking-tight
+    text-white
+  "
+>
+  Learn from Industry Leaders,
+
+  <span
+    className="
+      mt-1 block
+      bg-gradient-to-r
+      from-[#FFD166]
+      via-white
+      to-[#9BE7FF]
+      bg-clip-text
+      text-transparent
+    "
+  >
+    Innovators & Policymakers
+  </span>
+</h2>
 
             <div className="mx-auto mt-8 h-1 w-28 rounded-full bg-gradient-to-r from-orange-400 to-cyan-400"></div>
 
@@ -407,6 +554,8 @@ export default function SpeakersPage() {
           </div>
         </div>
       </section>
+
+
 
       {/* SPEAKERS */}
 
@@ -552,6 +701,9 @@ export default function SpeakersPage() {
         </div>
       </section>
 
+
+
+
       {/* ===================== CONFERENCE SESSION FORMATS ===================== */}
 
       <section className="relative overflow-hidden bg-gradient-to-br from-[#174d6d] via-[#1e5b7d] to-[#123d58] py-28">
@@ -579,12 +731,25 @@ export default function SpeakersPage() {
               Conference Session Formats
             </span>
 
-            <h2 className="mt-7 text-4xl font-extrabold text-white md:text-5xl">
-              Learn Through Multiple
-              <span className="block text-orange-400">
-                Interactive Session Formats
-              </span>
-            </h2>
+         <h2
+  className="
+    mt-6
+    font-serif
+    text-3xl
+    sm:text-4xl
+    md:text-5xl
+    font-bold
+    leading-tight
+    tracking-tight
+    text-white
+  "
+>
+  Learn Through Multiple
+
+  <span className="mt-1 block text-orange-400">
+    Interactive Session Formats
+  </span>
+</h2>
 
             <div className="mx-auto mt-7 h-1 w-24 rounded-full bg-gradient-to-r from-orange-400 to-cyan-400" />
 
@@ -690,14 +855,47 @@ export default function SpeakersPage() {
           {/* Heading */}
 
           <div className="mx-auto max-w-4xl text-center">
-            <span className="rounded-full bg-orange-100 px-5 py-2 text-sm font-semibold uppercase tracking-[0.18em] text-orange-600">
-              Conference Topics
-            </span>
+         <div className="flex items-center justify-center gap-5">
+  <span className="h-[2px] w-16 bg-red-500 sm:w-20" />
 
-            <h2 className="mt-6 text-4xl font-bold text-slate-900 md:text-5xl">
-              Topics Our Speakers
-              <span className="block text-[#174d6d]">Will Cover</span>
-            </h2>
+  <span
+    className="
+      font-poppins
+      text-sm
+      sm:text-base
+      font-medium
+      uppercase
+      tracking-[0.18em]
+      text-red-500
+      whitespace-nowrap
+    "
+  >
+    Conference Topics
+  </span>
+
+  <span className="h-[2px] w-16 bg-red-500 sm:w-20" />
+</div>
+          <h2
+  className="
+    mt-6
+    font-serif
+    text-3xl
+    sm:text-4xl
+    md:text-5xl
+    font-bold
+    leading-[1.15]
+    tracking-tight
+    text-slate-900
+  "
+>
+  <span className="block">
+    Topics Our Speakers
+  </span>
+
+  <span className="mt-2 block text-[#174d6d]">
+    Will Cover
+  </span>
+</h2>
 
             <div className="mx-auto mt-6 h-1 w-24 rounded-full bg-orange-500"></div>
 
@@ -768,6 +966,11 @@ export default function SpeakersPage() {
         </div>
       </section>
 
+
+
+
+
+
       {/* ===================== BECOME A SPEAKER ===================== */}
 
       <section className="relative overflow-hidden bg-white py-28">
@@ -776,16 +979,48 @@ export default function SpeakersPage() {
             {/* Left */}
 
             <div>
-              <span className="inline-flex rounded-full bg-orange-100 px-5 py-2 text-sm font-semibold uppercase tracking-[0.18em] text-orange-600">
-                Become A Speaker
-              </span>
+<div className="flex items-center justify-start gap-5 max-sm:justify-center">
+  <span className="h-[2px] w-16 bg-red-500 sm:w-20" />
 
-              <h2 className="mt-6 text-4xl font-bold leading-tight text-slate-900 md:text-5xl">
-                Share Your Knowledge.
-                <span className="block text-[#174d6d]">
-                  Inspire The Industry.
-                </span>
-              </h2>
+  <span
+    className="
+      font-poppins
+      text-sm
+      sm:text-base
+      font-medium
+      uppercase
+      tracking-[0.18em]
+      text-red-500
+      whitespace-nowrap
+    "
+  >
+    Become A Speaker
+  </span>
+
+  <span className="h-[2px] w-16 bg-red-500 sm:w-20" />
+</div>
+
+         <h2
+  className="
+    mt-5
+    font-serif
+    text-2xl
+    sm:text-3xl
+    md:text-4xl
+    font-bold
+    leading-tight
+    tracking-tight
+    text-slate-900
+  "
+>
+  <span className="block">
+    Share Your Knowledge.
+  </span>
+
+  <span className="mt-2 block text-[#174d6d]">
+    Inspire The Industry.
+  </span>
+</h2>
 
               <div className="mt-6 h-1 w-24 rounded-full bg-orange-500"></div>
 
@@ -804,9 +1039,19 @@ export default function SpeakersPage() {
             {/* Right */}
 
             <div className="rounded-[32px] border border-slate-200 bg-slate-50 p-10 shadow-xl">
-              <h3 className="text-2xl font-bold text-slate-900">
-                We're Looking For Experts In
-              </h3>
+            <h3
+  className="
+    font-serif
+    text-xl
+    sm:text-2xl
+    font-bold
+    leading-tight
+    tracking-tight
+    text-slate-900
+  "
+>
+  We're Looking For Experts In
+</h3>
 
               <p className="mt-4 leading-8 text-slate-600">
                 Share your expertise across renewable energy, sustainability,
@@ -873,14 +1118,50 @@ export default function SpeakersPage() {
         />
 
         <div className="relative z-10 mx-auto max-w-5xl px-6 text-center">
-          <span className="inline-flex rounded-full bg-white/10 px-6 py-2 text-sm font-semibold uppercase tracking-[0.18em] text-orange-300 backdrop-blur-md">
-            Call For Speaker Applications
-          </span>
+      <div className="flex items-center justify-center gap-5">
+  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
 
-          <h2 className="mt-6 text-4xl font-bold leading-tight text-white md:text-5xl">
-            Interested In Speaking
-            <span className="block text-orange-400">At RE-PAX India?</span>
-          </h2>
+  <span
+    className="
+      font-poppins
+      text-xs
+      sm:text-sm
+      md:text-base
+      font-medium
+      uppercase
+      tracking-[0.18em]
+      text-white
+      text-center
+      whitespace-nowrap
+    "
+  >
+    Call For Speaker Applications
+  </span>
+
+  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
+</div>
+
+      <h2
+  className="
+    mt-5
+    font-serif
+    text-2xl
+    sm:text-3xl
+    md:text-4xl
+    font-bold
+    leading-tight
+    tracking-tight
+    text-white
+  "
+>
+  <span className="block">
+    Interested In Speaking
+  </span>
+
+  <span className="mt-2 block text-orange-400">
+    At RE-PAX India?
+  </span>
+</h2>
 
           <div className="mx-auto mt-6 h-1 w-24 rounded-full bg-gradient-to-r from-orange-400 to-cyan-400"></div>
 
@@ -901,14 +1182,50 @@ export default function SpeakersPage() {
         {/* Background Glow */}
 
         <div className="relative z-10 mx-auto max-w-5xl px-6 text-center">
-          <span className="inline-flex rounded-full bg-orange-100 px-6 py-2 text-sm font-semibold uppercase tracking-[0.18em] text-orange-600">
-            Join The Conversation
-          </span>
+        <div className="flex items-center justify-center gap-5">
+  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
 
-          <h2 className="mt-6 text-4xl font-bold leading-tight text-slate-900 md:text-5xl">
-            Shape The Future Of
-            <span className="block text-[#174d6d]">Renewable Energy</span>
-          </h2>
+  <span
+    className="
+      font-poppins
+      text-xs
+      sm:text-sm
+      md:text-base
+      font-medium
+      uppercase
+      tracking-[0.18em]
+      text-red-500
+      text-center
+      whitespace-nowrap
+    "
+  >
+    Join The Conversation
+  </span>
+
+  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
+</div>
+
+        <h2
+  className="
+    mt-5
+    font-serif
+    text-2xl
+    sm:text-3xl
+    md:text-4xl
+    font-bold
+    leading-tight
+    tracking-tight
+    text-slate-900
+  "
+>
+  <span className="block">
+    Shape The Future Of
+  </span>
+
+  <span className="mt-2 block text-[#174d6d]">
+    Renewable Energy
+  </span>
+</h2>
 
           <div className="mx-auto mt-6 h-1 w-24 rounded-full bg-gradient-to-r from-orange-500 to-cyan-500"></div>
 

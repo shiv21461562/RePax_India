@@ -57,28 +57,46 @@ export default function WhyAttend() {
           transition={{ duration: 0.8 }}
           className="mx-auto mb-20 max-w-3xl text-center"
         >
-          <span
-            className="
-            inline-flex
-            items-center
-            rounded-full
-            border
-            border-[#D8CCA3]
-            bg-[#A89A6A]/10
-            px-5
-            py-2
-            text-xs
-            font-bold
-            uppercase
-            tracking-[2px]
-            text-[#A67C00]
-          "
-          >
-            WHY ATTEND RE-PAX INDIA
-          </span>
-          <h2 className="mt-6 text-4xl font-extrabold text-slate-900 md:text-5xl">
-            Why Attend <span className="text-[#0B3A63]">RE-PAX India?</span>
-          </h2>
+<div className="flex items-center justify-center gap-5">
+  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
+
+  <span
+    className="
+      font-poppins
+      text-xs
+      sm:text-sm
+      md:text-base
+      font-medium
+      uppercase
+      tracking-[0.18em]
+      text-red-500
+      text-center
+      whitespace-nowrap
+    "
+  >
+    WHY ATTEND RE-PAX INDIA
+  </span>
+
+  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
+</div>
+       <h2
+  className="
+    mt-5
+    font-serif
+    text-2xl
+    sm:text-3xl
+    md:text-4xl
+    font-bold
+    leading-tight
+    tracking-tight
+    text-slate-900
+  "
+>
+  Why Attend{" "}
+  <span className="text-[#0B3A63]">
+    RE-PAX India?
+  </span>
+</h2>
 
           <p className="mt-6 text-lg leading-8 text-slate-600">
             RE-PAX India is more than a conference—it's where the renewable
@@ -203,13 +221,43 @@ group-hover:text-white
           className="mt-20"
         >
           <div className="overflow-hidden rounded-[32px] bg-gradient-to-r from-[#0B3A63] via-[#114D7E] to-[#0B3A63] p-10 text-center shadow-[0_30px_80px_rgba(11,58,99,.25)] lg:p-14">
-            <span className="inline-flex rounded-full border border-orange-300/40 bg-orange-400/10 px-5 py-2 text-xs font-semibold uppercase tracking-[2px] text-orange-300">
-              Join India's Renewable Energy Community
-            </span>
+         <div className="flex items-center justify-center gap-5">
+  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
 
-            <h3 className="mt-6 text-3xl font-bold text-white md:text-4xl">
-              Build Connections That Drive the Future
-            </h3>
+  <span
+    className="
+      font-poppins
+      text-xs
+      sm:text-sm
+      md:text-base
+      font-medium
+      uppercase
+      tracking-[0.18em]
+      text-white
+      text-center
+      whitespace-nowrap
+    "
+  >
+    Join India's Renewable Energy Community
+  </span>
+
+  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
+</div>
+          <h3
+  className="
+    mt-5
+    font-serif
+    text-xl
+    sm:text-2xl
+    md:text-3xl
+    font-bold
+    leading-tight
+    tracking-tight
+    text-white
+  "
+>
+  Build Connections That Drive the Future
+</h3>
 
             <p className="mx-auto mt-6 max-w-4xl text-lg leading-8 text-slate-200">
               Whether you're launching a new technology, expanding your
