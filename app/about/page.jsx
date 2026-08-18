@@ -18,20 +18,19 @@ export default function About() {
       md:min-h-[720px]
     "
   >
-
-    {/* Background Image */}
-    <img
-      src="/speaker/aboutBg.png"
-      alt="About RE-PAX India"
-      className="
-        absolute inset-0
-        w-full h-full
-        object-cover
-        object-[72%_center]
-        sm:object-[70%_center]
-        md:object-center
-      "
-    />
+{/* Background Image */}
+<img
+  src="/speaker/aboutBG.png"
+  alt="About RE-PAX India"
+  className="
+    absolute inset-0
+    w-full h-full
+    object-cover
+    object-[72%_center]
+    sm:object-[70%_center]
+    md:object-center
+  "
+/>
 
     {/* Dark Transparent Overlay */}
     <div
