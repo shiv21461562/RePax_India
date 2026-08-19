@@ -29,7 +29,7 @@ export default function Venue() {
       drop-shadow-[0_2px_4px_rgba(249,115,22,0.18)]
     "
             >
-              Event Venue 
+              Event Venue
             </p>
 
             <div className="relative mt-3 flex items-center justify-center">
@@ -50,8 +50,8 @@ export default function Venue() {
             </div>
           </div>
 
-        <h2
-  className="
+          <h2
+            className="
     mt-4
     font-serif
     text-xl
@@ -62,9 +62,9 @@ export default function Venue() {
     tracking-tight
     text-slate-900
   "
->
-  Join Us At The Venue
-</h2>
+          >
+            Join Us At The Venue
+          </h2>
 
           <p className="mt-4 max-w-2xl mx-auto text-slate-600">
             Experience world-class networking, exhibitions and sustainability
@@ -109,7 +109,6 @@ export default function Venue() {
                   <span className="inline-block bg-orange-500 px-4 py-2 rounded-full text-sm font-semibold text-white">
                     RE PAX INDIA 2026
                   </span>
-               
                 </span>
 
                 <h3 className="mt-3 text-4xl font-bold text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
@@ -124,21 +123,34 @@ export default function Venue() {
 
             {/* Content */}
             <div className="p-8 lg:p-10 flex flex-col justify-center">
-            <h3
-  className="
-    font-serif
-    text-xl
-    sm:text-2xl
-    md:text-3xl
-    font-bold
-    leading-tight
-    tracking-tight
-    text-[#0B3A63]
-  "
->
-  Indana Palace, Jodhpur, Rajasthan
-</h3>
+<div className="flex flex-col items-start">
+  {/* 5 Star Rating */}
+  <div className="flex gap-1 mb-2">
+    {[1, 2, 3, 4, 5].map((star) => (
+      <span
+        key={star}
+        className="text-[#D4AF37] text-lg sm:text-xl"
+      >
+        ★
+      </span>
+    ))}
+  </div>
 
+  <h3
+    className="
+      font-serif
+      text-xl
+      sm:text-2xl
+      md:text-3xl
+      font-bold
+      leading-tight
+      tracking-tight
+      text-[#0B3A63]
+    "
+  >
+    Indana Palace, Jodhpur, Rajasthan
+  </h3>
+</div>
               <p className="mt-4 text-slate-600 leading-7">
                 One of India's leading conference and exhibition venues,
                 bringing together global leaders, innovators and sustainability
@@ -207,6 +219,8 @@ export default function Venue() {
                 />
               </a>
             </div>
+
+
           </div>
         </motion.div>
       </div>
