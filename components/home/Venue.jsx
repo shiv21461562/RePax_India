@@ -29,7 +29,7 @@ export default function Venue() {
       drop-shadow-[0_2px_4px_rgba(249,115,22,0.18)]
     "
             >
-              Event Venue · 2nd Edition
+              Event Venue 
             </p>
 
             <div className="relative mt-3 flex items-center justify-center">
@@ -97,9 +97,7 @@ export default function Venue() {
                   <span className="inline-block bg-orange-500 px-4 py-2 rounded-full text-sm font-semibold text-white">
                     RE PAX INDIA 2026
                   </span>
-                  <span className="inline-block bg-[#0B3A63] px-3 py-1 rounded-full text-xs font-bold text-white uppercase tracking-wide">
-                    2nd Edition
-                  </span>
+               
                 </span>
 
                 <h3 className="mt-3 text-4xl font-bold text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
