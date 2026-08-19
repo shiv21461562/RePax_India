@@ -141,59 +141,85 @@ export default function ContactPage() {
 
       {/* Hero Section */}
 
-      <section className="relative overflow-hidden bg-[#255B7D] min-h-[100vh] flex items-center pt-32 pb-32">
-        {/* Grid Background */}
-        <div
-          className="absolute inset-0 opacity-[0.06]"
-          style={{
-            backgroundImage: `
-        linear-gradient(rgba(255,255,255,.15) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,.15) 1px, transparent 1px)
-      `,
-            backgroundSize: "70px 70px",
-          }}
-        />
 
-        {/* Optional Gradient Glow */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#255B7D]/20 to-[#255B7D]" />
 
-        <div className="relative mx-auto max-w-6xl px-6 text-center">
-          <motion.span
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="inline-flex items-center rounded-full border border-white/10 bg-white/10 px-8 py-3 text-sm font-semibold tracking-[0.25em] text-white backdrop-blur-xl"
-          >
-            LET'S CONNECT
-          </motion.span>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            className="
-    mt-8
+<section className="relative overflow-hidden bg-white pt-28 pb-20">
+  <div className="mx-auto w-full max-w-7xl px-6 lg:px-10">
+
+    <div className="grid grid-cols-1 items-stretch gap-10 lg:grid-cols-2 lg:gap-6">
+
+      {/* LEFT: Content */}
+      <div className="flex flex-col justify-center py-6 lg:py-10">
+        <div className="max-w-2xl text-left">
+
+          {/* Small Label */}
+          <div className="flex items-center justify-start gap-4 max-sm:justify-center">
+            <span className="h-[2px] w-10 bg-red-500 sm:w-16" />
+
+            <motion.span
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              className="
+                whitespace-nowrap
+                font-poppins
+                text-xs
+                font-medium
+                uppercase
+                tracking-[0.18em]
+                text-red-500
+                sm:text-sm
+              "
+            >
+              LET'S CONNECT
+            </motion.span>
+
+            <span className="h-[2px] w-10 bg-red-500 sm:w-16" />
+          </div>
+
+      {/* Heading */}
+<motion.h1
+  initial={{ opacity: 0, y: 35 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.7, delay: 0.1 }}
+  className="
+    mt-6
+    text-center lg:text-left
     font-serif
     text-3xl
-    sm:text-4xl
-    md:text-5xl
     font-bold
     leading-[1.08]
     tracking-tight
+    sm:text-4xl
+    md:text-5xl
+    lg:text-[52px]
   "
-          >
-            <span className="block text-white">We're Here to Help You</span>
+>
+  <span className="block text-[#173F5F]">
+    We're Here to
+  </span>
 
-            <span className="mt-2 block text-orange-400">
-              Be Part of RE-PAX India
-            </span>
-          </motion.h1>
+  <span className="mt-1.5 block text-orange-500">
+    Help You
+  </span>
+</motion.h1>
 
+        
+
+          {/* Description */}
           <motion.p
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="mx-auto mt-10 max-w-4xl text-lg md:text-xl leading-9 text-slate-300"
+            transition={{ duration: 0.6, delay: 0.45 }}
+            className="
+              mt-6
+              max-w-xl
+              text-sm
+              leading-7
+              text-slate-600
+              sm:text-base
+            "
           >
             Whether you're interested in attending the conference, becoming a
             sponsor, exhibiting your latest innovations, speaking at the event,
@@ -201,15 +227,158 @@ export default function ContactPage() {
             our team is here to assist you.
           </motion.p>
 
-          {/* Buttons */}
+          {/* Contact Info */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.35 }}
-            className="mt-14 flex flex-wrap justify-center gap-5"
-          ></motion.div>
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="
+              mt-7
+              flex
+              flex-wrap
+              items-center
+              justify-start
+              gap-3
+              max-sm:justify-center
+            "
+          >
+
+            {/* Phone */}
+            <a
+              href="tel:+919876543210"
+              className="
+                group
+                flex
+                items-center
+                gap-2.5
+                rounded-lg
+                border
+                border-[#255B7D]/20
+                bg-transparent
+                px-3.5
+                py-2
+                transition-all
+                duration-300
+                hover:border-[#255B7D]
+              "
+            >
+              <span
+                className="
+                  flex
+                  h-8
+                  w-8
+                  items-center
+                  justify-center
+                  rounded-full
+                  bg-[#255B7D]
+                  text-sm
+                  text-white
+                "
+              >
+                ☎
+              </span>
+
+              <span className="text-left">
+                <span className="block text-[10px] font-semibold uppercase tracking-wider text-slate-400">
+                  Call Us
+                </span>
+
+                <span className="block text-xs font-bold text-[#173F5F] sm:text-sm">
+                  +91 9899072636
+                </span>
+              </span>
+            </a>
+
+            {/* Email */}
+            <a
+              href="mailto:info@repaxindia.com"
+              className="
+                group
+                flex
+                items-center
+                gap-2.5
+                rounded-lg
+                border
+                border-[#255B7D]/20
+                bg-transparent
+                px-3.5
+                py-2
+                transition-all
+                duration-300
+                hover:border-orange-500
+              "
+            >
+              <span
+                className="
+                  flex
+                  h-8
+                  w-8
+                  items-center
+                  justify-center
+                  rounded-full
+                  bg-orange-500
+                  text-sm
+                  text-white
+                "
+              >
+                ✉
+              </span>
+
+              <span className="text-left">
+                <span className="block text-[10px] font-semibold uppercase tracking-wider text-slate-400">
+                  Email Us
+                </span>
+
+                <span className="block text-xs font-bold text-[#173F5F] sm:text-sm">
+                  info@repaxindia.com
+                </span>
+              </span>
+            </a>
+
+          </motion.div>
+
+      
+
+          {/* Bottom Note */}
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.8 }}
+            className="mt-7 text-sm font-medium text-slate-500"
+          >
+            Let's build the future of India's renewable energy ecosystem
+            together.
+          </motion.p>
+
         </div>
-      </section>
+      </div>
+
+      {/* RIGHT: Image */}
+   <div className="relative hidden min-h-[600px] overflow-hidden rounded-3xl lg:block xl:min-h-[670px]">
+  <div
+    className="absolute inset-0 bg-cover bg-[100%_center] bg-no-repeat"
+    style={{
+      backgroundImage: "url('/contact/heroBG.png')",
+    }}
+  />
+
+  <div className="absolute inset-0 bg-white/5" />
+</div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
       {/* Contact Cards - Get in Touch */}
       <section className="relative py-24 bg-slate-50 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(37,91,125,0.08),transparent_40%)]" />
@@ -374,6 +543,12 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+
+
+
+
+
 
       {/* Contact Form + FAQs */}
       <section className="relative py-24 bg-white overflow-hidden">

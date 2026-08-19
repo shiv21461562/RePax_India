@@ -182,6 +182,10 @@ export default function SponsorsPage() {
 
   return (
     <main className="min-h-screen bg-[#f8fafc] text-slate-900">
+
+
+
+      
       {/* HERO */}
       <section className="relative overflow-hidden bg-[#174d6d] pt-36 pb-24">
         {/* Grid Background */}
@@ -287,6 +291,12 @@ export default function SponsorsPage() {
           </motion.p>
         </div>
       </section>
+
+
+
+
+
+
 
       {/* ================= WHY SPONSOR ================= */}
       <section className="relative overflow-hidden bg-white py-28">
@@ -394,6 +404,8 @@ export default function SponsorsPage() {
           </div>
         </div>
       </section>
+
+
 
       {/* ======================= ATTENDEE PROFILE ======================= */}
 
@@ -891,6 +903,9 @@ export default function SponsorsPage() {
           </div>
         </div>
       </section>
+
+
+
 
       {/* PARTNERS CATEGORIES */}
       <section className="py-24 bg-white">

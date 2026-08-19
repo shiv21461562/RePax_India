@@ -50,9 +50,21 @@ export default function Venue() {
             </div>
           </div>
 
-          <h2 className="mt-4 text-3xl md:text-4xl font-bold text-slate-900">
-            Join Us At The Venue
-          </h2>
+        <h2
+  className="
+    mt-4
+    font-serif
+    text-xl
+    sm:text-2xl
+    md:text-3xl
+    font-bold
+    leading-tight
+    tracking-tight
+    text-slate-900
+  "
+>
+  Join Us At The Venue
+</h2>
 
           <p className="mt-4 max-w-2xl mx-auto text-slate-600">
             Experience world-class networking, exhibitions and sustainability
@@ -112,9 +124,20 @@ export default function Venue() {
 
             {/* Content */}
             <div className="p-8 lg:p-10 flex flex-col justify-center">
-              <h3 className="text-2xl md:text-3xl font-bold text-[#0B3A63]">
-                Indana Palace, Jodhpur, Rajasthan
-              </h3>
+            <h3
+  className="
+    font-serif
+    text-xl
+    sm:text-2xl
+    md:text-3xl
+    font-bold
+    leading-tight
+    tracking-tight
+    text-[#0B3A63]
+  "
+>
+  Indana Palace, Jodhpur, Rajasthan
+</h3>
 
               <p className="mt-4 text-slate-600 leading-7">
                 One of India's leading conference and exhibition venues,
