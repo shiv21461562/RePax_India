@@ -25,9 +25,9 @@ import {
 const WHY_ITEMS = [
   { icon: Users, label: "Full-day conference access" },
   { icon: Handshake, label: "Networking opportunities" },
-  { icon: Store, label: "Exhibition access" },
+ 
   { icon: UtensilsCrossed, label: "Lunch & refreshments" },
-  { icon: ShoppingBag, label: "Delegate kit" },
+
   { icon: FileBadge, label: "Participation certificate" },
   { icon: Trophy, label: "Awards ceremony access" },
 ];

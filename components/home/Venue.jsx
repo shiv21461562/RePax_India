@@ -123,21 +123,21 @@ export default function Venue() {
 
             {/* Content */}
             <div className="p-8 lg:p-10 flex flex-col justify-center">
-<div className="flex flex-col items-start">
-  {/* 5 Star Rating */}
-  <div className="flex gap-1 mb-2">
-    {[1, 2, 3, 4, 5].map((star) => (
-      <span
-        key={star}
-        className="text-[#D4AF37] text-lg sm:text-xl"
-      >
-        ★
-      </span>
-    ))}
-  </div>
+              <div className="flex flex-col items-start">
+                {/* 5 Star Rating */}
+                <div className="flex gap-1 mb-2">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <span
+                      key={star}
+                      className="text-[#D4AF37] text-lg sm:text-xl"
+                    >
+                      ★
+                    </span>
+                  ))}
+                </div>
 
-  <h3
-    className="
+                <h3
+                  className="
       font-serif
       text-xl
       sm:text-2xl
@@ -147,10 +147,10 @@ export default function Venue() {
       tracking-tight
       text-[#0B3A63]
     "
-  >
-    Indana Palace, Jodhpur, Rajasthan
-  </h3>
-</div>
+                >
+                  Indana Palace, Jodhpur, Rajasthan
+                </h3>
+              </div>
               <p className="mt-4 text-slate-600 leading-7">
                 One of India's leading conference and exhibition venues,
                 bringing together global leaders, innovators and sustainability
@@ -219,8 +219,6 @@ export default function Venue() {
                 />
               </a>
             </div>
-
-
           </div>
         </motion.div>
       </div>
