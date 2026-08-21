@@ -3,32 +3,97 @@
 import { motion } from "framer-motion";
 import FadeUp from "@/components/FadeUp";
 
-import { useEffect, useState } from "react";
-import { getAgendas } from "../services/AgendaApi";
-
 import Link from "next/link";
 
 import CountUp from "react-countup";
+
+// ===== Hardcoded Agenda Data (RE PAX India 2026) =====
+const agenda = [
+  {
+    time: "09:30 AM - 10:30 AM",
+    type: "Registration",
+    title: "Registration, Welcome Tea & Coffee, Networking",
+  },
+  {
+    time: "10:30 AM – 11:00 AM",
+    type: "Inaugural Session",
+    title: "Inaugural Session",
+    description:
+      "Welcome Address by Organizer, Lamp Lighting Ceremony, Address by Chief Guest, Special Address by Industry Leader.",
+  },
+  {
+    time: "11:00 AM – 11:45 AM",
+    type: "Session 1",
+    title: "Solar Manufacturing & EPC – Building India's Solar Leadership",
+    points: [
+      "India's Solar Manufacturing Growth & Domestic Supply Chain",
+      "PM Surya Ghar: Accelerating Rooftop Solar Adoption and PM-KUSUM: Accelerating Agricultural Solarisation & Decentralised Renewable Energy",
+      "ALMM, DCR & Policy Framework for Domestic Manufacturing",
+      "Role of EPC in Scaling Utility-Scale & Rooftop Solar Projects",
+      "Technology Advancements, Cost Competitiveness & Future Manufacturing Opportunities",
+    ],
+  },
+  {
+    time: "11:50 AM - 12:00 PM",
+    type: "Presentation",
+    title: "Presentation I",
+  },
+  {
+    time: "12:05 PM - 12:15 PM",
+    type: "Presentation",
+    title: "Presentation II",
+  },
+  {
+    time: "12:15 PM - 12:30 PM",
+    type: "Break",
+    title: "Networking Tea & Coffee Break",
+  },
+  {
+    time: "12:30 PM – 01:15 PM",
+    type: "Session 2",
+    title: "Energy Storage – Enabling a Reliable Renewable Future",
+    points: [
+      "PM-KUSUM: Accelerating Agricultural Solarisation & Decentralised Renewable Energy and PM Surya Ghar: Accelerating Rooftop Solar Adoption",
+      "Growing Role of BESS in Renewable Energy Integration & Grid Stability",
+      "Emerging Storage Technologies & Manufacturing Opportunities",
+      "BESS Policy, Financing & Investment Landscape",
+      "Energy Storage for C&I, EVs & Other Emerging Applications",
+    ],
+  },
+  {
+    time: "1:15 PM – 01:30 PM",
+    type: "Video & Presentation",
+    title: "Corporate Video & Presentation",
+  },
+  {
+    time: "1:30 PM – 01:45 PM",
+    type: "Presentation",
+    title: "Presentation",
+  },
+  {
+    time: "01:45 PM - 02:30 PM",
+    type: "Lunch",
+    title: "Networking Lunch",
+  },
+  {
+    time: "02:30 PM – 03:00 PM",
+    type: "Awards",
+    title: "Renewable Energy Leadership & Excellence Awards 2026",
+  },
+  {
+    time: "03:00 PM – 04:00 PM",
+    type: "Break",
+    title: "Networking Tea & Coffee",
+  },
+  {
+    time: "04:00 PM",
+    type: "Closing",
+    title: "Conference Concludes",
+  },
+];
+// ===== End Hardcoded Agenda Data =====
+
 export default function AgendaPage() {
-  const [agenda, setAgenda] = useState([]);
-
-  const fetchAgenda = async () => {
-    try {
-      const response = await getAgendas();
-
-      if (response.success) {
-        setAgenda(response.data);
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  // call
-  useEffect(() => {
-    fetchAgenda();
-  }, []);
-
   return (
     <main className="bg-gradient-to-br from-white via-slate-50 to-orange-50 text-slate-900 overflow-hidden">
       {/* Hero Section */}
@@ -57,8 +122,8 @@ export default function AgendaPage() {
           </FadeUp>
 
           <FadeUp delay={0.2}>
-       <h1
-  className="
+            <h1
+              className="
     mt-8
     font-serif
     text-3xl
@@ -69,19 +134,13 @@ export default function AgendaPage() {
     leading-[1.05]
     tracking-tight
   "
->
-  <span className="block text-white">
-    Explore The
-  </span>
+            >
+              <span className="block text-white">Explore The</span>
 
-  <span className="mt-1 block text-orange-400">
-    Summit
-  </span>
+              <span className="mt-1 block text-orange-400">Summit</span>
 
-  <span className="mt-1 block text-white">
-    Agenda
-  </span>
-</h1>
+              <span className="mt-1 block text-white">Agenda</span>
+            </h1>
           </FadeUp>
 
           <FadeUp delay={0.4}>
@@ -101,7 +160,7 @@ export default function AgendaPage() {
               </div>
 
               <div className="rounded-full border border-white/10 bg-white/10 px-5 py-3 text-sm text-white backdrop-blur-xl">
-                🎤 50+ Speakers
+                🎤 20+ Speakers
               </div>
 
               <div className="rounded-full border border-white/10 bg-white/10 px-5 py-3 text-sm text-white backdrop-blur-xl">
@@ -121,11 +180,11 @@ export default function AgendaPage() {
           <div className="rounded-[40px] bg-white p-10 shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
             <FadeUp>
               <div className="mb-16 text-center">
-             <div className="flex items-center justify-center gap-5">
-  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
+                <div className="flex items-center justify-center gap-5">
+                  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
 
-  <span
-    className="
+                  <span
+                    className="
       font-poppins
       text-xs
       sm:text-sm
@@ -137,15 +196,15 @@ export default function AgendaPage() {
       text-center
       whitespace-nowrap
     "
-  >
-    EVENT FLOW
-  </span>
+                  >
+                    EVENT FLOW
+                  </span>
 
-  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
-</div>
+                  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
+                </div>
 
-               <h2
-  className="
+                <h2
+                  className="
     mt-5
     font-serif
     text-2xl
@@ -156,9 +215,9 @@ export default function AgendaPage() {
     tracking-tight
     text-slate-900
   "
->
-  Event Timeline
-</h2>
+                >
+                  Event Timeline
+                </h2>
 
                 <p className="mt-4 text-slate-600">
                   A full day packed with insights, networking and innovation.
@@ -257,8 +316,9 @@ export default function AgendaPage() {
                           ⏰ {item.time}
                         </span>
 
-                        <span
-                          className="
+                        {item.type && (
+                          <span
+                            className="
           rounded-full
           bg-white/10
           backdrop-blur-xl
@@ -270,9 +330,10 @@ export default function AgendaPage() {
           tracking-wider
           text-white
         "
-                        >
-                          {item.type}
-                        </span>
+                          >
+                            {item.type}
+                          </span>
+                        )}
                       </div>
 
                       {/* Title */}
@@ -280,10 +341,11 @@ export default function AgendaPage() {
                         {item.title}
                       </h3>
 
-                      {/* Speaker */}
-                      <div className="mt-6 flex items-center gap-4">
-                        <div
-                          className="
+                      {/* Speaker (only if provided) */}
+                      {item.speaker_name && (
+                        <div className="mt-6 flex items-center gap-4">
+                          <div
+                            className="
           flex
           h-12
           w-12
@@ -294,54 +356,62 @@ export default function AgendaPage() {
           text-lg
           shadow-lg
         "
-                        >
-                          🎤
-                        </div>  
+                          >
+                            🎤
+                          </div>
 
-                        <div>
-                          <p className="font-semibold text-white">
-                            {item.speaker_name}
-                          </p>
+                          <div>
+                            <p className="font-semibold text-white">
+                              {item.speaker_name}
+                            </p>
 
-                          <p className="text-sm text-white/70">
-                            Session Speaker
-                          </p>
+                            <p className="text-sm text-white/70">
+                              Session Speaker
+                            </p>
+                          </div>
                         </div>
-                      </div>
+                      )}
 
-                      {/* Location */}
-                      <div className="mt-4 flex items-center gap-2 text-white/80">
-                        <span>📍</span>
-                        <span>{item.location}</span>
-                      </div>
+                      {/* Location (only if provided) */}
+                      {item.location && (
+                        <div className="mt-4 flex items-center gap-2 text-white/80">
+                          <span>📍</span>
+                          <span>{item.location}</span>
+                        </div>
+                      )}
 
                       {/* Description */}
-                      <p className="mt-6 leading-8 text-white/75">
-                        {item.description}
-                      </p>
+                      {item.description && (
+                        <p className="mt-6 leading-8 text-white/75">
+                          {item.description}
+                        </p>
+                      )}
+
+                      {/* Discussion Topics (bullet points) */}
+                      {item.points && item.points.length > 0 && (
+                        <div className="mt-6">
+                          <p className="text-sm font-semibold uppercase tracking-wider text-orange-300">
+                            Discussion Topics
+                          </p>
+                          <ul className="mt-3 space-y-2">
+                            {item.points.map((point, i) => (
+                              <li
+                                key={i}
+                                className="flex items-start gap-3 leading-7 text-white/80"
+                              >
+                                <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-orange-400" />
+                                <span>{point}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
 
                       {/* Footer */}
                       <div className="mt-8 flex items-center justify-between border-t border-white/10 pt-5">
                         <span className="text-xs font-semibold tracking-[3px] text-white/50">
                           RE PAX INDIA 2026
                         </span>
-
-                        <button
-                          className="
-          rounded-full
-          bg-orange-500
-          px-4
-          py-2
-          text-sm
-          font-semibold
-          text-white
-          transition-all
-          duration-300
-          hover:bg-orange-400
-        "
-                        >
-                          View Session →
-                        </button>
                       </div>
                     </div>
                   </motion.div>
@@ -444,8 +514,8 @@ export default function AgendaPage() {
                 RE PAX INDIA 2026
               </span>
 
-           <h2
-  className="
+              <h2
+                className="
     mt-5
     font-serif
     text-2xl
@@ -455,15 +525,11 @@ export default function AgendaPage() {
     leading-tight
     tracking-tight
   "
->
-  <span className="block">
-    Ready To Experience
-  </span>
+              >
+                <span className="block">Ready To Experience</span>
 
-  <span className="mt-2 block text-orange-400">
-    RE PAX 2026?
-  </span>
-</h2>
+                <span className="mt-2 block text-orange-400">RE PAX 2026?</span>
+              </h2>
 
               <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-300">
                 Join industry leaders, investors, policymakers and innovators
