@@ -704,6 +704,10 @@ export default function SpeakersPage() {
 
 
 
+
+
+
+
       {/* ===================== CONFERENCE SESSION FORMATS ===================== */}
 
       <section className="relative overflow-hidden bg-gradient-to-br from-[#174d6d] via-[#1e5b7d] to-[#123d58] py-28">

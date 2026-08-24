@@ -25,7 +25,7 @@ import {
 const WHY_ITEMS = [
   { icon: Users, label: "Full-day conference access" },
   { icon: Handshake, label: "Networking opportunities" },
- 
+
   { icon: UtensilsCrossed, label: "Lunch & refreshments" },
 
   { icon: FileBadge, label: "Participation certificate" },
@@ -71,10 +71,10 @@ const CATEGORIES = [
 ];
 
 const STATS = [
-  "1000+ Industry Professionals",
-  "50+ Expert Speakers",
-  "80+ Exhibitors",
-  "2 Days of Insights & Networking",
+  "150+ Industry Professionals",
+  "10+ Expert Speakers",
+  "10+ Exhibitors",
+  "1 Days of Insights & Networking",
   "Shape the Future of Clean Energy",
 ];
 
@@ -99,42 +99,42 @@ export default function RepaxRegistration() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-const [formData, setFormData] = useState({
-  full_name: "",
-  company_name: "",
-  designation: "",
-  email: "",
-  phone: "",
-  city: "",
-  country: "",
-  gst_number: "",
-  registration_type: "Speaker", // default free
-});
+  const [formData, setFormData] = useState({
+    full_name: "",
+    company_name: "",
+    designation: "",
+    email: "",
+    phone: "",
+    city: "",
+    country: "",
+    gst_number: "",
+    registration_type: "Speaker", // default free
+  });
 
-const handleSubmit = async (e) => {
-  e.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-  try {
-    const response = await createRegistration(formData);
-    console.log("API response:", response); // debug ke liye
+    try {
+      const response = await createRegistration(formData);
+      console.log("API response:", response); // debug ke liye
 
-    if (!response.success) {
-      alert(response.message || "Registration failed");
-      return;
+      if (!response.success) {
+        alert(response.message || "Registration failed");
+        return;
+      }
+
+      if (response.data?.paymentRequired) {
+        window.location.href = "https://rzp.io/rzp/BN6quaL";
+        return;
+      }
+
+      setSubmitted(true);
+      // form reset...
+    } catch (err) {
+      console.error(err);
+      alert("Something went wrong. Please try again.");
     }
-
-    if (response.data?.paymentRequired) {
-      window.location.href = "https://rzp.io/rzp/BN6quaL";
-      return;
-    }
-
-    setSubmitted(true);
-    // form reset...
-  } catch (err) {
-    console.error(err);
-    alert("Something went wrong. Please try again.");
-  }
-};
+  };
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -152,8 +152,8 @@ const handleSubmit = async (e) => {
               <span className="w-5 h-0.5 bg-orange-400 inline-block" />
               Registration Page
             </div>
-           <h1
-  className="
+            <h1
+              className="
     font-serif
     text-3xl
     sm:text-4xl
@@ -163,21 +163,21 @@ const handleSubmit = async (e) => {
     tracking-tight
     text-white
   "
->
-  Register for{" "}
-  <span
-    className="
+            >
+              Register for{" "}
+              <span
+                className="
       bg-gradient-to-r
       from-orange-400
       to-amber-300
       bg-clip-text
       text-transparent
     "
-  >
-    RE-PAX
-  </span>{" "}
-  India 2026
-</h1>
+              >
+                RE-PAX
+              </span>{" "}
+              India 2026
+            </h1>
             <p className="text-slate-100 text-lg font-semibold mt-4">
               Join India's Premier Renewable Energy Conference
             </p>
@@ -224,15 +224,13 @@ const handleSubmit = async (e) => {
         </svg>
       </section>
 
-
-
       {/* Why Register */}
       <section id="why" className="scroll-mt-28 py-20 px-6 bg-orange-50">
         <div className="max-w-6xl mx-auto">
           {/* Heading */}
           <div className="text-center mb-12">
-           <h2
-  className="
+            <h2
+              className="
     font-serif
     text-2xl
     sm:text-3xl
@@ -242,9 +240,9 @@ const handleSubmit = async (e) => {
     tracking-tight
     text-gray-900
   "
->
-  Why Register?
-</h2>
+            >
+              Why Register?
+            </h2>
 
             <div className="w-16 h-1 bg-orange-500 mx-auto mt-4 rounded-full"></div>
 
@@ -346,16 +344,13 @@ const handleSubmit = async (e) => {
         </div>
       </section>
 
-
-
-
       {/* Categories */}
       <section className="py-20 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           {/* Heading */}
           <div className="text-center mb-12">
-         <h2
-  className="
+            <h2
+              className="
     font-serif
     text-2xl
     sm:text-3xl
@@ -365,12 +360,11 @@ const handleSubmit = async (e) => {
     tracking-tight
     text-gray-900
   "
->
-  Registration Categories
-</h2>
+            >
+              Registration Categories
+            </h2>
 
             <div className="w-16 h-1 bg-orange-500 mx-auto mt-4 rounded-full"></div>
-
           </div>
 
           {/* Cards */}
@@ -478,16 +472,13 @@ const handleSubmit = async (e) => {
         </div>
       </section>
 
-
-
-
       {/* Registration form + sidebar */}
       <section id="register" className="scroll-mt-32 py-20 px-6 bg-orange-50">
         <div className="max-w-6xl mx-auto grid md:grid-cols-[1.3fr_0.9fr] gap-7 items-start">
           {/* Form card */}
           <div className="bg-white border border-orange-100 rounded-3xl p-8 md:p-10 shadow-xl">
-         <h2
-  className="
+            <h2
+              className="
     font-serif
     text-xl
     sm:text-2xl
@@ -495,9 +486,9 @@ const handleSubmit = async (e) => {
     leading-tight
     tracking-tight
   "
->
-  Registration Form
-</h2>
+            >
+              Registration Form
+            </h2>
             <div className="w-12 h-1 bg-gradient-to-r from-orange-500 to-amber-400 mt-3 mb-7 rounded-full" />
 
             {submitted && (
@@ -507,140 +498,129 @@ const handleSubmit = async (e) => {
               </div>
             )}
 
+            <form onSubmit={handleSubmit} className="space-y-5">
+              <div className="grid md:grid-cols-2 gap-5">
+                <Field
+                  label="Name"
+                  name="full_name"
+                  value={formData.full_name}
+                  onChange={handleChange}
+                  required
+                  placeholder="Enter your full name"
+                />
+                <Field
+                  label="Company"
+                  name="company_name"
+                  value={formData.company_name}
+                  onChange={handleChange}
+                  required
+                  placeholder="Enter company name"
+                />
+              </div>
+              <div className="grid md:grid-cols-2 gap-5">
+                <Field
+                  label="Designation"
+                  name="designation"
+                  value={formData.designation}
+                  onChange={handleChange}
+                  required
+                  placeholder="Enter your designation"
+                />
+                <Field
+                  label="Email"
+                  name="email"
+                  type="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  placeholder="Enter your email address"
+                />
+              </div>
+              <div className="grid md:grid-cols-2 gap-5">
+                <Field
+                  label="Phone"
+                  name="phone"
+                  type="tel"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  required
+                  placeholder="Enter your phone number"
+                />
+                <Field
+                  label="City"
+                  name="city"
+                  value={formData.city}
+                  onChange={handleChange}
+                  required
+                  placeholder="Enter your city"
+                />
+              </div>
+              <div className="grid md:grid-cols-2 gap-5">
+                <Field
+                  label="Country"
+                  name="country"
+                  value={formData.country}
+                  onChange={handleChange}
+                  required
+                  placeholder="Enter your country"
+                />
+                <Field
+                  label="GST Number (Optional)"
+                  name="gst_number"
+                  value={formData.gst_number}
+                  onChange={handleChange}
+                  placeholder="Enter GST number"
+                />
+              </div>
 
+              {/* - Registration Type */}
+              <div>
+                <label className="block text-sm font-medium text-slate-700 mb-1.5">
+                  Registration Type <span className="text-red-500">*</span>
+                </label>
+                <select
+                  name="registration_type"
+                  value={formData.registration_type}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-orange-400 focus:ring-2 focus:ring-orange-400/20 outline-none transition-all bg-white"
+                  required
+                >
+                  <option value="Speaker">Speaker </option>
+                  <option value="Visitor">Visitor</option>
+                  <option value="Delegate">Delegate - ₹2,999 + GST(18%)</option>
+                </select>
+                {formData.registration_type === "Delegate" && (
+                  <p className="mt-2 text-orange-600 font-semibold">
+                    Registration Fee : ₹2,999 + GST (18%)
+                  </p>
+                )}
 
+                {formData.registration_type !== "Delegate" && (
+                  <p className="mt-2 text-green-600 font-semibold">
+                    Free Registration
+                  </p>
+                )}
+              </div>
 
-<form onSubmit={handleSubmit} className="space-y-5">
-  <div className="grid md:grid-cols-2 gap-5">
-    <Field
-      label="Name"
-      name="full_name"
-      value={formData.full_name}
-      onChange={handleChange}
-      required
-      placeholder="Enter your full name"
-    />
-    <Field
-      label="Company"
-      name="company_name"
-      value={formData.company_name}
-      onChange={handleChange}
-      required
-      placeholder="Enter company name"
-    />
-  </div>
-  <div className="grid md:grid-cols-2 gap-5">
-    <Field
-      label="Designation"
-      name="designation"
-      value={formData.designation}
-      onChange={handleChange}
-      required
-      placeholder="Enter your designation"
-    />
-    <Field
-      label="Email"
-      name="email"
-      type="email"
-      value={formData.email}
-      onChange={handleChange}
-      required
-      placeholder="Enter your email address"
-    />
-  </div>
-  <div className="grid md:grid-cols-2 gap-5">
-    <Field
-      label="Phone"
-      name="phone"
-      type="tel"
-      value={formData.phone}
-      onChange={handleChange}
-      required
-      placeholder="Enter your phone number"
-    />
-    <Field
-      label="City"
-      name="city"
-      value={formData.city}
-      onChange={handleChange}
-      required
-      placeholder="Enter your city"
-    />
-  </div>
-  <div className="grid md:grid-cols-2 gap-5">
-    <Field
-      label="Country"
-      name="country"
-      value={formData.country}
-      onChange={handleChange}
-      required
-      placeholder="Enter your country"
-    />
-    <Field
-      label="GST Number (Optional)"
-      name="gst_number"
-      value={formData.gst_number}
-      onChange={handleChange}
-      placeholder="Enter GST number"
-    />
-  </div>
+              <button
+                type="submit"
+                className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-orange-500 to-orange-400 text-white py-4 rounded-xl font-bold text-base shadow-lg shadow-orange-500/40 hover:-translate-y-0.5 transition-transform"
+              >
+                <Send size={16} />
+                Register Now
+              </button>
 
-  {/* - Registration Type */}
-  <div>
-    <label className="block text-sm font-medium text-slate-700 mb-1.5">
-      Registration Type <span className="text-red-500">*</span>
-    </label>
-    <select
-      name="registration_type"
-      value={formData.registration_type}
-      onChange={handleChange}
-      className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-orange-400 focus:ring-2 focus:ring-orange-400/20 outline-none transition-all bg-white"
-      required
-    >
-<option value="Speaker">Speaker </option>
-<option value="Visitor">Visitor</option>
-<option value="Delegate">Delegate - ₹2,999 + GST(18%)</option>
-    </select>
-{formData.registration_type === "Delegate" && (
-  <p className="mt-2 text-orange-600 font-semibold">
-    Registration Fee : ₹2,999 + GST (18%)
-  </p>
-)}
-
-{formData.registration_type !== "Delegate" && (
-  <p className="mt-2 text-green-600 font-semibold">
-    Free Registration
-  </p>
-)}
-  </div>
-
-  <button
-    type="submit"
-    className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-orange-500 to-orange-400 text-white py-4 rounded-xl font-bold text-base shadow-lg shadow-orange-500/40 hover:-translate-y-0.5 transition-transform"
-  >
-    <Send size={16} />
-    Register Now
-  </button>
-
-  <div className="flex items-center justify-center gap-2 text-xs text-slate-500 pt-1">
-    <Lock size={13} />
-    Your information is secure and will not be shared.
-  </div>
-</form>
-
-
-
-
-
-
-
-
-
-
-
-
-
+              <div className="flex items-center justify-center gap-2 text-xs text-slate-500 pt-1">
+                <Lock size={13} />
+                Your information is secure and will not be shared.
+              </div>
+            </form>
           </div>
+
+
+
+          
+
           {/* Sidebar */}
           <div className="rounded-3xl overflow-hidden shadow-xl sticky top-24">
             <div className="h-56 relative bg-gradient-to-b from-sky-500 via-sky-300 to-slate-200 overflow-hidden">
@@ -662,11 +642,10 @@ const handleSubmit = async (e) => {
             </div>
             <div className="bg-slate-950 text-white p-8">
               <h3 className="text-xl font-extrabold leading-snug">
-                Be Part of India's{" "}
+                Upcoming{" "}
                 <span className="bg-gradient-to-r from-orange-400 to-amber-300 bg-clip-text text-transparent">
-                  Renewable Energy
-                </span>{" "}
-                Transformation
+                  Expo
+                </span>
               </h3>
               <div className="w-11 h-1 bg-gradient-to-r from-orange-500 to-amber-400 my-5 rounded-full" />
               <ul className="space-y-3">
@@ -689,6 +668,9 @@ const handleSubmit = async (e) => {
     </div>
   );
 }
+
+
+
 
 function Field({
   label,
