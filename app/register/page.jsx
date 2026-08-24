@@ -1198,14 +1198,32 @@ const handleSubmit = async (e) => {
             </h2>
             <div className="w-12 h-1 bg-gradient-to-r from-orange-500 to-amber-400 mt-3 mb-7 rounded-full" />
 
-            {submitted && (
-              <div className="flex items-center gap-2 bg-emerald-50 border border-emerald-200 text-emerald-700 rounded-xl px-4 py-3 text-sm font-semibold mb-6">
-                <CheckCircle2 size={18} />
-                You're registered! A confirmation email is on its way.
-              </div>
-            )}
+         {submitted ? (
+  <div className="py-12 text-center">
 
-            <form onSubmit={handleSubmit} className="space-y-5">
+    <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-emerald-100 flex items-center justify-center">
+      <CheckCircle2
+        size={42}
+        className="text-emerald-600"
+      />
+    </div>
+
+    <h3 className="text-2xl font-extrabold text-slate-900">
+      Registration Successful!
+    </h3>
+
+    <p className="mt-3 text-slate-600">
+      Thank you for registering for RE-PAX India 2026.
+    </p>
+
+    <div className="mt-6 inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-700 font-semibold text-sm">
+      <CheckCircle2 size={18} />
+      You're Registered
+    </div>
+
+  </div>
+) : (
+  <form onSubmit={handleSubmit} className="space-y-5">
               <div className="grid md:grid-cols-2 gap-5">
                 <Field
                   label="Name"
@@ -1318,6 +1336,7 @@ const handleSubmit = async (e) => {
                 Your information is secure and will not be shared.
               </div>
             </form>
+)}
           </div>
 
 
