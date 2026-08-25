@@ -710,6 +710,14 @@
 
 
 
+
+
+
+
+
+
+
+
 "use client";
 import { useState } from "react";
 import { createRegistration } from "../services/RegistrationApi";
@@ -809,7 +817,9 @@ function Turbine({
 
 export default function RepaxRegistration() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showSuccessToast, setShowSuccessToast] = useState(false);
 
   const [formData, setFormData] = useState({
     full_name: "",
@@ -826,19 +836,49 @@ export default function RepaxRegistration() {
 const handleSubmit = async (e) => {
   e.preventDefault();
 
+  if (isSubmitting) return;
+
+  setIsSubmitting(true);
+
   try {
     const response = await createRegistration(formData);
 
     console.log("API response:", response);
 
-    if (!response.success) {
-      alert(response.message || "Registration failed");
-      return;
-    }
+if (!response.success) {
+  setIsSubmitting(false);
+  alert(response.message || "Registration failed");
+  return;
+}
 
-    setSubmitted(true);
+
+setShowSuccessToast(true);
+
+// Clear all form fields
+setFormData({
+  full_name: "",
+  company_name: "",
+  designation: "",
+  email: "",
+  phone: "",
+  city: "",
+  country: "",
+  gst_number: "",
+  registration_type: "Speaker",
+});
+
+// 3 seconds baad form wapas dikhao
+setTimeout(() => {
+
+  setShowSuccessToast(false);
+  setIsSubmitting(false);
+}, 3000);
+
+
+
   } catch (err) {
     console.error(err);
+      setIsSubmitting(false);
     alert("Something went wrong. Please try again.");
   }
 };
@@ -851,6 +891,66 @@ const handleSubmit = async (e) => {
 
   return (
     <div className="min-h-screen bg-orange-50 font-sans text-slate-900">
+
+
+
+
+
+{/* Success Toast */}
+{showSuccessToast && (
+  <div className="fixed top-6 right-6 z-[9999] animate-[slideIn_0.4s_cubic-bezier(0.16,1,0.3,1)]">
+    <div className="relative overflow-hidden flex items-center gap-4 bg-white/90 backdrop-blur-2xl border border-white/60 shadow-[0_8px_32px_rgba(16,185,129,0.15),0_2px_8px_rgba(0,0,0,0.06)] rounded-2xl pl-4 pr-6 py-4 min-w-[320px]">
+
+      {/* Subtle gradient glow background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/50 via-transparent to-transparent pointer-events-none" />
+
+      {/* Success Icon */}
+      <div className="relative w-11 h-11 rounded-full bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center flex-shrink-0 shadow-[0_4px_12px_rgba(16,185,129,0.35)]">
+        <div className="absolute inset-0 rounded-full bg-emerald-400/40 animate-ping" />
+        <CheckCircle2
+          size={22}
+          strokeWidth={2.5}
+          className="relative text-white"
+        />
+      </div>
+
+      {/* Message */}
+      <div className="relative flex flex-col gap-0.5">
+        <p className="text-[14px] font-bold text-slate-800 whitespace-nowrap tracking-tight leading-tight">
+          Registration Successful!
+        </p>
+      
+      </div>
+
+      {/* Close button */}
+      <button
+        onClick={() => setShowSuccessToast(false)}
+        className="relative ml-2 w-6 h-6 rounded-full flex items-center justify-center text-slate-300 hover:text-slate-500 hover:bg-slate-100 transition-colors flex-shrink-0"
+      >
+        <X size={14} strokeWidth={2.5} />
+      </button>
+
+      {/* Progress bar */}
+      <div className="absolute bottom-0 left-0 w-full h-[3px] bg-slate-100/80">
+        <div className="h-full bg-gradient-to-r from-emerald-400 via-emerald-500 to-green-500 animate-[toastProgress_3s_linear_forwards] shadow-[0_0_8px_rgba(16,185,129,0.5)]" />
+      </div>
+
+    </div>
+  </div>
+)}
+
+
+
+
+
+
+
+
+
+
+
+
+
       {/* Hero */}
       <section className="relative min-h-[800px] overflow-hidden bg-gradient-to-b from-slate-950 via-slate-900 to-slate-800 pt-22 pb-36 px-6 flex items-center">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center relative z-10">
@@ -1198,31 +1298,8 @@ const handleSubmit = async (e) => {
             </h2>
             <div className="w-12 h-1 bg-gradient-to-r from-orange-500 to-amber-400 mt-3 mb-7 rounded-full" />
 
-         {submitted ? (
-  <div className="py-12 text-center">
+    
 
-    <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-emerald-100 flex items-center justify-center">
-      <CheckCircle2
-        size={42}
-        className="text-emerald-600"
-      />
-    </div>
-
-    <h3 className="text-2xl font-extrabold text-slate-900">
-      Registration Successful!
-    </h3>
-
-    <p className="mt-3 text-slate-600">
-      Thank you for registering for RE-PAX India 2026.
-    </p>
-
-    <div className="mt-6 inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-700 font-semibold text-sm">
-      <CheckCircle2 size={18} />
-      You're Registered
-    </div>
-
-  </div>
-) : (
   <form onSubmit={handleSubmit} className="space-y-5">
               <div className="grid md:grid-cols-2 gap-5">
                 <Field
@@ -1323,20 +1400,34 @@ const handleSubmit = async (e) => {
 </p>
               </div>
 
-              <button
-                type="submit"
-                className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-orange-500 to-orange-400 text-white py-4 rounded-xl font-bold text-base shadow-lg shadow-orange-500/40 hover:-translate-y-0.5 transition-transform"
-              >
-                <Send size={16} />
-                Register Now
-              </button>
+            <button
+  type="submit"
+  disabled={isSubmitting}
+  className={`w-full flex items-center justify-center gap-2 text-white py-4 rounded-xl font-bold text-base shadow-lg transition-transform ${
+    isSubmitting
+      ? "bg-orange-300 cursor-not-allowed"
+      : "bg-gradient-to-r from-orange-500 to-orange-400 shadow-orange-500/40 hover:-translate-y-0.5"
+  }`}
+>
+  {isSubmitting ? (
+    <>
+      <span className="w-5 h-5 border-2 border-white/40 border-t-white rounded-full animate-spin" />
+      Submitting...
+    </>
+  ) : (
+    <>
+      <Send size={16} />
+      Register Now
+    </>
+  )}
+</button>
 
               <div className="flex items-center justify-center gap-2 text-xs text-slate-500 pt-1">
                 <Lock size={13} />
                 Your information is secure and will not be shared.
               </div>
             </form>
-)}
+
           </div>
 
 
