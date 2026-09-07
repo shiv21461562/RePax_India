@@ -2,7 +2,7 @@ import Hero from "@/components/home/Hero";
 import EventStats from "@/components/home/EventStats";
 import About from "@/components/home/About";
 import ConferenceThemes from "@/components/home/ConferenceThemes";
-import Speakers from "@/components/home/Speakers";
+// import Speakers from "@/components/home/Speakers";
 // import Agenda from "@/components/home/Agenda";
 // import Industries from "@/components/home/Industries";
 // import Sponsors from "@/components/home/Sponsors";
@@ -33,7 +33,7 @@ export default function HomePage() {
       <FeaturedConferenceSessions />
       <WhyAttend />
 
-      <Speakers />
+      {/* <Speakers /> */}
 
       {/* <Agenda /> */}
 

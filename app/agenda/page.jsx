@@ -8,86 +8,105 @@ import Link from "next/link";
 import CountUp from "react-countup";
 
 // ===== Hardcoded Agenda Data (RE PAX India 2026) =====
+// ===== Hardcoded Agenda Data (RE PAX India 2026) =====
+
 const agenda = [
   {
     time: "09:30 AM - 10:30 AM",
     type: "Registration",
     title: "Registration, Welcome Tea & Coffee, Networking",
   },
+
   {
-    time: "10:30 AM – 11:00 AM",
+    time: "10:30 AM - 11:00 AM",
     type: "Inaugural Session",
     title: "Inaugural Session",
     description:
-      "Welcome Address by Organizer, Lamp Lighting Ceremony, Address by Chief Guest, Special Address by Industry Leader.",
+      "Welcome Address by Organizer, Lamp Lighting Ceremony, Address by Chief Guest, Special Address by Industry Leader",
   },
+
   {
-    time: "11:00 AM – 11:45 AM",
+    time: "11:00 AM - 11:45 AM",
     type: "Session 1",
-    title: "Solar Manufacturing & EPC – Building India's Solar Leadership",
+    title: "Solar Manufacturing & EPC – Building India’s Solar Leadership",
     points: [
-      "India's Solar Manufacturing Growth & Domestic Supply Chain",
-      "PM Surya Ghar: Accelerating Rooftop Solar Adoption and PM-KUSUM: Accelerating Agricultural Solarisation & Decentralised Renewable Energy",
+      "India’s Solar Manufacturing Growth & Domestic Supply Chain",
+      "PM Surya Ghar & PM-KUSUM: Accelerating Rooftop Solar Adoption & Agricultural Solarisation",
       "ALMM, DCR & Policy Framework for Domestic Manufacturing",
       "Role of EPC in Scaling Utility-Scale & Rooftop Solar Projects",
       "Technology Advancements, Cost Competitiveness & Future Manufacturing Opportunities",
     ],
   },
+
   {
     time: "11:50 AM - 12:00 PM",
     type: "Presentation",
-    title: "Presentation I",
+    title: "Presentation",
   },
+
   {
     time: "12:05 PM - 12:15 PM",
     type: "Presentation",
     title: "Presentation II",
   },
+
   {
     time: "12:15 PM - 12:30 PM",
     type: "Break",
     title: "Networking Tea & Coffee Break",
   },
+
   {
-    time: "12:30 PM – 01:15 PM",
+    time: "12:30 PM - 01:15 PM",
     type: "Session 2",
     title: "Energy Storage – Enabling a Reliable Renewable Future",
     points: [
-      "PM-KUSUM: Accelerating Agricultural Solarisation & Decentralised Renewable Energy and PM Surya Ghar: Accelerating Rooftop Solar Adoption",
+      "PM-KUSUM: Accelerating Agricultural Solarisation & Decentralised Renewable Energy",
       "Growing Role of BESS in Renewable Energy Integration & Grid Stability",
       "Emerging Storage Technologies & Manufacturing Opportunities",
       "BESS Policy, Financing & Investment Landscape",
       "Energy Storage for C&I, EVs & Other Emerging Applications",
     ],
   },
+
   {
-    time: "1:15 PM – 01:30 PM",
-    type: "Video & Presentation",
-    title: "Corporate Video & Presentation",
-  },
-  {
-    time: "1:30 PM – 01:45 PM",
+    time: "01:15 PM - 01:30 PM",
     type: "Presentation",
     title: "Presentation",
   },
+
   {
-    time: "01:45 PM - 02:30 PM",
+    time: "01:30 PM - 01:45 PM",
+    type: "Presentation",
+    title: "Presentation",
+  },
+
+  {
+    time: "01:45 PM - 02:00 PM",
+    type: "Presentation",
+    title: "Presentation",
+  },
+
+  {
+    time: "02:00 PM - 02:30 PM",
     type: "Lunch",
     title: "Networking Lunch",
   },
+
   {
-    time: "02:30 PM – 03:00 PM",
+    time: "02:30 PM - 03:00 PM",
     type: "Awards",
     title: "Renewable Energy Leadership & Excellence Awards 2026",
   },
+
   {
-    time: "03:00 PM – 04:00 PM",
+    time: "03:00 PM - 04:00 PM",
     type: "Break",
     title: "Networking Tea & Coffee",
   },
+
   {
     time: "04:00 PM",
-    type: "Closing",
     title: "Conference Concludes",
   },
 ];
