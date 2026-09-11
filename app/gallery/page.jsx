@@ -1,12 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { conferences } from "./galleryData";
 import { motion, AnimatePresence } from "framer-motion";
 import { Trophy, X, ZoomIn, ArrowLeft } from "lucide-react";
 
-export default function GalleryPage() {
+function GalleryContent() {
   const searchParams = useSearchParams();
 
   const [selectedConferenceId, setSelectedConferenceId] = useState(
@@ -35,6 +35,7 @@ export default function GalleryPage() {
   return (
     <section className="relative overflow-hidden bg-white pt-32 pb-20 md:pt-40">
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
+
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -65,8 +66,13 @@ export default function GalleryPage() {
                 key={conference.id}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.06 }}
-                onClick={() => setSelectedConferenceId(conference.id)}
+                transition={{
+                  duration: 0.4,
+                  delay: index * 0.06,
+                }}
+                onClick={() =>
+                  setSelectedConferenceId(conference.id)
+                }
                 className="group cursor-pointer overflow-hidden rounded-2xl shadow-lg relative"
               >
                 <img
@@ -74,11 +80,13 @@ export default function GalleryPage() {
                   alt={conference.name}
                   className="w-full h-64 md:h-80 object-cover transition-transform duration-700 group-hover:scale-110"
                 />
+
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-5">
                   <div>
                     <h3 className="text-xl md:text-2xl font-bold text-white">
                       {conference.name}
                     </h3>
+
                     <p className="text-sm text-white/80 mt-1">
                       Click to view gallery
                     </p>
@@ -92,8 +100,10 @@ export default function GalleryPage() {
         {/* ---------------- SINGLE CONFERENCE VIEW ---------------- */}
         {selectedConference && (
           <>
-            {/* Back + Awards toggle row */}
+            {/* Back + Awards Toggle Row */}
             <div className="mb-10 flex flex-wrap items-center justify-between gap-4">
+              
+              {/* Back Button */}
               <button
                 onClick={handleBack}
                 className="flex items-center gap-2 text-sm font-semibold text-slate-700 hover:text-orange-600 transition-colors"
@@ -102,6 +112,7 @@ export default function GalleryPage() {
                 Back to all conferences
               </button>
 
+              {/* Awards Button */}
               <button
                 onClick={() => setShowAwards(!showAwards)}
                 className={`group relative px-6 md:px-8 py-3 md:py-3.5 rounded-full text-xs md:text-sm font-semibold transition-all duration-300 flex items-center gap-2 md:gap-3 shadow-lg hover:shadow-2xl ${
@@ -113,17 +124,20 @@ export default function GalleryPage() {
                 {showAwards ? (
                   <>
                     <X className="w-4 h-4 md:w-5 md:h-5 transition-transform group-hover:rotate-90 text-[#F59E0B]" />
+
                     <span>Show All Images</span>
                   </>
                 ) : (
                   <>
                     <Trophy className="w-4 h-4 md:w-5 md:h-5 text-[#F59E0B] group-hover:scale-110 transition-transform" />
+
                     <span>View Awards Ceremony</span>
                   </>
                 )}
               </button>
             </div>
 
+            {/* Conference Name */}
             <h3 className="mb-6 text-2xl font-bold text-slate-900 text-center">
               {selectedConference.name}
             </h3>
@@ -138,10 +152,24 @@ export default function GalleryPage() {
                   <motion.div
                     key={image}
                     layout
-                    initial={{ opacity: 0, y: 30, scale: 0.96 }}
-                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                    exit={{ opacity: 0, scale: 0.9 }}
-                    transition={{ duration: 0.4, delay: index * 0.04 }}
+                    initial={{
+                      opacity: 0,
+                      y: 30,
+                      scale: 0.96,
+                    }}
+                    animate={{
+                      opacity: 1,
+                      y: 0,
+                      scale: 1,
+                    }}
+                    exit={{
+                      opacity: 0,
+                      scale: 0.9,
+                    }}
+                    transition={{
+                      duration: 0.4,
+                      delay: index * 0.04,
+                    }}
                     onClick={() => setSelectedImage(image)}
                     className="group cursor-pointer overflow-hidden rounded-xl md:rounded-2xl shadow-md md:shadow-lg relative"
                   >
@@ -150,6 +178,8 @@ export default function GalleryPage() {
                       alt={selectedConference.name}
                       className="w-full h-48 sm:h-56 md:h-64 lg:h-72 object-cover transition-transform duration-700 group-hover:scale-110"
                     />
+
+                    {/* Hover Overlay */}
                     <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                       <ZoomIn className="w-8 h-8 md:w-12 md:h-12 text-white" />
                     </div>
@@ -158,6 +188,7 @@ export default function GalleryPage() {
               </AnimatePresence>
             </motion.div>
 
+            {/* No Images */}
             {displayedImages.length === 0 && (
               <p className="text-center text-slate-500 mt-10">
                 No images added yet for this section.
@@ -178,13 +209,25 @@ export default function GalleryPage() {
             className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 p-2 md:p-4"
           >
             <motion.div
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.8, opacity: 0 }}
-              transition={{ duration: 0.3 }}
+              initial={{
+                scale: 0.8,
+                opacity: 0,
+              }}
+              animate={{
+                scale: 1,
+                opacity: 1,
+              }}
+              exit={{
+                scale: 0.8,
+                opacity: 0,
+              }}
+              transition={{
+                duration: 0.3,
+              }}
               className="relative max-w-6xl w-full h-full flex flex-col items-center justify-center"
               onClick={(e) => e.stopPropagation()}
             >
+              {/* Close Button */}
               <button
                 onClick={() => setSelectedImage(null)}
                 className="absolute top-4 right-4 z-10 text-white hover:text-gray-300 bg-black/50 hover:bg-black/70 rounded-full p-2 md:p-3 transition-all duration-300"
@@ -192,6 +235,7 @@ export default function GalleryPage() {
                 <X className="w-6 h-6 md:w-8 md:h-8" />
               </button>
 
+              {/* Fullscreen Image */}
               <img
                 src={selectedImage}
                 alt="Gallery"
@@ -202,5 +246,23 @@ export default function GalleryPage() {
         )}
       </AnimatePresence>
     </section>
+  );
+}
+
+/* ---------------- SUSPENSE WRAPPER ---------------- */
+
+export default function GalleryPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="min-h-screen flex items-center justify-center bg-white">
+          <div className="text-slate-600 text-lg">
+            Loading gallery...
+          </div>
+        </div>
+      }
+    >
+      <GalleryContent />
+    </Suspense>
   );
 }
