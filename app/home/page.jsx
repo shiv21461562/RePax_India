@@ -18,6 +18,7 @@ import Venue from "@/components/home/Venue";
 
 import WhyAttend from "@/components/home/WhyAttend";
 import FeaturedConferenceSessions from "@/components/home/FeaturedConferenceSessions";
+import PreviousConferences from "@/components/home/PreviousConferences";
 export default function HomePage() {
   return (
     <>
@@ -26,6 +27,8 @@ export default function HomePage() {
       <EventStats />
       {/* <EventVideo /> */}
           <Venue />
+          <PreviousConferences />
+
 
       <About />
 
