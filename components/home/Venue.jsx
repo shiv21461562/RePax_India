@@ -234,17 +234,26 @@
 
 
 
-
 "use client";
 
-import { MapPin, Calendar, Sparkles } from "lucide-react";
+import { MapPin, Calendar } from "lucide-react";
 import { motion } from "framer-motion";
+
+/*
+  HOTEL / VENUE: jab hotel confirm ho jaye, to:
+  1. import mein `Hotel` add karein:  import { MapPin, Calendar, Hotel } from "lucide-react";
+  2. neeche wali commented line uncomment karke hotel ka naam likh dein.
+  Grid apne aap 3 tiles mein badal jayega.
+*/
+const details = [
+  { icon: Calendar, label: "Date", value: "4 October 2026" },
+  { icon: MapPin, label: "City", value: "Lucknow, Uttar Pradesh" },
+  // { icon: Hotel, label: "Venue", value: "Hotel name here" },
+];
 
 export default function Venue() {
   return (
     <section className="relative overflow-hidden bg-[#F7F8FA] py-20">
-     
-
       <div className="container relative mx-auto px-4 lg:px-8">
         {/* Heading */}
         <motion.div
@@ -266,17 +275,17 @@ export default function Venue() {
             </div>
           </div>
 
-          <h2 className="mt-4 font-serif text-xl font-bold leading-tight tracking-tight text-[#0B3A63] sm:text-2xl md:text-3xl">
-            Join Us 
+          <h2 className="mt-4 font-serif text-3xl font-bold leading-tight tracking-tight text-[#0B3A63] sm:text-4xl md:text-5xl">
+            Join Us in Lucknow
           </h2>
 
           <p className="mx-auto mt-4 max-w-2xl text-slate-500">
             Experience world-class networking, exhibitions and sustainability
-            discussions at India's premier event destination.
+            discussions at India&apos;s premier event destination.
           </p>
         </motion.div>
 
-        {/* Venue Card */}
+        {/* Details Card */}
         <motion.div
           initial={{ opacity: 0, y: 70 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -284,29 +293,43 @@ export default function Venue() {
           transition={{ duration: 0.8 }}
           className="relative mx-auto max-w-4xl overflow-hidden rounded-[32px] border border-slate-200 bg-white shadow-xl shadow-slate-900/[0.06]"
         >
-          <div className="flex flex-col items-center px-8 pb-14 pt-12 text-center lg:px-16">
-            <div className="inline-flex items-center gap-2.5">
-              <span className="relative flex h-3 w-3">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-orange-400 opacity-75" />
-                <span className="relative inline-flex h-3 w-3 rounded-full bg-orange-500" />
-              </span>
-              <span className="font-poppins text-2xl font-extrabold uppercase tracking-[0.1em] text-orange-500 sm:text-3xl">
-                Coming Soon
-              </span>
+          {/* Top accent bar */}
+          <div className="h-1.5 w-full bg-orange-500" />
+
+          <div className="flex flex-col items-center px-8 pb-12 pt-10 text-center lg:px-16">
+            <h3 className="font-serif text-2xl font-bold text-[#0B3A63] sm:text-3xl">
+              Save the date
+            </h3>
+
+            {/* Date / City (aur hotel, jab confirm ho) */}
+            <div
+              className={`mt-8 grid w-full gap-4 ${
+                details.length === 3 ? "sm:grid-cols-3" : "sm:grid-cols-2"
+              }`}
+            >
+              {details.map(({ icon: Icon, label, value }) => (
+                <div
+                  key={label}
+                  className="flex flex-col items-center rounded-2xl border border-slate-200 bg-[#F7F8FA] px-4 py-6"
+                >
+                  <span className="flex h-11 w-11 items-center justify-center rounded-full bg-orange-500/10 text-orange-500">
+                    <Icon className="h-5 w-5" />
+                  </span>
+                  <p className="mt-3 text-sm text-slate-500">{label}</p>
+                  <p className="mt-1 text-lg font-semibold text-[#0B3A63]">
+                    {value}
+                  </p>
+                </div>
+              ))}
             </div>
 
-         
-
-         
-
-            <p className="mt-4 max-w-xl leading-relaxed text-slate-500">
-              We're finalizing a venue worthy of India's premier renewable
-              energy gathering. The exact property will be announced shortly
-              — stay tuned.
-            </p>
-
-
-       
+            {/* CTA */}
+            <a
+              href="register"
+              className="mt-10 inline-flex items-center justify-center rounded-full bg-orange-500 px-8 py-3.5 font-semibold text-[#0B3A63] transition hover:bg-orange-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0B3A63] focus-visible:ring-offset-2"
+            >
+              Register your interest
+            </a>
           </div>
         </motion.div>
       </div>
