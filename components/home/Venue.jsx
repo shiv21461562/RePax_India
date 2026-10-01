@@ -246,7 +246,7 @@ import { motion } from "framer-motion";
   Grid apne aap 3 tiles mein badal jayega.
 */
 const details = [
-  { icon: Calendar, label: "Date", value: "4 October 2026" },
+  { icon: Calendar, label: "Date", value: "5 November 2026" },
   { icon: MapPin, label: "City", value: "Lucknow, Uttar Pradesh" },
   // { icon: Hotel, label: "Venue", value: "Hotel name here" },
 ];

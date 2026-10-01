@@ -146,9 +146,6 @@
 
 //               {/* RIGHT - Stats Cards */}
 //               <div className="grid grid-cols-2 gap-5">
-               
-
-              
 
 //                 <div className="col-span-2 group bg-gradient-to-r from-[#FF8A00] to-[#FFB347] rounded-3xl p-8 text-white border border-transparent hover:border-white/40 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(255,138,0,0.30)] transition-all duration-300">
 //                   <h3 className="text-2xl font-bold">Why RE-PAX India?</h3>
@@ -167,13 +164,9 @@
 //         </section>
 //       </FadeUp>
 
-   
 //     </>
 //   );
 // }
-
-
-
 
 "use client";
 
@@ -202,26 +195,38 @@ export default function About() {
   };
 
   const features = [
-    { label: "Business Networking", desc: "Meet 500+ industry leaders face to face" },
-    { label: "Knowledge Sharing", desc: "Panels led by policy & technology experts" },
-    { label: "Strategic Partnerships", desc: "Connect EPCs, developers & investors" },
-    { label: "Market Expansion", desc: "Enter new states & sourcing corridors" },
-    { label: "Innovation Showcase", desc: "See the latest solar, wind & storage tech" },
-    { label: "Leadership Awards", desc: "Recognizing India's clean energy pioneers" },
+    {
+      label: "Business Networking",
+      desc: "Meet 500+ industry leaders face to face",
+    },
+    {
+      label: "Knowledge Sharing",
+      desc: "Panels led by policy & technology experts",
+    },
+    {
+      label: "Strategic Partnerships",
+      desc: "Connect EPCs, developers & investors",
+    },
+    {
+      label: "Market Expansion",
+      desc: "Enter new states & sourcing corridors",
+    },
+    {
+      label: "Innovation Showcase",
+      desc: "See the latest solar, wind & storage tech",
+    },
+    {
+      label: "Leadership Awards",
+      desc: "Recognizing India's clean energy pioneers",
+    },
   ];
 
-  const stats = [
-    { value: "500+", label: "Delegates" },
-    { value: "80+", label: "Exhibitors" },
-    { value: "40+", label: "Speakers" },
-  ];
+
 
   return (
     <>
       <FadeUp>
-<section className="relative overflow-hidden bg-[#124570] py-24">
-        
-
+        <section className="relative overflow-hidden bg-[#124570] py-24">
           <div className="container relative z-10 mx-auto px-4 lg:px-8">
             <div className="grid items-center gap-16 lg:grid-cols-2">
               {/* LEFT */}
@@ -233,34 +238,30 @@ export default function About() {
                   </span>
                 </div>
 
-             <h2 className="mt-6 font-serif text-3xl font-bold leading-[1.15] text-white sm:text-4xl md:text-[2.15rem]">
-  India's most influential{" "}
-  <span className="text-orange-500">
-    renewable energy
-  </span>{" "}
-  business networking platform
-</h2>
+                <h2 className="mt-6 font-serif text-3xl font-bold leading-[1.15] text-white sm:text-4xl md:text-[2.15rem]">
+                  India's most influential{" "}
+                  <span className="text-orange-500">renewable energy</span>{" "}
+                  business networking platform
+                </h2>
 
                 <p className="mt-6 max-w-xl text-lg leading-relaxed text-slate-300">
-                  RE-PAX India is a premier conference and networking
-                  platform dedicated to accelerating the growth of India's
-                  renewable energy sector.
+                  RE-PAX India is a premier conference and networking platform
+                  dedicated to accelerating the growth of India's renewable
+                  energy sector.
                 </p>
 
                 <p className="mt-4 max-w-xl leading-relaxed text-slate-400">
                   Organized by Renewable Mirror, the event brings together
                   manufacturers, EPC contractors, developers, investors,
-                  government officials, policymakers, technology innovators
-                  and sustainability experts to collaborate, share
-                  knowledge, and drive India's clean energy transition.
+                  government officials, policymakers, technology innovators and
+                  sustainability experts to collaborate, share knowledge, and
+                  drive India's clean energy transition.
                 </p>
-
-          
 
                 <div className="mt-9 flex flex-wrap gap-4">
                   <button
                     onClick={() => router.push("/register")}
-                    className="rounded-xl bg-gradient-to-r from-orange-500 to-orange-400 px-6 py-3 font-semibold text-white shadow-[0_8px_30px_rgba(255,138,0,0.35)] transition-transform duration-200 hover:scale-[1.03]"
+                    className="rounded-xl bg-gradient-to-r from-orange-500 to-orange-400 px-6 py-3 font-semibold text-white  transition-transform duration-200 hover:scale-[1.03]"
                   >
                     Register Now
                   </button>
@@ -301,18 +302,12 @@ export default function About() {
                             {f.label}
                           </div>
                         </div>
-                     
                       </div>
                     ))}
                   </div>
                 </div>
 
-             {/* floating accent chip */}
-<div className="absolute -bottom-5 -left-5 hidden rounded-2xl border border-orange-300/30 bg-[#FF8A00] px-5 py-3 shadow-lg shadow-orange-500/20 backdrop-blur-xl sm:block">
-  <div className="text-sm font-semibold text-white">
-    Powered by Renewable Mirror
-  </div>
-</div>
+                {/* floating accent chip */}
               </div>
             </div>
           </div>
