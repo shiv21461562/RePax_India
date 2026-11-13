@@ -234,27 +234,23 @@
 
 
 
+
 "use client";
 
-import { MapPin, Calendar } from "lucide-react";
+import { MapPin, CalendarDays, Hotel } from "lucide-react";
 import { motion } from "framer-motion";
 
-/*
-  HOTEL / VENUE: jab hotel confirm ho jaye, to:
-  1. import mein `Hotel` add karein:  import { MapPin, Calendar, Hotel } from "lucide-react";
-  2. neeche wali commented line uncomment karke hotel ka naam likh dein.
-  Grid apne aap 3 tiles mein badal jayega.
-*/
 const details = [
-  { icon: Calendar, label: "Date", value: "5 November 2026" },
-  { icon: MapPin, label: "City", value: "Lucknow, Uttar Pradesh" },
-  // { icon: Hotel, label: "Venue", value: "Hotel name here" },
+  { icon: CalendarDays, label: "Month", value: "December 2026" },
+  { icon: MapPin, label: "City", value: "Raipur, Chhattisgarh" },
+  { icon: Hotel, label: "Venue", value: "To Be Announced" },
 ];
 
 export default function Venue() {
   return (
-    <section className="relative overflow-hidden bg-[#F7F8FA] py-20">
+    <section className="relative overflow-hidden bg-[#F7F8FA] py-20 md:py-24">
       <div className="container relative mx-auto px-4 lg:px-8">
+
         {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -265,7 +261,7 @@ export default function Venue() {
         >
           <div className="inline-flex flex-col items-center">
             <p className="font-sans text-[15px] font-semibold uppercase tracking-[0.22em] text-orange-500 md:text-[17px]">
-              Event Venue
+              Event Details
             </p>
 
             <div className="relative mt-3 flex items-center justify-center">
@@ -276,12 +272,13 @@ export default function Venue() {
           </div>
 
           <h2 className="mt-4 font-serif text-3xl font-bold leading-tight tracking-tight text-[#0B3A63] sm:text-4xl md:text-5xl">
-            Join Us in Lucknow
+            Join Us in Raipur
           </h2>
 
           <p className="mx-auto mt-4 max-w-2xl text-slate-500">
-            Experience world-class networking, exhibitions and sustainability
-            discussions at India&apos;s premier event destination.
+            Get ready for an exciting gathering of industry leaders,
+            professionals and innovators. Join us for networking,
+            exhibitions and insightful discussions.
           </p>
         </motion.div>
 
@@ -291,45 +288,53 @@ export default function Venue() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="relative mx-auto max-w-4xl overflow-hidden rounded-[32px] border border-slate-200 bg-white shadow-xl shadow-slate-900/[0.06]"
+          className="relative mx-auto max-w-5xl overflow-hidden rounded-[32px] border border-slate-200 bg-white shadow-xl shadow-slate-900/[0.06]"
         >
           {/* Top accent bar */}
           <div className="h-1.5 w-full bg-orange-500" />
 
-          <div className="flex flex-col items-center px-8 pb-12 pt-10 text-center lg:px-16">
+          <div className="flex flex-col items-center px-6 pb-12 pt-10 text-center sm:px-10 lg:px-16">
             <h3 className="font-serif text-2xl font-bold text-[#0B3A63] sm:text-3xl">
-              Save the date
+              Event Information
             </h3>
 
-            {/* Date / City (aur hotel, jab confirm ho) */}
-            <div
-              className={`mt-8 grid w-full gap-4 ${
-                details.length === 3 ? "sm:grid-cols-3" : "sm:grid-cols-2"
-              }`}
-            >
-              {details.map(({ icon: Icon, label, value }) => (
-                <div
+            {/* Month / City / Venue */}
+            <div className="mt-8 grid w-full gap-4 sm:grid-cols-3">
+              {details.map(({ icon: Icon, label, value }, index) => (
+                <motion.div
                   key={label}
-                  className="flex flex-col items-center rounded-2xl border border-slate-200 bg-[#F7F8FA] px-4 py-6"
+                  initial={{ opacity: 0, y: 25 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.15 }}
+                  className="flex flex-col items-center justify-center rounded-2xl border border-slate-200 bg-[#F7F8FA] px-4 py-7 transition-all duration-300 hover:-translate-y-1 hover:border-orange-300 hover:shadow-lg"
                 >
-                  <span className="flex h-11 w-11 items-center justify-center rounded-full bg-orange-500/10 text-orange-500">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-full bg-orange-500/10 text-orange-500">
                     <Icon className="h-5 w-5" />
                   </span>
-                  <p className="mt-3 text-sm text-slate-500">{label}</p>
+
+                  <p className="mt-3 text-sm font-medium text-slate-500">
+                    {label}
+                  </p>
+
                   <p className="mt-1 text-lg font-semibold text-[#0B3A63]">
                     {value}
                   </p>
-                </div>
+                </motion.div>
               ))}
             </div>
 
             {/* CTA */}
             <a
-              href="register"
+              href="/register"
               className="mt-10 inline-flex items-center justify-center rounded-full bg-orange-500 px-8 py-3.5 font-semibold text-[#0B3A63] transition hover:bg-orange-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0B3A63] focus-visible:ring-offset-2"
             >
-              Register your interest
+              Register Your Interest
             </a>
+
+            <p className="mt-4 text-sm text-slate-400">
+              Exact event date and venue will be announced soon.
+            </p>
           </div>
         </motion.div>
       </div>
