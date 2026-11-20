@@ -1,221 +1,134 @@
 "use client";
 
-import {
-  Sun,
-  RefreshCw,
-  Globe2,
-  Cpu,
-  LineChart,
-  Building2,
-  Bot,
-  Leaf,
-} from "lucide-react";
+import { motion, useReducedMotion } from "framer-motion";
 
 const themes = [
   {
     title: "Renewable Energy",
-    icon: Sun,
     description:
       "Exploring solar, wind, and clean energy innovations for a sustainable future.",
   },
   {
     title: "Circular Economy",
-    icon: RefreshCw,
     description:
       "Strategies to reduce waste and maximize resource efficiency across industries.",
   },
   {
     title: "Climate Action",
-    icon: Globe2,
     description:
       "Global initiatives and policies driving climate resilience and net-zero goals.",
   },
   {
-  title: "Energy Storage Systems (BESS)",
-  icon: Cpu,
-  description:
-    "Understand the growing role of battery energy storage in grid stability, renewable integration, commercial & industrial applications and utility-scale projects.",
-},
-{
-  title: "Green Hydrogen",
-  icon: Building2,
-  description:
-    "Discover opportunities in hydrogen production, storage, infrastructure, industrial applications and India's Green Hydrogen Mission.",
-},
-{
-  title: "Electric Mobility",
-  icon: LineChart,
-  description:
-    "Learn about EV charging infrastructure, battery technologies, fleet electrification and sustainable transportation solutions.",
-},
+    title: "Energy Storage Systems (BESS)",
+    description:
+      "Understand the growing role of battery energy storage in grid stability, renewable integration, commercial & industrial applications and utility-scale projects.",
+  },
+  {
+    title: "Green Hydrogen",
+    description:
+      "Discover opportunities in hydrogen production, storage, infrastructure, industrial applications and India's Green Hydrogen Mission.",
+  },
+  {
+    title: "Electric Mobility",
+    description:
+      "Learn about EV charging infrastructure, battery technologies, fleet electrification and sustainable transportation solutions.",
+  },
 ];
 
+const container = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.09 } },
+};
 
+const item = {
+  hidden: { opacity: 0, y: 30 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] },
+  },
+};
 
 export default function ConferenceThemes() {
+  const reduceMotion = useReducedMotion();
+
   return (
-    <section className="py-24 bg-white">
-      <div className="container mx-auto px-4 lg:px-8">
+    <section className="bg-white py-16 sm:py-20 lg:py-28">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-      <div className="flex items-center justify-start gap-5 max-sm:justify-center">
-  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
+        <motion.div
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="mx-auto mb-12 max-w-3xl text-center sm:mb-16"
+        >
+          <div className="flex items-center justify-center gap-3 sm:gap-4">
+            <span className="h-[2px] w-8 bg-red-500 sm:w-16" />
+            <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-red-500 sm:text-sm">
+              Shaping the Future of Renewable Energy
+            </span>
+            <span className="h-[2px] w-8 bg-red-500 sm:w-16" />
+          </div>
 
-  <span
-    className="
-      font-poppins
-      text-xs
-      sm:text-sm
-      md:text-base
-      font-medium
-      uppercase
-      tracking-[0.18em]
-      text-red-500
-      text-center
-      whitespace-nowrap
-    "
-  >
-    Shaping the Future of Renewable Energy
-  </span>
+          <h2 className="mt-5 font-serif text-2xl font-bold leading-tight text-slate-900 sm:text-3xl md:text-4xl">
+            Explore Key Discussion Areas
+          </h2>
 
-  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
-</div>
+          <div className="mx-auto mt-4 h-1 w-16 rounded-full bg-orange-500" />
 
-      <h2
-  className="
-    mt-5
-    font-serif
-    text-2xl
-    sm:text-3xl
-    md:text-4xl
-    font-bold
-    leading-tight
-    tracking-tight
-    text-slate-900
-  "
->
-  Explore Key Discussion Areas
-</h2>
-
-          <p className="mt-5 text-lg text-slate-600">
-           The conference will focus on the most important topics driving India's clean energy transformation.
+          <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-slate-600 sm:text-base md:text-lg">
+            The conference will focus on the most important topics driving
+            India's clean energy transformation.
           </p>
-        </div>
+        </motion.div>
 
         {/* Cards */}
-        <div className="grid gap-7 md:grid-cols-2 lg:grid-cols-3">
-          {themes.map((theme, index) => {
-            const Icon = theme.icon;
-
-            return (
+        <motion.div
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-60px" }}
+          className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3 lg:gap-8"
+        >
+          {themes.map((theme) => (
+            <motion.div
+              key={theme.title}
+              variants={item}
+              whileHover={reduceMotion ? undefined : { scale: 1.04, y: -4 }}
+              whileTap={reduceMotion ? undefined : { scale: 0.98 }}
+              transition={{ type: "spring", stiffness: 260, damping: 20 }}
+              className="group h-full"
+            >
               <div
-                key={index}
                 className="
-                  group
-                  relative
-                  overflow-hidden
-                  rounded-3xl
-                  border
-                  border-slate-200
-                  bg-white
-                  p-8
-                  transition-all
-                  duration-500
-                  hover:-translate-y-3
-                  hover:shadow-[0_25px_60px_rgba(11,58,99,0.25)]
+                  relative flex h-full min-h-[240px] flex-col items-center justify-center
+                  overflow-hidden rounded-2xl border-2 border-transparent bg-[#0B3A63]
+                  px-6 py-9 text-center shadow-lg shadow-[#0B3A63]/15
+                  transition-all duration-500 ease-out
+                  group-hover:border-orange-400 group-hover:shadow-2xl group-hover:shadow-orange-500/20
+                  sm:min-h-[260px] sm:px-8 sm:py-10
                 "
               >
-                {/* Hover Background */}
-                <div
-                  className="
-                    absolute
-                    inset-0
-                    bg-gradient-to-r
-                    from-[#0B3A63]
-                    via-[#114D7E]
-                    to-[#0B3A63]
-                    translate-x-[-100%]
-                    group-hover:translate-x-0
-                    transition-transform
-                    duration-700
-                  "
-                />
+                {/* Soft glow on hover */}
+                <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-orange-400/0 blur-3xl transition-colors duration-500 group-hover:bg-orange-400/25" />
 
                 {/* Content */}
-                <div className="relative z-10">
-                  {/* Icon */}
-                  <div
-                    className="
-                      w-16
-                      h-16
-                      rounded-2xl
-                      bg-orange-100
-                      flex
-                      items-center
-                      justify-center
-                      mb-6
-                      transition-all
-                      duration-500
-                      group-hover:bg-white/15
-                    "
-                  >
-                    <Icon
-                      size={30}
-                      className="
-                        text-orange-500
-                        group-hover:text-orange-300
-                        transition-colors
-                        duration-500
-                      "
-                    />
-                  </div>
-
-                  {/* Title */}
-                  <h3
-                    className="
-                      text-xl
-                      font-bold
-                      text-slate-900
-                      mb-3
-                      transition-colors
-                      duration-500
-                      group-hover:text-white
-                    "
-                  >
+                <div className="relative z-10 flex flex-1 flex-col items-center justify-center">
+                  <h3 className="text-lg font-bold leading-snug text-white sm:text-xl lg:text-2xl">
                     {theme.title}
                   </h3>
 
-                  {/* Description */}
-                  <p
-                    className="
-                      text-slate-600
-                      leading-relaxed
-                      transition-colors
-                      duration-500
-                      group-hover:text-slate-200
-                    "
-                  >
+                  <p className="mt-4 max-w-sm text-sm leading-7 text-slate-200 sm:text-[15px] lg:text-base">
                     {theme.description}
                   </p>
 
-                  {/* Bottom line */}
-                  <div
-                    className="
-                      mt-6
-                      h-[3px]
-                      w-12
-                      rounded-full
-                      bg-orange-400
-                      transition-all
-                      duration-500
-                      group-hover:w-24
-                    "
-                  />
+                  <div className="mt-6 h-[2px] w-10 rounded-full bg-orange-400 transition-all duration-500 ease-out group-hover:w-20" />
                 </div>
               </div>
-            );
-          })}
-        </div>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
     </section>
   );

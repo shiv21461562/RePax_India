@@ -1,104 +1,76 @@
+
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  Users,
-  Lightbulb,
-  Handshake,
-  Presentation,
-  TrendingUp,
-} from "lucide-react";
 
 const benefits = [
   {
-    icon: Users,
     title: "Connect with Industry Leaders",
     description:
       "Meet CEOs, founders, project developers, investors, government officials, utilities, EPC contractors, manufacturers and technology providers from across India.",
   },
   {
-    icon: Lightbulb,
     title: "Gain Industry Insights",
     description:
       "Learn about the latest developments in renewable energy policies, manufacturing trends, energy storage technologies, financing opportunities, and sustainability initiatives from leading experts.",
   },
   {
-    icon: Handshake,
     title: "Expand Your Business Network",
     description:
       "Build relationships with potential customers, suppliers, distributors, investors, and strategic partners through dedicated networking sessions.",
   },
   {
-    icon: Presentation,
     title: "Showcase Innovation",
     description:
       "Present your latest products, services, and technologies to a targeted audience of industry professionals and decision-makers.",
   },
   {
-    icon: TrendingUp,
     title: "Discover New Opportunities",
     description:
       "Explore emerging market trends, investment possibilities, and collaborative business opportunities across the renewable energy value chain.",
   },
 ];
 
+const highlights = [
+  "Business Networking",
+  "Knowledge Sharing",
+  "Innovation Showcase",
+  "Leadership Awards",
+];
+
 export default function WhyAttend() {
   return (
-    <section className="relative overflow-hidden bg-white py-24">
-      {/* Background */}
-      <div className="absolute inset-0"></div>
+    <section className="overflow-hidden bg-white py-20 sm:py-24">
+      <div className="mx-auto max-w-7xl px-5 sm:px-6">
 
-      <div className="relative mx-auto max-w-7xl px-6">
-        {/* Header */}
+        {/* Heading */}
         <motion.div
-          initial={{ opacity: 0, y: 60 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="mx-auto mb-20 max-w-3xl text-center"
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.7 }}
+          className="mx-auto mb-14 max-w-3xl text-center sm:mb-16"
         >
-<div className="flex items-center justify-center gap-5">
-  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
+          <div className="flex items-center justify-center gap-4">
+            <span className="h-[2px] w-10 bg-red-500 sm:w-16" />
 
-  <span
-    className="
-      font-poppins
-      text-xs
-      sm:text-sm
-      md:text-base
-      font-medium
-      uppercase
-      tracking-[0.18em]
-      text-red-500
-      text-center
-      whitespace-nowrap
-    "
-  >
-    WHY ATTEND RE-PAX INDIA
-  </span>
+            <span className="whitespace-nowrap text-[10px] font-medium uppercase tracking-[0.18em] text-red-500 sm:text-xs">
+              WHY ATTEND RE-PAX INDIA
+            </span>
 
-  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
-</div>
-       <h2
-  className="
-    mt-5
-    font-serif
-    text-2xl
-    sm:text-3xl
-    md:text-4xl
-    font-bold
-    leading-tight
-    tracking-tight
-    text-slate-900
-  "
->
-  Why Attend{" "}
-  <span className="text-[#0B3A63]">
-    RE-PAX India?
-  </span>
-</h2>
+            <span className="h-[2px] w-10 bg-red-500 sm:w-16" />
+          </div>
 
-          <p className="mt-6 text-lg leading-8 text-slate-600">
+          <h2 className="mt-5 font-serif text-2xl font-bold leading-tight text-slate-900 sm:text-3xl md:text-4xl">
+            Why Attend{" "}
+            <span className="text-[#0B3A63]">
+              RE-PAX India?
+            </span>
+          </h2>
+
+          <div className="mx-auto mt-4 h-1 w-16 rounded-full bg-orange-500" />
+
+          <p className="mt-5 text-sm leading-7 text-slate-600 sm:text-base">
             RE-PAX India is more than a conference—it's where the renewable
             energy community comes together to learn, connect, and grow. The
             event is designed to create meaningful business opportunities and
@@ -106,160 +78,63 @@ export default function WhyAttend() {
           </p>
         </motion.div>
 
-        {/* Cards */}
-        <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-          {benefits.map((item, index) => {
-            const Icon = item.icon;
+        {/* Benefit Cards */}
+        <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
+          {benefits.map((item, index) => (
+            <motion.div
+              key={item.title}
+              initial={{ opacity: 0, y: 35 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.15 }}
+              transition={{
+                duration: 0.6,
+                delay: index * 0.1,
+                ease: "easeOut",
+              }}
+              className="h-full"
+            >
+              <div className="group relative flex h-full min-h-[260px] flex-col items-center justify-center overflow-hidden rounded-2xl border border-white/20 bg-[#0B3A63] px-6 py-8 text-center transition-colors duration-300 hover:border-[#E6B94A] sm:px-7">
 
-            return (
-              <motion.div
-                key={index}
-                initial={{
-                  opacity: 0,
-                  y: 60,
-                  scale: 0.95,
-                }}
-                whileInView={{
-                  opacity: 1,
-                  y: 0,
-                  scale: 1,
-                }}
-                viewport={{
-                  once: true,
-                }}
-                transition={{
-                  duration: 0.7,
-                  delay: index * 0.12,
-                }}
-                className="
-                group
-                relative
-                overflow-hidden
-                rounded-3xl
-                border
-                border-slate-200
-                bg-white
-                p-8
-                shadow-lg
-                transition-all
-                duration-500
-                hover:-translate-y-3
-                hover:border-[#0B3A63]
-                hover:shadow-[0_25px_70px_rgba(11,58,99,.25)]
-                "
-              >
-                {/* Left to Right Hover Background - RE PAX India Colors */}
-                <div
-                  className="
-                    absolute
-                    inset-0
-                    origin-left
-                    scale-x-0
-                    bg-gradient-to-r
-                    from-[#0B3A63]
-                    via-[#114D7E]
-                    to-[#0B3A63]
-                    transition-transform
-                    duration-700
-                    ease-out
-                    group-hover:scale-x-100
-                  "
-                />
+                <h3 className="text-lg font-semibold leading-snug text-white sm:text-xl">
+                  {item.title}
+                </h3>
 
-                {/* Glow Effect */}
-                <div className="absolute right-0 top-0 h-32 w-32 rounded-full bg-orange-400/10 blur-3xl opacity-0 transition duration-700 group-hover:opacity-100" />
+                <p className="mt-4 text-[13px] leading-7 text-slate-200 sm:text-sm">
+                  {item.description}
+                </p>
 
-                {/* Content */}
-                <div className="relative z-10">
-                  <div
-                    className="
-    flex
-    h-16
-    w-16
-    items-center
-    justify-center
-    rounded-2xl
-    bg-gradient-to-br
-    from-[#0B3A63]
-    to-[#114D7E]
-    text-white
-    shadow-lg
-    transition-all
-    duration-500
-    group-hover:scale-110
-    group-hover:rotate-6
-  group-hover:bg-white/10
-group-hover:text-white
-    group-hover:shadow-[0_10px_30px_rgba(255,255,255,0.2)]
-  "
-                  >
-                    <Icon size={30} />
-                  </div>
+                <div className="mt-6 h-[2px] w-9 rounded-full bg-orange-400" />
 
-                  <h3 className="mt-8 text-2xl font-bold text-slate-900 transition-all duration-500 group-hover:text-white">
-                    {item.title}
-                  </h3>
-
-                  <p className="mt-4 leading-8 text-slate-600 transition-all duration-500 group-hover:text-white/90">
-                    {item.description}
-                  </p>
-                </div>
-              </motion.div>
-            );
-          })}
+              </div>
+            </motion.div>
+          ))}
         </div>
 
         {/* Bottom CTA */}
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 35 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{
-            duration: 0.8,
-            delay: 0.3,
-          }}
-          className="mt-20"
+          viewport={{ once: true, amount: 0.15 }}
+          transition={{ duration: 0.7 }}
+          className="mt-16 sm:mt-20"
         >
-          <div className="overflow-hidden rounded-[32px] bg-gradient-to-r from-[#0B3A63] via-[#114D7E] to-[#0B3A63] p-10 text-center shadow-[0_30px_80px_rgba(11,58,99,.25)] lg:p-14">
-         <div className="flex items-center justify-center gap-5">
-  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
+          <div className="rounded-3xl bg-[#0B3A63] px-6 py-10 text-center sm:px-10 sm:py-14 lg:px-14">
 
-  <span
-    className="
-      font-poppins
-      text-xs
-      sm:text-sm
-      md:text-base
-      font-medium
-      uppercase
-      tracking-[0.18em]
-      text-white
-      text-center
-      whitespace-nowrap
-    "
-  >
-    Join India's Renewable Energy Community
-  </span>
+            <div className="flex items-center justify-center gap-4">
+              <span className="h-[2px] w-10 bg-red-400 sm:w-16" />
 
-  <span className="h-[2px] w-12 bg-red-500 sm:w-20" />
-</div>
-          <h3
-  className="
-    mt-5
-    font-serif
-    text-xl
-    sm:text-2xl
-    md:text-3xl
-    font-bold
-    leading-tight
-    tracking-tight
-    text-white
-  "
->
-  Build Connections That Drive the Future
-</h3>
+              <span className="text-[10px] font-medium uppercase tracking-[0.16em] text-white sm:text-xs">
+                Join India's Renewable Energy Community
+              </span>
 
-            <p className="mx-auto mt-6 max-w-4xl text-lg leading-8 text-slate-200">
+              <span className="h-[2px] w-10 bg-red-400 sm:w-16" />
+            </div>
+
+            <h3 className="mt-5 font-serif text-xl font-bold leading-tight text-white sm:text-2xl md:text-3xl">
+              Build Connections That Drive the Future
+            </h3>
+
+            <p className="mx-auto mt-5 max-w-3xl text-sm leading-7 text-slate-200 sm:text-base">
               Whether you're launching a new technology, expanding your
               business, exploring investment opportunities or staying ahead of
               market trends, RE-PAX India provides the ideal platform to connect
@@ -267,48 +142,38 @@ group-hover:text-white
             </p>
 
             {/* Highlights */}
-            <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-              <div className="rounded-2xl border border-white/10 bg-white/10 p-5 backdrop-blur-md">
-                <div className="text-3xl">🤝</div>
-                <h4 className="mt-3 font-semibold text-white">
-                  Business Networking
-                </h4>
-              </div>
-
-              <div className="rounded-2xl border border-white/10 bg-white/10 p-5 backdrop-blur-md">
-                <div className="text-3xl">💡</div>
-                <h4 className="mt-3 font-semibold text-white">
-                  Knowledge Sharing
-                </h4>
-              </div>
-
-              <div className="rounded-2xl border border-white/10 bg-white/10 p-5 backdrop-blur-md">
-                <div className="text-3xl">🚀</div>
-                <h4 className="mt-3 font-semibold text-white">
-                  Innovation Showcase
-                </h4>
-              </div>
-
-              <div className="rounded-2xl border border-white/10 bg-white/10 p-5 backdrop-blur-md">
-                <div className="text-3xl">🏆</div>
-                <h4 className="mt-3 font-semibold text-white">
-                  Leadership Awards
-                </h4>
-              </div>
+            <div className="mt-9 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+              {highlights.map((item, index) => (
+                <motion.div
+                  key={item}
+                  initial={{ opacity: 0, y: 15 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{
+                    duration: 0.45,
+                    delay: index * 0.08,
+                  }}
+                  className="flex min-h-[65px] items-center justify-center rounded-xl border border-white/20 px-4 py-4 text-sm font-medium text-white transition-colors duration-300 hover:border-[#E6B94A] hover:text-[#E6B94A]"
+                >
+                  {item}
+                </motion.div>
+              ))}
             </div>
 
             {/* Buttons */}
-            <div className="mt-10 flex flex-wrap justify-center gap-4">
-              <button className="rounded-xl bg-orange-500 px-8 py-4 font-semibold text-white transition-all duration-300 hover:bg-orange-600 hover:shadow-xl">
+            <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
+              <button className="rounded-lg bg-orange-500 px-7 py-3 text-sm font-semibold text-white transition-colors duration-300 hover:bg-orange-600">
                 Register Now
               </button>
 
-              <button className="rounded-xl border border-white/20 bg-white/10 px-8 py-4 font-semibold text-white backdrop-blur-md transition-all duration-300 hover:bg-white/20">
+              <button className="rounded-lg border border-white/30 px-7 py-3 text-sm font-semibold text-white transition-colors duration-300 hover:border-[#E6B94A] hover:text-[#E6B94A]">
                 Become a Sponsor
               </button>
             </div>
+
           </div>
         </motion.div>
+
       </div>
     </section>
   );
