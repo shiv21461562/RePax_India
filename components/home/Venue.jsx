@@ -1,3 +1,4 @@
+
 "use client";
 
 import { MapPin, Calendar, Navigation } from "lucide-react";
@@ -17,52 +18,18 @@ export default function Venue() {
           className="text-center mb-12"
         >
           <div className="inline-flex flex-col items-center">
-            <p
-              className="
-      font-sans
-      text-[15px]
-      md:text-[17px]
-      font-semibold
-      uppercase
-      tracking-[0.22em]
-      text-orange-400
-      drop-shadow-[0_2px_4px_rgba(249,115,22,0.25)]
-    "
-            >
+            <p className="font-sans text-[15px] md:text-[17px] font-semibold uppercase tracking-[0.22em] text-orange-400 drop-shadow-[0_2px_4px_rgba(249,115,22,0.25)]">
               Event Venue
             </p>
 
             <div className="relative mt-3 flex items-center justify-center">
               <span className="h-[1px] w-8 bg-orange-500/30" />
-
-              <span
-                className="
-        mx-2
-        h-[3px]
-        w-20
-        rounded-full
-        bg-orange-500
-        shadow-[0_2px_8px_rgba(249,115,22,0.45)]
-      "
-              />
-
+              <span className="mx-2 h-[3px] w-20 rounded-full bg-orange-500 shadow-[0_2px_8px_rgba(249,115,22,0.45)]" />
               <span className="h-[1px] w-8 bg-orange-500/30" />
             </div>
           </div>
 
-          <h2
-            className="
-    mt-4
-    font-serif
-    text-xl
-    sm:text-2xl
-    md:text-3xl
-    font-bold
-    leading-tight
-    tracking-tight
-    text-white
-  "
-          >
+          <h2 className="mt-4 font-serif text-xl sm:text-2xl md:text-3xl font-bold leading-tight tracking-tight text-white">
             Join Us At The Venue
           </h2>
 
@@ -78,31 +45,20 @@ export default function Venue() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="
-            overflow-hidden
-            rounded-[32px]
-            border
-            border-slate-200
-            bg-white
-            shadow-2xl
-            shadow-black/40
-            hover:border-orange-400
-            hover:shadow-orange-500/20
-            transition-all
-            duration-500
-          "
+          className="overflow-hidden rounded-[32px] border border-slate-200 bg-white shadow-2xl shadow-black/40 hover:border-orange-400 hover:shadow-orange-500/20 transition-all duration-500"
         >
           <div className="grid lg:grid-cols-2">
-            {/* Image */}
+            {/* Image Section */}
             <div className="flex flex-col">
-              <div className="relative h-[300px] lg:h-[320px] overflow-hidden">
+              {/* Image with spacing and rounded corners */}
+              <div className="relative h-[300px] lg:h-[320px] mx-4 mt-4 overflow-hidden rounded-[28px]">
                 <Image
                   src="/venue/Raipur1.png"
-                  alt="Radisson Blu hotel exterior in Jodhpur"
+                  alt="Courtyard by Marriott Raipur"
                   fill
                   priority
                   sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover transition duration-700 hover:scale-110"
+                  className="object-cover transition-transform duration-700 hover:scale-105"
                 />
               </div>
 
@@ -121,7 +77,7 @@ export default function Venue() {
               </div>
             </div>
 
-            {/* Content */}
+            {/* Content Section */}
             <div className="p-8 lg:p-10 flex flex-col justify-center">
               <div className="flex flex-col items-start">
                 {/* 5 Star Rating */}
@@ -136,24 +92,14 @@ export default function Venue() {
                   ))}
                 </div>
 
-   <h3
-  className="
-    font-serif
-    text-xl
-    sm:text-2xl
-    md:text-3xl
-    font-bold
-    leading-tight
-    tracking-tight
-    text-[#0B3A63]
-  "
->
-  <span className="text-[#E87500] drop-shadow-[0_2px_2px_rgba(232,117,0,0.25)]">
-    Courtyard by Marriott
-  </span>
-  , Raipur, Chhattisgarh
-</h3>
+                <h3 className="font-serif text-xl sm:text-2xl md:text-3xl font-bold leading-tight tracking-tight text-[#0B3A63]">
+                  <span className="text-[#E87500] drop-shadow-[0_2px_2px_rgba(232,117,0,0.25)]">
+                    Courtyard by Marriott
+                  </span>
+                  , Raipur, Chhattisgarh
+                </h3>
               </div>
+
               <p className="mt-4 text-slate-600 leading-7">
                 One of India's leading conference and exhibition venues,
                 bringing together global leaders, innovators and sustainability
@@ -193,33 +139,10 @@ export default function Venue() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="View Courtyard by Marriott Raipur on Google Maps"
-                className="
-    mt-8
-    inline-flex
-    items-center
-    gap-2
-    w-fit
-    px-6
-    py-3
-    rounded-full
-    bg-orange-500
-    text-white
-    font-semibold
-    hover:bg-orange-600
-    hover:scale-105
-    active:scale-95
-    transition-all
-    duration-300
-    shadow-lg
-    shadow-orange-500/25
-    hover:shadow-orange-500/40
-  "
+                className="mt-8 inline-flex items-center gap-2 w-fit px-6 py-3 rounded-full bg-orange-500 text-white font-semibold hover:bg-orange-600 hover:scale-105 active:scale-95 transition-all duration-300 shadow-lg shadow-orange-500/25 hover:shadow-orange-500/40"
               >
                 Get Directions
-                <Navigation
-                  size={18}
-                  className="transition-transform group-hover:translate-x-1"
-                />
+                <Navigation size={18} />
               </a>
             </div>
           </div>
@@ -228,6 +151,16 @@ export default function Venue() {
     </section>
   );
 }
+
+
+
+
+
+
+
+
+
+
 
 // "use client";
 
