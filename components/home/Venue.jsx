@@ -112,7 +112,7 @@ export default function Venue() {
                 </span>
 
                 <p className="mt-3 text-3xl font-bold text-[#0B3A63]">
-                  courtyard by marriott
+                  Courtyard by Marriott
                 </p>
 
                 <p className="text-lg text-slate-600 font-medium">
@@ -149,7 +149,7 @@ export default function Venue() {
   "
 >
   <span className="text-[#E87500] drop-shadow-[0_2px_2px_rgba(232,117,0,0.25)]">
-    courtyard by marriott
+    Courtyard by Marriott
   </span>
   , Raipur, Chhattisgarh
 </h3>
