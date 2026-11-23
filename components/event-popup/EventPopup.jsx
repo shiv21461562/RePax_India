@@ -1,4 +1,3 @@
-
 // "use client";
 
 // import { useEffect, useState } from "react";
@@ -46,10 +45,6 @@
 //   );
 // }
 
-
-
-
-
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
@@ -57,7 +52,9 @@ import { X } from "lucide-react";
 import Link from "next/link";
 
 /* ---------- Settings (yahin se tweak karo) ---------- */
+
 const POSTER_SRC = "/event-popup/repax-banner.png";
+
 const SHOW_DELAY_MS = 1000; // page load ke kitni der baad popup aaye
 const SHOW_ONCE_PER_SESSION = false; // true karo to ek session me sirf ek baar dikhega
 const STORAGE_KEY = "repax-popup-seen";
@@ -80,7 +77,9 @@ export default function EventPopup() {
 
     const t = setTimeout(() => {
       setMounted(true);
-      requestAnimationFrame(() => requestAnimationFrame(() => setVisible(true)));
+      requestAnimationFrame(() =>
+        requestAnimationFrame(() => setVisible(true)),
+      );
       try {
         sessionStorage.setItem(STORAGE_KEY, "1");
       } catch {}
@@ -111,13 +110,14 @@ export default function EventPopup() {
       <div onClick={close} className="absolute inset-0 bg-black/55" />
 
       {/* Popup */}
-<div
-  className={`relative w-fit max-w-[650px] -translate-y-8 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+      <div
+        className={`relative w-fit max-w-[650px] -translate-y-8 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
           visible
             ? "translate-y-0 scale-100 opacity-100"
             : "translate-y-6 scale-95 opacity-0"
         }`}
       >
+
         {/* Close button */}
         <button
           type="button"
@@ -127,6 +127,8 @@ export default function EventPopup() {
         >
           <X size={20} />
         </button>
+
+
 
         {/* Thin gold border + poster (poster hi hero hai, poora dikhega) */}
         <div className="rounded-[18px] bg-gradient-to-br from-[#FFD36B] via-[#FF8A1F] to-[#FFD36B] p-[3px] shadow-[0_30px_90px_rgba(0,0,0,0.65)]">
@@ -142,9 +144,9 @@ export default function EventPopup() {
               className="block h-auto max-h-[72vh] w-auto max-w-[min(650px,88vw)] object-contain"
             />
           </Link>
+
+
         </div>
-
-
       </div>
     </div>
   );
